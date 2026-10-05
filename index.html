@@ -16,11 +16,11 @@
 <div class="cards"><div class="card"><span class="big">6薬剤 × 55株</span>公開GI50集約値 / 330行</div><div class="card"><span class="big">9株 / 54行</span>各分割の未見評価データ</div><div class="card"><span class="big">1秒未満 × 2</span>CPU 1スレッド / データ追加なし</div></div></header>
 <section aria-labelledby="comparison"><h2 id="comparison">基準から、何が変わった？</h2>
 <p>薬剤ごとの学習平均を基準に、組織分類による補正を加えたモデルを比較しました。平均絶対誤差（MAE）は小さい方が良い値です。</p>
-<figure><img class="chart" src="mae-comparison.png" alt="分割20261004では基準MAE0.654、モデル0.638。20261005では基準0.652、モデル0.715。両方の誤差区間は大きく重なる。"><figcaption>線は細胞株単位の200回bootstrapによる記述的95%区間。pGI50の予測誤差であり、治療の成功率ではありません。</figcaption></figure>
+<figure><a href="mae-comparison.png" aria-label="グラフを拡大"><img class="chart" src="mae-comparison.png" alt="分割20261004では基準MAE0.654、モデル0.638。20261005では基準0.652、モデル0.715。両方の誤差区間は大きく重なる。"></a><figcaption>図をタップすると拡大できます。線は細胞株単位の200回bootstrapによる記述的95%区間。pGI50の予測誤差であり、治療の成功率ではありません。</figcaption></figure>
 <div class="scroll"><table><thead><tr><th scope="col">分割seed</th><th scope="col">基準MAE</th><th scope="col">モデルMAE</th><th scope="col">差</th><th scope="col">基準 / モデルRMSE</th></tr></thead><tbody><tr><th scope="row">20261004 / 再現</th><td>0.654</td><td>0.638</td><td>−0.016</td><td>0.829 / 0.825</td></tr><tr><th scope="row">20261005 / 感度</th><td>0.652</td><td>0.715</td><td>+0.063</td><td>0.866 / 0.906</td></tr></tbody></table></div>
 <p>2つ目は同じデータの分割を変えた感度確認です。独立した新データの検証ではなく、候補数や学習量も増やしていません。良い分割だけを選ばず、悪化した結果も残します。</p></section>
 <section aria-labelledby="uncertainty"><h2 id="uncertainty">不確実性は十分だったか</h2>
-<figure><img class="chart" src="interval-coverage.png" alt="80%目標の区間。行単位被覆率は83.3%と81.5%、細胞株の全6薬剤を同時に覆う率は55.6%と44.4%で目標未達。"><figcaption>校正9株、test9株の小標本。厳密な分布自由の被覆保証は主張しません。</figcaption></figure>
+<figure><a href="interval-coverage.png" aria-label="グラフを拡大"><img class="chart" src="interval-coverage.png" alt="80%目標の区間。行単位被覆率は83.3%と81.5%、細胞株の全6薬剤を同時に覆う率は55.6%と44.4%で目標未達。"></a><figcaption>図をタップすると拡大できます。校正9株、test9株の小標本。厳密な分布自由の被覆保証は主張しません。</figcaption></figure>
 <p class="warning">細胞株全体での被覆率は目標未達です。行単位の被覆率だけから信頼できると判断できません。測定誤差や臨床上の安全性を表す区間でもありません。</p></section>
 <section aria-labelledby="method"><h2 id="method">方法とデータの範囲</h2>
 <p>NCI/DTPの既知薬剤6種（doxorubicin、cisplatin、paclitaxel、fluorouracil、methotrexate、etoposide）のGI50集約値を使用。<code>pGI50 = −log10(GI50 [M])</code> に変換します。</p>
