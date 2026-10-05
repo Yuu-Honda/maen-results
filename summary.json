@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "date": "2026-10-05",
+  "experiment_code_commit": "cd1040556093c032e768548510d3daecba3e2bd3",
+  "task": "known-drug response prediction for held-out cell lines; not clinical efficacy",
+  "drug_count": 6,
+  "cell_count": 55,
+  "runs": [
+    {
+      "seed": 20261004,
+      "counts": {
+        "train": {
+          "rows": 222,
+          "cells": 37
+        },
+        "calibration": {
+          "rows": 54,
+          "cells": 9
+        },
+        "test": {
+          "rows": 54,
+          "cells": 9
+        }
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE_pGI50": 0.6535505505505506,
+          "RMSE_pGI50": 0.8291390013040536,
+          "MAE_cluster_bootstrap_95pct": [
+            0.4840000000000001,
+            0.8062962962962963
+          ]
+        },
+        "drug_plus_tissue": {
+          "MAE_pGI50": 0.6377343828366846,
+          "RMSE_pGI50": 0.8247395434227658,
+          "MAE_cluster_bootstrap_95pct": [
+            0.4411396218352739,
+            0.8160385961408978
+          ]
+        },
+        "interval": {
+          "nominal_coverage": 0.8,
+          "radius_pGI50": 1.0711180963572264,
+          "test_row_coverage": 0.8333333333333334,
+          "test_cell_simultaneous_coverage": 0.5555555555555556
+        }
+      },
+      "elapsed_seconds": 0.05468149995431304,
+      "run_utc": "2026-10-05T05:29:01Z",
+      "code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354"
+    },
+    {
+      "seed": 20261005,
+      "counts": {
+        "train": {
+          "rows": 222,
+          "cells": 37
+        },
+        "calibration": {
+          "rows": 54,
+          "cells": 9
+        },
+        "test": {
+          "rows": 54,
+          "cells": 9
+        }
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE_pGI50": 0.6519904904904904,
+          "RMSE_pGI50": 0.8662369038879845,
+          "MAE_cluster_bootstrap_95pct": [
+            0.4352352352352351,
+            0.8139844844844845
+          ]
+        },
+        "drug_plus_tissue": {
+          "MAE_pGI50": 0.7146387202187073,
+          "RMSE_pGI50": 0.9060746002105078,
+          "MAE_cluster_bootstrap_95pct": [
+            0.503963329761987,
+            0.8918206226454307
+          ]
+        },
+        "interval": {
+          "nominal_coverage": 0.8,
+          "radius_pGI50": 1.178615158636898,
+          "test_row_coverage": 0.8148148148148148,
+          "test_cell_simultaneous_coverage": 0.4444444444444444
+        }
+      },
+      "elapsed_seconds": 0.040193541906774044,
+      "run_utc": "2026-10-05T05:29:01Z",
+      "code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354"
+    }
+  ],
+  "sources": {
+    "123127": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=123127&subsetlist=GI50&outputformat=xml",
+      "sha256": "7547424f5a0881446526bde03a203ccb3181bf724775199a89dbf51864c94346",
+      "bytes": 168460,
+      "retrieved_utc": "2026-10-04T13:37:36Z"
+    },
+    "119875": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=119875&subsetlist=GI50&outputformat=xml",
+      "sha256": "0e11ba7f10d90bccc8e084344ae68815fbeb982d1d93cff2f523b3139e64b1f3",
+      "bytes": 266890,
+      "retrieved_utc": "2026-10-04T13:37:46Z"
+    },
+    "125973": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=125973&subsetlist=GI50&outputformat=xml",
+      "sha256": "023ddaa733311d528f0f4146011926cc506a5074979ec24fcc56a2b2964e14e6",
+      "bytes": 225628,
+      "retrieved_utc": "2026-10-04T13:37:54Z"
+    },
+    "19893": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=19893&subsetlist=GI50&outputformat=xml",
+      "sha256": "69b6fe5cf3ff7d277113a869ae9ef884a1bfc3a807b81d1db0076d5c479bac7c",
+      "bytes": 120429,
+      "retrieved_utc": "2026-10-04T13:38:01Z"
+    },
+    "740": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=740&subsetlist=GI50&outputformat=xml",
+      "sha256": "a10397172de898a8a806f00615ac0735191e8a97b91189048af86ee2303dbe22",
+      "bytes": 176729,
+      "retrieved_utc": "2026-10-04T13:38:09Z"
+    },
+    "141540": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=141540&subsetlist=GI50&outputformat=xml",
+      "sha256": "47f1d55518295983674dad5d19480bb5678ec59a88ba9b0b82512ac9b566f9ec",
+      "bytes": 199157,
+      "retrieved_utc": "2026-10-04T13:38:16Z"
+    }
+  },
+  "conditions": {
+    "123127": {
+      "high_conc_log10_M": "-4.6",
+      "NumExp": 2273,
+      "rows": 80,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "119875": {
+      "high_conc_log10_M": "-3.3",
+      "NumExp": 114,
+      "rows": 100,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "125973": {
+      "high_conc_log10_M": "-4.6",
+      "NumExp": 31,
+      "rows": 72,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "19893": {
+      "high_conc_log10_M": "-2.6",
+      "NumExp": 1806,
+      "rows": 79,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "740": {
+      "high_conc_log10_M": "-3.6",
+      "NumExp": 124,
+      "rows": 109,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "141540": {
+      "high_conc_log10_M": "-3.0",
+      "NumExp": 36,
+      "rows": 73,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    }
+  },
+  "excluded_tissues": {
+    "Prostate": 2
+  },
+  "interpretation": "One split slightly improves; another worsens. No stable advantage demonstrated.",
+  "data_policy": "Only aggregate metrics and provenance; raw data and per-cell results excluded."
+}
