@@ -1,854 +1,1137 @@
 {
-  "date": "2026-10-06",
-  "protocol": "fixed 20-seed grouped development validation plus operational locked cohort",
-  "plan_sha256": "3846b8d81e0ccc29606fdf89f85540e697f45decfaa26b1c850b426e43f65548",
-  "registered_utc": "2026-10-06T04:05:52Z",
+  "status": "exploratory development evaluation; previously viewed cells; independent evaluation not completed",
+  "join_coverage": {
+    "matched": 55,
+    "eligible": 55,
+    "meaning": "cell identity mapping; not prediction interval coverage"
+  },
   "summary": {
-    "n_splits": 20,
-    "delta_sign": "model MAE minus baseline MAE; negative improves",
-    "delta_MAE": {
-      "mean": -0.014827405329687732,
-      "median": -0.025530205531344052,
-      "min": -0.05592511188408378,
-      "max": 0.0504411400664484,
-      "win_rate": 0.7,
-      "worst": 0.0504411400664484
+    "drug_mean": {
+      "MAE": {
+        "mean": 0.6079409698275863,
+        "median": 0.6029837592364531,
+        "min": 0.49925697865353047,
+        "max": 0.6800223214285714
+      },
+      "RMSE": {
+        "mean": 0.7979660442002847,
+        "median": 0.8076867020516963,
+        "min": 0.6574408665693837,
+        "max": 0.871645145194509
+      }
     },
-    "baseline_MAE": {
-      "mean": 0.5974759744623656,
-      "median": 0.602375,
-      "min": 0.46243077956989254,
-      "max": 0.6772345430107527
+    "tissue": {
+      "MAE": {
+        "mean": 0.5946546561906478,
+        "median": 0.6009306718509309,
+        "min": 0.44086162620220515,
+        "max": 0.6662877813625451
+      },
+      "RMSE": {
+        "mean": 0.7839902962858876,
+        "median": 0.8026572914275383,
+        "min": 0.6009375367736373,
+        "max": 0.8608311076184902
+      }
     },
-    "model_MAE": {
-      "mean": 0.5826485691326778,
-      "median": 0.5959702193881584,
-      "min": 0.41984378840245773,
-      "max": 0.650651985480917
+    "molecular": {
+      "MAE": {
+        "mean": 0.5509287944226826,
+        "median": 0.5588387287520505,
+        "min": 0.40197166758700253,
+        "max": 0.6622713418025448
+      },
+      "RMSE": {
+        "mean": 0.7414008580304515,
+        "median": 0.7335622639259162,
+        "min": 0.5479722863748202,
+        "max": 0.8602295268552776
+      }
     },
-    "baseline_RMSE": {
-      "mean": 0.7937730757676642,
-      "median": 0.7955488194751791,
-      "min": 0.6247705039457206,
-      "max": 0.8780472827229695
+    "delta_vs_drug_mean": {
+      "mean": -0.05701217540490358,
+      "median": -0.05835274387295791,
+      "min": -0.11428517418928064,
+      "max": 0.016677605891928127,
+      "wins": 19,
+      "n_splits": 20
     },
-    "model_RMSE": {
-      "mean": 0.7776176609243738,
-      "median": 0.801132811348689,
-      "min": 0.5764970884220315,
-      "max": 0.8540083894934134
-    },
-    "cell_simultaneous_coverage": {
-      "mean": 0.85625,
-      "median": 0.875,
-      "min": 0.5,
-      "max": 1
+    "delta_vs_tissue": {
+      "mean": -0.043725861767965134,
+      "median": -0.05190889086407485,
+      "min": -0.101035457960641,
+      "max": 0.033626676140052325,
+      "wins": 18,
+      "n_splits": 20
     }
   },
   "runs": [
     {
       "seed": 20262001,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6102103494623655,
-        "RMSE": 0.8329416358097682
-      },
-      "tissue_model": {
-        "MAE": 0.6167761783776785,
-        "RMSE": 0.8249733776693489
-      },
-      "delta_MAE": 0.006565828915312988,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 7,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.48104401168298877
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6067636494252873,
+          "RMSE": 0.8242420252847709
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6184765102808365,
+          "RMSE": 0.8166983284683136
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5949659304934034,
+          "RMSE": 0.7933749425230656
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 3.062927419354838,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.7908620689655175,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 3.0184978448275865,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.4121325114473846,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.01179771893188386,
+      "delta_molecular_vs_tissue": -0.023510579787433095
     },
     {
       "seed": 20262002,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5917009408602151,
-        "RMSE": 0.7813006166329248
-      },
-      "tissue_model": {
-        "MAE": 0.6126616595769822,
-        "RMSE": 0.7807615445910414
-      },
-      "delta_MAE": 0.02096071871676708,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.5363063101508233
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.5983422619047619,
+          "RMSE": 0.7799144178367649
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6146887914540815,
+          "RMSE": 0.7769532972121872
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5459703664778507,
+          "RMSE": 0.7151946738158329
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.9411129032258065,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.673178571428571,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.8954330357142855,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.353552259570314,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.05237189542691123,
+      "delta_molecular_vs_tissue": -0.06871842497623082
     },
     {
       "seed": 20262003,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5941653225806451,
-        "RMSE": 0.776303549441727
-      },
-      "tissue_model": {
-        "MAE": 0.5553023707978848,
-        "RMSE": 0.7452963474784139
-      },
-      "delta_MAE": -0.038862951782760335,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.5316598852808783
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.599203869047619,
+          "RMSE": 0.7748627568022944
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5738428385416667,
+          "RMSE": 0.7595049645913943
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5056352529231982,
+          "RMSE": 0.6996082433179847
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.13717396313364,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.2177857142857142,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.0959553571428575,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.052112495103244,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.0935686161244208,
+      "delta_molecular_vs_tissue": -0.06820758561846851
     },
     {
       "seed": 20262004,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6332211021505376,
-        "RMSE": 0.841366976120347
-      },
-      "tissue_model": {
-        "MAE": 0.5853471138207142,
-        "RMSE": 0.7959212741761783
-      },
-      "delta_MAE": -0.04787398832982337,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 7,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.5170777557445141
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6368369252873564,
+          "RMSE": 0.8410776212851903
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5912644154121374,
+          "RMSE": 0.8011812113325283
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5225517510980757,
+          "RMSE": 0.7179081512905139
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 1.9485798387096782,
-        "row": 0.9166666666666666,
-        "cell_simultaneous": 0.5,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.9271724137931043,
+          "cell_simultaneous": 0.625,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.9312939655172423,
+          "cell_simultaneous": 0.5,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.9724502626699039,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.11428517418928064,
+      "delta_molecular_vs_tissue": -0.06871266431406164
     },
     {
       "seed": 20262005,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6772345430107527,
-        "RMSE": 0.8696987804258002
-      },
-      "tissue_model": {
-        "MAE": 0.650651985480917,
-        "RMSE": 0.8422215426404475
-      },
-      "delta_MAE": -0.026582557529835737,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.530845513126142
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6800223214285714,
+          "RMSE": 0.8676557983418646
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6662877813625451,
+          "RMSE": 0.8499089028470818
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.6622713418025448,
+          "RMSE": 0.8602295268552776
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.3563830645161286,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.0664999999999996,
+          "cell_simultaneous": 0.75,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.316196428571428,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.3256909066641427,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.017750979626026675,
+      "delta_molecular_vs_tissue": -0.004016439560000307
     },
     {
       "seed": 20262006,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6607970430107527,
-        "RMSE": 0.8780472827229695
-      },
-      "tissue_model": {
-        "MAE": 0.6053374091634172,
-        "RMSE": 0.8320761963190539
-      },
-      "delta_MAE": -0.05545963384733554,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 2,
+        "alpha": 100,
+        "inner_MAE": 0.5119182021768379
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6633943452380952,
+          "RMSE": 0.871645145194509
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5987324839594929,
+          "RMSE": 0.8177539590670992
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.6323591600995452,
+          "RMSE": 0.8274352231606283
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.896762096774193,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.612214285714286,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.8463303571428575,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.102500416706456,
+          "cell_simultaneous": 0.75,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.03103518513854997,
+      "delta_molecular_vs_tissue": 0.033626676140052325
     },
     {
       "seed": 20262007,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5788743279569893,
-        "RMSE": 0.7566114731094783
-      },
-      "tissue_model": {
-        "MAE": 0.5229492160729056,
-        "RMSE": 0.7347542256378918
-      },
-      "delta_MAE": -0.05592511188408378,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.5148013323945237
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.5810848214285715,
+          "RMSE": 0.7532640433225158
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5183262745439087,
+          "RMSE": 0.7266601113480322
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5176307837882828,
+          "RMSE": 0.645585504224521
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.359374999999999,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.161714285714286,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.3195089285714285,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.1314849203846205,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.06345403764028879,
+      "delta_molecular_vs_tissue": -0.000695490755625916
     },
     {
       "seed": 20262008,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6754005376344085,
-        "RMSE": 0.8474115212931645
-      },
-      "tissue_model": {
-        "MAE": 0.6431212554779976,
-        "RMSE": 0.8063443485211996
-      },
-      "delta_MAE": -0.03227928215641096,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 30,
+        "calibration": 6,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.4590115460227144
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6757499999999999,
+          "RMSE": 0.845792837563711
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6420392652894491,
+          "RMSE": 0.8041333715225482
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.6000992675552477,
+          "RMSE": 0.7887898210333563
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.5395161290322585,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 6,
+          "half_width_pGI50": 2.6568666666666667,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 6,
+          "half_width_pGI50": 2.5152166666666664,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 6,
+          "half_width_pGI50": 2.335043330130735,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.07565073244475218,
+      "delta_molecular_vs_tissue": -0.04193999773420143
     },
     {
       "seed": 20262009,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5409952956989248,
-        "RMSE": 0.8077111489799046
-      },
-      "tissue_model": {
-        "MAE": 0.5635217095305866,
-        "RMSE": 0.8082009058023306
-      },
-      "delta_MAE": 0.022526413831661762,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 8,
+        "test": 7
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.4894995891379338
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.5879055829228244,
+          "RMSE": 0.84769621389006
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.610856762877565,
+          "RMSE": 0.8513242935717644
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.6045831888147525,
+          "RMSE": 0.8573360911822566
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.309899193548387,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.025379310344827,
+          "cell_simultaneous": 0.7142857142857143,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.2573987068965513,
+          "cell_simultaneous": 0.8571428571428571,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 1.8371930756535146,
+          "cell_simultaneous": 0.7142857142857143,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": 0.016677605891928127,
+      "delta_molecular_vs_tissue": -0.006273574062812481
     },
     {
       "seed": 20262010,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6298951612903225,
-        "RMSE": 0.857643038135301
-      },
-      "tissue_model": {
-        "MAE": 0.5925016256425026,
-        "RMSE": 0.8104034910413438
-      },
-      "delta_MAE": -0.03739353564781989,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 7,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.5070385711138754
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6320158045977011,
+          "RMSE": 0.8512794017520945
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6021268934729064,
+          "RMSE": 0.8115989211799699
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5623216368598972,
+          "RMSE": 0.8025305662963614
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.1075233870967747,
-        "row": 0.9375,
-        "cell_simultaneous": 0.625,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.0294482758620696,
+          "cell_simultaneous": 0.625,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.0854793103448284,
+          "cell_simultaneous": 0.75,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.0079630939313002,
+          "cell_simultaneous": 0.625,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.0696941677378039,
+      "delta_molecular_vs_tissue": -0.039805256613009155
     },
     {
       "seed": 20262011,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5452251344086021,
-        "RMSE": 0.7195462173249415
-      },
-      "tissue_model": {
-        "MAE": 0.5373083782303243,
-        "RMSE": 0.7080243989689494
-      },
-      "delta_MAE": -0.007916756178277806,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 7,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.530596521920211
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.5464461206896551,
+          "RMSE": 0.7184189535232287
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5409306767142593,
+          "RMSE": 0.7108638750526906
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.4398952187536183,
+          "RMSE": 0.6120672260369918
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 1.967253456221198,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.1926896551724138,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.94614039408867,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.235955417914923,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.10655090193603683,
+      "delta_molecular_vs_tissue": -0.101035457960641
     },
     {
       "seed": 20262012,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6383306451612903,
-        "RMSE": 0.7581884317333134
-      },
-      "tissue_model": {
-        "MAE": 0.6070715469174643,
-        "RMSE": 0.741451106633424
-      },
-      "delta_MAE": -0.031259098243826,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 7,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.5378952305717445
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6445704022988507,
+          "RMSE": 0.7619133546331182
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6101034121636421,
+          "RMSE": 0.7429254500680256
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5553558206442039,
+          "RMSE": 0.7149499312043408
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.4536270161290323,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.542965517241379,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.426683189655172,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.9199071787367394,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.0892145816546468,
+      "delta_molecular_vs_tissue": -0.0547475915194382
     },
     {
       "seed": 20262013,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5149979838709677,
-        "RMSE": 0.6641205386187785
-      },
-      "tissue_model": {
-        "MAE": 0.5409260147110952,
-        "RMSE": 0.6832558776990865
-      },
-      "delta_MAE": 0.025928030840127514,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 30,
+        "calibration": 7,
+        "test": 7
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.5653969424443882
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.5540976190476191,
+          "RMSE": 0.698166450245697
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5819526416001183,
+          "RMSE": 0.7177716314027763
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5200930026469177,
+          "RMSE": 0.6879122687912478
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 1.7917258064516126,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.9244666666666665,
+          "cell_simultaneous": 0.8571428571428571,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.76061875,
+          "cell_simultaneous": 0.8571428571428571,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.9491545479249446,
+          "cell_simultaneous": 0.8571428571428571,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.034004616400701404,
+      "delta_molecular_vs_tissue": -0.06185963895320057
     },
     {
       "seed": 20262014,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5862177419354839,
-        "RMSE": 0.822015307916999
-      },
-      "tissue_model": {
-        "MAE": 0.6366588820019323,
-        "RMSE": 0.8540083894934134
-      },
-      "delta_MAE": 0.0504411400664484,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.4641324216859603
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.5915550595238096,
+          "RMSE": 0.8184079777132515
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6535755595419986,
+          "RMSE": 0.8608311076184902
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5702290461667487,
+          "RMSE": 0.7767236356261511
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.5273920595533497,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.523142857142857,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.4279392857142854,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.3300016775708716,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.021326013357060858,
+      "delta_molecular_vs_tissue": -0.0833465133752499
     },
     {
       "seed": 20262015,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6239166666666666,
-        "RMSE": 0.8571850618325825
-      },
-      "tissue_model": {
-        "MAE": 0.5994388131338142,
-        "RMSE": 0.8421252598248673
-      },
-      "delta_MAE": -0.024477853532852367,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.4812874195565043
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6285044642857143,
+          "RMSE": 0.8488686807759966
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5997344502289552,
+          "RMSE": 0.8327464873154885
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5506642600202437,
+          "RMSE": 0.7811726411822911
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 1.644410483870967,
-        "row": 0.9166666666666666,
-        "cell_simultaneous": 0.5,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 1.4005,
+          "cell_simultaneous": 0.375,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 1.6425910714285719,
+          "cell_simultaneous": 0.5,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 1.5478052963054445,
+          "cell_simultaneous": 0.625,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.07784020426547056,
+      "delta_molecular_vs_tissue": -0.049070190208711506
     },
     {
       "seed": 20262016,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6150134408602151,
-        "RMSE": 0.7677713926816989
-      },
-      "tissue_model": {
-        "MAE": 0.6106232286214734,
-        "RMSE": 0.7621519940845651
-      },
-      "delta_MAE": -0.0043902122387416975,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 28,
+        "calibration": 8,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.5028173614898954
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6191875000000001,
+          "RMSE": 0.7657496130021387
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.6311021868122251,
+          "RMSE": 0.7747137124958308
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5659360498943731,
+          "RMSE": 0.6996521070930853
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.01986370967742,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.018928571428571,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 1.9964624999999998,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 1.7784903818472966,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.05325145010562704,
+      "delta_molecular_vs_tissue": -0.065166136917852
     },
     {
       "seed": 20262017,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.6218051075268817,
-        "RMSE": 0.8621149596239202
-      },
-      "tissue_model": {
-        "MAE": 0.5794363307559376,
-        "RMSE": 0.8362721606252608
-      },
-      "delta_MAE": -0.04236877677094408,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 7,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.4883427745809019
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.6244985632183908,
+          "RMSE": 0.8533317848920288
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5763133466748769,
+          "RMSE": 0.8254662110535277
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.6023856295771685,
+          "RMSE": 0.8435840461263114
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 1.7426774193548384,
-        "row": 0.9166666666666666,
-        "cell_simultaneous": 0.5,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.838103448275862,
+          "cell_simultaneous": 0.5,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.6979495073891622,
+          "cell_simultaneous": 0.5,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.8192711852242587,
+          "cell_simultaneous": 0.75,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.022112933641222354,
+      "delta_molecular_vs_tissue": 0.026072282902291577
     },
     {
       "seed": 20262018,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5545477150537633,
-        "RMSE": 0.7673265890334917
-      },
-      "tissue_model": {
-        "MAE": 0.5543956478807404,
-        "RMSE": 0.7570628365764266
-      },
-      "delta_MAE": -0.0001520671730229628,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 8,
+        "test": 7
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 100,
+        "inner_MAE": 0.5232699695794879
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.5908579638752054,
+          "RMSE": 0.7969654263901412
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.5855317459742518,
+          "RMSE": 0.7836378572263039
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.500559334719438,
+          "RMSE": 0.7067738979126746
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.726936724565757,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.623137931034483,
+          "cell_simultaneous": 0.8571428571428571,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.6603224137931036,
+          "cell_simultaneous": 0.8571428571428571,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.5326878850672756,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.09029862915576736,
+      "delta_molecular_vs_tissue": -0.0849724112548138
     },
     {
       "seed": 20262019,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.5945396505376345,
-        "RMSE": 0.7833864899704536
-      },
-      "tissue_model": {
-        "MAE": 0.6190982280567314,
-        "RMSE": 0.8105508522822015
-      },
-      "delta_MAE": 0.024558577519096958,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 7,
+        "test": 8
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.5178674611607063
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.598525143678161,
+          "RMSE": 0.7826275149869352
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.636345460705834,
+          "RMSE": 0.8141946955700616
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.5630971785311404,
+          "RMSE": 0.7492163765613185
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.2968145161290314,
-        "row": 0.9791666666666666,
-        "cell_simultaneous": 0.875,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 1.9866206896551724,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.2434116379310343,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 7,
+          "half_width_pGI50": 2.066039117312468,
+          "cell_simultaneous": 0.875,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.035427965147020624,
+      "delta_molecular_vs_tissue": -0.07324828217469359
     },
     {
       "seed": 20262020,
-      "role": "development validation; not final test",
-      "baseline": {
-        "MAE": 0.46243077956989254,
-        "RMSE": 0.6247705039457206
-      },
-      "tissue_model": {
-        "MAE": 0.41984378840245773,
-        "RMSE": 0.5764970884220315
-      },
-      "delta_MAE": -0.04258699116743481,
       "counts": {
-        "train": {
-          "cells": 31,
-          "rows": 186
+        "train": 29,
+        "calibration": 8,
+        "test": 7
+      },
+      "selected": {
+        "pca_components": 5,
+        "alpha": 1,
+        "inner_MAE": 0.5699824369661887
+      },
+      "metrics": {
+        "drug_mean": {
+          "MAE": 0.49925697865353047,
+          "RMSE": 0.6574408665693837
         },
-        "calibration": {
-          "cells": 8,
-          "rows": 48
+        "tissue": {
+          "MAE": 0.44086162620220515,
+          "RMSE": 0.6009375367736373
         },
-        "evaluation": {
-          "cells": 8,
-          "rows": 48
+        "molecular": {
+          "MAE": 0.40197166758700253,
+          "RMSE": 0.5479722863748202
         }
       },
-      "coverage": {
-        "nominal": 0.8,
-        "half_width_pGI50": 2.473572580645161,
-        "row": 1,
-        "cell_simultaneous": 1,
-        "status": "observed; no distribution-free guarantee"
-      }
+      "intervals": {
+        "drug_mean": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.525586206896552,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "tissue": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.414825431034483,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        },
+        "molecular": {
+          "nominal": 0.8,
+          "calibration_cells": 8,
+          "half_width_pGI50": 2.2685968484413532,
+          "cell_simultaneous": 1.0,
+          "status": "descriptive only; exchangeability not established"
+        }
+      },
+      "delta_molecular_vs_drug_mean": -0.09728531106652794,
+      "delta_molecular_vs_tissue": -0.03888995861520261
     }
   ],
-  "locked_result": {
-    "baseline": {
-      "MAE": 0.4649663461538462,
-      "RMSE": 0.6050877318444716
-    },
-    "tissue_model": {
-      "MAE": 0.48450514824258645,
-      "RMSE": 0.6203523438654207
-    },
-    "delta_MAE": 0.01953880208874026,
-    "counts": {
-      "train": {
-        "cells": 39,
-        "rows": 234
-      },
-      "calibration": {
-        "cells": 8,
-        "rows": 48
-      },
-      "evaluation": {
-        "cells": 8,
-        "rows": 48
-      }
-    },
-    "coverage": {
-      "nominal": 0.8,
-      "half_width_pGI50": 2.7564312354312355,
-      "row": 1,
-      "cell_simultaneous": 1,
-      "status": "observed; no distribution-free guarantee"
-    },
-    "role": "operational lock only: previously in historical training/calibration, not independent new data"
-  },
-  "locked_status": "operational lock only: previously in historical training/calibration, not independent new data",
-  "tuning": "none; both models fixed before evaluation",
-  "cell_count_total": 55,
-  "locked_cell_count": 8,
-  "development_cell_count": 47,
-  "sources": {
-    "123127": {
-      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=123127&subsetlist=GI50&outputformat=xml",
-      "sha256": "7547424f5a0881446526bde03a203ccb3181bf724775199a89dbf51864c94346",
-      "bytes": 168460,
-      "retrieved_utc": "2026-10-04T13:37:36Z"
-    },
-    "119875": {
-      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=119875&subsetlist=GI50&outputformat=xml",
-      "sha256": "0e11ba7f10d90bccc8e084344ae68815fbeb982d1d93cff2f523b3139e64b1f3",
-      "bytes": 266890,
-      "retrieved_utc": "2026-10-04T13:37:46Z"
-    },
-    "125973": {
-      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=125973&subsetlist=GI50&outputformat=xml",
-      "sha256": "023ddaa733311d528f0f4146011926cc506a5074979ec24fcc56a2b2964e14e6",
-      "bytes": 225628,
-      "retrieved_utc": "2026-10-04T13:37:54Z"
-    },
-    "19893": {
-      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=19893&subsetlist=GI50&outputformat=xml",
-      "sha256": "69b6fe5cf3ff7d277113a869ae9ef884a1bfc3a807b81d1db0076d5c479bac7c",
-      "bytes": 120429,
-      "retrieved_utc": "2026-10-04T13:38:01Z"
-    },
-    "740": {
-      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=740&subsetlist=GI50&outputformat=xml",
-      "sha256": "a10397172de898a8a806f00615ac0735191e8a97b91189048af86ee2303dbe22",
-      "bytes": 176729,
-      "retrieved_utc": "2026-10-04T13:38:09Z"
-    },
-    "141540": {
-      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=141540&subsetlist=GI50&outputformat=xml",
-      "sha256": "47f1d55518295983674dad5d19480bb5678ec59a88ba9b0b82512ac9b566f9ec",
-      "bytes": 199157,
-      "retrieved_utc": "2026-10-04T13:38:16Z"
-    }
-  },
-  "conditions": {
-    "123127": {
-      "high_conc_log10_M": "-4.6",
-      "NumExp": 2273,
-      "rows": 80,
-      "selection": "largest NumExp summary; exclude cell names containing /"
-    },
-    "119875": {
-      "high_conc_log10_M": "-3.3",
-      "NumExp": 114,
-      "rows": 100,
-      "selection": "largest NumExp summary; exclude cell names containing /"
-    },
-    "125973": {
-      "high_conc_log10_M": "-4.6",
-      "NumExp": 31,
-      "rows": 72,
-      "selection": "largest NumExp summary; exclude cell names containing /"
-    },
-    "19893": {
-      "high_conc_log10_M": "-2.6",
-      "NumExp": 1806,
-      "rows": 79,
-      "selection": "largest NumExp summary; exclude cell names containing /"
-    },
-    "740": {
-      "high_conc_log10_M": "-3.6",
-      "NumExp": 124,
-      "rows": 109,
-      "selection": "largest NumExp summary; exclude cell names containing /"
-    },
-    "141540": {
-      "high_conc_log10_M": "-3.0",
-      "NumExp": 36,
-      "rows": 73,
-      "selection": "largest NumExp summary; exclude cell names containing /"
-    }
-  },
-  "maen_code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354",
-  "robust_code_sha256": "87150b406ff24c1f97f09f49fa7927328e64c77967bd6dadb2f11ac61f1f4c45",
-  "elapsed_seconds": 0.03186112502589822,
+  "elapsed_seconds": 11.224075416103005,
   "threads": 1,
   "limitations": [
-    "reused data; overlapping validation cohorts; no independent-trial significance test",
-    "locked cohort was used in historical training/calibration; no claim of truly unseen independent final test",
-    "aggregate conditions and censoring not resolved; no clinical or novel compound inference"
+    "no independent data final test; locked cells not evaluated",
+    "same overlapping development splits; wins are not independent trials",
+    "upstream FPKM normalization is supplied by source; downstream imputation/selection/scaling/PCA fit only training",
+    "representative filtering changes cohort; compare only recalculated three models here",
+    "aggregate GI50 censoring/conditions unresolved; no clinical efficacy claim"
   ],
-  "protocol_code_commit": "84888b3"
+  "development_cells": 44,
+  "tests": "14 passing tests recorded locally; not CI",
+  "freeze": "molecular protocol prospective; imported code/environment additionally locked after result",
+  "source": {
+    "url": "https://discover.nci.nih.gov/cellminer/download/processeddataset/nci60_RNA__RNA_seq_composite_expression.zip",
+    "sha256": "fe0bc1f8fda562c5ebf016c90f29e18bdf3145eebe8fda01365eb03d2200dff1",
+    "bytes": 12227542,
+    "version": "CellMiner 2.15",
+    "genome": "HG-19",
+    "source_date_label": "09-11-2025",
+    "scale": "log2(FPKM + 1)",
+    "gene_records": 23808,
+    "cell_columns": 60,
+    "missing_values": 0,
+    "zero_values": 355270,
+    "terms": "https://discover.nci.nih.gov/disclaimer.jsp",
+    "redistribution": "not assumed; original matrix stays ignored local cache"
+  }
 }

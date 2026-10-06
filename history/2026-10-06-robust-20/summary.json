@@ -1,0 +1,854 @@
+{
+  "date": "2026-10-06",
+  "protocol": "fixed 20-seed grouped development validation plus operational locked cohort",
+  "plan_sha256": "3846b8d81e0ccc29606fdf89f85540e697f45decfaa26b1c850b426e43f65548",
+  "registered_utc": "2026-10-06T04:05:52Z",
+  "summary": {
+    "n_splits": 20,
+    "delta_sign": "model MAE minus baseline MAE; negative improves",
+    "delta_MAE": {
+      "mean": -0.014827405329687732,
+      "median": -0.025530205531344052,
+      "min": -0.05592511188408378,
+      "max": 0.0504411400664484,
+      "win_rate": 0.7,
+      "worst": 0.0504411400664484
+    },
+    "baseline_MAE": {
+      "mean": 0.5974759744623656,
+      "median": 0.602375,
+      "min": 0.46243077956989254,
+      "max": 0.6772345430107527
+    },
+    "model_MAE": {
+      "mean": 0.5826485691326778,
+      "median": 0.5959702193881584,
+      "min": 0.41984378840245773,
+      "max": 0.650651985480917
+    },
+    "baseline_RMSE": {
+      "mean": 0.7937730757676642,
+      "median": 0.7955488194751791,
+      "min": 0.6247705039457206,
+      "max": 0.8780472827229695
+    },
+    "model_RMSE": {
+      "mean": 0.7776176609243738,
+      "median": 0.801132811348689,
+      "min": 0.5764970884220315,
+      "max": 0.8540083894934134
+    },
+    "cell_simultaneous_coverage": {
+      "mean": 0.85625,
+      "median": 0.875,
+      "min": 0.5,
+      "max": 1
+    }
+  },
+  "runs": [
+    {
+      "seed": 20262001,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6102103494623655,
+        "RMSE": 0.8329416358097682
+      },
+      "tissue_model": {
+        "MAE": 0.6167761783776785,
+        "RMSE": 0.8249733776693489
+      },
+      "delta_MAE": 0.006565828915312988,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 3.062927419354838,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262002,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5917009408602151,
+        "RMSE": 0.7813006166329248
+      },
+      "tissue_model": {
+        "MAE": 0.6126616595769822,
+        "RMSE": 0.7807615445910414
+      },
+      "delta_MAE": 0.02096071871676708,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.9411129032258065,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262003,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5941653225806451,
+        "RMSE": 0.776303549441727
+      },
+      "tissue_model": {
+        "MAE": 0.5553023707978848,
+        "RMSE": 0.7452963474784139
+      },
+      "delta_MAE": -0.038862951782760335,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.13717396313364,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262004,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6332211021505376,
+        "RMSE": 0.841366976120347
+      },
+      "tissue_model": {
+        "MAE": 0.5853471138207142,
+        "RMSE": 0.7959212741761783
+      },
+      "delta_MAE": -0.04787398832982337,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 1.9485798387096782,
+        "row": 0.9166666666666666,
+        "cell_simultaneous": 0.5,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262005,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6772345430107527,
+        "RMSE": 0.8696987804258002
+      },
+      "tissue_model": {
+        "MAE": 0.650651985480917,
+        "RMSE": 0.8422215426404475
+      },
+      "delta_MAE": -0.026582557529835737,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.3563830645161286,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262006,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6607970430107527,
+        "RMSE": 0.8780472827229695
+      },
+      "tissue_model": {
+        "MAE": 0.6053374091634172,
+        "RMSE": 0.8320761963190539
+      },
+      "delta_MAE": -0.05545963384733554,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.896762096774193,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262007,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5788743279569893,
+        "RMSE": 0.7566114731094783
+      },
+      "tissue_model": {
+        "MAE": 0.5229492160729056,
+        "RMSE": 0.7347542256378918
+      },
+      "delta_MAE": -0.05592511188408378,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.359374999999999,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262008,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6754005376344085,
+        "RMSE": 0.8474115212931645
+      },
+      "tissue_model": {
+        "MAE": 0.6431212554779976,
+        "RMSE": 0.8063443485211996
+      },
+      "delta_MAE": -0.03227928215641096,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.5395161290322585,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262009,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5409952956989248,
+        "RMSE": 0.8077111489799046
+      },
+      "tissue_model": {
+        "MAE": 0.5635217095305866,
+        "RMSE": 0.8082009058023306
+      },
+      "delta_MAE": 0.022526413831661762,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.309899193548387,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262010,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6298951612903225,
+        "RMSE": 0.857643038135301
+      },
+      "tissue_model": {
+        "MAE": 0.5925016256425026,
+        "RMSE": 0.8104034910413438
+      },
+      "delta_MAE": -0.03739353564781989,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.1075233870967747,
+        "row": 0.9375,
+        "cell_simultaneous": 0.625,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262011,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5452251344086021,
+        "RMSE": 0.7195462173249415
+      },
+      "tissue_model": {
+        "MAE": 0.5373083782303243,
+        "RMSE": 0.7080243989689494
+      },
+      "delta_MAE": -0.007916756178277806,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 1.967253456221198,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262012,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6383306451612903,
+        "RMSE": 0.7581884317333134
+      },
+      "tissue_model": {
+        "MAE": 0.6070715469174643,
+        "RMSE": 0.741451106633424
+      },
+      "delta_MAE": -0.031259098243826,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.4536270161290323,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262013,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5149979838709677,
+        "RMSE": 0.6641205386187785
+      },
+      "tissue_model": {
+        "MAE": 0.5409260147110952,
+        "RMSE": 0.6832558776990865
+      },
+      "delta_MAE": 0.025928030840127514,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 1.7917258064516126,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262014,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5862177419354839,
+        "RMSE": 0.822015307916999
+      },
+      "tissue_model": {
+        "MAE": 0.6366588820019323,
+        "RMSE": 0.8540083894934134
+      },
+      "delta_MAE": 0.0504411400664484,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.5273920595533497,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262015,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6239166666666666,
+        "RMSE": 0.8571850618325825
+      },
+      "tissue_model": {
+        "MAE": 0.5994388131338142,
+        "RMSE": 0.8421252598248673
+      },
+      "delta_MAE": -0.024477853532852367,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 1.644410483870967,
+        "row": 0.9166666666666666,
+        "cell_simultaneous": 0.5,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262016,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6150134408602151,
+        "RMSE": 0.7677713926816989
+      },
+      "tissue_model": {
+        "MAE": 0.6106232286214734,
+        "RMSE": 0.7621519940845651
+      },
+      "delta_MAE": -0.0043902122387416975,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.01986370967742,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262017,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.6218051075268817,
+        "RMSE": 0.8621149596239202
+      },
+      "tissue_model": {
+        "MAE": 0.5794363307559376,
+        "RMSE": 0.8362721606252608
+      },
+      "delta_MAE": -0.04236877677094408,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 1.7426774193548384,
+        "row": 0.9166666666666666,
+        "cell_simultaneous": 0.5,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262018,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5545477150537633,
+        "RMSE": 0.7673265890334917
+      },
+      "tissue_model": {
+        "MAE": 0.5543956478807404,
+        "RMSE": 0.7570628365764266
+      },
+      "delta_MAE": -0.0001520671730229628,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.726936724565757,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262019,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.5945396505376345,
+        "RMSE": 0.7833864899704536
+      },
+      "tissue_model": {
+        "MAE": 0.6190982280567314,
+        "RMSE": 0.8105508522822015
+      },
+      "delta_MAE": 0.024558577519096958,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.2968145161290314,
+        "row": 0.9791666666666666,
+        "cell_simultaneous": 0.875,
+        "status": "observed; no distribution-free guarantee"
+      }
+    },
+    {
+      "seed": 20262020,
+      "role": "development validation; not final test",
+      "baseline": {
+        "MAE": 0.46243077956989254,
+        "RMSE": 0.6247705039457206
+      },
+      "tissue_model": {
+        "MAE": 0.41984378840245773,
+        "RMSE": 0.5764970884220315
+      },
+      "delta_MAE": -0.04258699116743481,
+      "counts": {
+        "train": {
+          "cells": 31,
+          "rows": 186
+        },
+        "calibration": {
+          "cells": 8,
+          "rows": 48
+        },
+        "evaluation": {
+          "cells": 8,
+          "rows": 48
+        }
+      },
+      "coverage": {
+        "nominal": 0.8,
+        "half_width_pGI50": 2.473572580645161,
+        "row": 1,
+        "cell_simultaneous": 1,
+        "status": "observed; no distribution-free guarantee"
+      }
+    }
+  ],
+  "locked_result": {
+    "baseline": {
+      "MAE": 0.4649663461538462,
+      "RMSE": 0.6050877318444716
+    },
+    "tissue_model": {
+      "MAE": 0.48450514824258645,
+      "RMSE": 0.6203523438654207
+    },
+    "delta_MAE": 0.01953880208874026,
+    "counts": {
+      "train": {
+        "cells": 39,
+        "rows": 234
+      },
+      "calibration": {
+        "cells": 8,
+        "rows": 48
+      },
+      "evaluation": {
+        "cells": 8,
+        "rows": 48
+      }
+    },
+    "coverage": {
+      "nominal": 0.8,
+      "half_width_pGI50": 2.7564312354312355,
+      "row": 1,
+      "cell_simultaneous": 1,
+      "status": "observed; no distribution-free guarantee"
+    },
+    "role": "operational lock only: previously in historical training/calibration, not independent new data"
+  },
+  "locked_status": "operational lock only: previously in historical training/calibration, not independent new data",
+  "tuning": "none; both models fixed before evaluation",
+  "cell_count_total": 55,
+  "locked_cell_count": 8,
+  "development_cell_count": 47,
+  "sources": {
+    "123127": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=123127&subsetlist=GI50&outputformat=xml",
+      "sha256": "7547424f5a0881446526bde03a203ccb3181bf724775199a89dbf51864c94346",
+      "bytes": 168460,
+      "retrieved_utc": "2026-10-04T13:37:36Z"
+    },
+    "119875": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=119875&subsetlist=GI50&outputformat=xml",
+      "sha256": "0e11ba7f10d90bccc8e084344ae68815fbeb982d1d93cff2f523b3139e64b1f3",
+      "bytes": 266890,
+      "retrieved_utc": "2026-10-04T13:37:46Z"
+    },
+    "125973": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=125973&subsetlist=GI50&outputformat=xml",
+      "sha256": "023ddaa733311d528f0f4146011926cc506a5074979ec24fcc56a2b2964e14e6",
+      "bytes": 225628,
+      "retrieved_utc": "2026-10-04T13:37:54Z"
+    },
+    "19893": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=19893&subsetlist=GI50&outputformat=xml",
+      "sha256": "69b6fe5cf3ff7d277113a869ae9ef884a1bfc3a807b81d1db0076d5c479bac7c",
+      "bytes": 120429,
+      "retrieved_utc": "2026-10-04T13:38:01Z"
+    },
+    "740": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=740&subsetlist=GI50&outputformat=xml",
+      "sha256": "a10397172de898a8a806f00615ac0735191e8a97b91189048af86ee2303dbe22",
+      "bytes": 176729,
+      "retrieved_utc": "2026-10-04T13:38:09Z"
+    },
+    "141540": {
+      "url": "https://dtp.cancer.gov/dtpstandard/servlet/SubSets?subsettype=COMPOUND&searchtype=NSC&searchlist=141540&subsetlist=GI50&outputformat=xml",
+      "sha256": "47f1d55518295983674dad5d19480bb5678ec59a88ba9b0b82512ac9b566f9ec",
+      "bytes": 199157,
+      "retrieved_utc": "2026-10-04T13:38:16Z"
+    }
+  },
+  "conditions": {
+    "123127": {
+      "high_conc_log10_M": "-4.6",
+      "NumExp": 2273,
+      "rows": 80,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "119875": {
+      "high_conc_log10_M": "-3.3",
+      "NumExp": 114,
+      "rows": 100,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "125973": {
+      "high_conc_log10_M": "-4.6",
+      "NumExp": 31,
+      "rows": 72,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "19893": {
+      "high_conc_log10_M": "-2.6",
+      "NumExp": 1806,
+      "rows": 79,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "740": {
+      "high_conc_log10_M": "-3.6",
+      "NumExp": 124,
+      "rows": 109,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    },
+    "141540": {
+      "high_conc_log10_M": "-3.0",
+      "NumExp": 36,
+      "rows": 73,
+      "selection": "largest NumExp summary; exclude cell names containing /"
+    }
+  },
+  "maen_code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354",
+  "robust_code_sha256": "87150b406ff24c1f97f09f49fa7927328e64c77967bd6dadb2f11ac61f1f4c45",
+  "elapsed_seconds": 0.03186112502589822,
+  "threads": 1,
+  "limitations": [
+    "reused data; overlapping validation cohorts; no independent-trial significance test",
+    "locked cohort was used in historical training/calibration; no claim of truly unseen independent final test",
+    "aggregate conditions and censoring not resolved; no clinical or novel compound inference"
+  ],
+  "protocol_code_commit": "84888b3"
+}
