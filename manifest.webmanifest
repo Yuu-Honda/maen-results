@@ -1,14 +1,26 @@
 {
-  "name": "MAEN — 薬の効きやすさ予測の検証",
+  "name": "MAEN — 細胞の変化から、次の仮説へ。",
   "short_name": "MAEN",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0d3b3a",
-  "theme_color": "#0d3b3a",
+  "background_color": "#f5f3ec",
+  "theme_color": "#103f3b",
   "icons": [
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
-    {"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"}
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
   ]
 }

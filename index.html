@@ -3,320 +3,153 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MAEN — 薬の効きやすさを予測する小さな検証</title>
+<title>MAEN — 細胞の変化から、次の仮説へ。</title>
+<meta name="description" content="公開されたがん細胞のRNAとタンパク質量を使い、薬剤応答の予測と既知の投与条件の逆検索を検証する、Yuu Hondaの個人プロジェクト。結果・対照・限界を公開しています。">
+<meta name="theme-color" content="#103f3b">
+<meta name="apple-mobile-web-app-title" content="MAEN">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#0d3b3a">
-<meta name="apple-mobile-web-app-title" content="MAEN">
 <link rel="alternate" hreflang="ja" href="index.html">
 <link rel="alternate" hreflang="en" href="en.html">
-<meta name="description" content="公開されているがん細胞の実験データを使い、既知の抗がん剤がどの細胞に効きやすいかを計算で予測し、答え合わせをする個人の検証記録です。">
-<style>
-:root{
-  color-scheme:light dark;
-  --bg:#f6f7f4;--surface:#ffffff;--surface-2:#eef1ec;--ink:#1d2730;--sub:#5a6672;--line:#dde2dc;
-  --accent:#0f7a6c;--accent-soft:#dcefea;--warm:#c8553d;--warm-soft:#fbeae4;--gray:#8a949e;
-  --hero-1:#0d3b3a;--hero-2:#12564f;--hero-ink:#f2f7f4;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#11161a;--surface:#182026;--surface-2:#1f2930;--ink:#e6ece9;--sub:#a3afb7;--line:#2b363e;
-    --accent:#4cc3ad;--accent-soft:#163a35;--warm:#f08a70;--warm-soft:#3a221d;--gray:#7d8891;
-    --hero-1:#0a1f1f;--hero-2:#0f3a36;}
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-underline-offset:3px}
-img{max-width:100%}
-.wrap{max-width:1040px;margin:auto;padding:0 20px}
-h2{font-size:clamp(22px,3.4vw,30px);line-height:1.45;margin:0 0 14px;letter-spacing:.01em}
-h3{font-size:18px;margin:0 0 6px}
-p{margin:0 0 14px}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
-.sub{color:var(--sub)}
-.num{font-variant-numeric:tabular-nums}
-
-/* ---------- Hero ---------- */
-.hero{position:relative;overflow:hidden;color:var(--hero-ink);background:radial-gradient(120% 90% at 80% 20%,var(--hero-2),var(--hero-1) 70%)}
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:center;min-height:min(88vh,680px);padding-top:56px;padding-bottom:64px}
-.hero .eyebrow{color:#8fe3d1}
-.hero h1{font-size:clamp(30px,5.2vw,52px);line-height:1.3;margin:0 0 18px;letter-spacing:.01em}
-.hero h1 em{font-style:normal;background:linear-gradient(90deg,#8fe3d1,#f6c49b);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .lead{font-size:clamp(16px,2vw,19px);color:#cfe2dc;max-width:34em}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px;padding:0;list-style:none}
-.badges li{font-size:13px;padding:5px 12px;border:1px solid rgba(255,255,255,.22);border-radius:99px;background:rgba(255,255,255,.06)}
-.hero-note{font-size:13px;color:#cfe2dc;margin:-10px 0 22px}.hero-note a{color:#f6c49b}
-.lang{position:absolute;top:16px;right:16px;z-index:5;display:flex;border:1px solid rgba(255,255,255,.28);border-radius:99px;overflow:hidden;font-size:13px;background:rgba(0,0,0,.18)}
-.lang a,.lang span{padding:6px 14px;color:#e7f2ee;text-decoration:none}
-.lang span{background:#8fe3d1;color:#0d3b3a;font-weight:700}
-.lang a:hover{background:rgba(255,255,255,.12)}
-.cta{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#0d3b3a;background:#8fe3d1;padding:12px 22px;border-radius:99px;text-decoration:none;transition:transform .2s}
-.cta:hover{transform:translateY(-2px)}
-
-/* floating cells background */
-.cells{position:absolute;inset:0;z-index:1;pointer-events:none}
-.cells span{position:absolute;border-radius:50%;border:1px solid rgba(143,227,209,.28);background:radial-gradient(circle at 35% 35%,rgba(143,227,209,.18),rgba(143,227,209,.03) 60%);animation:drift 18s ease-in-out infinite}
-.cells span::after{content:"";position:absolute;width:28%;height:28%;left:40%;top:36%;border-radius:50%;background:rgba(143,227,209,.22)}
-.cells span:nth-child(1){width:90px;height:90px;left:4%;top:12%;animation-duration:19s}
-.cells span:nth-child(2){width:46px;height:46px;left:38%;top:78%;animation-duration:15s;animation-delay:-4s}
-.cells span:nth-child(3){width:130px;height:130px;left:86%;top:62%;animation-duration:23s;animation-delay:-9s}
-.cells span:nth-child(4){width:34px;height:34px;left:58%;top:8%;animation-duration:13s;animation-delay:-2s}
-.cells span:nth-child(5){width:64px;height:64px;left:20%;top:64%;animation-duration:21s;animation-delay:-12s}
-.cells span:nth-child(6){width:24px;height:24px;left:72%;top:30%;animation-duration:11s;animation-delay:-6s}
-@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(18px,-22px) scale(1.06)}66%{transform:translate(-14px,12px) scale(.96)}}
-
-/* prediction-vs-actual visual */
-.viz{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:22px 22px 18px;backdrop-filter:blur(4px)}
-.viz-title{font-size:13px;color:#cfe2dc;margin-bottom:14px;display:flex;justify-content:space-between;gap:8px}
-.lane{display:grid;grid-template-columns:5.5em 1fr;gap:10px;align-items:center;margin:10px 0}
-.lane b{font-size:13px;font-weight:600;color:#e7f2ee}
-.track{position:relative;height:38px;border-radius:10px;background:rgba(255,255,255,.07)}
-.track::before{content:"";position:absolute;left:62%;top:-4px;bottom:-4px;width:2px;background:#f6c49b;border-radius:2px}
-.dot{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#8fe3d1;box-shadow:0 0 0 6px rgba(143,227,209,.18);animation:aim 6s cubic-bezier(.45,.05,.2,1) infinite}
-.gap{position:absolute;top:50%;height:2px;background:repeating-linear-gradient(90deg,#8fe3d1 0 5px,transparent 5px 9px);animation:gap 6s cubic-bezier(.45,.05,.2,1) infinite}
-.lane:nth-child(2) .dot{--from:8%;--to:30%}.lane:nth-child(2) .gap{--from:8%;--to:30%}
-.lane:nth-child(3) .dot{--from:10%;--to:38%;animation-delay:.25s}.lane:nth-child(3) .gap{--from:10%;--to:38%;animation-delay:.25s}
-.lane:nth-child(4) .dot{--from:12%;--to:50%;animation-delay:.5s}.lane:nth-child(4) .gap{--from:12%;--to:50%;animation-delay:.5s}
-@keyframes aim{0%{left:var(--from);opacity:0}12%{opacity:1}55%,88%{left:var(--to);opacity:1}100%{left:var(--to);opacity:0}}
-@keyframes gap{0%{left:var(--from);right:38%;opacity:0}12%{opacity:1}55%,88%{left:var(--to);right:38%;opacity:1}100%{left:var(--to);right:38%;opacity:0}}
-.viz-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#cfe2dc;margin-top:12px}
-.viz-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;background:#8fe3d1;margin-right:6px;vertical-align:-1px}
-.viz-legend i.t{border-radius:2px;width:3px;height:12px;background:#f6c49b}
-.viz-note{font-size:11.5px;color:#a9c3bb;margin-top:8px}
-
-/* ---------- Sections ---------- */
-section{padding:64px 0}
-section+section{border-top:1px solid var(--line)}
-.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
-.card .k{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent);margin-bottom:6px}
-.card p:last-child{margin:0}
-
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 8px;padding:0;list-style:none}
-.steps li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 18px 18px}
-.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;margin-bottom:10px}
-.steps li p{font-size:14.5px;margin:0;color:var(--sub)}
-.ico{font-size:26px;line-height:1;margin-bottom:6px}
-
-.explain{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
-.box{background:var(--surface-2);border-radius:14px;padding:20px}
-.box p:last-child{margin:0}
-.scale{display:flex;align-items:flex-end;gap:6px;margin:12px 0 4px;height:70px}
-.scale div{flex:1;background:var(--accent);opacity:.25;border-radius:6px 6px 0 0}
-.scale div:nth-child(1){height:18%}.scale div:nth-child(2){height:36%;opacity:.4}.scale div:nth-child(3){height:58%;opacity:.6}.scale div:nth-child(4){height:80%;opacity:.8}.scale div:nth-child(5){height:100%;opacity:1}
-.scale-label{display:flex;justify-content:space-between;font-size:12px;color:var(--sub)}
-
-/* model comparison bars */
-.models{display:grid;gap:14px;margin:26px 0}
-.model{display:grid;grid-template-columns:minmax(0,15em) 1fr;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.model h3{font-size:16px}
-.model p{font-size:13.5px;color:var(--sub);margin:0}
-.bar{position:relative;height:30px;background:var(--surface-2);border-radius:8px;overflow:hidden}
-.bar span{position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--c,var(--gray));border-radius:8px;transform-origin:left;animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both}
-.bar output{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-weight:700;font-size:15px}
-@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.fold{font-size:13px;color:var(--sub)}
-
-figure{margin:22px 0 6px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
-figcaption{font-size:13px;color:#5a6672;margin-top:6px}
-
-.knowns{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
-.knowns .card ul{margin:0;padding-left:1.2em}
-.knowns .card li{margin:6px 0}
-.ok{border-top:4px solid var(--accent)}
-.ng{border-top:4px solid var(--warm)}
-.disc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.disc-item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--warm);border-radius:12px;padding:18px 20px}
-.disc-item h3{font-size:16px}
-.disc-item p{font-size:14.5px;margin:0}
-.callout{border-left:4px solid var(--warm);background:var(--warm-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0}
-
-details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin:12px 0}
-summary{cursor:pointer;font-weight:700;padding:14px 0}
-details[open]>summary{color:var(--accent)}
-details p{font-size:15px}
-.scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-top:16px}
-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:14.5px}
-th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
-th:first-child,td:first-child{text-align:left}
-thead th{font-size:13px;color:var(--sub);font-weight:600}
-td.best{color:var(--accent);font-weight:700}
-tbody tr:last-child td{border-bottom:0}
-.links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px}
-
-footer{padding:36px 0 56px;border-top:1px solid var(--line);color:var(--sub);font-size:13.5px}
-footer p{margin:0 0 8px}
-
-
-@media (max-width:860px){
-  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:44px;padding-bottom:48px}
-  .steps{grid-template-columns:1fr 1fr}
-}
-@media (max-width:640px){
-  .wrap{padding:0 16px}
-  .hero .wrap{padding-top:72px}
-  section{padding:46px 0}
-  .summary,.explain,.knowns,.steps,.disc{grid-template-columns:1fr}
-  .model{grid-template-columns:1fr;gap:10px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .dot{left:var(--to)}.gap{left:var(--to);right:38%}
-}
-</style>
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
 </head>
 <body>
-
-<header class="hero">
-  <nav class="lang" aria-label="言語 / Language"><span aria-current="page" lang="ja">日本語</span><a href="en.html" lang="en" hreflang="en">English</a></nav>
-  <div class="cells" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">MAEN ・ 個人の検証記録</div>
-      <h1>この薬は、どのがん細胞に<em>効きやすい</em>？<br>計算で当てて、実験結果と答え合わせ。</h1>
-      <p class="lead">米国国立がん研究所（NCI）が公開している細胞実験の結果を使って、既存の抗がん剤6種類がどの細胞に効きやすいかを予測し、その「ずれ」を測っている小さな検証です。</p>
-      <ul class="badges">
-        <li>個人の趣味プロジェクト</li>
-        <li>AIを使って運用</li>
-        <li>公開データのみ使用</li>
-        <li>NCIとは無関係</li>
-        <li>治療効果の主張なし</li>
-      </ul>
-      <p class="hero-note">専門家による研究ではありません。<a href="#disclaimer">免責事項</a>を必ずお読みください。</p>
-      <a class="cta" href="#what">そもそも何の話？ ↓</a>
-    </div>
-    <div class="viz" role="img" aria-label="予測（点）が実験値（縦線）に近づくイメージ。薬剤平均、組織、分子の順に近づきます。">
-      <div class="viz-title"><span>予測と実験値の距離（イメージ）</span><span>→ 実験値</span></div>
-      <div class="lane"><b>薬剤平均</b><div class="track"><div class="gap"></div><div class="dot"></div></div></div>
-      <div class="lane"><b>＋組織</b><div class="track"><div class="gap"></div><div class="dot"></div></div></div>
-      <div class="lane"><b>＋RNA</b><div class="track"><div class="gap"></div><div class="dot"></div></div></div>
-      <div class="viz-legend"><span><i></i>予測</span><span><i class="t"></i>実際の実験値</span></div>
-      <p class="viz-note">動きは説明用の模式図です。実際の数値は下の「結果」を見てください。</p>
-    </div>
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="MAEN"><img src="favicon.svg" width="30" height="30" alt="">MAEN</a>
+    <nav class="nav-links" id="site-navigation" aria-label="主なページ内リンク">
+      <a href="#approach">取り組み</a><a href="#protein">タンパク質</a><a href="#rna">RNA</a><a href="#next">次の一歩</a><a href="#evidence">記録</a>
+    </nav>
+    <nav class="language" aria-label="Language / 言語"><span lang="ja" aria-current="page">JP</span><span class="separator" aria-hidden="true">/</span><a href="en.html" lang="en" hreflang="en" aria-label="Read in English">EN</a></nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"></span>メニュー</button>
   </div>
 </header>
-
-<main>
-
-<section aria-labelledby="tldr"><div class="wrap">
-  <div class="eyebrow">ひとことで</div>
-  <h2 id="tldr">3行でわかるMAEN</h2>
-  <div class="summary">
-    <div class="card"><div class="k">何をしている？</div><p>「この薬はこの細胞にどれくらいの濃度で効くか」を計算で予測し、実際の実験値と比べています。</p></div>
-    <div class="card"><div class="k">誰が・どこで？</div><p>Yuu Honda の個人プロジェクトです。コードの作成・計算・文章作成は主にAIに任せて回しており、医療や創薬の専門家が監修したものではありません。データはNCIの公開データです。</p></div>
-    <div class="card"><div class="k">結果は？</div><p>細胞の<strong>RNA（遺伝子の働き具合）</strong>を使うと、予測のずれが平均で約9%小さくなりました。ただし探索段階で、まだ確定した結論ではありません。</p></div>
-  </div>
-</div></section>
-
-<section id="what" aria-labelledby="what-h"><div class="wrap">
-  <div class="eyebrow">そもそも何の話？</div>
-  <h2 id="what-h">同じ薬でも、効きやすい細胞と効きにくい細胞がある</h2>
-  <p>がんの細胞は種類によって性質が違うので、同じ抗がん剤でも、少しの量で増えなくなる細胞もあれば、たくさん使わないと止まらない細胞もあります。NCIは数十年にわたり、約60種類のがん細胞（<strong>NCI-60</strong>）に多くの薬をかける実験を行い、その結果を公開しています。</p>
-  <p>MAENはこの公開結果を「答え」として使い、<strong>見せていない細胞に対して、薬の効きやすさを当てられるか</strong>を試しています。</p>
-
-  <ol class="steps">
-    <li><div class="ico" aria-hidden="true">🧫</div><h3>公開データを取得</h3><p>NCIの公式サイトから、6種類の既存抗がん剤の実験結果と、細胞のRNAデータをダウンロード。</p></li>
-    <li><div class="ico" aria-hidden="true">✂️</div><h3>細胞を分ける</h3><p>細胞を「学習用」と「答え合わせ用」に分けます。答え合わせ用は予測が終わるまで使いません。</p></li>
-    <li><div class="ico" aria-hidden="true">🧮</div><h3>予測する</h3><p>学習用の細胞だけを使って、答え合わせ用の細胞での効きやすさを予測。</p></li>
-    <li><div class="ico" aria-hidden="true">📏</div><h3>ずれを測る</h3><p>予測と実際の実験値の差の平均（MAE）を計算。小さいほど良い予測です。</p></li>
-  </ol>
-
-  <div class="explain">
-    <div class="box">
-      <h3>「効きやすさ」の物差し：GI50</h3>
-      <p>細胞の増え方を半分に抑えるのに必要な薬の濃度です。少ない濃度で効くほど「効きやすい」。ここでは扱いやすいように対数（pGI50）に直しています。</p>
-      <div class="scale" aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div>
-      <div class="scale-label"><span>効きにくい</span><span>効きやすい</span></div>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>MAEN / 公開データによる個人の検証</p>
+        <h1 id="hero-title">細胞の変化から、<br><span>次の仮説へ。</span></h1>
+        <p class="hero-lead">ある物質が細胞をどう変えるのか。その変化から、何を加えたのかをたどれるのか。公開されたがん細胞のデータを使って、小さく計算し、実測と照らし合わせています。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#protein">最新の検証を見る<span aria-hidden="true">↗</span></a><a class="text-link" href="#next">これから目指すこと<span aria-hidden="true">↓</span></a></div>
+        <p class="hero-caption">Yuu Honda の個人プロジェクト。主にAIを使って運用しています。<br>専門家の監修・査読はありません。<a href="#disclaimer">医療上の判断には使えません。</a></p>
+      </div>
+      <div class="signature-panel" aria-hidden="true">
+  <div class="panel-heading"><span>CHANGE → HYPOTHESIS</span><span class="panel-tag">模式図</span></div>
+  <svg class="signature-svg" viewBox="0 0 410 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="signal" x1="10" y1="0" x2="180" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#B7E5CF" stop-opacity=".2"/><stop offset="1" stop-color="#B7E5CF" stop-opacity=".7"/></linearGradient></defs>
+    <circle cx="105" cy="136" r="91" stroke="#B7E5CF" stroke-opacity=".12"/>
+    <circle cx="105" cy="136" r="67" stroke="#B7E5CF" stroke-opacity=".16"/>
+    <circle cx="105" cy="136" r="41" fill="#B7E5CF" fill-opacity=".06" stroke="#B7E5CF" stroke-opacity=".25"/>
+    <path d="M55 105h38M76 118h57M52 131h74M79 144h40M62 157h86M87 170h38" stroke="url(#signal)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M196 136h42" stroke="#B7E5CF" stroke-opacity=".65" class="signature-path"/>
+    <path d="m231 131 7 5-7 5" stroke="#B7E5CF" stroke-opacity=".65"/>
+    <rect x="253" y="70" width="141" height="44" rx="4" fill="#B7E5CF" fill-opacity=".12" stroke="#B7E5CF" stroke-opacity=".5"/>
+    <circle cx="271" cy="92" r="5" fill="#B7E5CF"/><path d="M286 87h80M286 96h49" stroke="#B7E5CF" stroke-opacity=".6" stroke-linecap="round"/>
+    <rect x="253" y="121" width="141" height="44" rx="4" stroke="#B7E5CF" stroke-opacity=".2"/>
+    <circle cx="271" cy="143" r="5" fill="#B7E5CF" fill-opacity=".3"/><path d="M286 138h61M286 147h40" stroke="#B7E5CF" stroke-opacity=".3" stroke-linecap="round"/>
+    <rect x="253" y="172" width="141" height="44" rx="4" stroke="#B7E5CF" stroke-opacity=".14"/>
+    <circle cx="271" cy="194" r="5" fill="#B7E5CF" fill-opacity=".18"/><path d="M286 189h42M286 198h66" stroke="#B7E5CF" stroke-opacity=".2" stroke-linecap="round"/>
+    <circle cx="39" cy="74" r="3" fill="#B7E5CF" fill-opacity=".6"/><circle cx="172" cy="197" r="3" fill="#B7E5CF" fill-opacity=".5"/>
+    <path d="M22 234h372" stroke="#B7E5CF" stroke-opacity=".1"/><path d="M105 230v8M324 230v8" stroke="#B7E5CF" stroke-opacity=".25"/>
+  </svg>
+  <div class="panel-foot"><span>細胞の変化を読む</span><span>既知の条件を探す</span></div>
+</div>
     </div>
-    <div class="box">
-      <h3>「ずれ」の読み方：MAE</h3>
-      <p>pGI50が1違うと、必要な濃度は10倍違います。MAE 0.55は、予測が実際の濃度から<strong>平均で約3.6倍</strong>（幾何平均）ずれている、というイメージです。</p>
-      <p class="sub">対象の薬：ドキソルビシン、シスプラチン、パクリタキセル、フルオロウラシル、メトトレキサート、エトポシド</p>
+    <div class="container hero-facts">
+      <div class="hero-fact"><strong>78</strong><span>投与条件 / MCF7</span></div>
+      <div class="hero-fact"><strong>69.9<span>%</span></strong><span>別反復から1位で再発見</span></div>
+      <div class="hero-fact"><strong>02</strong><span>公開データ / 2つの検証</span></div>
     </div>
-  </div>
-</div></section>
+  </section>
 
-<section id="result" aria-labelledby="result-h"><div class="wrap">
-  <div class="eyebrow">結果</div>
-  <h2 id="result-h">3つの予測方法を比べると</h2>
-  <p>同じ44個の細胞、同じ20通りの分け方で3つの方法を比べた平均MAEです（バーが短いほど、ずれが小さい）。</p>
-  <div class="models">
-    <div class="model"><div><h3>① 薬剤平均</h3><p>「その薬の平均的な効き具合」をそのまま予測にする基準線</p></div><div class="bar"><span style="--w:100%;--c:var(--gray)"></span><output class="num">0.608</output></div></div>
-    <div class="model"><div><h3>② ＋組織</h3><p>肺・乳腺など、がんの部位ごとの傾向を足す</p></div><div class="bar"><span style="--w:97.8%;--c:#7fb3a9"></span><output class="num">0.595</output></div></div>
-    <div class="model"><div><h3>③ ＋分子（RNA）</h3><p>細胞ごとの遺伝子の働き具合から予測</p></div><div class="bar"><span style="--w:90.6%;--c:var(--accent)"></span><output class="num">0.551</output></div></div>
-  </div>
-  <p class="fold">③は①より20通り中19通り、②より20通り中18通りで小さくなりました。ただし同じ細胞を何度も使い回した比較なので、「19回独立に勝った」「統計的に有意」という意味ではありません。</p>
+  <section class="section project-intro" id="approach" aria-labelledby="approach-title">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow">THE QUESTION</p><h2 id="approach-title">「効きやすさ」と<br>「変わり方」を探る。</h2></div><p>MAENには、目的の異なる2つの検証があります。どちらも培養細胞の測定に基づく開発段階の記録で、人の治療効果は調べていません。</p></div>
+      <div class="research-grid">
+        <article class="research-card"><p class="line-number">01 / RNA</p><h3>細胞の特徴から、薬への応答を予測。</h3><p>薬を加える前のRNA情報を手がかりに、既存6薬剤が細胞の増殖を抑える濃度を予測。見せていない細胞の実測値と比べます。</p><p><a class="text-link" href="#rna">予測のずれを見る<span aria-hidden="true">↗</span></a></p><div class="card-foot">NCI-60 / 44開発細胞 / 20分割</div></article>
+        <article class="research-card protein"><p class="line-number">02 / PROTEIN</p><h3>タンパク質の変化から、投与条件を逆検索。</h3><p>物質を加えた後のタンパク質量を手がかりに、既知の78投与条件を並べます。別の生物学的反復から、元の条件を取り戻せるかを確かめます。</p><p><a class="text-link" href="#protein">逆検索の結果を見る<span aria-hidden="true">↗</span></a></p><div class="card-foot">MCF7 / 12時間後 / 2生物学的反復</div></article>
+      </div>
+    </div>
+  </section>
 
-  <figure><img src="mae-comparison.png" alt="平均MAE：薬剤平均0.60794、組織0.59465、分子0.55093"><figcaption>平均MAEの比較（元の図）</figcaption></figure>
+  <section class="section results-section" id="protein" aria-labelledby="protein-title">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow">LATEST / 02 — PROTEIN</p><h2 id="protein-title">変化には、<br>投与条件の手がかりがある。</h2></div><p>一方の反復を問い合わせ、もう一方を候補にして検索。R1 → R2とR2 → R1の計156問い合わせで、同じ投与条件が何位に戻るかを測りました。</p></div>
+      <div class="result-panel">
+        <div class="result-toolbar">
+          <div class="result-title">別反復からの再発見<small>観測値と2つの対照を比較</small></div>
+          <div class="viewer-controls" aria-label="集計結果の表示切り替え">
+            <div class="segmented" role="group" aria-label="指標"><button type="button" data-metric="top1" aria-pressed="true">Top 1</button><button type="button" data-metric="top5" aria-pressed="false">Top 5</button><button type="button" data-metric="mrr" aria-pressed="false">MRR</button></div>
+            <div class="direction-control"><label class="control-label" for="protein-direction">方向</label><select id="protein-direction" data-direction data-protein-direction><option value="all">両方向</option><option value="R1_to_R2">R1 → R2</option><option value="R2_to_R1">R2 → R1</option></select></div>
+          </div>
+        </div>
+        <div class="result-body">
+          <div class="primary-result"><div class="primary-value" id="protein-primary-value">69.9<span class="unit">%</span></div><p class="primary-label" id="protein-primary-label">元の投与条件が1位に</p><p class="primary-count" id="protein-primary-count">109 / 156 問い合わせ</p><p class="metric-definition" id="protein-definition">Top 1は、元の投与条件が候補の1位に戻った割合です。検索対象は測定済みの条件に限られます。</p></div>
+          <div class="comparison-chart" role="group" aria-label="同じ評価条件で、何を使って検索したか">
+            <p class="chart-heading">同じ評価条件で、何を使って検索したか</p>
+            <div class="chart-row observed"><div class="chart-row-head"><span>観測されたタンパク質量</span><strong data-protein-value="observed_cosine">69.9%</strong></div><div class="chart-track"><span class="chart-fill" data-protein-bar="observed_cosine" data-value="0.6987179487179487" style="--value:69.87179487179487%"></span></div></div>
+            <div class="chart-row mask"><div class="chart-row-head"><span>欠測パターンだけ</span><strong data-protein-value="mask_jaccard">16.7%</strong></div><div class="chart-track"><span class="chart-fill" data-protein-bar="mask_jaccard" data-value="0.16666666666666666" style="--value:16.666666666666664%"></span></div></div>
+            <div class="chart-row permuted"><div class="chart-row-head"><span>値を入れ替えた対照</span><strong data-protein-value="value_permuted_cosine">0.6%</strong></div><div class="chart-track"><span class="chart-fill" data-protein-bar="value_permuted_cosine" data-value="0.00641025641025641" style="--value:0.641025641025641%"></span></div></div>
+            <div class="chart-legend"><span id="chart-zero">0%</span><span id="protein-uniform-reference">均等順位の参照：1.3%</span><span id="chart-full">100%</span></div>
+          </div>
+        </div>
+        <div class="result-note"><strong>ここが限界</strong><p>共通のDMSO対照とTMT測定グループに由来する依存が残ります。高い再発見率は、未知物質の作用や治療効果を予測できたことを意味しません。</p></div>
+      </div>
+      <p class="status-message" id="protein-status" role="status" aria-live="polite">公開された集計値を表示しています。</p>
+      <noscript><p class="table-note">JavaScriptが無効のため、両方向のTop 1集計を表示しています。集計JSONから他の指標も確認できます。</p></noscript>
+      <div class="support-grid">
+        <article class="support-card"><p class="eyebrow">CONTROL / 欠測の影響</p><h3>値を使わなくても、<br>16.7%は1位に戻る。</h3><p>Top 5は観測値95.5%、欠測のみ75.6%、値入れ替え6.4%。欠測の位置だけでも条件を識別できました。測定グループの特徴が検索に混ざるため、この対照も主結果と一緒に示します。</p></article>
+        <article class="support-card"><p class="eyebrow">EXTERNAL / 別研究の署名</p><h3>外部研究では、<br>対応できた11件を評価。</h3><div class="support-numbers"><div><strong>6 / 11</strong><small>1位</small></div><div><strong>7 / 11</strong><small>5位以内</small></div></div><p>20件中19件に候補があり、1件にはありませんでした。元資料名で対応できた11件を評価し、同定が不確かなもの・候補にないものの計9件は正解率から除外。限定的な診断で、独立した最終検証ではありません。</p></article>
+      </div>
+    </div>
+  </section>
 
-  <h3 style="margin-top:28px">予測の「幅」はどうか</h3>
-  <p>予測には「この範囲に入るはず」という幅（予測区間）も付けています。分子モデルでは、細胞ごとの6薬すべてが幅に入った割合が平均87.2%でした。ただし幅は片側1.548〜2.533 pGI50（数十〜数百倍の濃度幅）と広く、当たりやすいのは幅が広いせいでもあります。</p>
-  <figure><img src="interval-coverage.png" alt="分子予測区間の被覆率"><figcaption>予測区間に実験値が入った割合（元の図）</figcaption></figure>
-  <p class="sub">なお「55/55」は細胞名の対応付けが正しくできた割合で、予測の当たり率とは別物です。</p>
-</div></section>
+  <section class="section rna-section" id="rna" aria-labelledby="rna-title">
+    <div class="container">
+      <div class="rna-grid">
+        <div class="rna-intro"><p class="eyebrow">01 — RNA</p><h2 id="rna-title">細胞のRNAは、<br>予測に役立つか。</h2><p>同じ44細胞、6薬剤、20通りの分け方で比較しました。誤差はpGI50のMAE。小さいほど、実験で測った濃度に近い予測です。</p><div class="rna-key"><strong>0.55093</strong><span>RNAを使うモデルの平均MAE</span></div></div>
+        <div><table class="model-table"><caption>追加対照を含む同じ20分割の比較 / pGI50・MAE ↓</caption><thead><tr><th scope="col">予測方法</th><th scope="col">平均MAE</th></tr></thead><tbody><tr class=""><td>薬剤平均<small>その薬の平均的な応答</small></td><td data-rna-model="drug_mean">0.60794</td></tr><tr class=""><td>組織・固定<small>組織ごとの傾向 / shrinkage 10</small></td><td data-rna-model="tissue_fixed">0.59465</td></tr><tr class=""><td>組織・内部CV<small>組織モデルも内部で調整</small></td><td data-rna-model="tissue_cv">0.61016</td></tr><tr class="best"><td>RNA・内部CV<small>細胞の分子情報を使用</small></td><td data-rna-model="molecular">0.55093</td></tr><tr class=""><td>RNA入れ替え対照<small>細胞とRNAの対応を置換</small></td><td data-rna-model="rna_permuted">0.60766</td></tr></tbody></table><p class="table-note">RNAモデルは、調整した組織モデル・RNA入れ替え対照のそれぞれより19/20分割でMAEが小さくなりました。同じ細胞を繰り返し使った記述的比較です。独立試行や有意差、RNAの因果効果を意味しません。</p></div>
+      </div>
+      <div class="rna-meta"><span>21ローカルテスト成功</span><span>CPU 1スレッド / 17.237秒</span><a href="data/controls-summary.json">追加対照の集計JSON<span aria-hidden="true"> ↗</span></a></div>
+    </div>
+  </section>
 
-<section aria-labelledby="limits-h"><div class="wrap">
-  <div class="eyebrow">正直なところ</div>
-  <h2 id="limits-h">わかったこと・まだわからないこと</h2>
-  <div class="knowns">
-    <div class="card ok"><h3>言えること</h3><ul>
-      <li>この44細胞・6薬の範囲では、RNA情報を使うと平均のずれが小さくなる傾向があった</li>
-      <li>計算はCPU1スレッドで約11秒（ダウンロード等を除く）と軽い</li>
-      <li>結果が悪かった分割も含めて、すべて公開している</li>
-    </ul></div>
-    <div class="card ng"><h3>言えないこと</h3><ul>
-      <li>人の治療に役立つ・新薬が見つかる、ということ</li>
-      <li>まだ使っていない新しいデータでも同じように当たること（独立した最終評価は未実施）</li>
-      <li>RNAそのものが原因で予測が良くなった、ということ（分子モデルだけ内部で調整している）</li>
-    </ul></div>
-  </div>
-  <p class="callout">これはAIを使った個人の練習・記録であり、医療上の判断に使えるものではありません。NCIの支持や推奨を受けたものでもありません。詳しくは下の<a href="#disclaimer">免責事項</a>をご覧ください。</p>
-</div></section>
+  <section class="section roadmap" id="next" aria-labelledby="next-title">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow">NEXT / 目指す先</p><h2 id="next-title">答えを出す前に、<br>問いを確かめていく。</h2></div><p>目指すのは、実験に進める候補を根拠と一緒に絞ること。一つの細胞・測定条件で見えた手がかりが、別の場面でも残るかが次の分岐です。</p></div>
+      <ol class="roadmap-grid"><li class="roadmap-step"><span class="step-number">01</span><span class="pill ">実施済み</span><h3>既知の条件を取り戻す</h3><p>反復を分けて再発見率を測り、欠測・値の入れ替え対照と比較する。</p></li><li class="roadmap-step"><span class="step-number">02</span><span class="pill pill-warm">次の検証</span><h3>測定グループを越える</h3><p>共有対照や測定バッチの影響を減らし、別研究・別細胞でも手がかりが残るか調べる。</p></li><li class="roadmap-step"><span class="step-number">03</span><span class="pill ">検索CLI実装済み</span><h3>望む変化から候補を絞る</h3><p>入力した遺伝子変化CSVと似た方向・逆方向の実測条件を順位付けする研究用CLIを実装。望む作用が起きるかは未検証です。</p></li><li class="roadmap-step"><span class="step-number">04</span><span class="pill ">将来の段階</span><h3>実験で作用を確かめる</h3><p>細胞の増殖・正常細胞への影響・再現性を、専門家による実験で確認する。</p></li></ol>
+      <p class="roadmap-note">このサイトでは集計結果を閲覧・比較できます。CSVからの検索は別の研究用CLIで行います。未知の物質が起こす変化、正常な状態への回復、人体での安全性・治療効果は未検証です。</p>
+    </div>
+  </section>
 
-<section aria-labelledby="detail-h"><div class="wrap">
-  <div class="eyebrow">専門向け</div>
-  <h2 id="detail-h">詳細と再現性</h2>
-  <details><summary>前処理・モデル選択・リーク対策</summary><p>公式CellMiner 2.15、HG-19、日付ラベル09-11-2025、log2(FPKM+1)。23,808遺伝子レコード×60細胞、欠損0。0値は欠損と扱いません。供給側のFPKM処理を利用しraw再処理はしていません。</p><p>外側学習28〜30、校正6〜8、評価7〜8細胞。6薬剤は同じ細胞の区画を共有。内部3foldの学習だけで中央値補完、分散上位500特徴、標準化、PCAをfit。PCA2/5、Ridge alpha1/10/100を内部MAEで選択。外側評価を調整に使いません。系列代表を結果計算前に固定し、既存20分割の割り当てを保持しました。関連する細胞系列は代表だけに絞り、全3モデルを同じ対象・同じ割り当てで再計算しています。</p><p>分子は内部CVで調整、組織は固定shrinkage10。同等に最適化したモデル群の比較ではなく、RNA単独の因果効果でもありません。予測区間の被覆率は記述的なもので、交換可能性は確立していません。</p></details>
-  <details><summary>固定・環境・利用条件</summary><p>molecular.pyの手順は計算前commitで固定。import先maen.py/robust.pyと環境依存hashはレビュー後に追加固定しました。追加対象まで事前固定したとは主張しません。14テスト成功はローカル実行記録でありCIではありません。</p><p>CPU1スレッド11.224秒。ダウンロード・描画・公開処理は除外。公式ZIP12.2MBを取得し、原行列・細胞別応答・割り当て・保留ID・非公開コードは掲載しません。包括的な再配布許諾は仮定していません。</p><p><a href="https://discover.nci.nih.gov/cellminer/loadDownload.do">公式取得元</a> / <a href="https://discover.nci.nih.gov/disclaimer.jsp">利用条件</a>。測定条件・GI50打ち切り・独立最終評価は未解決です。独立データでの最終評価は未完了で、今回除外した保留8細胞も過去に使用済みです。</p></details>
-  <details><summary>全20分割のMAE</summary>
-  <div class="scroll"><table><thead><tr><th>seed</th><th>薬剤平均</th><th>組織</th><th>分子</th></tr></thead><tbody id="runs"><tr><td>20262001</td><td>0.60676</td><td>0.61848</td><td>0.59497</td></tr><tr><td>20262002</td><td>0.59834</td><td>0.61469</td><td>0.54597</td></tr><tr><td>20262003</td><td>0.59920</td><td>0.57384</td><td>0.50564</td></tr><tr><td>20262004</td><td>0.63684</td><td>0.59126</td><td>0.52255</td></tr><tr><td>20262005</td><td>0.68002</td><td>0.66629</td><td>0.66227</td></tr><tr><td>20262006</td><td>0.66339</td><td>0.59873</td><td>0.63236</td></tr><tr><td>20262007</td><td>0.58108</td><td>0.51833</td><td>0.51763</td></tr><tr><td>20262008</td><td>0.67575</td><td>0.64204</td><td>0.60010</td></tr><tr><td>20262009</td><td>0.58791</td><td>0.61086</td><td>0.60458</td></tr><tr><td>20262010</td><td>0.63202</td><td>0.60213</td><td>0.56232</td></tr><tr><td>20262011</td><td>0.54645</td><td>0.54093</td><td>0.43990</td></tr><tr><td>20262012</td><td>0.64457</td><td>0.61010</td><td>0.55536</td></tr><tr><td>20262013</td><td>0.55410</td><td>0.58195</td><td>0.52009</td></tr><tr><td>20262014</td><td>0.59156</td><td>0.65358</td><td>0.57023</td></tr><tr><td>20262015</td><td>0.62850</td><td>0.59973</td><td>0.55066</td></tr><tr><td>20262016</td><td>0.61919</td><td>0.63110</td><td>0.56594</td></tr><tr><td>20262017</td><td>0.62450</td><td>0.57631</td><td>0.60239</td></tr><tr><td>20262018</td><td>0.59086</td><td>0.58553</td><td>0.50056</td></tr><tr><td>20262019</td><td>0.59853</td><td>0.63635</td><td>0.56310</td></tr><tr><td>20262020</td><td>0.49926</td><td>0.44086</td><td>0.40197</td></tr></tbody></table></div>
-  <p class="sub" style="margin-top:12px">各行で最も小さい値を緑で表示しています。</p>
-  </details>
-  <div class="links"><a href="summary.json">集計JSON</a><a href="history/2026-10-06-robust-20/index.html">旧20分割（留保付き）</a><a href="history/2026-10-06-five-splits/index.html">旧5分割</a><a href="history/2026-10-05/index.html">2026-10-05の記録</a></div>
-  <p class="sub" style="margin-top:12px">旧20結果は関連系列が18/20分割で区画をまたいでいました。数値誤りとは断定せず留保付き履歴として保存しています。旧組織0.58265と現分子を直接比較しません。</p>
-</div></section>
+  <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
+    <div class="container evidence-layout">
+      <div class="evidence-aside"><p class="eyebrow">EVIDENCE / 記録</p><h2 id="evidence-title">数字の先を、<br>たどれるように。</h2><p>元資料、評価方法、対照、過去の結果を残します。掲載するのは集計結果。計算コード・原行列・細胞別の生データは公開していません。</p><a class="text-link" href="https://github.com/Yuu-Honda/maen-results">公開結果のリポジトリ<span aria-hidden="true">↗</span></a></div>
+      <div class="disclosure-list">
+        <details><summary>タンパク質検索の評価方法と限界</summary><div class="detail-content"><p>MCF7乳がん細胞、12時間投与、78条件・2反復。メトホルミンの5濃度を含むため、78種類の化学物質ではなく、原表の物質名では74物質の78条件です。対象はタンパク質量で、活性やリン酸化の測定ではありません。</p><p>Table S2の正の測定値をlog2変換し、両者で観測されたアクセッション100個以上のペアをcosine類似度で比較しました。欠損は0と同一視せず、補完しません。線形の相対量という解釈は論文の方法記述に基づく仮定で、表自体には単位が明記されていません。論文の遺伝子集計・最小値補完・ComBat後の行列を再現した結果ではありません。</p><p>欠測は全測定欄の57.8%。TMTグループ内で欠測パターンが共通し、同じDMSO対照も共有されます。観測ID集合のJaccard類似度（値を使わない欠測位置の対照）と、マスクを保った値の入れ替えを対照にしました。均等順位の参照は計算上の基準で、独立した確率的試行やp値ではありません。反復を分けても測定上の依存は残ります。</p><p>外部Table S3は遺伝子別Log2FC署名を使用。20件中19件に候補があり、1件にはありません。11件のみ元資料名で候補と対応でき、同定が不確かなもの・候補にないものの計9件を正解率から除外しています。名称の一致は厳密な化学物質同定の証明ではなく、細胞種・投与時間・濃度も揃っていません。</p></div></details>
+        <details><summary>RNA予測の評価方法と限界</summary><div class="detail-content"><p>公式CellMiner 2.15、HG-19、日付ラベル09-11-2025、log2(FPKM+1)。23,808遺伝子レコード×60細胞、欠損0。0は欠損扱いにしません。供給側のFPKM処理を利用し、raw再処理はしていません。</p><p>関連する細胞系列は代表に絞り、44開発細胞を同じ20分割で比較。外側学習28〜30、校正6〜8、評価7〜8細胞で6薬剤が区画を共有します。各学習区画だけで中央値補完、分散上位500特徴、標準化、PCAをfitし、学習内3foldのMAEでPCA 2/5・Ridge alpha 1/10/100を選択しました。追加対照は組織shrinkage 0/1/10/100の内部CVと、固定した1回のRNA行置換です。置換は組織との対応も壊します。組織4候補・分子6候補の比較は、モデル群の複雑さを等しくしたものではありません。評価値を調整に使っていません。</p><p>元の3モデル比較ではRNAが薬剤平均より19/20、固定組織より18/20分割で小さいMAEでした。追加の調整組織は固定組織より18/20分割で悪化しました。これらの分割は重複し、独立した試行ではありません。</p><p>分子モデルの6薬同時区間被覆は平均87.2%ですが、片側幅は1.548〜2.533 pGI50と広い値です。被覆は記述的で、交換可能性は未確立。「55/55」は入力名の対応付けで、予測精度ではありません。GI50の打ち切り・測定条件は未解決で、独立最終評価は未完了。除外した保留8細胞も過去に使用済みです。</p><p>対象薬剤：ドキソルビシン、シスプラチン、パクリタキセル、フルオロウラシル、メトトレキサート、エトポシド。</p></div></details>
+        <details><summary>手順の固定・実行環境・利用条件</summary><div class="detail-content"><p>タンパク質検索はコード・設定・入力hashを結果計算前のcommit <code>012e2c5</code>で固定。41テスト成功はローカル実行記録です。入力解析6.498秒、計算1.558秒で、ダウンロードや描画を除きます。</p><p>RNA追加対照はcommit <code>ce5a4fb</code>でコード・入力・設定・環境を結果前に固定し、21ローカルテスト成功、CPU 1スレッド17.237秒。元のRNA検証は手順を事前固定しましたが、import先と環境hashは結果後の追加固定で、全対象を事前固定したとは主張しません。元の実行は14ローカルテスト・11.224秒でした。これらはCIや全システムの検証を意味しません。</p><p>原データと全変換行列は公開しません。タンパク質論文はCC BY-NC-ND 4.0で、独立したデータライセンスは確認できていません。NCIデータを含め包括的な再配布許諾は仮定せず、各提供元の条件に従います。</p></div></details>
+        <details><summary>データの一次資料と集計JSON</summary><div class="detail-content"><ul class="source-list"><li><a href="https://doi.org/10.1016/j.jpha.2023.08.021">MCF7タンパク質の一次論文</a><span>A proteomic landscape of pharmacologic perturbations for functional relevance / Table S1–S3</span></li><li><a href="https://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD043263">ProteomeXchange / PXD043263</a><span>論文に対応する質量分析データの登録</span></li><li><a href="https://dtp.cancer.gov/">NCI Developmental Therapeutics Program</a><span>GI50データの提供元</span></li><li><a href="https://discover.nci.nih.gov/cellminer/loadDownload.do">CellMiner / 公式取得元</a><span>RNA発現データ / <a href="https://discover.nci.nih.gov/disclaimer.jsp">利用条件</a></span></li><li><a href="data/protein-summary.json">タンパク質検索の集計JSON</a><span>反復方向別・指標別・対照別の集計</span></li><li><a href="data/controls-summary.json">RNA追加対照の集計JSON</a><span>5モデルの同じ20分割の集計</span></li><li><a href="summary.json">元のRNA検証の集計JSON</a><span>3モデル / 全20分割</span></li></ul></div></details>
+        <details><summary>これまでの記録・元のRNA全20分割</summary><div class="detail-content"><p>過去の結果は、留保とともに保存しています。旧20結果は関連系列が18/20分割で区画をまたいでいました。旧組織0.58265と現分子を直接比較しません。</p><ul class="history-list"><li><a href="history/2026-10-06-robust-20/index.html">旧20分割 / 留保付き<span aria-hidden="true"> ↗</span></a></li><li><a href="history/2026-10-06-five-splits/index.html">旧5分割<span aria-hidden="true"> ↗</span></a></li><li><a href="history/2026-10-05/index.html">2026-10-05の記録<span aria-hidden="true"> ↗</span></a></li></ul><p style="margin-top:20px">以下は現在の44細胞に対する元の3モデルの全20分割です。緑は各行の最小MAE。</p><div class="scroll" tabindex="0" role="region" aria-label="元のRNA検証 全20分割のMAE"><table class="split-table"><thead><tr><th scope="col">seed</th><th scope="col">薬剤平均</th><th scope="col">組織・固定</th><th scope="col">RNA</th></tr></thead><tbody id="runs"><tr><td>20262001</td><td>0.60676</td><td>0.61848</td><td>0.59497</td></tr><tr><td>20262002</td><td>0.59834</td><td>0.61469</td><td>0.54597</td></tr><tr><td>20262003</td><td>0.59920</td><td>0.57384</td><td>0.50564</td></tr><tr><td>20262004</td><td>0.63684</td><td>0.59126</td><td>0.52255</td></tr><tr><td>20262005</td><td>0.68002</td><td>0.66629</td><td>0.66227</td></tr><tr><td>20262006</td><td>0.66339</td><td>0.59873</td><td>0.63236</td></tr><tr><td>20262007</td><td>0.58108</td><td>0.51833</td><td>0.51763</td></tr><tr><td>20262008</td><td>0.67575</td><td>0.64204</td><td>0.60010</td></tr><tr><td>20262009</td><td>0.58791</td><td>0.61086</td><td>0.60458</td></tr><tr><td>20262010</td><td>0.63202</td><td>0.60213</td><td>0.56232</td></tr><tr><td>20262011</td><td>0.54645</td><td>0.54093</td><td>0.43990</td></tr><tr><td>20262012</td><td>0.64457</td><td>0.61010</td><td>0.55536</td></tr><tr><td>20262013</td><td>0.55410</td><td>0.58195</td><td>0.52009</td></tr><tr><td>20262014</td><td>0.59156</td><td>0.65358</td><td>0.57023</td></tr><tr><td>20262015</td><td>0.62850</td><td>0.59973</td><td>0.55066</td></tr><tr><td>20262016</td><td>0.61919</td><td>0.63110</td><td>0.56594</td></tr><tr><td>20262017</td><td>0.62450</td><td>0.57631</td><td>0.60239</td></tr><tr><td>20262018</td><td>0.59086</td><td>0.58553</td><td>0.50056</td></tr><tr><td>20262019</td><td>0.59853</td><td>0.63635</td><td>0.56310</td></tr><tr><td>20262020</td><td>0.49926</td><td>0.44086</td><td>0.40197</td></tr></tbody></table></div></div></details>
+      </div>
+    </div>
+  </section>
 
-<section id="disclaimer" aria-labelledby="disclaimer-h"><div class="wrap">
-  <div class="eyebrow">必ずお読みください</div>
-  <h2 id="disclaimer-h">免責事項</h2>
-  <p>このサイトをご覧いただく前提として、以下をご了承ください。</p>
-  <div class="disc">
+  <section class="disclaimer-section" id="disclaimer" aria-labelledby="disclaimer-title">
+    <div class="container"><div class="disclaimer-intro"><h2 id="disclaimer-title">免責事項</h2><p>個人の趣味の記録 / 専門家の監修・査読なし / 医療上の助言ではありません</p></div><details><summary>ご利用にあたって — 免責事項をすべて読む</summary><div class="disc">
     <div class="disc-item"><h3>1. AIで運用している個人の記録です</h3><p>MAENは個人が趣味で行っているもので、コードの作成、計算の実行、結果の解釈、このページの文章まで、主にAI（大規模言語モデル）を使って作っています。AIは誤った内容をもっともらしく出力することがあり、運営者はその内容を専門的に検証できる立場にありません。医学・薬学・統計学の専門家による監修や査読（ピアレビュー）は受けていません。</p></div>
     <div class="disc-item"><h3>2. 医療上の助言ではありません</h3><p>掲載内容は診断・治療・予防・投薬の判断に使えるものではなく、特定の薬や治療法を勧めたり否定したりするものでもありません。使っているのは培養したがん細胞の実験データで、人の体の中で薬がどう効くかとは別物です。ご自身やご家族の病気・治療については、必ず医師・薬剤師などの専門家にご相談ください。このサイトを理由に治療を始めたり、変えたり、やめたりしないでください。</p></div>
     <div class="disc-item"><h3>3. 正確さ・完全さは保証しません</h3><p>計算・データ処理・記述には誤りが含まれている可能性があります。運営者は、掲載内容の正確性、完全性、有用性、最新性、特定目的への適合性について、明示・黙示を問わず一切保証しません。元データは取得時点のもので、その後更新されている場合があります。</p></div>
     <div class="disc-item"><h3>4. 責任を負いません</h3><p>このサイトの情報を利用したこと、または利用できなかったことによって生じたいかなる損害（健康上・経済上の損害、研究・業務上の判断の誤りなどを含む）についても、運営者は責任を負いません。情報の利用はご自身の判断と責任で行ってください。研究・論文・業務などに引用・利用する場合は、必ず一次資料（NCIの公式データ・査読済み論文）で確認してください。</p></div>
     <div class="disc-item"><h3>5. NCIとは無関係です</h3><p>米国国立がん研究所（NCI）の公開データを使っていますが、NCI・米国政府・関連機関とは一切関係がなく、それらの支持・推奨・承認を受けたものではありません。データの利用条件は各提供元の規定に従います。</p></div>
-    <div class="disc-item"><h3>6. 予告なく変更・削除します</h3><p>掲載内容は予告なく修正・更新・削除することがあります。過去の結果は記録として残していますが、後から誤りや留保が見つかる場合があります。外部サイトへのリンク先の内容についても責任を負いません。</p></div>
-  </div>
-</div></section>
-
+    <div class="disc-item"><h3>6. 予告なく変更・削除します</h3><p>掲載内容は予告なく修正・更新・削除することがあります。過去の結果は記録として残していますが、後から誤りや留保が見つかる場合があります。外部サイトへのリンク先の内容についても責任を負いません。</p></div></div></details></div>
+  </section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <p><strong>MAEN</strong> — Yuu Honda による個人の検証プロジェクト。コード・計算・文章は主にAIを使って作成しています。計算コードは非公開、このページは結果の公開用です。</p>
-    <p>データ出典：<a href="https://dtp.cancer.gov/">NCI Developmental Therapeutics Program</a>（GI50）、<a href="https://discover.nci.nih.gov/cellminer/">CellMiner</a>（RNA発現）。NCIの支持・推奨を意味しません。医療上の助言ではありません。掲載内容の利用により生じた損害について責任を負いません（<a href="#disclaimer">免責事項</a>）。</p>
-  </div>
-</footer>
-
-<script>
-// highlight the smallest MAE in each split row
-document.querySelectorAll('#runs tr').forEach(function(tr){
-  var cells=[].slice.call(tr.children,1),min=Math.min.apply(null,cells.map(function(td){return +td.textContent}));
-  cells.forEach(function(td){if(+td.textContent===min)td.className='best'});
-});
-</script>
+<footer class="site-footer"><div class="container footer-inner"><div><div class="footer-brand">MAEN</div><p>Yuu Honda による個人の検証プロジェクト。コード・計算・文章は主にAIを使って作成しています。NCIの支持・推奨を意味しません。</p></div><nav class="footer-links" aria-label="フッター"><a href="#evidence">集計データ</a><a href="#disclaimer">免責事項</a><span>2026.10.06</span></nav></div></footer>
 </body>
 </html>

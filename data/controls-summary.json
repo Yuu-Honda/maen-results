@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "research_line": "rna_drug_response_controls",
+  "status": "exploratory development checks on previously viewed cells; independent evaluation not completed",
+  "freeze": {
+    "commit": "ce5a4fb",
+    "frozen_utc": "2026-10-06T11:38:50Z",
+    "before_scoring": true,
+    "result_date": "2026-10-06"
+  },
+  "counts": {
+    "development_cells": 44,
+    "overlapping_splits": 20,
+    "locked_cells_evaluated": 0
+  },
+  "measurement": {
+    "metric": "MAE and RMSE in pGI50; lower is better",
+    "features": "CellMiner RNA, log2(FPKM + 1)",
+    "comparison": "The same previously viewed development cells and overlapping splits are reused."
+  },
+  "summary": {
+    "models": {
+      "drug_mean": {
+        "MAE": {
+          "mean": 0.6079409698275863,
+          "median": 0.6029837592364531,
+          "min": 0.49925697865353047,
+          "max": 0.6800223214285714
+        },
+        "RMSE": {
+          "mean": 0.7979660442002847,
+          "median": 0.8076867020516963,
+          "min": 0.6574408665693837,
+          "max": 0.871645145194509
+        }
+      },
+      "tissue_fixed": {
+        "MAE": {
+          "mean": 0.5946546561906478,
+          "median": 0.6009306718509309,
+          "min": 0.44086162620220515,
+          "max": 0.6662877813625451
+        },
+        "RMSE": {
+          "mean": 0.7839902962858876,
+          "median": 0.8026572914275383,
+          "min": 0.6009375367736373,
+          "max": 0.8608311076184902
+        }
+      },
+      "tissue_cv": {
+        "MAE": {
+          "mean": 0.6101590908930449,
+          "median": 0.6192447925211167,
+          "min": 0.47951247085001536,
+          "max": 0.6704106977513228
+        },
+        "RMSE": {
+          "mean": 0.8005956755666523,
+          "median": 0.8215966180812446,
+          "min": 0.6372255192373993,
+          "max": 0.8915387134439573
+        }
+      },
+      "molecular": {
+        "MAE": {
+          "mean": 0.5509287944226826,
+          "median": 0.5588387287520505,
+          "min": 0.40197166758700253,
+          "max": 0.6622713418025448
+        },
+        "RMSE": {
+          "mean": 0.7414008580304515,
+          "median": 0.7335622639259162,
+          "min": 0.5479722863748202,
+          "max": 0.8602295268552776
+        }
+      },
+      "rna_permuted": {
+        "MAE": {
+          "mean": 0.6076619522350397,
+          "median": 0.6122887892708979,
+          "min": 0.5121838895374287,
+          "max": 0.6872988650043131
+        },
+        "RMSE": {
+          "mean": 0.8083265038877617,
+          "median": 0.8075397670691279,
+          "min": 0.6973813346969855,
+          "max": 0.9350239738848161
+        }
+      }
+    },
+    "delta_MAE": {
+      "molecular_vs_drug_mean": {
+        "mean": -0.05701217540490358,
+        "median": -0.05835274387295791,
+        "min": -0.11428517418928064,
+        "max": 0.016677605891928127,
+        "wins_negative": 19,
+        "n_splits": 20
+      },
+      "molecular_vs_tissue_fixed": {
+        "mean": -0.043725861767965134,
+        "median": -0.05190889086407485,
+        "min": -0.101035457960641,
+        "max": 0.033626676140052325,
+        "wins_negative": 18,
+        "n_splits": 20
+      },
+      "molecular_vs_tissue_cv": {
+        "mean": -0.0592302964703622,
+        "median": -0.06606382183084542,
+        "min": -0.10401538465950705,
+        "max": 0.026072282902291577,
+        "wins_negative": 19,
+        "n_splits": 20
+      },
+      "molecular_vs_rna_permuted": {
+        "mean": -0.056733157812357084,
+        "median": -0.057305030486233255,
+        "min": -0.11961772162475032,
+        "max": 0.03965593473032736,
+        "wins_negative": 19,
+        "n_splits": 20
+      },
+      "tissue_cv_vs_tissue_fixed": {
+        "mean": 0.015504434702397069,
+        "median": 0.0183374478917947,
+        "min": -0.013537131150802573,
+        "max": 0.04550918920382452,
+        "wins_negative": 2,
+        "n_splits": 20
+      },
+      "rna_permuted_vs_drug_mean": {
+        "mean": -0.00027901759254649885,
+        "median": -0.00301281751499477,
+        "min": -0.05740691435635403,
+        "max": 0.06559413700928873,
+        "wins_negative": 12,
+        "n_splits": 20
+      }
+    },
+    "delta_sign": "first named model MAE minus second; negative improves first"
+  },
+  "method": {
+    "tissue_fixed": "shrinkage fixed at 10",
+    "tissue_cv": "training-only cross-validation selects among four candidates",
+    "molecular": "training-only cross-validation selects among six PCA/Ridge candidates",
+    "rna_permuted": "One fixed whole-RNA-row shuffle within each training, validation, calibration and evaluation partition; no crossing partitions.",
+    "control_limit": "The shuffle also breaks tissue information; it is not a causal or isolated incremental RNA-effect estimate."
+  },
+  "timings": {
+    "elapsed_seconds": 17.236675249878317,
+    "includes": "cached input parsing and 20-split evaluation",
+    "excludes": "download, plotting and GitHub publication",
+    "threads": 1
+  },
+  "verification": {
+    "tests_passed": 21,
+    "tests_skipped": 0,
+    "scope": "local execution, not CI",
+    "new_response_or_rna_downloads": 0
+  },
+  "sources": [
+    {
+      "title": "CellMiner 2.15 RNA-seq composite expression",
+      "url": "https://discover.nci.nih.gov/cellminer/download/processeddataset/nci60_RNA__RNA_seq_composite_expression.zip",
+      "terms_url": "https://discover.nci.nih.gov/disclaimer.jsp",
+      "use": "original matrix is not redistributed here"
+    }
+  ],
+  "limitations": [
+    "previously viewed data and overlapping development splits; no independent final test",
+    "split wins are not independent trials; no significance test or p-value",
+    "one fixed negative control is diagnostic, not a permutation null distribution",
+    "RNA shuffle also breaks tissue information; no causal or incremental RNA effect claim",
+    "four tissue and six molecular candidates do not equalize model class complexity",
+    "imputation, variance selection, scaling and PCA fit only each training subset",
+    "inner RNA permutations stay inside inner train/validation separately",
+    "known lineage representatives only; unknown related lineages may remain",
+    "GI50 censoring and aggregate measurement conditions unresolved; no clinical efficacy claim",
+    "source FPKM preprocessing not independently reproduced; interval coverage descriptive",
+    "60-second cap is soft and does not interrupt parsing or an active linear algebra call"
+  ]
+}
