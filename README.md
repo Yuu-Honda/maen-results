@@ -61,6 +61,24 @@ RNA−組織の対応付き差は−0.04152（95%区間−0.11405〜0.01943）�
 
 [全6薬剤・主/副結果の公開集計](data/external-summary.json) / [GDSC測定仕様](https://depmap.sanger.ac.uk/documentation/datasets/drug-sensitivity/) / [RNA仕様](https://depmap.sanger.ac.uk/documentation/datasets/expression/) / [Sanger利用方針](https://depmap.sanger.ac.uk/documentation/data-usage-policy/)
 
+## 転移の開発診断
+
+外部評価の結果を見た後、同株の測定間一致、RNA入力間の出力一致、組織Known/Unknown、範囲外fitを分けて調べました。新しい盲検性能評価ではなく、原因を一意に決める診断でもありません。
+
+| 診断 | 対象 | 結果（記述的区間・差） |
+|---|---|---|
+| 同株NCI GI50 / GDSC IC50（範囲内） | 158組・48モデル/由来群・6薬剤 | 0.27041 / 0.06319〜0.44541 |
+| 同株RNAを替えた固定モデル出力 | 18モデル/由来群・6薬剤 | 0.94083 / 0.86481〜0.96237 |
+| Known RNA / 組織・固定 | 455組・147モデル/由来群・6薬剤 | 0.09191 / 0.15462（差−0.06272の区間−0.14476〜0.02674） |
+| Unknown RNA / 組織 | 592組・193モデル/由来群 | RNA0.00034、組織は未定義（集計可能0薬剤） |
+| 範囲外fit RNA / 組織・固定 | 915組・348モデル/由来群・6薬剤 | 0.18398 / 0.09643（差+0.08755の区間−0.01389〜0.19757） |
+
+同株RNAの遺伝子別ρは442遺伝子で中央値0.76891。選択500遺伝子のうち493が対応し、欠損8・一定50を別記します。出力の順位はよく保たれますが、Sanger−NCIの平均予測差は6薬剤すべて負です。順位一致は水準の一致や応答予測精度を保証しません。18株のうち16株は固定モデルの学習44株にも含まれ、2株は学習外です。この橋渡し18株を独立コホートへ追加しません。KnownだけでもRNA優位は未確認で、範囲外の差の区間も0を含みます。同株測定間の相関はモデルの数学的な上限ではありません。
+
+v1は実診断を行っていません。v2をcommit `365d39f`に固定後に一度実行し、過去の外部点推定を再現した後、重複読取りを含むRNA段階で60秒soft capを超え、65.188秒で停止しました。原応答をプログラムが抽出しRNA処理も始まっていたこと、開始・失敗記録を保存したことを開示します。v3はGDSCとNCI RNAの読み取りを各一回にする技術修正のみ。commit `b621429`に固定・push後、26入力のhashを照合し、同じモデル・指標・500bootstrap・seed・1thread・60秒制限で20.989秒で完了しました。RNA/core/diagnostic82件と別protein環境20件、計102件がローカルで成功しています。
+
+[全6薬剤・主/副/感度診断の公開集計](data/diagnostics-summary.json) / [診断セクション](https://yuu-honda.github.io/maen-results/#diagnostics)。次の性能確認はendpoint・測定条件を確認できる未使用データで、対象・変換・指標を先に固定します。
+
 ## 到達点と次の検証
 
 今の到達点は、実測された細胞の変化から、次に調べる候補を絞るための比較です。未知物質の応答予測、正常細胞への回復、がん細胞だけへの選択毒性、人体での安全性や治療効果は評価していません。次に必要なのは、別施設・別細胞の摂動データ、物質構造と投与条件の対応、正常細胞とがん細胞を並べた測定、そして実験による検証です。
@@ -74,5 +92,8 @@ Protein retrieval recovered the exact treatment condition at rank 1 in 109/156 q
 The additional RNA comparison reused 44 previously viewed development cells over 20 overlapping splits. Mean MAE was 0.55093 for the molecular model, 0.61016 for the cross-validated tissue model and 0.60766 for the shuffled-RNA control. Split wins are descriptive, not independent trials or significance tests. The additional procedure was frozen before scoring; 21 tests passed locally. Same-GI50 independent confirmation and therapeutic efficacy remain unverified. The frozen cross-endpoint transfer is reported below.
 
 The first frozen NCI→GDSC1 cross-endpoint ranking test is complete: primary RNA macro rho 0.06165 versus tissue 0.10317 across six drugs, with paired difference −0.04152 (95% descriptive interval −0.11405 to 0.01943). RNA superiority was not established. The prespecified all-finite secondary analysis includes 915 out-of-range fits and reverses the point-estimate difference (RNA0.18051, tissue0.13146); it does not replace the primary. Fixed and CV tissue predictions are identical because NCI-only CV selected shrinkage10. The 418 RNA-eligible models become 387 matched models and 340 in-range models. No external fitting, original profiles, individual predictions or clinical claim is included. See [the full aggregate](data/external-summary.json).
+
+
+Development diagnostics on the already viewed data found same-cell response macro rho0.27041 (95% descriptive interval0.06319–0.44541) and frozen-output agreement0.94083 (0.86481–0.96237) after replacing RNA profiles in18cells. Prediction levels still shift down for all six drugs. Known tissues alone do not establish RNA superiority; Unknown tissue correlations remain undefined, and the out-of-range paired difference interval crosses zero. Measurement concordance is not a mathematical ceiling or a causal explanation. v2 timed out after raw response/RNA program access; the preserved failure was followed by a disclosed one-pass v3 registration, frozen and pushed before scoring, with unchanged numerical rules. See [all diagnostic aggregates](data/diagnostics-summary.json).
 
 **免責事項**：個人の趣味の研究記録で、コード・計算・文章は主にAIを使って作成しています。専門家の監修・査読はなく、正確性は保証しません。医療上の助言ではなく、掲載内容の利用により生じた損害について責任を負いません。NCI、ウェルカム・サンガー研究所（GDSC・Cell Model Passports）、MCF7タンパク質研究の論文著者、ProteomeXchangeなど、データ提供元とは無関係です。[サイトの免責事項](https://yuu-honda.github.io/maen-results/#disclaimer)を参照してください。

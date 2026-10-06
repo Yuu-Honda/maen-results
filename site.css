@@ -359,3 +359,66 @@ details[open]>summary::after{content:"−"}
 }
 @media(max-width:380px){.external-table th,.external-table td{padding:9px 4px}.external-table,.external-table tbody th{font-size:12px}}
 @media(max-width:350px){.language,.menu-toggle{font-size:11px}.button{font-size:12px}}
+
+.diagnostics-section{border-top:1px solid var(--line);background:var(--paper)}
+.diagnostics-section .section-heading{margin-bottom:28px}
+.diagnostics-scope{border:1px solid #d7cbb7;border-left:3px solid #b28b5c;border-radius:4px;background:#f1ecdf;padding:20px 25px;margin-bottom:26px}
+.diagnostics-scope>strong{display:block;color:#785537;font-size:14px;line-height:1.7;margin-bottom:6px;font-weight:650}
+.diagnostics-scope>p{color:#635c50;font-size:13.5px;line-height:1.9;margin:0}
+.diagnostics-index{display:flex;flex-wrap:wrap;gap:9px 12px;margin:0 0 29px;padding:0;list-style:none}
+.diagnostics-index a{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--surface);border-radius:4px;color:var(--ink);text-decoration:none;font-size:12.5px;padding:8px 13px;line-height:1.7}
+.diagnostics-index a:hover{background:#e4ebe1;border-color:#b2c6b6}
+.diagnostics-index span{font-family:var(--serif);font-size:16px;color:var(--teal)}
+.diagnostics-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.diagnostic-card{min-width:0;border:1px solid var(--line);border-radius:7px;background:var(--surface);overflow:hidden;scroll-margin-top:100px}
+.diagnostic-card-head{padding:25px 27px 20px;border-bottom:1px solid var(--line)}
+.diagnostic-kicker{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:12px}
+.diagnostic-kicker>span:first-child{font-family:var(--serif);font-size:24px;font-style:italic;color:#628376;line-height:1.3}
+.diagnostic-kicker .pill{max-width:75%;overflow-wrap:anywhere;font-size:11.5px}
+.diagnostic-card h3{font-size:19px;line-height:1.65;font-weight:600;margin-bottom:12px}
+.diagnostic-card-head>p{font-size:13.5px;color:var(--muted);line-height:1.9;margin:0}
+.diagnostic-card-body{padding:21px 27px 23px}
+.diagnostic-facts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 18px}
+.diagnostic-facts div{min-width:0}
+.diagnostic-facts dt{font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:5px}
+.diagnostic-facts dd{margin:0;font-size:25px;font-weight:450;letter-spacing:-.025em;line-height:1.4;color:var(--ink);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.diagnostic-facts dd small{font-size:12px;margin-left:5px;letter-spacing:0;color:var(--muted)}
+.diagnostic-reading{font-size:13.5px;color:var(--muted);line-height:1.9;margin:0 0 17px}
+.diagnostic-macro{padding:16px 0 18px;border-top:1px solid var(--line);margin-top:2px}
+.diagnostic-macro>p{font-size:12.5px;color:var(--muted);line-height:1.7;margin:0 0 7px;font-weight:650}
+.diagnostic-macro>strong{display:block;font-size:32px;line-height:1.25;font-weight:450;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.diagnostic-macro>span{display:block;font-size:12.5px;line-height:1.85;color:var(--muted);margin-top:7px;font-variant-numeric:tabular-nums}
+.diagnostic-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;margin-top:5px}
+.diagnostic-compare>.diagnostic-macro:last-child:nth-child(3){grid-column:1/-1}
+.diagnostic-compare .diagnostic-macro>strong{font-size:25px}
+.diagnostic-group-label{font-size:13px;font-weight:650;line-height:1.8;margin:17px 0 6px;color:var(--ink)}
+.diagnostic-undefined-note{font-size:12.5px;color:var(--muted);line-height:1.85;margin:0 0 18px}
+.diagnostic-detail-note{font-size:13px;line-height:1.9;color:var(--muted);margin:0;padding:0 0 20px}
+.diagnostic-boundary{border-top:1px solid var(--line);padding-top:16px;font-size:12.5px;line-height:1.85;color:#715a42;margin:0}
+.diagnostic-card details{border-top:1px solid var(--line);border-bottom:0;padding-inline:27px}
+.diagnostic-card summary{font-size:13.5px;padding-block:17px;line-height:1.7}
+.diagnostic-table-scroll{overflow-x:auto;max-width:100%;padding-bottom:20px}
+.diagnostic-table{min-width:420px;width:100%;border-collapse:collapse;font-size:12.5px;line-height:1.8;font-variant-numeric:tabular-nums}
+.diagnostic-table caption{font-size:12.5px;color:var(--muted);text-align:left;line-height:1.85;padding:0 0 13px}
+.diagnostic-table th,.diagnostic-table td{border-bottom:1px solid var(--line);padding:10px 10px;text-align:right;vertical-align:top}
+.diagnostic-table th:first-child,.diagnostic-table td:first-child{text-align:left;padding-left:0;min-width:130px}
+.diagnostic-table th:last-child,.diagnostic-table td:last-child{padding-right:0}
+.diagnostic-table thead th{font-size:12px;font-weight:650;color:var(--muted)}
+.diagnostic-table tbody th{font-size:12.5px;font-weight:500}
+.diagnostic-table tbody tr:last-child th,.diagnostic-table tbody tr:last-child td{border-bottom:0}
+.diagnostic-table .diagnostic-status-cell{font-size:12px;min-width:100px;white-space:normal;line-height:1.8}
+.diagnostic-token{overflow-wrap:anywhere}
+.diagnostic-strata{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:0 0 17px}
+.diagnostic-stratum{padding:15px;border-radius:4px;background:#edf0e7;min-width:0}
+.diagnostic-stratum h4{font-size:13.5px;font-weight:650;line-height:1.6;margin:0 0 9px}
+.diagnostic-stratum>strong{font-size:24px;font-weight:450;letter-spacing:-.025em;line-height:1.3;font-variant-numeric:tabular-nums;display:block;overflow-wrap:anywhere}
+.diagnostic-stratum>p{font-size:12px;line-height:1.85;color:var(--muted);margin:9px 0 0}
+.diagnostic-next{margin-top:25px;padding:22px 25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:.6fr 1fr;gap:35px;align-items:start}
+.diagnostic-next h3{font-size:16px;line-height:1.8;font-weight:600;margin:0}
+.diagnostic-next p{font-size:13.5px;color:var(--muted);line-height:1.9;margin:0}
+.diagnostic-meta{margin-top:21px;padding-top:18px;gap:12px 23px}
+@media(max-width:1050px){.diagnostics-grid{gap:18px}.diagnostic-card-head{padding:23px}.diagnostic-card-body{padding:20px 23px}.diagnostic-card details{padding-inline:23px}.diagnostic-card h3{font-size:18px}}
+@media(max-width:780px){.diagnostics-grid{grid-template-columns:1fr;gap:22px}.diagnostic-card-head,.diagnostic-card-body{padding-inline:25px}.diagnostic-card details{padding-inline:25px}.diagnostic-table{min-width:430px}.diagnostic-next{grid-template-columns:1fr;gap:12px}.diagnostics-scope{padding:19px 23px}}
+@media(max-width:550px){.diagnostics-scope{padding:18px 20px;margin-bottom:21px}.diagnostics-scope>strong{font-size:13.5px}.diagnostics-scope>p{font-size:13px}.diagnostics-index{gap:8px;margin-bottom:24px}.diagnostics-index a{font-size:12px;padding:7px 10px;gap:8px}.diagnostic-card-head{padding:21px}.diagnostic-card h3{font-size:17px}.diagnostic-card-head>p,.diagnostic-reading{font-size:13.5px}.diagnostic-card-body{padding:19px 21px 21px}.diagnostic-card details{padding-inline:21px}.diagnostic-card summary{font-size:13px}.diagnostic-facts{gap:17px}.diagnostic-facts dt{font-size:12px}.diagnostic-facts dd{font-size:24px}.diagnostic-boundary{font-size:12.5px}.diagnostic-stratum{padding:13px}.diagnostic-stratum h4{font-size:13px}.diagnostic-stratum>strong{font-size:23px}.diagnostic-table{font-size:12.5px;min-width:450px}.diagnostic-table th,.diagnostic-table td{padding:9px 8px}.diagnostic-table tbody th{font-size:12.5px}.diagnostic-next{padding:20px 21px;margin-top:22px}.diagnostic-next h3{font-size:15px}.diagnostic-meta{gap:11px 19px}.diagnostic-meta,.diagnostic-meta a{font-size:12px}}
+@media print{.diagnostics-grid{display:block}.diagnostic-card{break-inside:avoid;margin-bottom:20px}.diagnostics-index{display:none}.diagnostic-table-scroll{overflow:visible}.diagnostics-scope{background:white}}
+@media(max-width:550px){.diagnostic-macro>strong{font-size:30px}.diagnostic-macro>span,.diagnostic-macro>p,.diagnostic-undefined-note{font-size:12.5px}.diagnostic-compare{gap:0 15px}.diagnostic-compare .diagnostic-macro>strong{font-size:23px}.diagnostic-detail-note{font-size:13px}}

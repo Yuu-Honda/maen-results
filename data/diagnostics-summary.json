@@ -1,0 +1,1197 @@
+{
+  "schema_version": 1,
+  "kind": "registered descriptive transfer diagnostics v3; already viewed data",
+  "drug_order": [
+    "123127",
+    "119875",
+    "125973",
+    "19893",
+    "740",
+    "141540"
+  ],
+  "provenance": {
+    "freeze_commit": "b621429a06bac5ee961dfd8e96982dda8933c40a",
+    "plan_sha256": "76434babc08cee6fb3e146c014a93b0e826f68344fda25768aabc3fd9daa9e85",
+    "started_utc": "2026-10-06T17:30:30Z",
+    "document_sha256": "de2b16cba547c5c0370e39d418093b7fce9b5d85e25b48eeed743e00343b2d0c",
+    "code_sha256": {
+      "transfer_diagnostics.py": "2622ee625c4733641e03be5203545f98af066055d2f04a01efb159f4e703fbd3",
+      "external_data.py": "39620c608fe9cfa381b20017fc199c6da1ad536f2d5b28d8b812ae5511a354eb",
+      "external_metrics.py": "9ee922df19c9ab6e59149c274ca45639e9ed4a261882e7216f959e3d47bbc43d",
+      "external_model.py": "db3e62ccf95e99340e02163e383298ce7c9a8caf83e01478cb4b88fe5f6d4a99",
+      "external_validation.py": "62d825e82e1b6ba4bb4a45ab724f16d1e983c46fb951bda3a920e49caf72b0c7",
+      "maen.py": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354",
+      "molecular.py": "7a1cbf2263c321bf50e906ec436e4ed4f3228c1c96de948ae0beb2066a478073",
+      "molecular_controls.py": "0a9987a9dc43fb4cdadf2f6dd782faa9fb2ab1bb677e85e2d396f71b92873a0c",
+      "robust.py": "87150b406ff24c1f97f09f49fa7927328e64c77967bd6dadb2f11ac61f1f4c45"
+    },
+    "registered_sha256": {
+      "external_plan": "dc80b6a53defb5738ef6cbfc76fca45eb019ea210688aec0ae8f09cc8008819e",
+      "label_access": "f2b18c02218feb23e7ed923e2b6e211b036f3154eecaacc3d763940b2c311042",
+      "nci_controls": "42b66bffd2ccb0d1a7acddcedd1ae83c17ddb630c198e06b7bb20a50f91c5141",
+      "model_training": "3ea3683d7b5b98cacfa0e4433d5bccb833bdd36c8783c8c28cac97e2a7412502",
+      "external_aggregate": "bed2aa344267c2f2aef8b5dea1d1bf10b65bea371677b77835f32e4f4134ff84"
+    },
+    "v2_failed_attempt": {
+      "commit": "365d39f2db3d4648a436bac704d1367be472482d",
+      "plan_sha256": "2db8f7e7df043d11f66fc4ae319c47dc1d276114148e3c3007beca03e599288e",
+      "record": "reports/transfer-diagnostics-v2-failed-attempt.json",
+      "record_sha256": "1a05ff094e71098ffe9709cc1340bfd4c86c6d7dea392a8ff7bf66b0d8f969a0",
+      "status": "preserved soft-cap failure at65.18813033401966s; registered external points reproduced; no new Q1/Q2 statistics calculated; bridge responses and RNA accessed by program"
+    },
+    "blinding_note": "v1 unexecuted; v2 extracted raw bridge responses and started RNA processing before a preserved timeout. Root did not inspect individual response/RNA values or new Q1/Q2 statistics. v3 preserves all numerical rules and only removes duplicate I/O; it is not a new blind external evaluation. External aggregates were already viewed.",
+    "runtime": {
+      "python": "3.14.8",
+      "numpy": "2.5.3"
+    },
+    "threads": 1,
+    "total_soft_cap_seconds": 60,
+    "elapsed_seconds": {
+      "verify_plan_and_inputs": 0.2547010420821607,
+      "identities_and_nci": 0.039735750295221806,
+      "gdsc_combined_and_registered_reproduction": 11.347035082988441,
+      "rna": 7.101052333600819,
+      "statistics": 2.2422821251675487
+    },
+    "total_elapsed_seconds": 20.9888006253168,
+    "source_aggregate_sha256": "9f1b66de5b367f00907d7d7779589cb25ffc5ced52762cf007fe60d7397402ee"
+  },
+  "input_checks": {
+    "verified_files": 26,
+    "gdsc_parse_exclusions": {},
+    "registered_external_evaluation_reproduced": true
+  },
+  "bridge": {
+    "nci_headers": 60,
+    "exact_matches": 58,
+    "unmatched": 2,
+    "ambiguous_excluded": 0,
+    "origin_groups": 55,
+    "gdsc": {
+      "raw_target_rows": 289,
+      "bridge_rows": 289
+    }
+  },
+  "nci_responses": {
+    "kept": 342,
+    "outside_sixty_rna_headers": {
+      "123127": 23,
+      "119875": 43,
+      "125973": 15,
+      "19893": 22,
+      "740": 52,
+      "141540": 16
+    }
+  },
+  "response_concordance": {
+    "primary_in_range": {
+      "counts": {
+        "rows": 158,
+        "models": 48,
+        "origin_groups": 48
+      },
+      "per_drug": {
+        "123127": {
+          "rows": 46,
+          "origin_groups": 46,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.35753052985231065,
+              "status": "estimable"
+            }
+          }
+        },
+        "119875": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.18059855521155832,
+              "status": "estimable"
+            }
+          }
+        },
+        "125973": {
+          "rows": 15,
+          "origin_groups": 15,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.10902595953155438,
+              "status": "estimable"
+            }
+          }
+        },
+        "19893": {
+          "rows": 25,
+          "origin_groups": 25,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.5284615384615384,
+              "status": "estimable"
+            }
+          }
+        },
+        "740": {
+          "rows": 12,
+          "origin_groups": 12,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.18181818181818182,
+              "status": "estimable"
+            }
+          }
+        },
+        "141540": {
+          "rows": 42,
+          "origin_groups": 42,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.265051454501256,
+              "status": "estimable"
+            }
+          }
+        }
+      },
+      "macro": {
+        "nci_measured": {
+          "value": 0.2704143698960666,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              0.06318635614147021,
+              0.44540898313237876
+            ],
+            "status": "available"
+          }
+        }
+      },
+      "paired_delta": null,
+      "bootstrap": {
+        "seed": 20266001,
+        "repetitions": 500,
+        "origin_groups": 48,
+        "method": "paired origin-group cluster bootstrap; integer multiplicities; average tied ranks",
+        "interval": "95% percentile; descriptive"
+      }
+    },
+    "secondary_all_finite": {
+      "counts": {
+        "rows": 279,
+        "models": 52,
+        "origin_groups": 52
+      },
+      "per_drug": {
+        "123127": {
+          "rows": 52,
+          "origin_groups": 52,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.45728922133450195,
+              "status": "estimable"
+            }
+          }
+        },
+        "119875": {
+          "rows": 51,
+          "origin_groups": 51,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.7263965249941704,
+              "status": "estimable"
+            }
+          }
+        },
+        "125973": {
+          "rows": 21,
+          "origin_groups": 21,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.43455669716395967,
+              "status": "estimable"
+            }
+          }
+        },
+        "19893": {
+          "rows": 52,
+          "origin_groups": 52,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.3599419448476052,
+              "status": "estimable"
+            }
+          }
+        },
+        "740": {
+          "rows": 51,
+          "origin_groups": 51,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.6106787330316742,
+              "status": "estimable"
+            }
+          }
+        },
+        "141540": {
+          "rows": 52,
+          "origin_groups": 52,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.3283174319332319,
+              "status": "estimable"
+            }
+          }
+        }
+      },
+      "macro": {
+        "nci_measured": {
+          "value": 0.4861967588841905,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark"
+        }
+      },
+      "paired_delta": null,
+      "bootstrap": null
+    },
+    "sensitivity_without_nci_top_dose_proxy": {
+      "counts": {
+        "rows": 158,
+        "models": 48,
+        "origin_groups": 48
+      },
+      "per_drug": {
+        "123127": {
+          "rows": 46,
+          "origin_groups": 46,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.35753052985231065,
+              "status": "estimable"
+            }
+          }
+        },
+        "119875": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.18059855521155832,
+              "status": "estimable"
+            }
+          }
+        },
+        "125973": {
+          "rows": 15,
+          "origin_groups": 15,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.10902595953155438,
+              "status": "estimable"
+            }
+          }
+        },
+        "19893": {
+          "rows": 25,
+          "origin_groups": 25,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.5284615384615384,
+              "status": "estimable"
+            }
+          }
+        },
+        "740": {
+          "rows": 12,
+          "origin_groups": 12,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.18181818181818182,
+              "status": "estimable"
+            }
+          }
+        },
+        "141540": {
+          "rows": 42,
+          "origin_groups": 42,
+          "status": "eligible",
+          "rho": {
+            "nci_measured": {
+              "rho": 0.265051454501256,
+              "status": "estimable"
+            }
+          }
+        }
+      },
+      "macro": {
+        "nci_measured": {
+          "value": 0.2704143698960666,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark"
+        }
+      },
+      "paired_delta": null,
+      "bootstrap": null
+    },
+    "top_dose_proxy_rows_in_range": 0,
+    "top_dose_proxy_unknown_rows_in_range": 0,
+    "band": {
+      "band": "low",
+      "certainty": "tentative"
+    }
+  },
+  "rna_input": {
+    "counts": {
+      "bridge_with_sanger_rna": 18,
+      "below95pct_excluded": 0,
+      "matched_selected_genes": 493,
+      "selected_genes": 500
+    },
+    "lines": 18,
+    "training_overlap": {
+      "training_overlap_models": 16,
+      "outside_training_models": 2,
+      "rna_origin_groups": 18
+    },
+    "gene_concordance": {
+      "genes_evaluated": 442,
+      "genes_missing_skipped": 8,
+      "genes_constant": 50,
+      "median_rho": 0.7689145469609284,
+      "q25_rho": 0.6296517773066356,
+      "q75_rho": 0.8563734495189073,
+      "share_rho_at_least_0_5": 0.8710407239819005,
+      "share_rho_at_most_0": 0.011312217194570135
+    },
+    "identity_check": {
+      "lines": 18,
+      "genes": 442,
+      "status": "estimable",
+      "top1_identification_rate": 0.9444444444444444,
+      "chance_rate": 0.05555555555555555,
+      "matched_median_rho": 0.8427152976937935,
+      "unmatched_median_rho": -0.10477138392123117
+    },
+    "identity_reference_note": "chance_rate is a uniform tie-free mathematical1/n reference, not a permutation null test",
+    "pc_score_rho": [
+      0.9318885448916409,
+      0.9236326109391125,
+      0.9442724458204335,
+      0.9318885448916409,
+      0.8782249742002064
+    ],
+    "prediction_concordance": {
+      "counts": {
+        "rows": 108,
+        "models": 18,
+        "origin_groups": 18
+      },
+      "per_drug": {
+        "123127": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "mean_difference_sanger_minus_nci": -0.12381955491262826,
+          "mean_absolute_difference": 0.12568308826936223,
+          "rho": {
+            "sanger_input": {
+              "rho": 0.8926728586171311,
+              "status": "estimable"
+            }
+          }
+        },
+        "119875": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "mean_difference_sanger_minus_nci": -0.020228306538920382,
+          "mean_absolute_difference": 0.03875060431348561,
+          "rho": {
+            "sanger_input": {
+              "rho": 0.9690402476780186,
+              "status": "estimable"
+            }
+          }
+        },
+        "125973": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "mean_difference_sanger_minus_nci": -0.1860214376415285,
+          "mean_absolute_difference": 0.19533139868946664,
+          "rho": {
+            "sanger_input": {
+              "rho": 0.9484004127966976,
+              "status": "estimable"
+            }
+          }
+        },
+        "19893": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "mean_difference_sanger_minus_nci": -0.0649237098814467,
+          "mean_absolute_difference": 0.06854471164429334,
+          "rho": {
+            "sanger_input": {
+              "rho": 0.936016511867905,
+              "status": "estimable"
+            }
+          }
+        },
+        "740": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "mean_difference_sanger_minus_nci": -0.2204727613754197,
+          "mean_absolute_difference": 0.2204727613754197,
+          "rho": {
+            "sanger_input": {
+              "rho": 0.9442724458204335,
+              "status": "estimable"
+            }
+          }
+        },
+        "141540": {
+          "rows": 18,
+          "origin_groups": 18,
+          "status": "eligible",
+          "mean_difference_sanger_minus_nci": -0.13661804965407098,
+          "mean_absolute_difference": 0.1410499040403018,
+          "rho": {
+            "sanger_input": {
+              "rho": 0.9545923632610939,
+              "status": "estimable"
+            }
+          }
+        }
+      },
+      "macro": {
+        "sanger_input": {
+          "value": 0.9408324733402132,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              0.8648100104821803,
+              0.962370801598475
+            ],
+            "status": "available"
+          }
+        }
+      },
+      "paired_delta": null,
+      "bootstrap": {
+        "seed": 20266002,
+        "repetitions": 500,
+        "origin_groups": 18,
+        "method": "paired origin-group cluster bootstrap; integer multiplicities; average tied ranks",
+        "interval": "95% percentile; descriptive"
+      }
+    },
+    "band": {
+      "band": "high",
+      "certainty": "interval_within_band"
+    }
+  },
+  "known_tissue_comparison": {
+    "known_tissue": {
+      "counts": {
+        "rows": 455,
+        "models": 147,
+        "origin_groups": 147,
+        "known_tissue_models": 147,
+        "unknown_tissue_models": 0,
+        "known_tissue_rows": 455,
+        "unknown_tissue_rows": 0
+      },
+      "rho": {
+        "molecular": {
+          "value": 0.09190722269487711,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              -0.02427423804991899,
+              0.19717480311285657
+            ],
+            "status": "available"
+          }
+        },
+        "drug_mean": {
+          "value": null,
+          "drugs": [],
+          "n_drugs": 0,
+          "status": "unavailable",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 0,
+            "valid_fraction": 0.0,
+            "interval95": null,
+            "status": "not_estimable"
+          }
+        },
+        "tissue_fixed": {
+          "value": 0.1546222717639503,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              0.03689852003993901,
+              0.26093690426796134
+            ],
+            "status": "available"
+          }
+        },
+        "tissue_cv": {
+          "value": 0.1546222717639503,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              0.03689852003993901,
+              0.26093690426796134
+            ],
+            "status": "available"
+          }
+        }
+      },
+      "paired_delta_rho": {
+        "molecular_vs_tissue_fixed": {
+          "value": -0.06271504906907319,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              -0.14476483823187314,
+              0.026743840538147476
+            ],
+            "status": "available"
+          },
+          "per_drug": {
+            "123127": 0.07606664946414872,
+            "119875": 0.02085322991271099,
+            "125973": -0.0022246437604743208,
+            "19893": -0.27351358510640134,
+            "740": -0.277313150674974,
+            "141540": 0.07984120575055081
+          }
+        },
+        "molecular_vs_tissue_cv": {
+          "value": -0.06271504906907319,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              -0.14476483823187314,
+              0.026743840538147476
+            ],
+            "status": "available"
+          },
+          "per_drug": {
+            "123127": 0.07606664946414872,
+            "119875": 0.02085322991271099,
+            "125973": -0.0022246437604743208,
+            "19893": -0.27351358510640134,
+            "740": -0.277313150674974,
+            "141540": 0.07984120575055081
+          }
+        }
+      },
+      "per_drug_counts": {
+        "123127": {
+          "rows": 117,
+          "models": 117,
+          "origin_groups": 117
+        },
+        "119875": {
+          "rows": 45,
+          "models": 45,
+          "origin_groups": 45
+        },
+        "125973": {
+          "rows": 58,
+          "models": 58,
+          "origin_groups": 58
+        },
+        "19893": {
+          "rows": 80,
+          "models": 80,
+          "origin_groups": 80
+        },
+        "740": {
+          "rows": 55,
+          "models": 55,
+          "origin_groups": 55
+        },
+        "141540": {
+          "rows": 100,
+          "models": 100,
+          "origin_groups": 100
+        }
+      },
+      "per_drug_status": {
+        "123127": "eligible",
+        "119875": "eligible",
+        "125973": "eligible",
+        "19893": "eligible",
+        "740": "eligible",
+        "141540": "eligible"
+      },
+      "per_drug_rho": {
+        "123127": {
+          "molecular": -0.0027499288165565195,
+          "drug_mean": null,
+          "tissue_fixed": -0.07881657828070524,
+          "tissue_cv": -0.07881657828070524
+        },
+        "119875": {
+          "molecular": 0.09314888010540184,
+          "drug_mean": null,
+          "tissue_fixed": 0.07229565019269085,
+          "tissue_cv": 0.07229565019269085
+        },
+        "125973": {
+          "molecular": 0.13876157371804732,
+          "drug_mean": null,
+          "tissue_fixed": 0.14098621747852164,
+          "tissue_cv": 0.14098621747852164
+        },
+        "19893": {
+          "molecular": -0.038209095171120484,
+          "drug_mean": null,
+          "tissue_fixed": 0.23530448993528083,
+          "tissue_cv": 0.23530448993528083
+        },
+        "740": {
+          "molecular": 0.11507936507936507,
+          "drug_mean": null,
+          "tissue_fixed": 0.39239251575433903,
+          "tissue_cv": 0.39239251575433903
+        },
+        "141540": {
+          "molecular": 0.2454125412541254,
+          "drug_mean": null,
+          "tissue_fixed": 0.16557133550357458,
+          "tissue_cv": 0.16557133550357458
+        }
+      }
+    },
+    "unknown_tissue": {
+      "counts": {
+        "rows": 592,
+        "models": 193,
+        "origin_groups": 193,
+        "known_tissue_models": 0,
+        "unknown_tissue_models": 193,
+        "known_tissue_rows": 0,
+        "unknown_tissue_rows": 592
+      },
+      "rho": {
+        "molecular": {
+          "value": 0.0003424548866225452,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              -0.09606164990503453,
+              0.10309053692908367
+            ],
+            "status": "available"
+          }
+        },
+        "drug_mean": {
+          "value": null,
+          "drugs": [],
+          "n_drugs": 0,
+          "status": "unavailable",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 0,
+            "valid_fraction": 0.0,
+            "interval95": null,
+            "status": "not_estimable"
+          }
+        },
+        "tissue_fixed": {
+          "value": null,
+          "drugs": [],
+          "n_drugs": 0,
+          "status": "unavailable",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 0,
+            "valid_fraction": 0.0,
+            "interval95": null,
+            "status": "not_estimable"
+          }
+        },
+        "tissue_cv": {
+          "value": null,
+          "drugs": [],
+          "n_drugs": 0,
+          "status": "unavailable",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 0,
+            "valid_fraction": 0.0,
+            "interval95": null,
+            "status": "not_estimable"
+          }
+        }
+      },
+      "paired_delta_rho": {
+        "molecular_vs_tissue_fixed": {
+          "value": null,
+          "drugs": [],
+          "n_drugs": 0,
+          "status": "unavailable",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 0,
+            "valid_fraction": 0.0,
+            "interval95": null,
+            "status": "not_estimable"
+          },
+          "per_drug": {}
+        },
+        "molecular_vs_tissue_cv": {
+          "value": null,
+          "drugs": [],
+          "n_drugs": 0,
+          "status": "unavailable",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 0,
+            "valid_fraction": 0.0,
+            "interval95": null,
+            "status": "not_estimable"
+          },
+          "per_drug": {}
+        }
+      },
+      "per_drug_counts": {
+        "123127": {
+          "rows": 170,
+          "models": 170,
+          "origin_groups": 170
+        },
+        "119875": {
+          "rows": 70,
+          "models": 70,
+          "origin_groups": 70
+        },
+        "125973": {
+          "rows": 70,
+          "models": 70,
+          "origin_groups": 70
+        },
+        "19893": {
+          "rows": 81,
+          "models": 81,
+          "origin_groups": 81
+        },
+        "740": {
+          "rows": 56,
+          "models": 56,
+          "origin_groups": 56
+        },
+        "141540": {
+          "rows": 145,
+          "models": 145,
+          "origin_groups": 145
+        }
+      },
+      "per_drug_status": {
+        "123127": "eligible",
+        "119875": "eligible",
+        "125973": "eligible",
+        "19893": "eligible",
+        "740": "eligible",
+        "141540": "eligible"
+      },
+      "per_drug_rho": {
+        "123127": {
+          "molecular": -0.061207491405157514,
+          "drug_mean": null,
+          "tissue_fixed": null,
+          "tissue_cv": null
+        },
+        "119875": {
+          "molecular": 0.27509404251596536,
+          "drug_mean": null,
+          "tissue_fixed": null,
+          "tissue_cv": null
+        },
+        "125973": {
+          "molecular": -0.38686029218791007,
+          "drug_mean": null,
+          "tissue_fixed": null,
+          "tissue_cv": null
+        },
+        "19893": {
+          "molecular": 0.09130532971996387,
+          "drug_mean": null,
+          "tissue_fixed": null,
+          "tissue_cv": null
+        },
+        "740": {
+          "molecular": 0.1390293916609706,
+          "drug_mean": null,
+          "tissue_fixed": null,
+          "tissue_cv": null
+        },
+        "141540": {
+          "molecular": -0.05530625098409699,
+          "drug_mean": null,
+          "tissue_fixed": null,
+          "tissue_cv": null
+        }
+      }
+    },
+    "bootstrap_known": {
+      "seed": 20266003,
+      "repetitions": 500,
+      "origin_groups": 147,
+      "method": "paired origin-component cluster bootstrap; integer multiplicities and average tied ranks",
+      "scope": "strict in-range primary cohort",
+      "confidence_level": 0.95,
+      "interval_method": "percentile; linear interpolation",
+      "minimum_valid_fraction": 0.9,
+      "macro_drug_sets": "fixed at the original evaluation; all original correlations required per draw",
+      "interpretation": "conditional descriptive uncertainty; not endpoint equivalence or unannotated-lineage assurance"
+    },
+    "bootstrap_unknown": {
+      "seed": 20266004,
+      "repetitions": 500,
+      "origin_groups": 193,
+      "method": "paired origin-component cluster bootstrap; integer multiplicities and average tied ranks",
+      "scope": "strict in-range primary cohort",
+      "confidence_level": 0.95,
+      "interval_method": "percentile; linear interpolation",
+      "minimum_valid_fraction": 0.9,
+      "macro_drug_sets": "fixed at the original evaluation; all original correlations required per draw",
+      "interpretation": "conditional descriptive uncertainty; not endpoint equivalence or unannotated-lineage assurance"
+    }
+  },
+  "range_selection": {
+    "not_in_range_only": {
+      "counts": {
+        "rows": 915,
+        "models": 348,
+        "origin_groups": 348
+      },
+      "per_drug": {
+        "123127": {
+          "rows": 46,
+          "origin_groups": 46,
+          "status": "eligible",
+          "rho": {
+            "molecular": {
+              "rho": 0.4686401480111008,
+              "status": "estimable"
+            },
+            "tissue_fixed": {
+              "rho": 0.12276335309421658,
+              "status": "estimable"
+            }
+          }
+        },
+        "119875": {
+          "rows": 258,
+          "origin_groups": 258,
+          "status": "eligible",
+          "rho": {
+            "molecular": {
+              "rho": 0.1676729407251532,
+              "status": "estimable"
+            },
+            "tissue_fixed": {
+              "rho": 0.08119311190101411,
+              "status": "estimable"
+            }
+          }
+        },
+        "125973": {
+          "rows": 58,
+          "origin_groups": 58,
+          "status": "eligible",
+          "rho": {
+            "molecular": {
+              "rho": -0.025808237718785567,
+              "status": "estimable"
+            },
+            "tissue_fixed": {
+              "rho": 0.12804495703655946,
+              "status": "estimable"
+            }
+          }
+        },
+        "19893": {
+          "rows": 199,
+          "origin_groups": 199,
+          "status": "eligible",
+          "rho": {
+            "molecular": {
+              "rho": 0.13683417085427135,
+              "status": "estimable"
+            },
+            "tissue_fixed": {
+              "rho": 0.10668562285940948,
+              "status": "estimable"
+            }
+          }
+        },
+        "740": {
+          "rows": 261,
+          "origin_groups": 261,
+          "status": "eligible",
+          "rho": {
+            "molecular": {
+              "rho": 0.3269342134569826,
+              "status": "estimable"
+            },
+            "tissue_fixed": {
+              "rho": 0.15386899046943606,
+              "status": "estimable"
+            }
+          }
+        },
+        "141540": {
+          "rows": 93,
+          "origin_groups": 93,
+          "status": "eligible",
+          "rho": {
+            "molecular": {
+              "rho": 0.02958729969263824,
+              "status": "estimable"
+            },
+            "tissue_fixed": {
+              "rho": -0.014004950906282435,
+              "status": "estimable"
+            }
+          }
+        }
+      },
+      "macro": {
+        "molecular": {
+          "value": 0.18397675583689344,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              0.10979918221602827,
+              0.2578483840750126
+            ],
+            "status": "available"
+          }
+        },
+        "tissue_fixed": {
+          "value": 0.0964251807423922,
+          "drugs": [
+            "123127",
+            "119875",
+            "125973",
+            "19893",
+            "740",
+            "141540"
+          ],
+          "n_drugs": 6,
+          "status": "broad_benchmark",
+          "bootstrap": {
+            "repetitions": 500,
+            "valid_repetitions": 500,
+            "valid_fraction": 1.0,
+            "interval95": [
+              0.005469385937387097,
+              0.18481453037295628
+            ],
+            "status": "available"
+          }
+        }
+      },
+      "paired_delta": {
+        "value": 0.08755157509450123,
+        "drugs": [
+          "123127",
+          "119875",
+          "125973",
+          "19893",
+          "740",
+          "141540"
+        ],
+        "n_drugs": 6,
+        "status": "broad_benchmark",
+        "name": "molecular_minus_tissue_fixed",
+        "bootstrap": {
+          "repetitions": 500,
+          "valid_repetitions": 500,
+          "valid_fraction": 1.0,
+          "interval95": [
+            -0.01388902622785804,
+            0.19756563013158096
+          ],
+          "status": "available"
+        }
+      },
+      "bootstrap": {
+        "seed": 20266005,
+        "repetitions": 500,
+        "origin_groups": 348,
+        "method": "paired origin-group cluster bootstrap; integer multiplicities; average tied ranks",
+        "interval": "95% percentile; descriptive"
+      }
+    }
+  },
+  "context_registered_primary_macro_rho": {
+    "molecular": 0.06165163433670498,
+    "drug_mean": null,
+    "tissue_fixed": 0.10316803115731037,
+    "tissue_cv": 0.10316803115731037
+  },
+  "decision": {
+    "reading": "low_response_concordance",
+    "tentative": true
+  },
+  "interpretation_note": "band heuristic, noncausal, no unique attribution",
+  "limits": [
+    "Already viewed external results; technical re-registration after a preserved timeout, not a new blind test.",
+    "Same-cell response concordance is not a mathematical upper bound or identification of a causal obstacle.",
+    "Q1 and Q2 use different cohorts; RNA bridge overlaps training and output agreement is not response accuracy.",
+    "Known/Unknown and in/out-of-range strata have different populations; correlations do not uniquely identify causes.",
+    "Outside-range fits and the NCI top-dose proxy are not source censoring flags.",
+    "No model fitting, retuning, favorable drug selection, clinical validation or normal-cell toxicity validation."
+  ],
+  "distribution": "whitelisted aggregates only; no cell IDs, expression profiles or individual responses/predictions"
+}
