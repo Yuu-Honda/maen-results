@@ -1,5 +1,19 @@
 # 更新履歴
 
+## 2026-10-07 — 転移診断の結果を追加
+
+日英サイトに4問の開発診断と、全6薬剤の表、記述的区間、件数、未定義の状態を追加しました。RNAを替えた18株の予測順位は保持されますが、水準差は残り、外部RNA優位未確認を維持します。測定差を原因や精度の天井とは扱いません。
+
+v2の時間制限停止と原応答・RNAのプログラムアクセス、v3の読み取りだけの修正を開示しました。v3は結果計算前のcommit `b621429`に固定し、26入力を照合して約20.989秒で実行。公開JSONは集計欄を明示的に選び、細胞ID・全profile・個別応答/予測を含めません。
+
+既存の外部評価・RNA開発評価・タンパク質検索の集計、最新のアニメーション・アイコン・免責事項を保持しています。次の性能確認はendpoint・測定条件を確認した未使用データで行う方針です。
+
+別実装の順位・bootstrap監査で11,233件を照合し、問題0・数値差0でした。これは同じデータでの計算整合性確認で、新しい独立性能評価ではありません。
+
+日英320〜1440px、JavaScript無し、集計取得失敗、動きを減らす設定を含む44ブラウザケースと、ヘッダー12ケースを確認しました。既存のタンパク質指標/方向の切替、外部評価の数値、メニューと表のスクロールも保持しています。
+
+English: Added four descriptive transfer diagnostics and every drug’s counts, correlations and undefined states. High frozen-output rank agreement in18cells does not establish response accuracy or remove level shifts. The v2 timeout and subsequent one-pass v3 registration are disclosed; original results and the current design remain intact. No causal obstacle or external RNA advantage is established.
+
 ## 2026-10-07 — サイトの見直しと修正
 
 公開サイト（日本語・英語）の免責事項、出典、見やすさ、デザインを修正しました。数値、集計JSON、評価結果、方法の説明は変更していません。
