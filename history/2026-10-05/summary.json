@@ -1,6 +1,6 @@
 {
-  "schema": 2,
-  "date": "2026-10-06",
+  "schema": 1,
+  "date": "2026-10-05",
   "experiment_code_commit": "cd1040556093c032e768548510d3daecba3e2bd3",
   "task": "known-drug response prediction for held-out cell lines; not clinical efficacy",
   "drug_count": 6,
@@ -93,138 +93,6 @@
       "elapsed_seconds": 0.040193541906774044,
       "run_utc": "2026-10-05T05:29:01Z",
       "code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354"
-    },
-    {
-      "seed": 20261006,
-      "counts": {
-        "train": {
-          "rows": 222,
-          "cells": 37
-        },
-        "calibration": {
-          "rows": 54,
-          "cells": 9
-        },
-        "test": {
-          "rows": 54,
-          "cells": 9
-        }
-      },
-      "metrics": {
-        "drug_mean": {
-          "MAE_pGI50": 0.7076571571571572,
-          "RMSE_pGI50": 0.8902159901035608,
-          "MAE_cluster_bootstrap_95pct": [
-            0.5692157157157157,
-            0.8412532532532532
-          ]
-        },
-        "drug_plus_tissue": {
-          "MAE_pGI50": 0.6941994658632126,
-          "RMSE_pGI50": 0.8770206870690269,
-          "MAE_cluster_bootstrap_95pct": [
-            0.5398906439047741,
-            0.8444779373654052
-          ]
-        },
-        "interval": {
-          "nominal_coverage": 0.8,
-          "radius_pGI50": 1.2142641891891888,
-          "test_row_coverage": 0.8518518518518519,
-          "test_cell_simultaneous_coverage": 0.4444444444444444
-        }
-      },
-      "elapsed_seconds": 0.05858774995431304,
-      "run_utc": "2026-10-06T03:56:37Z",
-      "code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354"
-    },
-    {
-      "seed": 20261007,
-      "counts": {
-        "train": {
-          "rows": 222,
-          "cells": 37
-        },
-        "calibration": {
-          "rows": 54,
-          "cells": 9
-        },
-        "test": {
-          "rows": 54,
-          "cells": 9
-        }
-      },
-      "metrics": {
-        "drug_mean": {
-          "MAE_pGI50": 0.5562372372372373,
-          "RMSE_pGI50": 0.7017125687564477,
-          "MAE_cluster_bootstrap_95pct": [
-            0.4734664664664665,
-            0.6195390390390391
-          ]
-        },
-        "drug_plus_tissue": {
-          "MAE_pGI50": 0.5182387440916854,
-          "RMSE_pGI50": 0.6705639331523652,
-          "MAE_cluster_bootstrap_95pct": [
-            0.4171447662496257,
-            0.6629814171297547
-          ]
-        },
-        "interval": {
-          "nominal_coverage": 0.8,
-          "radius_pGI50": 1.2588521462639113,
-          "test_row_coverage": 0.9259259259259259,
-          "test_cell_simultaneous_coverage": 0.5555555555555556
-        }
-      },
-      "elapsed_seconds": 0.0525757921859622,
-      "run_utc": "2026-10-06T03:56:37Z",
-      "code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354"
-    },
-    {
-      "seed": 20261008,
-      "counts": {
-        "train": {
-          "rows": 222,
-          "cells": 37
-        },
-        "calibration": {
-          "rows": 54,
-          "cells": 9
-        },
-        "test": {
-          "rows": 54,
-          "cells": 9
-        }
-      },
-      "metrics": {
-        "drug_mean": {
-          "MAE_pGI50": 0.5242467467467468,
-          "RMSE_pGI50": 0.6861595273042734,
-          "MAE_cluster_bootstrap_95pct": [
-            0.44164364364364367,
-            0.6282482482482482
-          ]
-        },
-        "drug_plus_tissue": {
-          "MAE_pGI50": 0.5503364168632712,
-          "RMSE_pGI50": 0.7025142989932143,
-          "MAE_cluster_bootstrap_95pct": [
-            0.4524624189406798,
-            0.6322356381026458
-          ]
-        },
-        "interval": {
-          "nominal_coverage": 0.8,
-          "radius_pGI50": 1.7766856639247948,
-          "test_row_coverage": 0.9814814814814815,
-          "test_cell_simultaneous_coverage": 0.8888888888888888
-        }
-      },
-      "elapsed_seconds": 0.042909333016723394,
-      "run_utc": "2026-10-06T03:56:37Z",
-      "code_sha256": "7653085f05be00ba2b24cd9cbe64fa1645d194a1074b0115e39362dd13456354"
     }
   ],
   "sources": {
@@ -306,28 +174,6 @@
   "excluded_tissues": {
     "Prostate": 2
   },
-  "interpretation": "3 of 5 fixed splits have lower model MAE, 2 higher. Splits reuse the same dataset and are not independent validation datasets; no stable advantage or clinical efficacy demonstrated.",
-  "data_policy": "Only aggregate metrics and provenance; raw data and per-cell results excluded.",
-  "plan": {
-    "registered_utc": "2026-10-06T03:56:37Z",
-    "seeds": [
-      20261006,
-      20261007,
-      20261008
-    ],
-    "max_new_runs": 3,
-    "hypothesis": "Check split sensitivity without changing model or choosing favorable splits",
-    "model_changes": false,
-    "data_downloads": false,
-    "seconds_cap_per_run": 60,
-    "threads": 1
-  },
-  "delta_model_minus_baseline": [
-    -0.01581616771386596,
-    0.06264822972821693,
-    -0.013457691293944585,
-    -0.037998493145551926,
-    0.02608967011652441
-  ],
-  "additional_compute_seconds": 0.15407287515699863
+  "interpretation": "One split slightly improves; another worsens. No stable advantage demonstrated.",
+  "data_policy": "Only aggregate metrics and provenance; raw data and per-cell results excluded."
 }

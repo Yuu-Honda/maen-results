@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MAENの小規模CPU計算結果。既知薬剤の未見細胞株応答を基準モデルと比較し、改善と限界を記録。">
+<title>MAEN — 計算結果の記録</title>
+<style>
+:root{color-scheme:light;--ink:#243044;--sub:#536179;--green:#147d72;--paper:#f7f8fa}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 system-ui,-apple-system,sans-serif}main{max-width:1040px;padding:36px 24px 70px;margin:auto}header{padding:24px 0 30px;border-bottom:1px solid #d8dee7}.tag{font-size:13px;letter-spacing:.14em;color:var(--green);font-weight:700}h1{font-size:clamp(28px,5vw,44px);line-height:1.35;margin:12px 0}h2{font-size:24px;line-height:1.5;margin:0 0 16px}.lead{font-size:20px;max-width:790px}.sub{color:var(--sub)}section{margin-top:34px;padding:28px;background:white;border:1px solid #dce2e9;border-radius:16px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.card{padding:20px;background:#eaf4f2;border-radius:12px}.big{display:block;font-size:29px;font-weight:700}.chart{display:block;width:100%;height:auto}figure{margin:18px 0}figcaption{font-size:14px;color:var(--sub)}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th,td{text-align:left;padding:12px;border-bottom:1px solid #dce2e9;white-space:nowrap}.warning{border-left:4px solid #b34836;padding:12px 18px;background:#fff5f0}a{color:#116f65;text-underline-offset:3px}code{background:#eef1f5;padding:2px 5px;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:16px;background:#eef1f5;border-radius:8px;font-size:13px}footer{padding:30px 0;color:var(--sub);font-size:13px}@media(max-width:650px){main{padding:20px 14px}.cards{grid-template-columns:1fr}section{padding:20px 14px}.lead{font-size:18px}}
+</style>
+</head>
+<body><main>
+<header><div class="tag">MAEN / EXPERIMENT LOG / 2026-10-05</div>
+<h1>計算して、基準と比べる。</h1>
+<p class="lead">1つの分割では少し改善。<br>別の分割では悪化。<strong>安定した改善は確認できません。</strong></p>
+<p class="sub">既知抗がん剤の細胞株応答を予測する、小さなCPU計算の記録です。新薬の発見や治療効果を示すものではありません。</p>
+<div class="cards"><div class="card"><span class="big">6薬剤 × 55株</span>公開GI50集約値 / 330行</div><div class="card"><span class="big">9株 / 54行</span>各分割の未見評価データ</div><div class="card"><span class="big">1秒未満 × 2</span>CPU 1スレッド / データ追加なし</div></div></header>
+<section aria-labelledby="comparison"><h2 id="comparison">基準から、何が変わった？</h2>
+<p>薬剤ごとの学習平均を基準に、組織分類による補正を加えたモデルを比較しました。平均絶対誤差（MAE）は小さい方が良い値です。</p>
+<figure><a href="mae-comparison.png" aria-label="グラフを拡大"><img class="chart" src="mae-comparison.png" alt="分割20261004では基準MAE0.654、モデル0.638。20261005では基準0.652、モデル0.715。両方の誤差区間は大きく重なる。"></a><figcaption>図をタップすると拡大できます。線は細胞株単位の200回bootstrapによる記述的95%区間。pGI50の予測誤差であり、治療の成功率ではありません。</figcaption></figure>
+<div class="scroll"><table><thead><tr><th scope="col">分割seed</th><th scope="col">基準MAE</th><th scope="col">モデルMAE</th><th scope="col">差</th><th scope="col">基準 / モデルRMSE</th></tr></thead><tbody><tr><th scope="row">20261004 / 再現</th><td>0.654</td><td>0.638</td><td>−0.016</td><td>0.829 / 0.825</td></tr><tr><th scope="row">20261005 / 感度</th><td>0.652</td><td>0.715</td><td>+0.063</td><td>0.866 / 0.906</td></tr></tbody></table></div>
+<p>2つ目は同じデータの分割を変えた感度確認です。独立した新データの検証ではなく、候補数や学習量も増やしていません。良い分割だけを選ばず、悪化した結果も残します。</p></section>
+<section aria-labelledby="uncertainty"><h2 id="uncertainty">不確実性は十分だったか</h2>
+<figure><a href="interval-coverage.png" aria-label="グラフを拡大"><img class="chart" src="interval-coverage.png" alt="80%目標の区間。行単位被覆率は83.3%と81.5%、細胞株の全6薬剤を同時に覆う率は55.6%と44.4%で目標未達。"></a><figcaption>図をタップすると拡大できます。校正9株、test9株の小標本。厳密な分布自由の被覆保証は主張しません。</figcaption></figure>
+<p class="warning">細胞株全体での被覆率は目標未達です。行単位の被覆率だけから信頼できると判断できません。測定誤差や臨床上の安全性を表す区間でもありません。</p></section>
+<section aria-labelledby="method"><h2 id="method">方法とデータの範囲</h2>
+<p>NCI/DTPの既知薬剤6種（doxorubicin、cisplatin、paclitaxel、fluorouracil、methotrexate、etoposide）のGI50集約値を使用。<code>pGI50 = −log10(GI50 [M])</code> に変換します。</p>
+<p>学習37株/222行、校正9株/54行、test9株/54行。同じ細胞株の全薬剤を同じ分割に入れ、行ランダム分割は使いません。組織で層化した固定分割で、モデルと縮小係数10は変更せず、seedだけを比較しました。未知化合物への一般化は測っていません。</p>
+<p>薬剤ごとに実験数が最大の集約条件を採用し、6薬剤に共通する株を使用。3株未満の前立腺群2株は除外しました。各薬剤の最高濃度は異なり、集約前の実験日やプレート単位の独立性は復元できません。</p>
+<p>保存済みの約1.16MBデータを再利用し、追加ダウンロードはありません。1スレッド・低優先度で各計算1秒未満。取得上限12MB、計算上限60秒、常駐処理なし。</p>
+<p>出典：<a href="https://dctd.cancer.gov/data-tools-biospecimens/data">NCI/DCTD Data</a> / <a href="https://dtp.cancer.gov/dtpstandard/subsets/comp.jsp">Compound Inhibition Bulk Data Download</a>。<a href="https://www.cancer.gov/policies/copyright-reuse">NCI再利用方針</a>は一般テキストの方針で、データ固有の再配布権を確認したとは扱いません。生データ・細胞株別応答や予測表は掲載せず、集計指標・方法・出典とchecksumを載せています。</p></section>
+<section aria-labelledby="reproduce"><h2 id="reproduce">記録と再現手順</h2>
+<p><a href="summary.json">集計JSON：指標・サンプル数・実測秒・出典・SHA256</a> / <a href="mae-comparison.svg">比較グラフSVG</a> / <a href="interval-coverage.svg">被覆率SVG</a> / <a href="README.md">詳細Markdown</a></p>
+<p>実験コードcommit <code>cd1040556093c032e768548510d3daecba3e2bd3</code>。同じchecksumのキャッシュを保ったMAEN作業コピーで実行します。本体コードは非公開で、公開閲覧者に完全な実行環境が提供されているとは主張しません。</p>
+<pre>nice -n 15 python3 maen.py run --seed 20261004 --out runs/check
+nice -n 15 python3 maen.py run --seed 20261005 --out runs/sensitivity</pre>
+<p>未知化合物、原実験/プレート別分離、打ち切り補正、他施設での評価、生体内・臨床効果は未検証です。</p>
+<p><strong>更新履歴</strong><br>2026-10-04：小規模ベンチマーク初版。<br>2026-10-05：同じ分割の再現と追加1分割の感度確認、結果グラフを追加。</p></section>
+<footer>MAEN · 計算予測の検証記録。NCIの支持や推奨を意味しません。</footer>
+</main></body></html>
