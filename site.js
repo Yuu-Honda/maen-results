@@ -33,6 +33,20 @@
     cells.forEach(cell => cell.classList.toggle('best', Number(cell.textContent) === minimum));
   });
 
+  const openLinkedDetails = hash => {
+    if (!hash || hash.length < 2) return;
+    let target;
+    try { target = document.getElementById(decodeURIComponent(hash.slice(1))); } catch { return; }
+    const details = target?.querySelector('details[data-autoopen]');
+    if (details) details.open = true;
+  };
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (link) openLinkedDetails(link.getAttribute('href'));
+  });
+  window.addEventListener('hashchange', () => openLinkedDetails(location.hash));
+  openLinkedDetails(location.hash);
+
   const controls = document.querySelector('.viewer-controls');
   const status = document.querySelector('#protein-status');
   const directionInput = document.querySelector('#protein-direction');

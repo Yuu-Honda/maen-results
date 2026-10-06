@@ -1,6 +1,6 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
-[日本語サイト](https://yuu-honda.github.io/maen-results/) / [English](https://yuu-honda.github.io/maen-results/en.html)
+[日本語サイト](https://yuu-honda.github.io/maen-results/) / [English](https://yuu-honda.github.io/maen-results/en.html) / [更新履歴](CHANGELOG.md)
 
 MAENは、細胞の実測データを使って仮説を絞る探索的な研究記録です。この公開リポジトリにはサイトのコード、方法の説明、数値の集計を置きます。計算用のコードは別の非公開リポジトリで管理しています。原表、全タンパク質・遺伝子プロファイル、個別条件の結果、用量表、細胞の割り当てや保留IDはここに配布しません。
 
@@ -75,4 +75,4 @@ The additional RNA comparison reused 44 previously viewed development cells over
 
 The first frozen NCI→GDSC1 cross-endpoint ranking test is complete: primary RNA macro rho 0.06165 versus tissue 0.10317 across six drugs, with paired difference −0.04152 (95% descriptive interval −0.11405 to 0.01943). RNA superiority was not established. The prespecified all-finite secondary analysis includes 915 out-of-range fits and reverses the point-estimate difference (RNA0.18051, tissue0.13146); it does not replace the primary. Fixed and CV tissue predictions are identical because NCI-only CV selected shrinkage10. The 418 RNA-eligible models become 387 matched models and 340 in-range models. No external fitting, original profiles, individual predictions or clinical claim is included. See [the full aggregate](data/external-summary.json).
 
-**免責事項**：個人の趣味の研究記録で、コード・計算・文章は主にAIを使って作成しています。専門家の監修・査読はなく、正確性は保証しません。医療上の助言ではありません。NCIとは無関係です。[サイトの免責事項](https://yuu-honda.github.io/maen-results/#disclaimer)を参照してください。
+**免責事項**：個人の趣味の研究記録で、コード・計算・文章は主にAIを使って作成しています。専門家の監修・査読はなく、正確性は保証しません。医療上の助言ではなく、掲載内容の利用により生じた損害について責任を負いません。NCI、ウェルカム・サンガー研究所（GDSC・Cell Model Passports）、MCF7タンパク質研究の論文著者、ProteomeXchangeなど、データ提供元とは無関係です。[サイトの免責事項](https://yuu-honda.github.io/maen-results/#disclaimer)を参照してください。
