@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "research_line": "protein_response_retrieval",
+  "status": "exploratory exact-condition retrieval within one published study; no independent therapeutic validation",
+  "freeze": {
+    "commit": "012e2c5",
+    "frozen_utc": "2026-10-06T12:09:06Z",
+    "before_scoring": true,
+    "completed_utc": "2026-10-06T12:09:26Z"
+  },
+  "experimental_context": {
+    "cell_model": "MCF7",
+    "treatment_hours": 12,
+    "biological_replicates": 2,
+    "measurement": "protein abundance, not activity or binding",
+    "target": "same treatment condition in the opposite biological replicate"
+  },
+  "counts": {
+    "conditions": 78,
+    "accessions": 15170,
+    "gene_annotations": 8889,
+    "observed_values": 998650,
+    "missing_values": 1367870
+  },
+  "method": {
+    "score": "cosine on pairwise observed log2 treatment/DMSO ratios; no centering or imputation",
+    "primary_min_shared_accessions": 100,
+    "gene_query_min_shared": 20,
+    "unit_assumption": "Positive S2 values are interpreted as treatment/DMSO ratios from article method 2.5; workbook caption does not declare units.",
+    "mask_control": "Jaccard similarity of observed accession sets",
+    "value_control": "One fixed shuffle of observed query values, preserving missing positions; not a permutation test or p-value."
+  },
+  "primary": {
+    "observed_cosine": {
+      "summary": {
+        "queries": 156,
+        "scored_queries": 156,
+        "target_eligible_queries": 156,
+        "target_eligible_fraction": 1.0,
+        "candidate_count_min": 78,
+        "candidate_count_max": 78,
+        "top1_hits": 109,
+        "top5_hits": 149,
+        "top1": 0.6987179487179487,
+        "top5": 0.9551282051282052,
+        "mrr": 0.7999137436637437,
+        "uniform_rank_reference": {
+          "top1": 0.01282051282051282,
+          "top5": 0.0641025641025641,
+          "mrr": 0.06333744937304378
+        }
+      },
+      "by_direction": {
+        "R1_to_R2": {
+          "queries": 78,
+          "scored_queries": 78,
+          "target_eligible_queries": 78,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 53,
+          "top5_hits": 73,
+          "top1": 0.6794871794871795,
+          "top5": 0.9358974358974359,
+          "mrr": 0.779528342028342,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "R2_to_R1": {
+          "queries": 78,
+          "scored_queries": 78,
+          "target_eligible_queries": 78,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 56,
+          "top5_hits": 76,
+          "top1": 0.717948717948718,
+          "top5": 0.9743589743589743,
+          "mrr": 0.8202991452991453,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        }
+      },
+      "by_period": {
+        "1P": {
+          "queries": 50,
+          "scored_queries": 50,
+          "target_eligible_queries": 50,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 34,
+          "top5_hits": 48,
+          "top1": 0.68,
+          "top5": 0.96,
+          "mrr": 0.7986753246753246,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "2P": {
+          "queries": 38,
+          "scored_queries": 38,
+          "target_eligible_queries": 38,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 20,
+          "top5_hits": 35,
+          "top1": 0.5263157894736842,
+          "top5": 0.9210526315789473,
+          "mrr": 0.6679824561403509,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "3P": {
+          "queries": 68,
+          "scored_queries": 68,
+          "target_eligible_queries": 68,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 55,
+          "top5_hits": 66,
+          "top1": 0.8088235294117647,
+          "top5": 0.9705882352941176,
+          "mrr": 0.8745506535947712,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        }
+      }
+    },
+    "mask_jaccard": {
+      "summary": {
+        "queries": 156,
+        "scored_queries": 156,
+        "target_eligible_queries": 156,
+        "target_eligible_fraction": 1.0,
+        "candidate_count_min": 78,
+        "candidate_count_max": 78,
+        "top1_hits": 26,
+        "top5_hits": 118,
+        "top1": 0.16666666666666666,
+        "top5": 0.7564102564102564,
+        "mrr": 0.38629886851040696,
+        "uniform_rank_reference": {
+          "top1": 0.01282051282051282,
+          "top5": 0.0641025641025641,
+          "mrr": 0.06333744937304378
+        }
+      },
+      "by_direction": {
+        "R1_to_R2": {
+          "queries": 78,
+          "scored_queries": 78,
+          "target_eligible_queries": 78,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 13,
+          "top5_hits": 60,
+          "top1": 0.16666666666666666,
+          "top5": 0.7692307692307693,
+          "mrr": 0.3877286175363099,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "R2_to_R1": {
+          "queries": 78,
+          "scored_queries": 78,
+          "target_eligible_queries": 78,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 13,
+          "top5_hits": 58,
+          "top1": 0.16666666666666666,
+          "top5": 0.7435897435897436,
+          "mrr": 0.3848691194845041,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        }
+      },
+      "by_period": {
+        "1P": {
+          "queries": 50,
+          "scored_queries": 50,
+          "target_eligible_queries": 50,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 9,
+          "top5_hits": 40,
+          "top1": 0.18,
+          "top5": 0.8,
+          "mrr": 0.40203124653124656,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "2P": {
+          "queries": 38,
+          "scored_queries": 38,
+          "target_eligible_queries": 38,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 5,
+          "top5_hits": 20,
+          "top1": 0.13157894736842105,
+          "top5": 0.5263157894736842,
+          "mrr": 0.3191096184517237,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "3P": {
+          "queries": 68,
+          "scored_queries": 68,
+          "target_eligible_queries": 68,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 12,
+          "top5_hits": 58,
+          "top1": 0.17647058823529413,
+          "top5": 0.8529411764705882,
+          "mrr": 0.41227787735140675,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        }
+      }
+    },
+    "value_permuted_cosine": {
+      "summary": {
+        "queries": 156,
+        "scored_queries": 156,
+        "target_eligible_queries": 156,
+        "target_eligible_fraction": 1.0,
+        "candidate_count_min": 78,
+        "candidate_count_max": 78,
+        "top1_hits": 1,
+        "top5_hits": 10,
+        "top1": 0.00641025641025641,
+        "top5": 0.0641025641025641,
+        "mrr": 0.061486821296639856,
+        "uniform_rank_reference": {
+          "top1": 0.01282051282051282,
+          "top5": 0.0641025641025641,
+          "mrr": 0.06333744937304378
+        }
+      },
+      "by_direction": {
+        "R1_to_R2": {
+          "queries": 78,
+          "scored_queries": 78,
+          "target_eligible_queries": 78,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 0,
+          "top5_hits": 7,
+          "top1": 0.0,
+          "top5": 0.08974358974358974,
+          "mrr": 0.06138100440710032,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "R2_to_R1": {
+          "queries": 78,
+          "scored_queries": 78,
+          "target_eligible_queries": 78,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 1,
+          "top5_hits": 3,
+          "top1": 0.01282051282051282,
+          "top5": 0.038461538461538464,
+          "mrr": 0.061592638186179376,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        }
+      },
+      "by_period": {
+        "1P": {
+          "queries": 50,
+          "scored_queries": 50,
+          "target_eligible_queries": 50,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 1,
+          "top5_hits": 5,
+          "top1": 0.02,
+          "top5": 0.1,
+          "mrr": 0.09083720269170989,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "2P": {
+          "queries": 38,
+          "scored_queries": 38,
+          "target_eligible_queries": 38,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 0,
+          "top5_hits": 3,
+          "top1": 0.0,
+          "top5": 0.07894736842105263,
+          "mrr": 0.0465364813088095,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        },
+        "3P": {
+          "queries": 68,
+          "scored_queries": 68,
+          "target_eligible_queries": 68,
+          "target_eligible_fraction": 1.0,
+          "candidate_count_min": 78,
+          "candidate_count_max": 78,
+          "top1_hits": 0,
+          "top5_hits": 2,
+          "top1": 0.0,
+          "top5": 0.029411764705882353,
+          "mrr": 0.04826026026405237,
+          "uniform_rank_reference": {
+            "top1": 0.01282051282051282,
+            "top5": 0.0641025641025641,
+            "mrr": 0.06333744937304378
+          }
+        }
+      }
+    }
+  },
+  "secondary": {
+    "status": "secondary curated literature signatures; selection and study dependence limit generalization",
+    "summary": {
+      "queries": 11,
+      "scored_queries": 11,
+      "target_eligible_queries": 11,
+      "target_eligible_fraction": 1.0,
+      "candidate_count_min": 44,
+      "candidate_count_max": 78,
+      "top1_hits": 6,
+      "top5_hits": 7,
+      "top1": 0.5454545454545454,
+      "top5": 0.6363636363636364,
+      "mrr": 0.6073921028466484,
+      "uniform_rank_reference": {
+        "top1": 0.013721127357490993,
+        "top5": 0.06860563678745496,
+        "mrr": 0.06661405706088505
+      }
+    },
+    "coverage": {
+      "source_signatures": 20,
+      "searched_signatures": 20,
+      "mapped_for_identity_accuracy": 11,
+      "excluded_from_identity_accuracy": 9,
+      "with_any_candidate": 19,
+      "with_no_candidate": 1,
+      "candidate_count_min": 0,
+      "candidate_count_max": 78
+    },
+    "note": "The source authors selected and previously used these literature signatures. The 11 mapped signatures alone form the identity-accuracy denominator; all 20 were searched."
+  },
+  "timings": {
+    "parse_seconds": 6.497559834271669,
+    "computation_seconds": 1.5578866661526263,
+    "excludes": "download, plotting and JSON saving"
+  },
+  "verification": {
+    "tests_passed": 41,
+    "tests_skipped": 0,
+    "scope": "local execution, not CI"
+  },
+  "sources": [
+    {
+      "title": "A proteomic landscape of pharmacologic perturbations for functional relevance",
+      "url": "https://doi.org/10.1016/j.jpha.2023.08.021",
+      "methods_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10859532/",
+      "dataset_url": "https://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD043263"
+    },
+    {
+      "title": "Supplementary tables S1–S3",
+      "urls": [
+        "https://ars.els-cdn.com/content/image/1-s2.0-S2095177923002101-mmc2.xlsx",
+        "https://ars.els-cdn.com/content/image/1-s2.0-S2095177923002101-mmc3.xlsx",
+        "https://ars.els-cdn.com/content/image/1-s2.0-S2095177923002101-mmc4.xlsx"
+      ],
+      "use": "source attribution only; original workbooks and full derived matrices are not redistributed here"
+    }
+  ],
+  "license_note": "The article is CC BY-NC-ND 4.0. A separate supplementary-data license has not been confirmed. This public file contains only MAEN method descriptions and numerical aggregates.",
+  "limitations": [
+    "within-study shared-control/batch dependence",
+    "candidate-specific observed feature intersections",
+    "single value permutation is a diagnostic, not a p-value",
+    "external signatures were selected and used by the source authors",
+    "S2 ratio units inferred from methods, not declared in workbook",
+    "no unmeasured-compound or therapeutic efficacy evaluation",
+    "A high missing-mask top-5 score indicates measurement-group information; retrieval does not isolate a causal protein effect.",
+    "No unmeasured compounds, cancer-selective toxicity, human safety or clinical efficacy were evaluated."
+  ]
+}
