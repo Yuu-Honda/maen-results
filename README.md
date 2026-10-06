@@ -37,11 +37,29 @@ MRRは正解順位の逆数の平均です。全156問い合わせで、正解�
 | 分子（RNA） | 0.55093 |
 | RNAを入れ替えた分子対照 | 0.60766 |
 
-分子モデルは調整組織モデルとRNA入れ替え対照のそれぞれに対して19/20分割でMAEが小さくなりました。この20分割は独立試行ではなく、有意差や因果効果を意味しません。RNA入れ替えは組織の情報も壊し、モデルの調整候補数も異なります。独立最終評価は未完了で、保留細胞は評価していません。
+分子モデルは調整組織モデルとRNA入れ替え対照のそれぞれに対して19/20分割でMAEが小さくなりました。この20分割は独立試行ではなく、有意差や因果効果を意味しません。RNA入れ替えは組織の情報も壊し、モデルの調整候補数も異なります。同一GI50の独立確認は未完了で、保留細胞は評価していません。別endpointのGDSC1転移評価は下記に示します。
 
 追加手順は計算前のcommit `ce5a4fb`で固定しました。キャッシュ解析と20分割評価は17.237秒、ダウンロード・描画・GitHub反映は除きます。21テスト成功はローカル実行で、CI実績ではありません。既存の3モデル・20分割の集計は変更せず保存しています。その旧評価では、依存コードと環境の追加固定は結果の後でした。
 
 [追加対照の公開集計](data/controls-summary.json) / [旧3モデル・20分割集計](summary.json) / [以前の結果](history/2026-10-06-robust-20/index.html) / [CellMiner](https://discover.nci.nih.gov/cellminer/)
+
+## 最初の固定外部RNA順位転移評価
+
+NCIの44開発細胞だけで学習したRNAモデルを、全NCI-60モデルと既知の同一由来・派生モデルを除いたGDSC1で、一度評価しました。外部応答アクセス前に手順・予測・対応表・入力hashを固定しました。RNA適格418細胞、応答対応387細胞/1,962組、濃度範囲内の主評価340細胞/1,047組です。
+
+| 主評価モデル | 6薬剤macro Spearman ρ | 95%記述的bootstrap区間 |
+|---|---:|---|
+| RNA | 0.06165 | −0.02069〜0.12753 |
+| 組織・固定 | 0.10317 | 0.02903〜0.17933 |
+| 組織・NCI内部CV | 0.10317 | 0.02903〜0.17933 |
+
+RNA−組織の対応付き差は−0.04152（95%区間−0.11405〜0.01943）。差の区間はゼロを含み、今回の外部条件ではRNAの優位は確認できませんでした。薬剤平均の薬剤内相関は未定義で、0と比較しません。組織CVが係数10を選び、固定組織と同じ予測になっています。全6薬剤を掲載し、由来群単位で500回、同じ抽出を各モデル・薬剤に使った95%percentile区間を示します。
+
+事前指定の範囲外込み副結果はRNA0.18051、組織0.13146で比較の方向が変わります。主評価から除外した915組はfitted IC50が濃度範囲外にあるもので、真の打ち切りflagではありません。副結果の区間は未計算で、主評価へ昇格させません。NCI48時間増殖GI50とGDSC72時間viability IC50は異なるendpointで、元のMAEと直接比較しません。
+
+固定commitは学習`da5624f`、外部予測・手順`21677bb`、最終対応`c961cdb`。CPU1スレッドの解析＋評価12.596秒。76ローカルテストはRNA/core/external56件と別protein環境20件の合計で、CI実績ではありません。別実装で順位と500bootstrapを監査し一致しました。正常細胞の毒性・選択性・臨床効果は未検証です。今後この閲覧済み集合で調整する場合は開発集合とし、性能確認には別の未使用データが必要です。
+
+[全6薬剤・主/副結果の公開集計](data/external-summary.json) / [GDSC測定仕様](https://depmap.sanger.ac.uk/documentation/datasets/drug-sensitivity/) / [RNA仕様](https://depmap.sanger.ac.uk/documentation/datasets/expression/) / [Sanger利用方針](https://depmap.sanger.ac.uk/documentation/data-usage-policy/)
 
 ## 到達点と次の検証
 
@@ -53,6 +71,8 @@ MAEN records two exploratory research lines: RNA-based drug-response prediction 
 
 Protein retrieval recovered the exact treatment condition at rank 1 in 109/156 queries and within the top 5 in 149/156. Missing-mask retrieval alone reached 118/156 in the top 5, showing that measurement-group information remains a strong clue. The two replicates share a study and DMSO controls. Of 20 previously selected literature signatures searched, 19 had candidates; identity accuracy used only the 11 mapped signatures, with 6 top-1 and 7 top-5 hits. This is not an independent final validation. The procedure was frozen before scoring; 41 tests passed locally.
 
-The additional RNA comparison reused 44 previously viewed development cells over 20 overlapping splits. Mean MAE was 0.55093 for the molecular model, 0.61016 for the cross-validated tissue model and 0.60766 for the shuffled-RNA control. Split wins are descriptive, not independent trials or significance tests. The additional procedure was frozen before scoring; 21 tests passed locally. Independent final evaluation and therapeutic efficacy remain unverified.
+The additional RNA comparison reused 44 previously viewed development cells over 20 overlapping splits. Mean MAE was 0.55093 for the molecular model, 0.61016 for the cross-validated tissue model and 0.60766 for the shuffled-RNA control. Split wins are descriptive, not independent trials or significance tests. The additional procedure was frozen before scoring; 21 tests passed locally. Same-GI50 independent confirmation and therapeutic efficacy remain unverified. The frozen cross-endpoint transfer is reported below.
+
+The first frozen NCI→GDSC1 cross-endpoint ranking test is complete: primary RNA macro rho 0.06165 versus tissue 0.10317 across six drugs, with paired difference −0.04152 (95% descriptive interval −0.11405 to 0.01943). RNA superiority was not established. The prespecified all-finite secondary analysis includes 915 out-of-range fits and reverses the point-estimate difference (RNA0.18051, tissue0.13146); it does not replace the primary. Fixed and CV tissue predictions are identical because NCI-only CV selected shrinkage10. The 418 RNA-eligible models become 387 matched models and 340 in-range models. No external fitting, original profiles, individual predictions or clinical claim is included. See [the full aggregate](data/external-summary.json).
 
 **免責事項**：個人の趣味の研究記録で、コード・計算・文章は主にAIを使って作成しています。専門家の監修・査読はなく、正確性は保証しません。医療上の助言ではありません。NCIとは無関係です。[サイトの免責事項](https://yuu-honda.github.io/maen-results/#disclaimer)を参照してください。
