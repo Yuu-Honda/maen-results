@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MAEN — 薬の効きやすさを予測する小さな検証</title>
+<link rel="alternate" hreflang="ja" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
 <meta name="description" content="公開されているがん細胞の実験データを使い、既知の抗がん剤がどの細胞に効きやすいかを計算で予測し、答え合わせをする個人の検証記録です。">
 <style>
 :root{
@@ -40,6 +42,10 @@ p{margin:0 0 14px}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px;padding:0;list-style:none}
 .badges li{font-size:13px;padding:5px 12px;border:1px solid rgba(255,255,255,.22);border-radius:99px;background:rgba(255,255,255,.06)}
 .hero-note{font-size:13px;color:#cfe2dc;margin:-10px 0 22px}.hero-note a{color:#f6c49b}
+.lang{position:absolute;top:16px;right:16px;z-index:5;display:flex;border:1px solid rgba(255,255,255,.28);border-radius:99px;overflow:hidden;font-size:13px;background:rgba(0,0,0,.18)}
+.lang a,.lang span{padding:6px 14px;color:#e7f2ee;text-decoration:none}
+.lang span{background:#8fe3d1;color:#0d3b3a;font-weight:700}
+.lang a:hover{background:rgba(255,255,255,.12)}
 .cta{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#0d3b3a;background:#8fe3d1;padding:12px 22px;border-radius:99px;text-decoration:none;transition:transform .2s}
 .cta:hover{transform:translateY(-2px)}
 
@@ -144,6 +150,7 @@ footer p{margin:0 0 8px}
 }
 @media (max-width:640px){
   .wrap{padding:0 16px}
+  .hero .wrap{padding-top:72px}
   section{padding:46px 0}
   .summary,.explain,.knowns,.steps,.disc{grid-template-columns:1fr}
   .model{grid-template-columns:1fr;gap:10px}
@@ -157,6 +164,7 @@ footer p{margin:0 0 8px}
 <body>
 
 <header class="hero">
+  <nav class="lang" aria-label="言語 / Language"><span aria-current="page" lang="ja">日本語</span><a href="en.html" lang="en" hreflang="en">English</a></nav>
   <div class="cells" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="wrap">
     <div>

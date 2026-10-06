@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAEN — A small test of predicting drug sensitivity</title>
+<link rel="alternate" hreflang="ja" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<meta name="description" content="A personal log that uses public cancer cell-line data to predict which cells known anticancer drugs work best on, and checks the predictions against lab results.">
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#f6f7f4;--surface:#ffffff;--surface-2:#eef1ec;--ink:#1d2730;--sub:#5a6672;--line:#dde2dc;
+  --accent:#0f7a6c;--accent-soft:#dcefea;--warm:#c8553d;--warm-soft:#fbeae4;--gray:#8a949e;
+  --hero-1:#0d3b3a;--hero-2:#12564f;--hero-ink:#f2f7f4;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#11161a;--surface:#182026;--surface-2:#1f2930;--ink:#e6ece9;--sub:#a3afb7;--line:#2b363e;
+    --accent:#4cc3ad;--accent-soft:#163a35;--warm:#f08a70;--warm-soft:#3a221d;--gray:#7d8891;
+    --hero-1:#0a1f1f;--hero-2:#0f3a36;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+img{max-width:100%}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+h2{font-size:clamp(22px,3.4vw,30px);line-height:1.45;margin:0 0 14px;letter-spacing:.01em}
+h3{font-size:18px;margin:0 0 6px}
+p{margin:0 0 14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+.sub{color:var(--sub)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;color:var(--hero-ink);background:radial-gradient(120% 90% at 80% 20%,var(--hero-2),var(--hero-1) 70%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:center;min-height:min(88vh,680px);padding-top:56px;padding-bottom:64px}
+.hero .eyebrow{color:#8fe3d1}
+.hero h1{font-size:clamp(30px,5.2vw,52px);line-height:1.3;margin:0 0 18px;letter-spacing:.01em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#8fe3d1,#f6c49b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:clamp(16px,2vw,19px);color:#cfe2dc;max-width:34em}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px;padding:0;list-style:none}
+.badges li{font-size:13px;padding:5px 12px;border:1px solid rgba(255,255,255,.22);border-radius:99px;background:rgba(255,255,255,.06)}
+.hero-note{font-size:13px;color:#cfe2dc;margin:-10px 0 22px}.hero-note a{color:#f6c49b}
+.lang{position:absolute;top:16px;right:16px;z-index:5;display:flex;border:1px solid rgba(255,255,255,.28);border-radius:99px;overflow:hidden;font-size:13px;background:rgba(0,0,0,.18)}
+.lang a,.lang span{padding:6px 14px;color:#e7f2ee;text-decoration:none}
+.lang span{background:#8fe3d1;color:#0d3b3a;font-weight:700}
+.lang a:hover{background:rgba(255,255,255,.12)}
+.hero h1{font-size:clamp(28px,4.2vw,44px)}
+.cta{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#0d3b3a;background:#8fe3d1;padding:12px 22px;border-radius:99px;text-decoration:none;transition:transform .2s}
+.cta:hover{transform:translateY(-2px)}
+
+/* floating cells background */
+.cells{position:absolute;inset:0;z-index:1;pointer-events:none}
+.cells span{position:absolute;border-radius:50%;border:1px solid rgba(143,227,209,.28);background:radial-gradient(circle at 35% 35%,rgba(143,227,209,.18),rgba(143,227,209,.03) 60%);animation:drift 18s ease-in-out infinite}
+.cells span::after{content:"";position:absolute;width:28%;height:28%;left:40%;top:36%;border-radius:50%;background:rgba(143,227,209,.22)}
+.cells span:nth-child(1){width:90px;height:90px;left:4%;top:12%;animation-duration:19s}
+.cells span:nth-child(2){width:46px;height:46px;left:38%;top:78%;animation-duration:15s;animation-delay:-4s}
+.cells span:nth-child(3){width:130px;height:130px;left:86%;top:62%;animation-duration:23s;animation-delay:-9s}
+.cells span:nth-child(4){width:34px;height:34px;left:58%;top:8%;animation-duration:13s;animation-delay:-2s}
+.cells span:nth-child(5){width:64px;height:64px;left:20%;top:64%;animation-duration:21s;animation-delay:-12s}
+.cells span:nth-child(6){width:24px;height:24px;left:72%;top:30%;animation-duration:11s;animation-delay:-6s}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(18px,-22px) scale(1.06)}66%{transform:translate(-14px,12px) scale(.96)}}
+
+/* prediction-vs-actual visual */
+.viz{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:22px 22px 18px;backdrop-filter:blur(4px)}
+.viz-title{font-size:13px;color:#cfe2dc;margin-bottom:14px;display:flex;justify-content:space-between;gap:8px}
+.lane{display:grid;grid-template-columns:5.5em 1fr;gap:10px;align-items:center;margin:10px 0}
+.lane b{font-size:13px;font-weight:600;color:#e7f2ee}
+.track{position:relative;height:38px;border-radius:10px;background:rgba(255,255,255,.07)}
+.track::before{content:"";position:absolute;left:62%;top:-4px;bottom:-4px;width:2px;background:#f6c49b;border-radius:2px}
+.dot{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#8fe3d1;box-shadow:0 0 0 6px rgba(143,227,209,.18);animation:aim 6s cubic-bezier(.45,.05,.2,1) infinite}
+.gap{position:absolute;top:50%;height:2px;background:repeating-linear-gradient(90deg,#8fe3d1 0 5px,transparent 5px 9px);animation:gap 6s cubic-bezier(.45,.05,.2,1) infinite}
+.lane:nth-child(2) .dot{--from:8%;--to:30%}.lane:nth-child(2) .gap{--from:8%;--to:30%}
+.lane:nth-child(3) .dot{--from:10%;--to:38%;animation-delay:.25s}.lane:nth-child(3) .gap{--from:10%;--to:38%;animation-delay:.25s}
+.lane:nth-child(4) .dot{--from:12%;--to:50%;animation-delay:.5s}.lane:nth-child(4) .gap{--from:12%;--to:50%;animation-delay:.5s}
+@keyframes aim{0%{left:var(--from);opacity:0}12%{opacity:1}55%,88%{left:var(--to);opacity:1}100%{left:var(--to);opacity:0}}
+@keyframes gap{0%{left:var(--from);right:38%;opacity:0}12%{opacity:1}55%,88%{left:var(--to);right:38%;opacity:1}100%{left:var(--to);right:38%;opacity:0}}
+.viz-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#cfe2dc;margin-top:12px}
+.viz-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;background:#8fe3d1;margin-right:6px;vertical-align:-1px}
+.viz-legend i.t{border-radius:2px;width:3px;height:12px;background:#f6c49b}
+.viz-note{font-size:11.5px;color:#a9c3bb;margin-top:8px}
+
+/* ---------- Sections ---------- */
+section{padding:64px 0}
+section+section{border-top:1px solid var(--line)}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card .k{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent);margin-bottom:6px}
+.card p:last-child{margin:0}
+
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 8px;padding:0;list-style:none}
+.steps li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 18px 18px}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;margin-bottom:10px}
+.steps li p{font-size:14.5px;margin:0;color:var(--sub)}
+.ico{font-size:26px;line-height:1;margin-bottom:6px}
+
+.explain{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.box{background:var(--surface-2);border-radius:14px;padding:20px}
+.box p:last-child{margin:0}
+.scale{display:flex;align-items:flex-end;gap:6px;margin:12px 0 4px;height:70px}
+.scale div{flex:1;background:var(--accent);opacity:.25;border-radius:6px 6px 0 0}
+.scale div:nth-child(1){height:18%}.scale div:nth-child(2){height:36%;opacity:.4}.scale div:nth-child(3){height:58%;opacity:.6}.scale div:nth-child(4){height:80%;opacity:.8}.scale div:nth-child(5){height:100%;opacity:1}
+.scale-label{display:flex;justify-content:space-between;font-size:12px;color:var(--sub)}
+
+/* model comparison bars */
+.models{display:grid;gap:14px;margin:26px 0}
+.model{display:grid;grid-template-columns:minmax(0,15em) 1fr;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.model h3{font-size:16px}
+.model p{font-size:13.5px;color:var(--sub);margin:0}
+.bar{position:relative;height:30px;background:var(--surface-2);border-radius:8px;overflow:hidden}
+.bar span{position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--c,var(--gray));border-radius:8px;transform-origin:left;animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both}
+.bar output{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-weight:700;font-size:15px}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.fold{font-size:13px;color:var(--sub)}
+
+figure{margin:22px 0 6px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+figcaption{font-size:13px;color:#5a6672;margin-top:6px}
+
+.knowns{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.knowns .card ul{margin:0;padding-left:1.2em}
+.knowns .card li{margin:6px 0}
+.ok{border-top:4px solid var(--accent)}
+.ng{border-top:4px solid var(--warm)}
+.disc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.disc-item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--warm);border-radius:12px;padding:18px 20px}
+.disc-item h3{font-size:16px}
+.disc-item p{font-size:14.5px;margin:0}
+.callout{border-left:4px solid var(--warm);background:var(--warm-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0}
+
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin:12px 0}
+summary{cursor:pointer;font-weight:700;padding:14px 0}
+details[open]>summary{color:var(--accent)}
+details p{font-size:15px}
+.scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-top:16px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:14.5px}
+th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:13px;color:var(--sub);font-weight:600}
+td.best{color:var(--accent);font-weight:700}
+tbody tr:last-child td{border-bottom:0}
+.links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px}
+
+footer{padding:36px 0 56px;border-top:1px solid var(--line);color:var(--sub);font-size:13.5px}
+footer p{margin:0 0 8px}
+
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:44px;padding-bottom:48px}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .hero .wrap{padding-top:72px}
+  section{padding:46px 0}
+  .summary,.explain,.knowns,.steps,.disc{grid-template-columns:1fr}
+  .model{grid-template-columns:1fr;gap:10px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .dot{left:var(--to)}.gap{left:var(--to);right:38%}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <nav class="lang" aria-label="言語 / Language"><a href="index.html" lang="ja" hreflang="ja">日本語</a><span aria-current="page" lang="en">English</span></nav>
+  <div class="cells" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">MAEN · A personal validation log</div>
+      <h1>Which cancer cells does a drug <em>work best</em> on?<br>Predict it, then check against the lab.</h1>
+      <p class="lead">A small experiment that uses public cell-line data from the U.S. National Cancer Institute (NCI) to predict how strongly six existing anticancer drugs act on each cell line — and measures how far off the predictions are.</p>
+      <ul class="badges">
+        <li>Personal hobby project</li>
+        <li>Run with AI</li>
+        <li>Public data only</li>
+        <li>Not affiliated with NCI</li>
+        <li>No treatment claims</li>
+      </ul>
+      <p class="hero-note">This is not expert research. Please read the <a href="#disclaimer">disclaimer</a>.</p>
+      <a class="cta" href="#what">What is this about? ↓</a>
+    </div>
+    <div class="viz" role="img" aria-label="Illustration: predictions (dots) move closer to the measured value (vertical line) — drug mean, then tissue, then molecular.">
+      <div class="viz-title"><span>Prediction vs. measured value (illustration)</span><span>→ measured</span></div>
+      <div class="lane"><b>Drug mean</b><div class="track"><div class="gap"></div><div class="dot"></div></div></div>
+      <div class="lane"><b>+ Tissue</b><div class="track"><div class="gap"></div><div class="dot"></div></div></div>
+      <div class="lane"><b>+ RNA</b><div class="track"><div class="gap"></div><div class="dot"></div></div></div>
+      <div class="viz-legend"><span><i></i>Prediction</span><span><i class="t"></i>Measured value</span></div>
+      <p class="viz-note">This animation is a schematic. See “Results” below for the actual numbers.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section aria-labelledby="tldr"><div class="wrap">
+  <div class="eyebrow">In short</div>
+  <h2 id="tldr">MAEN in three lines</h2>
+  <div class="summary">
+    <div class="card"><div class="k">What does it do?</div><p>It predicts “at what concentration does this drug work on this cell line” and compares the prediction with the measured lab value.</p></div>
+    <div class="card"><div class="k">Who is behind it?</div><p>A personal project by Yuu Honda. The code, computation and writing are mostly done with AI, and nothing here has been reviewed by medical or drug-discovery experts. The data is public NCI data.</p></div>
+    <div class="card"><div class="k">What was found?</div><p>Using each cell line’s <strong>RNA (gene activity)</strong> reduced the average prediction error by about 9%. This is still exploratory and not a settled conclusion.</p></div>
+  </div>
+</div></section>
+
+<section id="what" aria-labelledby="what-h"><div class="wrap">
+  <div class="eyebrow">Background</div>
+  <h2 id="what-h">The same drug works well on some cells and poorly on others</h2>
+  <p>Cancer cells differ in their properties, so the same anticancer drug may stop some cells at a tiny dose while others need much more. For decades the NCI has tested many compounds on a panel of about 60 human cancer cell lines (<strong>NCI-60</strong>) and published the results.</p>
+  <p>MAEN uses these public results as the “answer key” and asks: <strong>can we predict drug sensitivity for cells the model has never seen?</strong></p>
+
+  <ol class="steps">
+    <li><div class="ico" aria-hidden="true">🧫</div><h3>Get public data</h3><p>Download lab results for six existing anticancer drugs and cell-line RNA data from NCI’s official sites.</p></li>
+    <li><div class="ico" aria-hidden="true">✂️</div><h3>Split the cells</h3><p>Divide cells into “training” and “answer-check” groups. The check group is not touched until predictions are made.</p></li>
+    <li><div class="ico" aria-hidden="true">🧮</div><h3>Predict</h3><p>Using only the training cells, predict drug sensitivity for the check cells.</p></li>
+    <li><div class="ico" aria-hidden="true">📏</div><h3>Measure the error</h3><p>Compute the mean absolute error (MAE) between prediction and measurement. Smaller is better.</p></li>
+  </ol>
+
+  <div class="explain">
+    <div class="box">
+      <h3>Measuring sensitivity: GI50</h3>
+      <p>The drug concentration needed to cut cell growth by half. The lower the concentration, the more sensitive the cell. Here it is log-transformed (pGI50) for easier handling.</p>
+      <div class="scale" aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div>
+      <div class="scale-label"><span>Less sensitive</span><span>More sensitive</span></div>
+    </div>
+    <div class="box">
+      <h3>Reading the error: MAE</h3>
+      <p>A difference of 1 in pGI50 means a 10× difference in concentration. An MAE of 0.55 roughly means predictions are off by <strong>about 3.6× on average</strong> (geometric mean).</p>
+      <p class="sub">Drugs: doxorubicin, cisplatin, paclitaxel, fluorouracil, methotrexate, etoposide</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="result" aria-labelledby="result-h"><div class="wrap">
+  <div class="eyebrow">Results</div>
+  <h2 id="result-h">Comparing three prediction methods</h2>
+  <p>Mean MAE for three methods on the same 44 cell lines and the same 20 splits (shorter bar = smaller error).</p>
+  <div class="models">
+    <div class="model"><div><h3>① Drug mean</h3><p>Baseline: use the drug’s average response as the prediction</p></div><div class="bar"><span style="--w:100%;--c:var(--gray)"></span><output class="num">0.608</output></div></div>
+    <div class="model"><div><h3>② + Tissue</h3><p>Add the typical tendency of each tissue of origin (lung, breast, …)</p></div><div class="bar"><span style="--w:97.8%;--c:#7fb3a9"></span><output class="num">0.595</output></div></div>
+    <div class="model"><div><h3>③ + Molecular (RNA)</h3><p>Predict from each cell line’s gene activity</p></div><div class="bar"><span style="--w:90.6%;--c:var(--accent)"></span><output class="num">0.551</output></div></div>
+  </div>
+  <p class="fold">③ had lower error than ① in 19 of 20 splits and lower than ② in 18 of 20. Because the same cells are reused across splits, this does not mean “19 independent wins” or statistical significance.</p>
+
+  <figure><img src="mae-comparison.png" alt="Mean MAE: drug mean 0.60794, tissue 0.59465, molecular 0.55093"><figcaption>Mean MAE comparison (original chart, Japanese labels)</figcaption></figure>
+
+  <h3 style="margin-top:28px">How wide are the prediction ranges?</h3>
+  <p>Each prediction also comes with a range it should fall into (a prediction interval). For the molecular model, the share of cells whose six drug values all fell within the range averaged 87.2%. However, the half-width is 1.548–2.533 pGI50 (tens to hundreds of times in concentration), so the high hit rate partly reflects how wide the ranges are.</p>
+  <figure><img src="interval-coverage.png" alt="Molecular prediction interval coverage"><figcaption>Share of measurements inside the prediction interval (original chart, Japanese labels)</figcaption></figure>
+  <p class="sub">Note: “55/55” is the rate at which cell-line identities were matched correctly — not a prediction hit rate.</p>
+</div></section>
+
+<section aria-labelledby="limits-h"><div class="wrap">
+  <div class="eyebrow">Honestly</div>
+  <h2 id="limits-h">What we know — and what we don’t</h2>
+  <div class="knowns">
+    <div class="card ok"><h3>What can be said</h3><ul>
+      <li>Within these 44 cell lines and 6 drugs, adding RNA information tended to reduce the average error</li>
+      <li>The computation is light: about 11 seconds on one CPU thread (excluding downloads)</li>
+      <li>All splits are published, including the ones where results were worse</li>
+    </ul></div>
+    <div class="card ng"><h3>What cannot be said</h3><ul>
+      <li>That this helps treat patients or finds new drugs</li>
+      <li>That it predicts equally well on new, unused data (no independent final evaluation yet)</li>
+      <li>That RNA itself caused the improvement (only the molecular model was tuned internally)</li>
+    </ul></div>
+  </div>
+  <p class="callout">This is a personal, AI-assisted practice log and must not be used for medical decisions. It is not endorsed by NCI. See the <a href="#disclaimer">disclaimer</a> below.</p>
+</div></section>
+
+<section aria-labelledby="detail-h"><div class="wrap">
+  <div class="eyebrow">For specialists</div>
+  <h2 id="detail-h">Details and reproducibility</h2>
+  <details><summary>Preprocessing, model selection and leakage control</summary><p>Official CellMiner 2.15, HG-19, date label 09-11-2025, log2(FPKM+1). 23,808 gene records × 60 cell lines, 0 missing values. Zero values are not treated as missing. Provider-side FPKM processing is used as-is; no raw reprocessing.</p><p>Outer training 28–30, calibration 6–8, evaluation 7–8 cells. All six drugs share the same cell partition. Median imputation, top-500 variance feature selection, standardization and PCA are fit on inner 3-fold training data only. PCA 2/5 and Ridge alpha 1/10/100 are selected by inner MAE; outer evaluation is never used for tuning. Lineage representatives were fixed before computing results, and the existing 20 split assignments were kept. Related lineages were reduced to one representative and all three models were recomputed on the same cohort and assignments.</p><p>The molecular model is tuned by inner CV; the tissue model uses a fixed shrinkage of 10. This is not a comparison of equally optimized models, nor a causal effect of RNA alone. Interval coverage is descriptive; exchangeability is not established.</p></details>
+  <details><summary>Freezing, environment and terms of use</summary><p>The molecular.py protocol was frozen by a commit before computation. Imported maen.py/robust.py and environment hashes were additionally pinned after review; we do not claim those were frozen in advance. The 14 passing tests are a local run record, not CI.</p><p>11.224 s on one CPU thread, excluding download, plotting and publishing. The official 12.2 MB ZIP was downloaded; the raw matrix, per-cell responses, split assignments, held-out IDs and private code are not published. No blanket redistribution permission is assumed.</p><p><a href="https://discover.nci.nih.gov/cellminer/loadDownload.do">Official source</a> / <a href="https://discover.nci.nih.gov/disclaimer.jsp">Terms of use</a>. Measurement conditions, GI50 censoring and an independent final evaluation remain unresolved. The 8 held-out cells excluded here have also been used before.</p></details>
+  <details><summary>MAE for all 20 splits</summary>
+  <div class="scroll"><table><thead><tr><th>seed</th><th>Drug mean</th><th>Tissue</th><th>Molecular</th></tr></thead><tbody id="runs"><tr><td>20262001</td><td>0.60676</td><td>0.61848</td><td>0.59497</td></tr><tr><td>20262002</td><td>0.59834</td><td>0.61469</td><td>0.54597</td></tr><tr><td>20262003</td><td>0.59920</td><td>0.57384</td><td>0.50564</td></tr><tr><td>20262004</td><td>0.63684</td><td>0.59126</td><td>0.52255</td></tr><tr><td>20262005</td><td>0.68002</td><td>0.66629</td><td>0.66227</td></tr><tr><td>20262006</td><td>0.66339</td><td>0.59873</td><td>0.63236</td></tr><tr><td>20262007</td><td>0.58108</td><td>0.51833</td><td>0.51763</td></tr><tr><td>20262008</td><td>0.67575</td><td>0.64204</td><td>0.60010</td></tr><tr><td>20262009</td><td>0.58791</td><td>0.61086</td><td>0.60458</td></tr><tr><td>20262010</td><td>0.63202</td><td>0.60213</td><td>0.56232</td></tr><tr><td>20262011</td><td>0.54645</td><td>0.54093</td><td>0.43990</td></tr><tr><td>20262012</td><td>0.64457</td><td>0.61010</td><td>0.55536</td></tr><tr><td>20262013</td><td>0.55410</td><td>0.58195</td><td>0.52009</td></tr><tr><td>20262014</td><td>0.59156</td><td>0.65358</td><td>0.57023</td></tr><tr><td>20262015</td><td>0.62850</td><td>0.59973</td><td>0.55066</td></tr><tr><td>20262016</td><td>0.61919</td><td>0.63110</td><td>0.56594</td></tr><tr><td>20262017</td><td>0.62450</td><td>0.57631</td><td>0.60239</td></tr><tr><td>20262018</td><td>0.59086</td><td>0.58553</td><td>0.50056</td></tr><tr><td>20262019</td><td>0.59853</td><td>0.63635</td><td>0.56310</td></tr><tr><td>20262020</td><td>0.49926</td><td>0.44086</td><td>0.40197</td></tr></tbody></table></div>
+  <p class="sub" style="margin-top:12px">The smallest value in each row is shown in green.</p>
+  </details>
+  <div class="links"><a href="summary.json">Summary JSON</a><a href="history/2026-10-06-robust-20/index.html">Previous 20 splits (qualified, Japanese)</a><a href="history/2026-10-06-five-splits/index.html">Previous 5 splits (Japanese)</a><a href="history/2026-10-05/index.html">Record of 2026-10-05 (Japanese)</a></div>
+  <p class="sub" style="margin-top:12px">In the previous 20-split results, related lineages crossed partitions in 18 of 20 splits. We do not assert the numbers are wrong, but keep them as qualified history. The old tissue result (0.58265) should not be compared directly with the current molecular result.</p>
+</div></section>
+
+<section id="disclaimer" aria-labelledby="disclaimer-h"><div class="wrap">
+  <div class="eyebrow">Please read</div>
+  <h2 id="disclaimer-h">Disclaimer</h2>
+  <p>By using this site, you acknowledge the following.</p>
+  <div class="disc">
+    <div class="disc-item"><h3>1. A personal record run with AI</h3><p>MAEN is a personal hobby project. The code, the computations, the interpretation of results and the text on this page are produced mainly with AI (large language models). AI can produce errors that sound plausible, and the operator is not in a position to verify the content professionally. Nothing here has been supervised or peer-reviewed by experts in medicine, pharmacology or statistics.</p></div>
+    <div class="disc-item"><h3>2. Not medical advice</h3><p>Nothing here may be used for diagnosis, treatment, prevention or medication decisions, and nothing here recommends or discourages any drug or therapy. The data comes from cultured cancer cells, which is different from how drugs act in the human body. For any illness or treatment, always consult a physician, pharmacist or other qualified professional. Do not start, change or stop any treatment because of this site.</p></div>
+    <div class="disc-item"><h3>3. No warranty of accuracy</h3><p>Computations, data processing and descriptions may contain errors. The operator makes no warranties, express or implied, regarding accuracy, completeness, usefulness, timeliness or fitness for a particular purpose. Source data reflects the time it was retrieved and may since have been updated.</p></div>
+    <div class="disc-item"><h3>4. No liability</h3><p>The operator accepts no liability for any damage arising from the use of, or inability to use, information on this site — including health or financial harm and errors in research or business decisions. Use the information at your own judgment and risk. If you cite or use it in research, papers or work, always verify against primary sources (official NCI data and peer-reviewed literature).</p></div>
+    <div class="disc-item"><h3>5. Not affiliated with NCI</h3><p>This site uses public data from the U.S. National Cancer Institute (NCI) but has no affiliation with NCI, the U.S. government or related institutions, and is not endorsed, recommended or approved by them. Data use is subject to each provider’s terms.</p></div>
+    <div class="disc-item"><h3>6. Subject to change without notice</h3><p>Content may be corrected, updated or removed without notice. Past results are kept as records, but errors or caveats may be found later. We are not responsible for the content of linked external sites.</p></div>
+  </div>
+  <p class="sub" style="margin-top:16px">This English page is a translation for convenience. If it differs from the Japanese page, the Japanese version prevails.</p>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>MAEN</strong> — a personal validation project by Yuu Honda. Code, computation and text are produced mainly with AI. The computation code is private; this page publishes the results.</p>
+    <p>Data sources: <a href="https://dtp.cancer.gov/">NCI Developmental Therapeutics Program</a> (GI50), <a href="https://discover.nci.nih.gov/cellminer/">CellMiner</a> (RNA expression). This does not imply NCI endorsement. Not medical advice. No liability is accepted for any damage arising from use of this content (<a href="#disclaimer">Disclaimer</a>).</p>
+  </div>
+</footer>
+
+<script>
+// highlight the smallest MAE in each split row
+document.querySelectorAll('#runs tr').forEach(function(tr){
+  var cells=[].slice.call(tr.children,1),min=Math.min.apply(null,cells.map(function(td){return +td.textContent}));
+  cells.forEach(function(td){if(+td.textContent===min)td.className='best'});
+});
+</script>
+</body>
+</html>
