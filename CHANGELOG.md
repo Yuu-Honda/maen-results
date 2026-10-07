@@ -1,5 +1,17 @@
 # 更新履歴
 
+## 2026-10-07 — 既存薬の転用候補を追加
+
+日英サイトに、既存薬の転用候補を探した結果の節を追加しました。PRISM Repurposing 19Q4（4,532化合物 × 568株）で、一部の細胞株だけを殺す710化合物を見つけました。二次スクリーニングで同じ株をまた殺すと確認できたのは311、別の測定法の CTRP v2 でも再現したのは50です。偶然で通る数の見積もりは、二次で8、CTRP で1でした。
+
+がん以外の用途の承認薬では47が二次まで残り、simvastatin と nintedanib は CTRP でも再現しました。陽性対照5剤のうち3剤が条件を満たし、disulfiram と tepoxalin は二次で確認できませんでした。判定基準はデータ取得前の commit `bc4ed8c` で固定しました。応答の値を読む前に、配布元の説明に基づいて2回修正し（`78c4032`、`4070bc2`）、一度だけ実行しています。
+
+培養がん細胞での結果で、人での効果・安全性・人の体で届く濃度・正常細胞への影響は確かめていません。免責事項のデータ提供元に、Broad Institute（PRISM Repurposing・CTRP）と NCI CTD² Network を加えました。公開 JSON は化合物単位の集計だけで、細胞株の ID や値は含みません。
+
+日英、320〜1440px、JavaScript の有無の16通りで、横のはみ出しと表示エラーがないことを確認しました。既存の節の数値と集計 JSON は変更していません。
+
+English: Added a repurposing section. In PRISM Repurposing 19Q4 (4,532 compounds × 568 lines), 710 compounds killed only a subset of lines; 311 were confirmed in the secondary screen and 50 also reproduced in CTRP v2, with 8 and 1 chance passes in a fixed permutation. Among drugs approved for non-cancer uses, 47 passed the secondary step and simvastatin and nintedanib also reproduced in CTRP. Three of five positive controls met expectation. Criteria were frozen before data access and the evaluation ran once. These are cultured cancer-cell results only; no human effect, safety or exposure was tested.
+
 ## 2026-10-07 — 転移診断の結果を追加
 
 日英サイトに4問の開発診断と、全6薬剤の表、記述的区間、件数、未定義の状態を追加しました。RNAを替えた18株の予測順位は保持されますが、水準差は残り、外部RNA優位未確認を維持します。測定差を原因や精度の天井とは扱いません。
