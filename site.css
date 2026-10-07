@@ -424,6 +424,8 @@ details[open]>summary::after{content:"−"}
 @media(max-width:550px){.diagnostic-macro>strong{font-size:30px}.diagnostic-macro>span,.diagnostic-macro>p,.diagnostic-undefined-note{font-size:12.5px}.diagnostic-compare{gap:0 15px}.diagnostic-compare .diagnostic-macro>strong{font-size:23px}.diagnostic-detail-note{font-size:13px}}
 
 /* Repurposing screen (2026-10-07) */
+/* Extend the compact header to 781–900px for the eight navigation items. */
+@media screen and (min-width:781px) and (max-width:900px){.header-inner{min-height:68px;gap:19px;flex-wrap:wrap;padding-block:13px}.language{margin-left:auto}.nav-links{order:4;flex-basis:100%;margin-left:0;flex-wrap:wrap;justify-content:flex-start;gap:8px 20px;padding-block:5px 2px;border-top:1px solid var(--line);margin-top:4px}.js .menu-toggle{display:flex}.js .nav-links{display:none}.js .nav-links.is-open{display:flex}}
 .research-card.repurposing{grid-column:1/-1}
 .research-card.repurposing::after{background:#3f6f8a}
 .repurposing-section .section-heading{margin-bottom:29px}
