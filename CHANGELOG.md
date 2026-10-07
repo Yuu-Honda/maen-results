@@ -1,16 +1,26 @@
 # 更新履歴
 
+## 2026-10-07 — 転用候補の解釈・注釈と表示を訂正
+
+日英サイト・紹介カード・表見出し・READMEを、生細胞量指標と感受性の相対順位に基づく説明へ訂正しました。viabilityは増殖停止と細胞死を区別せず、二次とCTRPは絶対効果や細胞死の再現を判定していないことを明記しました。一回のshuffleは補助対照で、個別p値・真陽性率・FDRを推定していません。一次2.5 µMは名目で、実際の記録濃度の幅と由来系列依存を補正しない記述的区間も説明しました。
+
+47は旧HubのLaunchedと用途注釈による集合として表示し、現行の国別・ヒト用非がん承認は未照合、動物用やがん適応を持つ配合剤の例を含むことを公的資料へのリンク付きで追記しました。皮膚由来の注釈からメラノーマやBRAF変異を推定せず、共通クラスは機序仮説に留めます。47/50の表の行・数値・順序、集計JSONの数値、旧RNA・タンパク質・転移診断の結果は変更していません。
+
+公開ページの再検査では英語820pxでヘッダーの言語表示が切れることを確認しました。コンパクトなメニューを900pxまで使うCSSを追加しました。以下の追加記録も訂正後の用語へ統一しています。
+
+English: Corrected the narrative to viable-cell signal and relative sensitivity ranks. The endpoint does not establish cell death; secondary and CTRP rules do not confirm absolute effects. The single shuffle provides no candidate-specific p-values or FDR. The 47-compound set is a historical Hub annotation group, not a verified list of current human-approved non-cancer drugs. Values, table order and frozen numeric results remain unchanged. Added a compact header layout for intermediate widths after finding clipping at 820px.
+
 ## 2026-10-07 — 既存薬の転用候補を追加
 
-日英サイトに、既存薬の転用候補を探した結果の節を追加しました。PRISM Repurposing 19Q4（4,532化合物 × 568株）で、一部の細胞株だけを殺す710化合物を見つけました。二次スクリーニングで同じ株をまた殺すと確認できたのは311、別の測定法の CTRP v2 でも再現したのは50です。偶然で通る数の見積もりは、二次で8、CTRP で1でした。
+日英サイトに転用候補を探した結果の節を追加しました。PRISM Repurposing 19Q4（4,532化合物 × 568株）で、一次の生細胞量指標が一部の株で対照比30%未満となる710化合物を選びました。二次の相対順位基準は判定可能638のうち311、CTRPは105のうち54が満たし、両方を満たしたのは50です。一回のshuffle補助対照では二次8、CTRP 1が通りました。
 
-がん以外の用途の承認薬では47が二次まで残り、simvastatin と nintedanib は CTRP でも再現しました。陽性対照5剤のうち3剤が条件を満たし、disulfiram と tepoxalin は二次で確認できませんでした。判定基準はデータ取得前の commit `bc4ed8c` で固定しました。応答の値を読む前に、配布元の説明に基づいて2回修正し（`78c4032`、`4070bc2`）、一度だけ実行しています。
+旧HubのLaunchedと用途注釈で選んだ47ではsimvastatinとnintedanibが両方の基準を満たしました。陽性対照5剤のうち3剤が基準を満たし、disulfiramとtepoxalinは二次で基準未達でした。判定基準はデータ取得前のcommit `bc4ed8c`で固定しました。v1a（`78c4032`）は配布元説明の読取り後・応答値アクセス前、v1b（`4070bc2`）はinventoryの行ラベル処理で停止した後・応答統計前の修正です。v1bをすべての値アクセス前とは扱いません。一度だけ実行しています。
 
-培養がん細胞での結果で、人での効果・安全性・人の体で届く濃度・正常細胞への影響は確かめていません。免責事項のデータ提供元に、Broad Institute（PRISM Repurposing・CTRP）と NCI CTD² Network を加えました。公開 JSON は化合物単位の集計だけで、細胞株の ID や値は含みません。
+培養がん細胞での結果で、人での効果・安全性・曝露・正常細胞への影響は未確認です。免責事項の提供元にBroad Institute（PRISM Repurposing・CTRP）とNCI CTD² Networkを加えました。公開JSONは化合物単位の集計だけで、細胞株のIDや値は含みません。
 
-日英、320〜1440px、JavaScript の有無の16通りで、横のはみ出しと表示エラーがないことを確認しました。既存の節の数値と集計 JSON は変更していません。
+追加時の検査記録は日英16条件でした。その後の公開ページ20条件の再検査で英語820pxの横溢れが判明し、上の訂正で対応しました。既存の節の数値と集計JSONは変更していません。
 
-English: Added a repurposing section. In PRISM Repurposing 19Q4 (4,532 compounds × 568 lines), 710 compounds killed only a subset of lines; 311 were confirmed in the secondary screen and 50 also reproduced in CTRP v2, with 8 and 1 chance passes in a fixed permutation. Among drugs approved for non-cancer uses, 47 passed the secondary step and simvastatin and nintedanib also reproduced in CTRP. Three of five positive controls met expectation. Criteria were frozen before data access and the evaluation ran once. These are cultured cancer-cell results only; no human effect, safety or exposure was tested.
+English: Added the PRISM/CTRP repurposing section: 710 primary-selected compounds, 311 of 638 meeting the secondary rank rule, 54 of 105 meeting CTRP, and 50 meeting both. A single auxiliary shuffle yielded 8 and 1 passes. Three of five controls met expectation. The initial protocol was frozen before data acquisition; v1a preceded response-value access, while v1b followed an inventory row-label stop and preceded response statistics. The evaluation ran once. Results concern cultured-cell viability and relative sensitivity, not human efficacy, safety or exposure.
 
 ## 2026-10-07 — 転移診断の結果を追加
 

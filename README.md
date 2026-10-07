@@ -4,17 +4,23 @@
 
 MAENは、細胞の実測データを使って仮説を絞る探索的な研究記録です。この公開リポジトリにはサイトのコード、方法の説明、数値の集計を置きます。計算用のコードは別の非公開リポジトリで管理しています。原表、全タンパク質・遺伝子プロファイル、個別条件の結果、用量表、細胞の割り当てや保留IDはここに配布しません。
 
-## 既存薬の転用候補を探す
+## 既存化合物の感受性パターンを調べる
 
-すでにある薬の中から、がん細胞の一部だけを選んで殺すものを探しました。PRISM Repurposing 19Q4（Broad Institute、CC BY 4.0）の一次スクリーニングで見つけ、二次スクリーニングと別の測定法の CTRP v2（NCI CTD² Network）で、同じ細胞をまた殺すかを確かめています。判定基準はデータを見る前に固定し、一度だけ実行しました。
+PRISM Repurposing 19Q4（Broad Institute、CC BY 4.0）の公開データから、一部のがん細胞株で対照比の生細胞量指標が低下する化合物を選びました。一次hitは対照比30%未満の株です。このviability指標は増殖停止と細胞死を区別しません。二次とCTRP v2（NCI CTD² Network）で確かめるのは、一次hit群のAUCが他の株より相対的に低いことです。同じ株が再び30%未満になったことや、絶対的な効果・細胞死の再現ではありません。初版はデータ取得前に固定し、v1aは配布元説明の読取り後・応答値アクセス前、v1bはinventoryの行ラベル処理で停止した後・応答統計前に修正しました。v1bをすべての値アクセス前とは扱いません。閾値は変えず、一度だけ実行しました。
 
 | 段階 | 化合物数 |
 |---|---:|
-| ① 一部の株だけを殺す（一次） | 710 |
-| ② 二次でも同じ株（判定できた638のうち） | 311 |
-| ③ CTRP でも再現（判定できた105のうち54、②も通ったもの） | 50 |
+| ① 一部の株で生細胞量指標が低下（一次） | 710 |
+| ② 二次でも相対的に高感受性（判定できた638のうち） | 311 |
+| ③ CTRPの相対順位基準も満たす（判定できた105のうち54、②も通ったもの） | 50 |
 
-偶然で通る数の見積もりは②で8、③で1です。がん以外の用途の承認薬では47が②以上に残り、simvastatin と nintedanib は③まで通りました。陽性対照は5剤中3剤が条件を満たし、disulfiram と tepoxalin は②で確認できませんでした。**培養がん細胞での結果で、人での効果・安全性・人の体で届く濃度は確かめていません。この結果を理由に、薬を飲んだり治療を変えたりしないでください。**
+AUCを各化合物で一度だけ入れ替えた補助対照では、②で8、③で1が通りました。個別候補のp値・真陽性率・FDRは推定していません。95%区間はhit/non-hit各群の細胞株を再抽出する記述的な500回bootstrapで、同じ由来の系列や共有測定条件の依存を補正していません。一次濃度は名目2.5 µMが中心ですが、候補710のうち646が記録上2.5 µM、範囲は1.04〜5.0 µMです。
+
+サイトの47化合物は、旧Repurposing HubでLaunchedと注釈され、用途にoncology・malignancyを含むものを除いた表示用集合です。現行の国別・ヒト用非がん承認薬として照合していません。動物用の記録がある[valnemulin（EMA）](https://www.ema.europa.eu/en/medicines/veterinary/EPAR/econor)・[tilmicosin（FDA）](https://www.fda.gov/animal-veterinary/cvm-updates/fda-approves-first-generic-tilmicosin-phosphate-aqueous-concentrate-swine)を含み、[trifluridine/tipiracil＋bevacizumab併用のFDA承認発表](https://www.fda.gov/drugs/drug-approvals-and-databases/fda-approves-trifluridine-and-tipiracil-bevacizumab-previously-treated-metastatic-colorectal-cancer)のようにがん適応を含む場合もあります。今回の単剤培養実験と臨床製剤は区別します。47の行・数値・順序は元の集計を保持しています。
+
+この47ではsimvastatinとnintedanibが③まで通りました。同じ薬効クラスが残ることは構造・標的と感受性の関連を調べる仮説で、共通機序の確認ではありません。陽性対照は5剤中3剤が基準を満たし、disulfiramとtepoxalinは②で基準未達でした。skinの組織注釈は皮膚由来を表し、組織型やBRAF変異は照合していません。CTRPは別アッセイですが、Broad Instituteと多数の細胞株を共有し、別施設・未使用細胞群での検証ではありません。
+
+**培養がん細胞での結果で、人での効果・安全性・曝露・正常細胞への影響は未確認です。この結果を理由に、薬を飲んだり治療を変えたりしないでください。** 次は現行承認・製剤・対象種と曝露の照合、作用機序の仮説検証を別に事前登録して行います。凍結したJSONの旧フィールド名と数値は変更せず、表示と解釈を訂正しています。
 
 [転用候補の集計 JSON](data/repurposing-summary.json) / [PRISM Repurposing 19Q4](https://doi.org/10.6084/m9.figshare.9393293.v4) / [Corsello et al. 2020](https://doi.org/10.1038/s43018-019-0018-6) / [CTRP v2（NCI CTD²）](https://studycatalog.cancer.gov/#/dataset/CTD2_066)
 
