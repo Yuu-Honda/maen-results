@@ -452,3 +452,6 @@ details[open]>summary::after{content:"−"}
 @media(max-width:780px){.rp-table-scroll,.rp-caption{padding-inline:24px}.detail-content .rp-table-scroll,.detail-content .rp-caption{padding-inline:0}}
 @media(max-width:550px){.rp-table-scroll,.rp-caption{padding-inline:21px}.rp-caption{font-size:12px}.rp-table{font-size:12.5px;min-width:620px}.rp-table tbody th{white-space:nowrap;overflow-wrap:normal}.rp-table.rp-controls{min-width:0}.rp-table.rp-controls th,.rp-table.rp-controls td{padding:9px 7px}.rp-table.rp-controls th:first-child{padding-left:0}.rp-table.rp-controls td:last-child{padding-right:0}.rp-safety{padding:16px 18px;font-size:13px}}
 @media print{.rp-table-scroll{overflow:visible}}
+
+/* Leave room for wrapped mobile navigation when JavaScript is unavailable. */
+@media screen and (max-width:780px){html:not(.js) .section[id]{scroll-margin-top:48px}}
