@@ -1,6 +1,5 @@
-/* Explanatory figures (2026-10-08). Static markup is the final state; explain.js
-   rewinds a figure to step 0 and plays it when it scrolls into view. Motion is
-   removed by the reduced-motion rule in site.css. */
+/* Explanatory figures (2026-10-08). Static markup is the final state;
+   explain.js maps document scroll position to reversible diagram frames. */
 .ex-story,.ex-fig{--ex-base:#1a9a74;--ex-hit:#d9622b;--ex-blue:#2a78d6;--ex-drop:#d6ddd8;--ex-faint:#eef1ec;--ex-quiet:#9fb1a7}
 .ex-story{display:grid;gap:22px;margin:0 0 34px}
 .ex-story-head{max-width:760px}
@@ -127,3 +126,28 @@
 @media(max-width:550px){.ex-story{gap:18px}.ex-story-head h3{font-size:18px}.ex-story-head p{font-size:13px}.ex-fig{padding:20px 17px 18px}.ex-fig h3{font-size:16px}.ex-fig figcaption{font-size:12.5px}.ex-chips{gap:5px}.ex-chips li{padding:6px 7px}.ex-chips strong{font-size:16px}.ex-panel-labels{gap:6px;font-size:11px}.ex-panel-labels strong{font-size:12px}.ex-count{font-size:14px}.ex-axis-labels{font-size:10.5px}.ex-meter{gap:9px}.ex-meter-value{font-size:18px}.ex-bar-row{grid-template-columns:6.4em minmax(0,1fr) 2.4em;gap:7px;font-size:11.5px}.ex-legend{font-size:11.5px;gap:5px 14px}}
 @media(prefers-reduced-motion:reduce){.ex-replay,.ex-stop{display:none!important}}
 @media print{.ex-replay,.ex-stop,.ex-toggle{display:none!important}.ex-fig{break-inside:avoid}.ex-fig,.ex-fig *{animation:none!important;transition:none!important}}
+
+/* Scroll position owns every frame, including when rewinding or standing
+   still. Disable the older timed transitions and decorative pulse entirely. */
+.ex-fig,.ex-fig *{animation:none!important;transition:none!important}
+.ex-scroll-track{grid-area:visual;min-width:0}
+.ex-scroll-track .ex-visual{position:relative}
+.ex-scroll-enabled .ex-scroll-track .ex-visual{padding:8px 0;background:var(--surface)}
+.ex-scroll-enabled .ex-scroll-track[data-pinned="true"] .ex-visual{position:sticky;top:var(--ex-pin-top)}
+.ex-scroll-track .ex-controls{margin-top:16px;gap:8px}
+.ex-scroll-track .ex-toggle{flex-basis:100%}
+.ex-scroll-help{display:none;margin-top:16px;grid-template-columns:minmax(0,1fr) auto;gap:7px 12px;font-size:11.5px;line-height:1.65;color:var(--muted)}
+.ex-scroll-enabled .ex-scroll-help{display:grid}
+.ex-scroll-help p{margin:0}
+.ex-scroll-help>p:first-child{font-weight:650;color:var(--ink)}
+.ex-scroll-progress{grid-column:1/-1;height:3px;overflow:hidden;background:var(--ex-faint);border-radius:3px}
+.ex-scroll-progress i{display:block;width:100%;height:100%;background:var(--ex-base);transform-origin:left center}
+.ex-scroll-note{grid-column:1/-1;font-size:10.5px}
+.ex-scroll-after{grid-column:1/-1;grid-row:4;margin-top:6px}
+.ex-separation[data-measurement="moving"] .ex-meter-fill,.ex-separation[data-measurement="moving"] .ex-meter-value{visibility:hidden}
+.ex-rank-notes{display:grid}
+.ex-rank-notes p{display:block!important;grid-area:1/1;visibility:hidden}
+.ex-rank[data-state="r100"] [data-rank-note="r100"],.ex-rank[data-state="r095"] [data-rank-note="r095"],.ex-rank[data-state="r026"] [data-rank-note="r026"],.ex-rank[data-state="r007"] [data-rank-note="r007"],.ex-rank[data-state="moving"] [data-rank-note="moving"]{visibility:visible}
+@media(max-width:900px){.ex-scroll-after{grid-row:auto}.ex-scroll-track .ex-controls{margin-top:14px}}
+@media(prefers-reduced-motion:reduce){.ex-scroll-track{height:auto!important}.ex-scroll-track .ex-visual{position:static!important}.ex-scroll-help{display:none!important}}
+@media print{.ex-scroll-track{height:auto!important}.ex-scroll-track .ex-visual{position:static!important}.ex-scroll-help{display:none!important}.ex-rank-notes p{display:none!important}.ex-rank[data-state="r007"] [data-rank-note="r007"]{display:block!important;visibility:visible}}
