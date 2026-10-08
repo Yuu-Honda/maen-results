@@ -1,5 +1,15 @@
 # 更新履歴
 
+## 2026-10-08 — 説明用の動く図を追加
+
+専門的な内容を直感的に読めるよう、日英サイトに6つの説明図を追加しました。転用候補の節に「3段階のふるい」「①の分類」「②③の分離度と補助対照」「vemurafenib の一次 hit と皮膚由来の注釈」、外部評価の節に「順位相関 ρ」、タンパク質の節に「逆検索の並べ替え」です。
+
+図は画面に入ると一度だけ再生され、「もう一度再生」と切り替えボタンで見直せます。考え方を示す図は「模式図」、集計した数をそのまま使う図は「実データ」と明記しました。数値は既存の集計のままで、文言は訂正後の用語（一次 hit、相対感受性、補助対照、skin＝皮膚由来の注釈）に合わせています。細胞死や機序、p値を示す図ではありません。
+
+動きを減らす設定と JavaScript 無効の環境では、各図の最後の状態を静止表示します。日英 × 320/390/768/1024/1440px × 通常・JavaScript 無効・動き軽減の30条件で、横のはみ出し・表示エラーがなく、最後の状態と切り替え操作が正しいことを確認しました。既存の数値・表・集計 JSON は変更していません。
+
+English: Added six explanatory figures that play once when scrolled into view, with replay and toggle buttons: the three-step filter, step-1 classes, separation with the auxiliary shuffle control, vemurafenib primary hits and the skin-derived annotation, rank correlation ρ, and protein reverse-search reordering. Figures are labeled as schematic or real data, use the corrected terms, and show their final state without JavaScript or with reduced motion. Existing numbers, tables and JSON are unchanged.
+
 ## 2026-10-07 — 転用候補の解釈・注釈と表示を訂正
 
 日英サイト・紹介カード・表見出し・READMEを、生細胞量指標と感受性の相対順位に基づく説明へ訂正しました。viabilityは増殖停止と細胞死を区別せず、二次とCTRPは絶対効果や細胞死の再現を判定していないことを明記しました。一回のshuffleは補助対照で、個別p値・真陽性率・FDRを推定していません。一次2.5 µMは名目で、実際の記録濃度の幅と由来系列依存を補正しない記述的区間も説明しました。
