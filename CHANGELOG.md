@@ -1,5 +1,13 @@
 # 更新履歴
 
+## 2026-10-08 — 説明図をスクロールで操作
+
+6つの説明図を、画面に入った際の自動再生から、ページのスクロール位置で直接操作する形に変更しました。下へスクロールすると進み、上へ戻すと巻き戻り、ページが止まると図もその位置で止まります。図が画面に収まる場合は表示を留め、「最初へ戻る」「最後へ進む」と例の切り替えボタンでも該当位置へ移動できます。画面が低い場合は通常のページ表示を保ちます。
+
+順位相関・分離度の中間配置には完成例の数値を表示せず、完成した配置でだけ対応する説明を出します。実集計の補助対照は静止表示のままにし、スクロールは説明の順序を操作するもので実験の時間経過ではないと明記しました。JavaScript無効・動きを減らす設定・印刷では最終状態を表示します。既存のHTML/SVG・科学的な本文・集計JSON・サイト共通CSS/JSはバイト単位で保持しています。
+
+English: The six diagrams now follow document scroll position: down advances, up rewinds, and stopping the page holds the current frame. Fitting diagrams stay visible while scrolling; example buttons jump to completed landmarks. Intermediate rank/separation arrangements hide endpoint metrics. Scrolling controls explanation order, not experimental time. No-JS, reduced-motion and print retain static final views. Existing HTML/SVG, scientific text, aggregate JSON and shared site CSS/JS are unchanged.
+
 ## 2026-10-08 — 説明用の動く図を追加
 
 専門的な内容を直感的に読めるよう、日英サイトに6つの説明図を追加しました。転用候補の節に「3段階のふるい」「①の分類」「②③の分離度と補助対照」「vemurafenib の一次 hit と皮膚由来の注釈」、外部評価の節に「順位相関 ρ」、タンパク質の節に「逆検索の並べ替え」です。
