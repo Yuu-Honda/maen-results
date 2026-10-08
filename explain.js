@@ -9,8 +9,13 @@
   const reduced = () => Boolean(motionQuery && motionQuery.matches);
   const timers = new Map();
   const frames = new Map();
+  let observer = null;
+  const autoplayPending = new Set();
 
   const cancel = figure => {
+    // Manual actions own the state, even before the first visibility callback.
+    observer?.unobserve(figure);
+    autoplayPending.delete(figure);
     (timers.get(figure) || []).forEach(window.clearTimeout);
     timers.set(figure, []);
     if (frames.has(figure)) window.cancelAnimationFrame(frames.get(figure));
@@ -118,9 +123,10 @@
   figures.forEach(figure => {
     timers.set(figure, []);
     figure.querySelector('[data-ex-replay]')?.addEventListener('click', () => play(figure));
+    figure.querySelector('[data-ex-stop]')?.addEventListener('click', () => finalState(figure));
     figure.querySelectorAll('[data-mode-set]').forEach(button => button.addEventListener('click', () => {
       cancel(figure);
-      if (['0', '1'].includes(figure.dataset.step)) step(figure, 3);
+      step(figure, 3);
       setMode(figure, button.dataset.modeSet);
     }));
     figure.querySelectorAll('[data-rank-set]').forEach(button => button.addEventListener('click', () => {
@@ -130,10 +136,16 @@
     }));
   });
 
+  motionQuery?.addEventListener?.('change', () => {
+    if (reduced()) figures.forEach(finalState);
+  });
+
+  window.addEventListener('beforeprint', () => figures.forEach(finalState));
+
   if (reduced() || !('IntersectionObserver' in window)) return;
-  const observer = new IntersectionObserver(entries => {
+  observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
+      if (!entry.isIntersecting || !autoplayPending.has(entry.target)) return;
       observer.unobserve(entry.target);
       play(entry.target);
     });
@@ -143,9 +155,7 @@
     if (figure.dataset.ex === 'rank') setRank(figure, 'r100', false);
     if (figure.dataset.ex === 'separation') setMode(figure, 'a');
     step(figure, 0);
+    autoplayPending.add(figure);
     observer.observe(figure);
-  });
-  motionQuery?.addEventListener?.('change', () => {
-    if (reduced()) figures.forEach(finalState);
   });
 })();

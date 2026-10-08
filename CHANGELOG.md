@@ -8,6 +8,8 @@
 
 動きを減らす設定と JavaScript 無効の環境では、各図の最後の状態を静止表示します。日英 × 320/390/768/1024/1440px × 通常・JavaScript 無効・動き軽減の30条件で、横のはみ出し・表示エラーがなく、最後の状態と切り替え操作が正しいことを確認しました。既存の数値・表・集計 JSON は変更していません。
 
+Codexの独立検査で、一次 hit が5株未満の分類を「ほとんど効かない」としない表現へ訂正し、順位の軸を比較対象に共通の A/B にしました。二次638件・未判定72件、CTRP105件・通過54件・両方通過50件の区別と、分離度で同順位を0.5と数える説明を追記しました。途中の切り替え、閲覧中の動き軽減設定の変更、手動停止後の自動再生との競合を修正し、「最後の状態を表示」ボタンと印刷時の静止表示を加えました。既存の集計・数値・SVGの座標は保持しています。
+
 English: Added six explanatory figures that play once when scrolled into view, with replay and toggle buttons: the three-step filter, step-1 classes, separation with the auxiliary shuffle control, vemurafenib primary hits and the skin-derived annotation, rank correlation ρ, and protein reverse-search reordering. Figures are labeled as schematic or real data, use the corrected terms, and show their final state without JavaScript or with reduced motion. Existing numbers, tables and JSON are unchanged.
 
 ## 2026-10-07 — 転用候補の解釈・注釈と表示を訂正
