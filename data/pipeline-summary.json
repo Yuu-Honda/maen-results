@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "research_line": "protein-signature retrieval with provisional source-label response references",
+  "status": "exploratory integration demo on previously used data; no new performance or efficacy validation",
+  "demonstration": {
+    "selection": "first S3 signature in original source column order; same mode",
+    "signature": "8-azaguanine (Method: TMT; Cell line: MCF7)",
+    "query_gene_count": 35,
+    "mode": "same",
+    "source": "Published Table S3, mmc4.xlsx; curated and previously used in MAEN",
+    "source_time_hours": null,
+    "healthy_target": "not_established",
+    "accuracy": "not_computed; no mapped exact target condition for this query"
+  },
+  "counts": {
+    "all_conditions": {
+      "conditions": 78,
+      "mapping": {
+        "source_label_correspondence": 30,
+        "unresolved": 48
+      },
+      "response_evidence": {
+        "broad_primary_activity": 13,
+        "identity_unresolved": 48,
+        "selective": 17
+      }
+    },
+    "ranked": {
+      "conditions": 74,
+      "mapping": {
+        "source_label_correspondence": 29,
+        "unresolved": 45
+      },
+      "response_evidence": {
+        "broad_primary_activity": 13,
+        "identity_unresolved": 45,
+        "selective": 16
+      }
+    },
+    "unavailable": {
+      "conditions": 4,
+      "mapping": {
+        "source_label_correspondence": 1,
+        "unresolved": 3
+      },
+      "response_evidence": {
+        "identity_unresolved": 3,
+        "selective": 1
+      }
+    }
+  },
+  "evidence_scope": {
+    "source_selective_records": 710,
+    "source_broad_primary_records": 202,
+    "whole_4532_inventory": false,
+    "correspondence": "same source label ignoring case only; chemical/salt/stereochemistry/sample identity unverified",
+    "absent_record": "does not establish inactivity, lack of screening, or substance absence",
+    "ordering": "unchanged protein similarity order; no response-based filtering or composite efficacy score"
+  },
+  "unassessed": [
+    "healthy-state restoration",
+    "normal-cell selectivity",
+    "current human approval, formulation and species",
+    "achievable human exposure",
+    "mechanism causality",
+    "new independent experimental validation"
+  ],
+  "rna_scope": {
+    "external_advantage": "not_confirmed",
+    "used_for_filtering": false
+  },
+  "limitations": [
+    "Query and catalog were previously used; this demonstrates connection behavior only.",
+    "Protein catalog is MCF7 at 12 hours; response references use different cells, doses and durations.",
+    "Relative viable-cell abundance and AUC separation do not establish cell death or desired-state restoration.",
+    "CTRP is another assay with shared institutional and cell-model context, not another laboratory."
+  ],
+  "provenance": {
+    "private_result_sha256": "13f22e5ceee06ee5e9c7c6dc1aa5cdae763df66b4a18e978c39119365b762476",
+    "protocol_sha256": "23b93f8fcbbbc6e61a7ccf5c359215b15c9e5cf1cbbdededc8e1c078598014e7",
+    "inputs_sha256": {
+      "protein_plan": "b83af325bfca8901298b493807ffb30e3ac06e69c9f023908b6a8f2bc67a26ba",
+      "crosswalk": "38432f1c5e8b9e529a27f65983a57584c973005bec7cf145dc9ea1dc18bbbf51",
+      "repurposing_evidence": "96e75f9d8a7d9997027145c62ee95f96397fb3812db51352f677d09c54f831e5"
+    },
+    "pipeline_code_sha256": {
+      "research_pipeline.py": "af4b175eeabd603fa626b2e2e38434431152b78a62cb8a827c8f09a3e593ab79",
+      "tests/test_research_pipeline.py": "b57891835ea42625cf07d99bed3b60bb746ac78785733513fbe407a9bd6d02a4",
+      "protein_search.py": "9cf50a1387e63241326b9de394eedafb34078610d77f3d203a3075ef30454c3f"
+    },
+    "exporter_sha256": "2807c2058682a1f4ba16255000b47ea9d919516282a2f9b3271acd3fdc6083c1"
+  }
+}
