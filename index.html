@@ -224,6 +224,20 @@
     </div>
   </section>
 
+  <section class="section" id="workflow" aria-labelledby="workflow-title">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow">CONNECTED WORKFLOW / 探索的な接続</p><h2 id="workflow-title">変化から候補へ、<br>根拠をつなぐ。</h2></div><p>希望するタンパク質量の変化から実測の投与条件を検索し、既存のPRISM・CTRP集計を参照する研究用CLIを追加しました。類似度と薬剤応答の根拠を別々に保存し、応答を理由に検索順位を変えません。新しい治療候補の有効性を確かめた結果ではありません。</p></div>
+      <ol class="roadmap-grid">
+        <li class="roadmap-step"><span class="step-number">01</span><span class="pill">入力を定義</span><h3>現在と目標の差を作る</h3><p>同じ測定法・正規化・単位と宣言されたタンパク質データから「目標−現在」を計算。共通して測れた遺伝子だけを使い、欠損をゼロで埋めません。目標が正常な状態を表すかは未検証です。</p></li>
+        <li class="roadmap-step"><span class="step-number">02</span><span class="pill">78条件を保持</span><h3>既知の変化を検索する</h3><p>MCF7・12時間後の既存カタログを使い、似た変化・逆向きの変化を順位付け。元の用量を保持し、採点不能な条件も理由付きで残します。未知物質の変化は予測しません。</p></li>
+        <li class="roadmap-step"><span class="step-number">03</span><span class="pill pill-warm">暫定的な名称対応</span><h3>応答の根拠を参照する</h3><p>30条件で、大文字小文字以外が同じ元名称を対応づけ、PRISM・CTRPの既存根拠を添付。化学構造・塩・試料の同一性は未確認です。残る48条件も除外せず、未解決として保存します。</p></li>
+        <li class="roadmap-step"><span class="step-number">04</span><span class="pill pill-warm">未評価を明示</span><h3>次に確かめる項目を残す</h3><p>正常細胞、人体で届く濃度、現在の承認・製剤・対象種、作用機序、独立した再現は未確認。RNAモデルは外部優位が未確認のため、候補の通過条件に使いません。</p></li>
+      </ol>
+      <p class="roadmap-note"><strong>既存データによる接続デモです。</strong>最初の通し確認には、元S3の先頭にある公開済み・使用済みの8-azaguanine署名（35遺伝子）を、結果を見て選び直さず使います。健康な状態への目標ではなく、対応する正解条件も付けられないため、再発見精度を計算しません。署名・カタログ・応答の時間、用量、細胞が一致することも確かめていません。</p>
+      <p class="roadmap-note">参照する集計は選択的710件と広い一次活性202件で、全4,532の個別在庫ではありません。集計にない物質を「無効」「未測定」とは判断しません。生細胞量の指標と細胞死も区別します。<a href="data/pipeline-summary.json">接続デモの公開集計（JSON）</a>。検索は別の研究用CLIで行い、このページからの入力・計算はありません。</p>
+    </div>
+  </section>
+
   <section class="section roadmap" id="next" aria-labelledby="next-title">
     <div class="container">
       <div class="section-heading"><div><p class="eyebrow">NEXT / 目指す先</p><h2 id="next-title">答えを出す前に、<br>問いを確かめていく。</h2></div><p>今回のRNAの外部優位は確認できませんでした。追加診断でも主な原因は確定していません。測定間のずれと入力・出力の水準差を開発上の手がかりとして残し、次は同一エンドポイントの別の未使用データによる性能確認を優先します。今後この集合を調整に使う場合は開発データとし、性能確認には別の未使用データを用います。転用候補は、現行承認・製剤・対象種と曝露の照合、作用機序の仮説検証を次に別の事前登録で行います。</p></div>

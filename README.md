@@ -6,6 +6,14 @@ MAENは、細胞の実測データを使って仮説を絞る探索的な研究�
 
 日英サイトの6つの説明図は、下へのスクロールで進み、上へのスクロールで戻り、ページを止めるとその位置で止まります。スクロールは説明の順序を操作するもので、実験の時間経過を示しません。JavaScript無効・動きを減らす設定・印刷では最終状態を静止表示します。
 
+## タンパク質署名から応答の根拠への接続
+
+[接続の流れ](https://yuu-honda.github.io/maen-results/#workflow)を追加しました。別の研究用CLIで、互換性を宣言した現在／目標のタンパク質量の差を作り、既存78条件を検索し、PRISM・CTRPの既存集計を参照します。30条件の元名称に注釈上の対応があり、48条件は未解決のまま保持します。化学構造・塩・試料の同一性は未確認です。検索順位は応答根拠で変えず、総合的な効き目の点数も作りません。
+
+元S3先頭の公開済み・使用済みの8-azaguanine署名（35遺伝子）による接続デモを固定しています。正常状態の目標や新しい独立性能確認ではなく、対応する正解条件も付けられないため再発見精度は計算しません。[公開集計](data/pipeline-summary.json)は件数と由来だけで、問い合わせの遺伝子プロファイルや条件順位は含みません。元の応答集計は選択的710＋広い一次活性202件のみなので、収録されない物質を無効・不活性・未測定とは判断しません。正常細胞、曝露、現行承認、機序は未評価で、RNAモデルも候補通過条件には使いません。サイト上での入力・検索計算はありません。
+
+English: The [connected research workflow](https://yuu-honda.github.io/maen-results/en.html#workflow) prepares a target-minus-current protein signature, retrieves known conditions, and attaches provisional source-label response references without changing the similarity order. The fixed previously used S3 example demonstrates connection behavior only. Chemical identity, healthy-state restoration, normal-cell effects, human exposure and efficacy remain unverified. Only aggregate counts and provenance are public.
+
 ## 既存化合物の感受性パターンを調べる
 
 PRISM Repurposing 19Q4（Broad Institute、CC BY 4.0）の公開データから、一部のがん細胞株で対照比の生細胞量指標が低下する化合物を選びました。一次hitは対照比30%未満の株です。このviability指標は増殖停止と細胞死を区別しません。二次とCTRP v2（NCI CTD² Network）で確かめるのは、一次hit群のAUCが他の株より相対的に低いことです。同じ株が再び30%未満になったことや、絶対的な効果・細胞死の再現ではありません。初版はデータ取得前に固定し、v1aは配布元説明の読取り後・応答値アクセス前、v1bはinventoryの行ラベル処理で停止した後・応答統計前に修正しました。v1bをすべての値アクセス前とは扱いません。閾値は変えず、一度だけ実行しました。
@@ -109,7 +117,7 @@ v1は実診断を行っていません。v2をcommit `365d39f`に固定後に一
 
 ## English overview
 
-MAEN records two exploratory research lines: RNA-based drug-response prediction and retrieval of measured treatment conditions from protein-abundance changes. The public repository contains website code, methods and numerical aggregates. Benchmark code is private; source workbooks, full profiles, individual conditions, doses and cell assignments are not redistributed.
+MAEN records three exploratory research lines: RNA-based drug-response prediction, retrieval of measured treatment conditions from protein-abundance changes, and relative-sensitivity screening of existing compounds. A provisional connector now references existing response evidence alongside protein retrieval without changing the similarity order. The public repository contains website code, methods and numerical aggregates. Benchmark code is private; source workbooks, full profiles, individual conditions, doses and cell assignments are not redistributed.
 
 Protein retrieval recovered the exact treatment condition at rank 1 in 109/156 queries and within the top 5 in 149/156. Missing-mask retrieval alone reached 118/156 in the top 5, showing that measurement-group information remains a strong clue. The two replicates share a study and DMSO controls. Of 20 previously selected literature signatures searched, 19 had candidates; identity accuracy used only the 11 mapped signatures, with 6 top-1 and 7 top-5 hits. This is not an independent final validation. The procedure was frozen before scoring; 41 tests passed locally.
 

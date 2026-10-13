@@ -224,6 +224,20 @@
     </div>
   </section>
 
+  <section class="section" id="workflow" aria-labelledby="workflow-title">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow">CONNECTED WORKFLOW / EXPLORATORY INTEGRATION</p><h2 id="workflow-title">Connect a change<br>to its evidence.</h2></div><p>A research CLI now retrieves measured treatment conditions from a requested protein-abundance change and references existing PRISM and CTRP aggregates. Similarity and response evidence remain separate; response evidence does not change the retrieval order. This does not establish the efficacy of a new treatment candidate.</p></div>
+      <ol class="roadmap-grid">
+        <li class="roadmap-step"><span class="step-number">01</span><span class="pill">Define the input</span><h3>Subtract current from target</h3><p>Use protein profiles declared to share an assay, normalization and units. Compute target minus current on measured genes shared by both profiles, without zero-filling missing values. A target is not a validated healthy state.</p></li>
+        <li class="roadmap-step"><span class="step-number">02</span><span class="pill">Keep all 78 conditions</span><h3>Retrieve known changes</h3><p>Rank similar or opposite changes in the existing MCF7, 12-hour catalog. Preserve source doses and unscoreable conditions with reasons. Changes caused by unknown substances are not predicted.</p></li>
+        <li class="roadmap-step"><span class="step-number">03</span><span class="pill pill-warm">Provisional label references</span><h3>Attach response references</h3><p>For 30 conditions, source labels match apart from letter case and provide references to existing PRISM/CTRP evidence. Chemical, salt and sample identity remain unverified. The other 48 conditions are retained as unresolved.</p></li>
+        <li class="roadmap-step"><span class="step-number">04</span><span class="pill pill-warm">Gaps remain explicit</span><h3>Record what needs testing</h3><p>Normal-cell effects, achievable human exposure, current approvals, formulations, target species, mechanism and independent replication remain unassessed. The RNA model has no established external advantage and is not used as a pass filter.</p></li>
+      </ol>
+      <p class="roadmap-note"><strong>This is a connection demo using previously viewed data.</strong>The first run uses the first published S3 signature, 8-azaguanine (35 genes), without selecting a query for its new result. It is not a healthy-state target and has no mapped exact target condition, so retrieval accuracy is not computed. Matching of times, doses and cells across the query, catalog and response references is not established.</p>
+      <p class="roadmap-note">The source export contains 710 selective and 202 broad-primary-activity records, not an individual inventory of all 4,532 compounds. Absence from this export does not mean inactivity or lack of screening. A viable-cell proxy does not establish cell death. <a href="data/pipeline-summary.json">Public connection-demo aggregate (JSON)</a>. Searches run in a separate research CLI; this page does not accept inputs or run the analysis.</p>
+    </div>
+  </section>
+
   <section class="section roadmap" id="next" aria-labelledby="next-title">
     <div class="container">
       <div class="section-heading"><div><p class="eyebrow">NEXT / THE DIRECTION</p><h2 id="next-title">Before an answer,<br>test the question.</h2></div><p>This evaluation did not establish an external RNA advantage. The added diagnostics do not identify a principal cause. Preserve cross-measurement disagreement and input/output level shifts as development clues. Prioritize the next performance check in different unused data with the same endpoint; if this cohort is used for future tuning, treat it as development data and use other unused data for performance evaluation. For repurposing candidates, next pre-register checks of current approvals, formulations, target species and exposure, and tests of mechanism hypotheses.</p></div>

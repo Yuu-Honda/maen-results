@@ -1,5 +1,13 @@
 # 更新履歴
 
+## 2026-10-13 — タンパク質署名と既存応答の根拠を接続
+
+日英ページに、現在／目標のタンパク質量の差分作成、既存78条件の検索、PRISM・CTRPの暫定的な名称参照、未評価項目を残す流れを追加しました。30条件の名称注釈対応と48条件の未解決を区別し、化学的同一性未確認、集計にないことと無効・未測定の違い、正常化・曝露等の未評価を明記しています。検索は別の研究用CLIで、サイトには入力や計算サーバーを追加していません。
+
+元S3先頭の使用済み署名を使う接続デモの集計を追加しました。新しい精度・薬効の評価ではありません。既存の科学的本文・SVG・集計JSON・CSS/JSは保持。Codexと実Claudeの検査・指摘修正後の公開処理はPASS、全164ローカルテストと日英24表示条件464検査が成功しました。
+
+English: Added an exploratory workflow section linking protein signatures to measured-condition retrieval and provisional response references, with unresolved identities and unassessed validation axes retained. The fixed, previously used S3 query is a functional demo, not new efficacy or independent performance evidence. Existing scientific sections, SVGs, aggregates and runtime assets are unchanged.
+
 ## 2026-10-08 — 説明図をスクロールで操作
 
 6つの説明図を、画面に入った際の自動再生から、ページのスクロール位置で直接操作する形に変更しました。下へスクロールすると進み、上へ戻すと巻き戻り、ページが止まると図もその位置で止まります。図が画面に収まる場合は表示を留め、「最初へ戻る」「最後へ進む」と例の切り替えボタンでも該当位置へ移動できます。画面が低い場合は通常のページ表示を保ちます。
