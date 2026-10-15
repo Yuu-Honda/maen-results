@@ -15,8 +15,10 @@
 <link rel="alternate" hreflang="en" href="en.html">
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="explain.css">
+<link rel="stylesheet" href="workflow.css">
 <script src="site.js" defer></script>
 <script src="explain.js" defer></script>
+<script src="workflow.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -227,6 +229,59 @@
   <section class="section" id="workflow" aria-labelledby="workflow-title">
     <div class="container">
       <div class="section-heading"><div><p class="eyebrow">CONNECTED WORKFLOW / 探索的な接続</p><h2 id="workflow-title">変化から候補へ、<br>根拠をつなぐ。</h2></div><p>希望するタンパク質量の変化から実測の投与条件を検索し、既存のPRISM・CTRP集計を参照する研究用CLIを追加しました。類似度と薬剤応答の根拠を別々に保存し、応答を理由に検索順位を変えません。新しい治療候補の有効性を確かめた結果ではありません。</p></div>
+      <!-- Connected-workflow explanation: invented visuals; actual counts below. -->
+      <figure class="wf-story" id="workflow-animation" data-wf-story aria-labelledby="wf-title">
+        <div class="wf-intro"><div><h3 id="wf-title">MAENは、何をしている？</h3><p>量の違いを読み、似た記録を探し、分からないことを残します。棒・矢印・条件X/Y/Zは、すべて説明用の架空例です。実際の集計は図の下に示します。</p></div><span class="wf-label">模式図</span></div>
+        <div class="wf-track">
+          <div class="wf-board">
+            <nav class="wf-nav" aria-label="説明の段階へ移動"><button type="button" data-wf-jump="0">① 量の差</button><button type="button" data-wf-jump="1">② 似た変化</button><button type="button" data-wf-jump="2">③ 記録を添える</button><button type="button" data-wf-jump="3">④ 未確認</button></nav>
+            <p class="wf-help"><strong>下へ進む · 上へ戻る · 止めて読む</strong><span>スクロールで説明を操作</span></p>
+            <div class="wf-progress" aria-hidden="true"><i></i></div>
+            <div class="wf-panels">
+              <section class="wf-pane" data-wf-pane="0" aria-labelledby="wf-step-1">
+                <span class="wf-step">01 / どんな変化を指定する？</span><h4 id="wf-step-1">どの量を増やす・減らすか</h4><p>同じ測り方の「現在」と「指定した状態」を比べ、増やす・減らす・変えない、を取り出します。</p>
+                <ul class="wf-legend"><li><i class="wf-key" aria-hidden="true"></i>現在の量</li><li><i class="wf-key target" aria-hidden="true"></i>指定した量</li></ul>
+                <div class="wf-amounts"><div class="wf-amount-row"><span class="wf-protein-letter">A</span><div class="wf-bar-pair" aria-hidden="true"><i class="wf-current" style="--wf-length:25%"></i><i class="wf-requested" style="--wf-length:75%" data-wf-ratio="0.3333333333333333"></i></div><span class="wf-change ">＋ 増やす</span></div><div class="wf-amount-row"><span class="wf-protein-letter">B</span><div class="wf-bar-pair" aria-hidden="true"><i class="wf-current" style="--wf-length:75%"></i><i class="wf-requested" style="--wf-length:25%" data-wf-ratio="3"></i></div><span class="wf-change ">− 減らす</span></div><div class="wf-amount-row"><span class="wf-protein-letter">C</span><div class="wf-bar-pair" aria-hidden="true"><i class="wf-current" style="--wf-length:50%"></i><i class="wf-requested" style="--wf-length:50%" data-wf-ratio="1"></i></div><span class="wf-change same">0 同じ</span></div></div>
+                <ul class="wf-signature" aria-label="探したい変化（模式図）"><li>A ↑</li><li class="wf-down">B ↓</li><li class="wf-flat">C →</li></ul>
+                <p class="wf-small">A/B/Cは架空のタンパク質、量は仮の目盛りです。「指定した状態」が健康な状態とは限りません。</p>
+              </section>
+              <section class="wf-pane" data-wf-pane="1" aria-labelledby="wf-step-2">
+                <span class="wf-step">02 / 過去に似た記録はある？</span><h4 id="wf-step-2">似た変化を探す</h4><p>MCF7という培養がん細胞で、投与12時間後に測った78条件と、タンパク質の増減パターンを比べます。下の3条件は、考え方を示す架空例です。</p>
+                <p class="wf-query-label">探したい変化（模式図）</p><ul class="wf-signature"><li>A ↑</li><li class="wf-down">B ↓</li><li class="wf-flat">C →</li></ul>
+                <div class="wf-scan" aria-hidden="true"><i></i></div><ul class="wf-compare-list"><li class=""><strong>条件 X</strong><span class="wf-pattern"><small>A / B / C</small>↑ ↑ →</span></li><li class="wf-match"><strong>条件 Y</strong><span class="wf-pattern"><small>A / B / C</small>↑ ↓ →</span></li><li class=""><strong>条件 Z</strong><span class="wf-pattern"><small>A / B / C</small>↓ ↑ →</span></li></ul>
+                <p class="wf-small">未知の物質が起こす変化を、ここで予測しているわけではありません。</p>
+              </section>
+              <section class="wf-pane" data-wf-pane="2" aria-labelledby="wf-step-3">
+                <span class="wf-step">03 / 別の記録を添えられる？</span><h4 id="wf-step-3">別の実験の記録を添える</h4><p>まず似た順に並べます。次に、名称が対応する条件へ、既存の薬剤応答の記録を添えます。</p>
+                <ol class="wf-rank-list" aria-label="似た順の架空例"><li class="wf-rank-card"><span class="wf-rank-number" aria-hidden="true">1</span><div><strong>条件 Y <span class="wf-pattern">↑ ↓ →</span></strong><span class="wf-ref ">暫定参照：名称の対応のみ</span></div></li><li class="wf-rank-card"><span class="wf-rank-number" aria-hidden="true">2</span><div><strong>条件 X <span class="wf-pattern">↑ ↑ →</span></strong><span class="wf-ref unknown">対応未解決：この条件も保持</span></div></li><li class="wf-rank-card"><span class="wf-rank-number" aria-hidden="true">3</span><div><strong>条件 Z <span class="wf-pattern">↓ ↑ →</span></strong><span class="wf-ref unknown">対応未解決：この条件も保持</span></div></li></ol>
+                <p class="wf-keep">参照がなくても候補を消しません。記録を添えても、似た順は変えません。</p><p class="wf-small">名称が同じでも、化学構造・塩・試料が同じかは未確認です。</p>
+              </section>
+              <section class="wf-pane" data-wf-pane="3" aria-labelledby="wf-step-4">
+                <span class="wf-step">04 / 何がまだ分からない？</span><h4 id="wf-step-4">まだ分からないことを残す</h4><p>似た記録が見つかることと、望む作用を確かめることの間には、まだ調べる項目があります。</p>
+                <ul class="wf-open-list"><li><div><strong>同じ物質か</strong><span>構造・塩・試料の照合</span></div></li><li><div><strong>正常な細胞ではどうなるか</strong><span>がん細胞との比較</span></div></li><li><div><strong>体内で届く量か</strong><span>濃度と作用する時間</span></div></li><li><div><strong>別の研究でも成り立つか</strong><span>独立データと実験で確認</span></div></li></ul><p class="wf-small">「未確認」は、そのまま記録します。この図は治療効果や正常状態への回復を示していません。</p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <figcaption class="wf-caption"><p>スクロールは説明の順序を操作します。実験の時間経過ではありません。</p>
+          <div class="wf-facts"><h4>ここからは実際の接続デモの集計</h4><p>公開済み・使用済みの8-azaguanine署名（35遺伝子）を入力した動作確認です。上の架空の棒や順位とは別の情報です。</p>
+            <div class="wf-counts">
+              <div class="wf-count-axis"><h5>78条件を「採点できるか」で見る</h5><ul><li><strong>74</strong><span>順位を付けられた</span></li><li><strong>4</strong><span>採点不能・理由を保存</span></li></ul></div>
+              <div class="wf-count-axis"><h5>同じ78条件を「名称対応」で見る</h5><ul><li><strong>30</strong><span>暫定的な名称対応</span></li><li><strong>48</strong><span>対応未解決・保持</span></li></ul></div>
+            </div><p>2つは同じ78条件の別の分け方です。74から30へ絞った結果ではありません。参照なしも採点不能も、全条件を残します。</p>
+            <details><summary>詳しい読み方</summary><p>順位あり74条件の内訳は、名称対応29・未解決45。採点不能4条件の内訳は、名称対応1・未解決3です。名称の対応は化学的同一性の証明ではありません。応答記録は別の細胞・用量・時間の測定で、治療効果の確認でもありません。RNAモデルは外部での優位が未確認のため、候補の通過条件に使いません。</p></details>
+          </div><p><a href="data/pipeline-summary.json">接続デモの集計と出典（JSON）</a></p>
+        </figcaption>
+      </figure>
+      <aside class="wf-audit" id="workflow-next-check" aria-labelledby="wf-audit-title">
+        <h3 id="wf-audit-title">次に進めた確認 · 2026年10月15日</h3>
+        <p>別研究でも検索が成り立つかを調べるため、物質と測定条件を照合しました。比較に必要な情報が足りない資料では数値の解析を始めず、足りない項目を記録しています。<strong>新しい独立検索の結果は、まだ出していません。</strong></p>
+        <details><summary>調査で分かったことと、次の条件</summary>
+          <ul><li>lapatinibの公開構造参照は照合できました。古い実験の原試料は識別情報が足りず、既存の名称対応を「同じ物質と確認済み」には変更していません。</li><li>BRPでは生物反復と測り直しを区別できました。ただし定量表の正規化と試料量の補正が未確認で、12時間の同時点対照も確認できません。数値検索は実行していません。</li><li>別のdecryptE研究では、旧カタログと同じ名称の16薬と、薬ごとの処理済みファイルを確認しました。測定は別の細胞Jurkat・18時間で、旧カタログのMCF7・12時間とは条件が異なります。試料対応表の取得と反復の確認が残っています。</li><li>KSR1研究では、薬単独の正規化済みタンパク質比の列を確認しました。対照の時点や操作条件、反復数が未確定のため、こちらも数値は未解析です。</li></ul>
+          <p>次は対照・試料対応・正規化の記録を揃え、使う条件と評価方法を結果を見る前に固定します。上の接続デモの件数・順位や、既存の評価結果は更新していません。</p>
+          <p>一次資料：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10392136/">BRP</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11919725/">decryptE</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4452580/">KSR1研究</a> · <a href="https://pubchem.ncbi.nlm.nih.gov/compound/208908">lapatinib参照構造</a></p>
+        </details>
+      </aside>
       <ol class="roadmap-grid">
         <li class="roadmap-step"><span class="step-number">01</span><span class="pill">入力を定義</span><h3>現在と目標の差を作る</h3><p>同じ測定法・正規化・単位と宣言されたタンパク質データから「目標−現在」を計算。共通して測れた遺伝子だけを使い、欠損をゼロで埋めません。目標が正常な状態を表すかは未検証です。</p></li>
         <li class="roadmap-step"><span class="step-number">02</span><span class="pill">78条件を保持</span><h3>既知の変化を検索する</h3><p>MCF7・12時間後の既存カタログを使い、似た変化・逆向きの変化を順位付け。元の用量を保持し、採点不能な条件も理由付きで残します。未知物質の変化は予測しません。</p></li>

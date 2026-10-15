@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-15T08:41:22.385269+00:00",
+  "reviewer": "Independent Codex subagent /root/review_workflow_oct15",
+  "provider": "OpenAI",
+  "status": "PASS",
+  "findings": [],
+  "base_commit": "3267a6cc5b89f4c1718c6c8853338f36354cb4c3",
+  "target_sha256": {
+    "workflow.js": "2300a9e212d8da14d23e2660882a8ca608292461b2010f717af4aacaff49e586",
+    "workflow.css": "5e9dadef433d5fbb39adaf78cd155f8a2ebc0fc88e4ffb45f15379ea6e0f9a54",
+    "index.html": "f3cb55b13ad773d66e614e31bfb4f74353a7e6a1887ee5e2c0dee04e2d3f61b5",
+    "en.html": "3c797880a3681c77f99d035987f953e4d11955a002cd1cbd50c44dcdfc264b99"
+  },
+  "scope": [
+    "workflow.js",
+    "workflow.css",
+    "index.html #workflow-animation and workflow asset head references",
+    "en.html #workflow-animation and workflow asset head references"
+  ],
+  "browser_checks": {
+    "browser": "Google Chrome via Playwright",
+    "matrix": {
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "viewports": [
+        [
+          320,
+          740
+        ],
+        [
+          390,
+          844
+        ],
+        [
+          844,
+          390
+        ],
+        [
+          1024,
+          768
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "reduced_motion": [
+        false,
+        true
+      ],
+      "cases": 20
+    },
+    "additional_static_cases": {
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "modes": [
+        "JavaScript disabled",
+        "print CSS emulation",
+        "dynamic reduced motion"
+      ],
+      "cases": 6
+    },
+    "normal_mode_navigation_cases": 10,
+    "stage_sequence": [
+      1,
+      2,
+      3,
+      4,
+      3,
+      2,
+      1
+    ],
+    "idle_freeze_ms": 300,
+    "results": {
+      "horizontal_overflow_cases": 0,
+      "javascript_errors": 0,
+      "navigation_sequence_mismatches": 0,
+      "idle_dom_changes": 0,
+      "fallback_panels_accessible": true,
+      "dynamic_reduced_motion_removes_aria_hidden": true
+    }
+  },
+  "regression_evidence": {
+    "html_matches_base_after_removing_new_figure_and_two_head_references": {
+      "index.html": true,
+      "en.html": true
+    },
+    "tracked_changed_files": [
+      "en.html",
+      "index.html"
+    ],
+    "pipeline_summary_sha256": "6c96ab1f0e24c0d3fac0d36bc43cb99e92a954e961ff7d37ad90fdde7e38753c",
+    "existing_common_assets_and_aggregates_unchanged": true,
+    "duplicate_html_ids": []
+  },
+  "limits": [
+    "Chrome only; no real-device iOS/Safari test",
+    "No assistive-technology device test",
+    "Print CSS emulated; beforeprint reset inspected in code, no physical/PDF print test",
+    "No user comprehension study",
+    "Scientific efficacy and new independent predictive performance are outside this UI review"
+  ],
+  "review_text": "判定: PASS。公開を止める欠陥は確認しませんでした。\n\n独立した Codex レビューです。Claude の検査を代替する記録ではありません。対象は新規 workflow.js / workflow.css と、日英 HTML の #workflow-animation および 2 つの読み込み指定です。\n\n模式図の A/B/C、条件 X/Y/Z、棒、矢印、順位は架空例と明示され、健康状態への回復や治療効果を示す記述はありません。実際の集計は図から分離され、74 + 4 と 30 + 48 が同じ 78 条件の別分類であること、未対応・採点不能を残すことが説明されています。35 遺伝子、29 + 45、1 + 3 を含む数値は固定済み集計 JSON と一致しました。名称の対応を化学的同一性とせず、応答記録を理由に並べ替えない説明も実装と整合します。\n\nスクロール位置から状態を計算し、時間で進む処理や wheel の奪取はありません。独立した Chrome 検査では、日英 × 5 画面サイズ × 通常/動きを減らす設定の 20 条件で、ページと各パネルの横はみ出し・JavaScript 例外は 0 件でした。通常設定 10 条件では、段階ボタンを 1→2→3→4→3→2→1 の順に操作して表示段階が一致し、300 ミリ秒停止後の図の DOM も一致しました。画面に収まる場合は非表示パネルの aria-hidden が正しく切り替わり、低い画面では全パネルが通常の文書順で読み取れました。\n\n追加の 6 条件（日英 × JavaScript 無効 / 印刷 CSS / 動きを減らす設定への途中変更）でも、全パネルを表示し、操作ボタンの親を非表示にし、固定表示を解除しました。途中で reduced-motion を有効にすると全パネルの aria-hidden が除かれました。印刷 CSS のエミュレーションは beforeprint イベントを起こさないため、印刷時の aria-hidden 解除は reset() のコード確認に限ります。\n\n旧内容の保持は、新しい図と読み込み 2 行を取り除くと日英 HTML が指定 base と完全一致することで確認しました。追跡済みの差分は両 HTML の追加のみで、既存 6 図、共通 CSS/JS、集計 JSON に差分はありません。重複 id もありません。\n\n限界: 検査は Google Chrome / Playwright とコードの読解によるものです。実機 iOS / Safari、支援技術の読み上げ実機、PDF の実印刷、利用者による理解度テストは実施していません。未知物質の効果や独立データでの精度を検証するレビューでもありません。\n"
+}

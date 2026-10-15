@@ -1,5 +1,13 @@
 # 更新履歴
 
+## 2026-10-15 — 接続の流れを4段階のスクロール図で説明
+
+日英の接続節に、指定したタンパク質量の差、既存条件との比較、順位を変えずに名称対応の参照を添える処理、未確認事項を残す処理を追加しました。架空のA/B/C・X/Y/Zによる模式図と、既存デモの74＋4／30＋48という同じ78条件の二分類を分けています。下へ進む・上へ戻る・止めて読む操作に対応し、画面に収まらない場合、動き軽減、JavaScript無効、印刷では全文を読めます。
+
+物質参照・BRP・KSR1・decryptEの条件監査の進捗も追加しました。新しい独立検索の数値結果はありません。既存の文章・6説明図・科学的数値・集計JSON・共通CSS/JSは保持しています。検査・修正の証跡は [今回のレビュー記録](reviews/workflow-2026-10-15.md) に保存します。
+
+English: Added a four-stage reversible scroll explanation of the exploratory connector, with fictional diagrams separated from the unchanged demo counts. Added metadata-readiness progress without claiming new independent retrieval results. Existing scientific content, aggregates and shared assets are preserved.
+
 ## 2026-10-13 — タンパク質署名と既存応答の根拠を接続
 
 日英ページに、現在／目標のタンパク質量の差分作成、既存78条件の検索、PRISM・CTRPの暫定的な名称参照、未評価項目を残す流れを追加しました。30条件の名称注釈対応と48条件の未解決を区別し、化学的同一性未確認、集計にないことと無効・未測定の違い、正常化・曝露等の未評価を明記しています。検索は別の研究用CLIで、サイトには入力や計算サーバーを追加していません。
