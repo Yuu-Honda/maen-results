@@ -15,8 +15,10 @@
 <link rel="alternate" hreflang="en" href="en.html">
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="explain.css">
+<link rel="stylesheet" href="workflow.css">
 <script src="site.js" defer></script>
 <script src="explain.js" defer></script>
+<script src="workflow.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -227,6 +229,59 @@
   <section class="section" id="workflow" aria-labelledby="workflow-title">
     <div class="container">
       <div class="section-heading"><div><p class="eyebrow">CONNECTED WORKFLOW / EXPLORATORY INTEGRATION</p><h2 id="workflow-title">Connect a change<br>to its evidence.</h2></div><p>A research CLI now retrieves measured treatment conditions from a requested protein-abundance change and references existing PRISM and CTRP aggregates. Similarity and response evidence remain separate; response evidence does not change the retrieval order. This does not establish the efficacy of a new treatment candidate.</p></div>
+      <!-- Connected-workflow explanation: invented visuals; actual counts below. -->
+      <figure class="wf-story" id="workflow-animation" data-wf-story aria-labelledby="wf-title">
+        <div class="wf-intro"><div><h3 id="wf-title">What is MAEN doing?</h3><p>Read a change, find similar records, and keep the unanswered questions. All bars, arrows and conditions X/Y/Z are invented examples. Actual counts are shown separately below.</p></div><span class="wf-label">Schematic</span></div>
+        <div class="wf-track">
+          <div class="wf-board">
+            <nav class="wf-nav" aria-label="Jump to an explanation stage"><button type="button" data-wf-jump="0">① Change</button><button type="button" data-wf-jump="1">② Compare</button><button type="button" data-wf-jump="2">③ Add records</button><button type="button" data-wf-jump="3">④ Unknowns</button></nav>
+            <p class="wf-help"><strong>Down to advance · up to rewind · stop to read</strong><span>Scroll controls the explanation</span></p>
+            <div class="wf-progress" aria-hidden="true"><i></i></div>
+            <div class="wf-panels">
+              <section class="wf-pane" data-wf-pane="0" aria-labelledby="wf-step-1">
+                <span class="wf-step">01 / Which change is requested?</span><h4 id="wf-step-1">Choose what to increase or decrease</h4><p>Compare the current and requested states using the same measurement scale. Identify what should increase, decrease or stay the same.</p>
+                <ul class="wf-legend"><li><i class="wf-key" aria-hidden="true"></i>Current amount</li><li><i class="wf-key target" aria-hidden="true"></i>Requested amount</li></ul>
+                <div class="wf-amounts"><div class="wf-amount-row"><span class="wf-protein-letter">A</span><div class="wf-bar-pair" aria-hidden="true"><i class="wf-current" style="--wf-length:25%"></i><i class="wf-requested" style="--wf-length:75%" data-wf-ratio="0.3333333333333333"></i></div><span class="wf-change ">+ More</span></div><div class="wf-amount-row"><span class="wf-protein-letter">B</span><div class="wf-bar-pair" aria-hidden="true"><i class="wf-current" style="--wf-length:75%"></i><i class="wf-requested" style="--wf-length:25%" data-wf-ratio="3"></i></div><span class="wf-change ">− Less</span></div><div class="wf-amount-row"><span class="wf-protein-letter">C</span><div class="wf-bar-pair" aria-hidden="true"><i class="wf-current" style="--wf-length:50%"></i><i class="wf-requested" style="--wf-length:50%" data-wf-ratio="1"></i></div><span class="wf-change same">0 Same</span></div></div>
+                <ul class="wf-signature" aria-label="Requested change (schematic)"><li>A ↑</li><li class="wf-down">B ↓</li><li class="wf-flat">C →</li></ul>
+                <p class="wf-small">A/B/C are invented proteins on an arbitrary scale. The requested state is not necessarily a healthy state.</p>
+              </section>
+              <section class="wf-pane" data-wf-pane="1" aria-labelledby="wf-step-2">
+                <span class="wf-step">02 / Has a similar change been measured?</span><h4 id="wf-step-2">Find similar changes</h4><p>Compare protein-abundance changes with all 78 conditions measured in cultured MCF7 cancer cells 12 hours after treatment. The three examples below are invented to explain the method.</p>
+                <p class="wf-query-label">Requested change (schematic)</p><ul class="wf-signature"><li>A ↑</li><li class="wf-down">B ↓</li><li class="wf-flat">C →</li></ul>
+                <div class="wf-scan" aria-hidden="true"><i></i></div><ul class="wf-compare-list"><li class=""><strong>Condition X</strong><span class="wf-pattern"><small>A / B / C</small>↑ ↑ →</span></li><li class="wf-match"><strong>Condition Y</strong><span class="wf-pattern"><small>A / B / C</small>↑ ↓ →</span></li><li class=""><strong>Condition Z</strong><span class="wf-pattern"><small>A / B / C</small>↓ ↑ →</span></li></ul>
+                <p class="wf-small">This does not predict the changes caused by an unknown substance.</p>
+              </section>
+              <section class="wf-pane" data-wf-pane="2" aria-labelledby="wf-step-3">
+                <span class="wf-step">03 / Can another record be attached?</span><h4 id="wf-step-3">Attach records from other experiments</h4><p>Order conditions by pattern similarity first. Then attach existing drug-response records where source names correspond.</p>
+                <ol class="wf-rank-list" aria-label="Invented similarity order"><li class="wf-rank-card"><span class="wf-rank-number" aria-hidden="true">1</span><div><strong>Condition Y <span class="wf-pattern">↑ ↓ →</span></strong><span class="wf-ref ">Provisional record: name correspondence only</span></div></li><li class="wf-rank-card"><span class="wf-rank-number" aria-hidden="true">2</span><div><strong>Condition X <span class="wf-pattern">↑ ↑ →</span></strong><span class="wf-ref unknown">Correspondence unresolved: condition retained</span></div></li><li class="wf-rank-card"><span class="wf-rank-number" aria-hidden="true">3</span><div><strong>Condition Z <span class="wf-pattern">↓ ↑ →</span></strong><span class="wf-ref unknown">Correspondence unresolved: condition retained</span></div></li></ol>
+                <p class="wf-keep">Keep conditions without references. Attaching a record does not change the similarity order.</p><p class="wf-small">A shared name does not establish the same chemical structure, salt or sample.</p>
+              </section>
+              <section class="wf-pane" data-wf-pane="3" aria-labelledby="wf-step-4">
+                <span class="wf-step">04 / What is still unknown?</span><h4 id="wf-step-4">Keep unanswered questions visible</h4><p>Finding a similar measured pattern leaves several questions before the requested effect can be established.</p>
+                <ul class="wf-open-list"><li><div><strong>Is it the same substance?</strong><span>Check structure, salt and sample</span></div></li><li><div><strong>What happens in normal cells?</strong><span>Compare with cancer cells</span></div></li><li><div><strong>Can that exposure be reached?</strong><span>Check concentration and duration</span></div></li><li><div><strong>Does it hold in another study?</strong><span>Use independent data and experiments</span></div></li></ul><p class="wf-small">Unassessed items remain unassessed. This diagram does not demonstrate treatment efficacy or restoration of a healthy state.</p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <figcaption class="wf-caption"><p>Scrolling controls the explanation, not experimental time.</p>
+          <div class="wf-facts"><h4>Actual counts from the connection demo</h4><p>A workflow check using a published, previously used 8-azaguanine signature (35 genes). These counts are separate from the invented bars and ranking above.</p>
+            <div class="wf-counts">
+              <div class="wf-count-axis"><h5>All 78 conditions: can they be scored?</h5><ul><li><strong>74</strong><span>Ranked</span></li><li><strong>4</strong><span>Unscoreable; reasons saved</span></li></ul></div>
+              <div class="wf-count-axis"><h5>The same 78: do source names correspond?</h5><ul><li><strong>30</strong><span>Provisional name correspondence</span></li><li><strong>48</strong><span>Unresolved; retained</span></li></ul></div>
+            </div><p>These are two classifications of the same 78 conditions, not a filter from 74 to 30. Conditions without references and unscoreable conditions are all retained.</p>
+            <details><summary>How to read these counts</summary><p>Of the 74 ranked conditions, 29 have name correspondence and 45 are unresolved. Of the 4 unscoreable conditions, 1 has name correspondence and 3 are unresolved. Name correspondence does not establish chemical identity. Response references use different cells, doses and durations and do not establish treatment efficacy. The RNA model is not a candidate gate because its external advantage was not confirmed.</p></details>
+          </div><p><a href="data/pipeline-summary.json">Connection demo counts and provenance (JSON)</a></p>
+        </figcaption>
+      </figure>
+      <aside class="wf-audit" id="workflow-next-check" aria-labelledby="wf-audit-title">
+        <h3 id="wf-audit-title">The next checks · 15 October 2026</h3>
+        <p>We checked substance references and measurement conditions before extending retrieval to another study. When comparison requirements are unresolved, we record the missing information before numerical analysis. <strong>No new independent retrieval result has been produced.</strong></p>
+        <details><summary>What the audit found, and what is needed next</summary>
+          <ul><li>Public lapatinib reference structures agree. The old experiment lacks source-substance identifiers, so existing name correspondences have not been upgraded to confirmed substance identity.</li><li>For BRP, biological replicates and reinjections can now be distinguished. Matrix normalization and sample-loading correction remain unconfirmed, and no contemporaneous 12-hour control was found. No numerical retrieval was run.</li><li>The separate decryptE study has 16 case-insensitive exact name overlaps with the old catalog and processed files for individual drugs. It measured Jurkat cells at 18 hours, differing from the old MCF7 catalog at 12 hours. Sample mapping and replicate checks remain incomplete.</li><li>The KSR1 study provides a normalized protein-ratio column for drug alone. Control timing, handling and biological replicate count remain unclear, so its numerical data have not been analyzed either.</li></ul>
+          <p>Next, resolve control, sample-mapping and normalization records, then fix eligible conditions and methods before viewing outcomes. The connection-demo counts and ranks, and all existing evaluation results, remain unchanged.</p>
+          <p>Primary sources: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10392136/">BRP</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11919725/">decryptE</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4452580/">KSR1 study</a> · <a href="https://pubchem.ncbi.nlm.nih.gov/compound/208908">lapatinib reference structure</a></p>
+        </details>
+      </aside>
       <ol class="roadmap-grid">
         <li class="roadmap-step"><span class="step-number">01</span><span class="pill">Define the input</span><h3>Subtract current from target</h3><p>Use protein profiles declared to share an assay, normalization and units. Compute target minus current on measured genes shared by both profiles, without zero-filling missing values. A target is not a validated healthy state.</p></li>
         <li class="roadmap-step"><span class="step-number">02</span><span class="pill">Keep all 78 conditions</span><h3>Retrieve known changes</h3><p>Rank similar or opposite changes in the existing MCF7, 12-hour catalog. Preserve source doses and unscoreable conditions with reasons. Changes caused by unknown substances are not predicted.</p></li>

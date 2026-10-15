@@ -1,5 +1,7 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-10-15：接続の仕組みを[4段階のスクロール図](https://yuu-honda.github.io/maen-results/#workflow-animation)で説明しました。物質参照と別研究の入力条件を監査しましたが、新しい独立検索の数値結果はありません。[検査・修正記録](reviews/workflow-2026-10-15.md)
+
 [日本語サイト](https://yuu-honda.github.io/maen-results/) / [English](https://yuu-honda.github.io/maen-results/en.html) / [更新履歴](CHANGELOG.md)
 
 MAENは、細胞の実測データを使って仮説を絞る探索的な研究記録です。この公開リポジトリにはサイトのコード、方法の説明、数値の集計を置きます。計算用のコードは別の非公開リポジトリで管理しています。原表、全タンパク質・遺伝子プロファイル、個別条件の結果、用量表、細胞の割り当てや保留IDはここに配布しません。

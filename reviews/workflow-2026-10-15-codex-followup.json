@@ -1,0 +1,1096 @@
+{
+  "reviewer": "Codex follow-up UI check by workflow_animation (initial UI implementation author; not a separate independent initial review)",
+  "reviewed_at": "2026-10-15T08:50:26.765Z",
+  "sha256": {
+    "workflow.js": "ad0f9d6ac83e52a267b9985d2c267a0351a9504a4f90151b18f85b9d074a6f74",
+    "workflow.css": "d7adfc199e091cf4277df1fe9ac5b95778824addd13bcd7d9ad6df8e597ad166",
+    "index.html": "39057495a384efb6458921a407e3a1f7cb605abd2dc3dd539c1cc88c369b4973",
+    "en.html": "854daf1e2dbb3b5fb93bd8381c8e2496a2b8bd1912203ce37da6f5272ae3f12b"
+  },
+  "cases": [
+    {
+      "lang": "index.html",
+      "width": 1440,
+      "height": 1000,
+      "mode": "normal",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "true",
+        "static": false,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": "false"
+          },
+          {
+            "visibility": "hidden",
+            "ariaHidden": "true"
+          },
+          {
+            "visibility": "hidden",
+            "ariaHidden": "true"
+          },
+          {
+            "visibility": "hidden",
+            "ariaHidden": "true"
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "grid",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "stage3FirstFrame": {
+        "step": "3",
+        "p": "0.500475",
+        "refs": [
+          {
+            "opacity": "1",
+            "visibility": "visible",
+            "text": "暫定参照：名称の対応のみ"
+          },
+          {
+            "opacity": "1",
+            "visibility": "visible",
+            "text": "対応未解決：この条件も保持"
+          },
+          {
+            "opacity": "1",
+            "visibility": "visible",
+            "text": "対応未解決：この条件も保持"
+          }
+        ],
+        "cards": [
+          "matrix(1, 0, 0, 1, 0, 84)",
+          "matrix(1, 0, 0, 1, 0, -84)",
+          "matrix(1, 0, 0, 1, 0, 0)"
+        ]
+      },
+      "buttons": [
+        {
+          "step": "1",
+          "p": "0.219734",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(0, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 84)",
+            "matrix(1, 0, 0, 1, 0, -84)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "2",
+          "p": "0.479734",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 84)",
+            "matrix(1, 0, 0, 1, 0, -84)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "3",
+          "p": "0.739734",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "4",
+          "p": "0.979734",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "frozen": true,
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "index.html",
+      "width": 320,
+      "height": 740,
+      "mode": "normal",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": false,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "grid",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "buttons": [
+        {
+          "step": "1",
+          "p": "0.272516",
+          "requested": [
+            "matrix(0.999939, 0, 0, 1, 0, 0)",
+            "matrix(1.00018, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(0.0901559, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 82)",
+            "matrix(1, 0, 0, 1, 0, -82)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "2",
+          "p": "0.500000",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 82)",
+            "matrix(1, 0, 0, 1, 0, -82)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "3",
+          "p": "0.749977",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0.0074926)",
+            "matrix(1, 0, 0, 1, 0, -0.0074926)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "4",
+          "p": "0.999985",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "frozen": true,
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "index.html",
+      "width": 844,
+      "height": 390,
+      "mode": "normal",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": false,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "grid",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "buttons": [
+        {
+          "step": "1",
+          "p": "0.249849",
+          "requested": [
+            "matrix(0.999598, 0, 0, 1, 0, 0)",
+            "matrix(1.00121, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(0, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 83)",
+            "matrix(1, 0, 0, 1, 0, -83)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "2",
+          "p": "0.499933",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(0.999732, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 83)",
+            "matrix(1, 0, 0, 1, 0, -83)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "3",
+          "p": "0.749916",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0.0278299)",
+            "matrix(1, 0, 0, 1, 0, -0.0278299)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "4",
+          "p": "0.999799",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "frozen": true,
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "index.html",
+      "width": 320,
+      "height": 740,
+      "mode": "reduced",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": true,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "none",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "index.html",
+      "width": 320,
+      "height": 740,
+      "mode": "nojs",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "static": true,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "none",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "index.html",
+      "width": 844,
+      "height": 390,
+      "mode": "print",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": true,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "none",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "en.html",
+      "width": 1440,
+      "height": 1000,
+      "mode": "normal",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "true",
+        "static": false,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": "false"
+          },
+          {
+            "visibility": "hidden",
+            "ariaHidden": "true"
+          },
+          {
+            "visibility": "hidden",
+            "ariaHidden": "true"
+          },
+          {
+            "visibility": "hidden",
+            "ariaHidden": "true"
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "grid",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "stage3FirstFrame": {
+        "step": "3",
+        "p": "0.500509",
+        "refs": [
+          {
+            "opacity": "1",
+            "visibility": "visible",
+            "text": "Provisional record: name correspondence only"
+          },
+          {
+            "opacity": "1",
+            "visibility": "visible",
+            "text": "Correspondence unresolved: condition retained"
+          },
+          {
+            "opacity": "1",
+            "visibility": "visible",
+            "text": "Correspondence unresolved: condition retained"
+          }
+        ],
+        "cards": [
+          "matrix(1, 0, 0, 1, 0, 84)",
+          "matrix(1, 0, 0, 1, 0, -84)",
+          "matrix(1, 0, 0, 1, 0, 0)"
+        ]
+      },
+      "buttons": [
+        {
+          "step": "1",
+          "p": "0.219769",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(0, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 84)",
+            "matrix(1, 0, 0, 1, 0, -84)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "2",
+          "p": "0.479769",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 84)",
+            "matrix(1, 0, 0, 1, 0, -84)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "3",
+          "p": "0.739769",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "4",
+          "p": "0.979769",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "frozen": true,
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "en.html",
+      "width": 320,
+      "height": 740,
+      "mode": "normal",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": false,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "grid",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "buttons": [
+        {
+          "step": "1",
+          "p": "0.249863",
+          "requested": [
+            "matrix(0.999635, 0, 0, 1, 0, 0)",
+            "matrix(1.0011, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(0, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 122)",
+            "matrix(1, 0, 0, 1, 0, -122)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "2",
+          "p": "0.500000",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 122)",
+            "matrix(1, 0, 0, 1, 0, -122)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "3",
+          "p": "0.750000",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "4",
+          "p": "1.000000",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "frozen": true,
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "en.html",
+      "width": 844,
+      "height": 390,
+      "mode": "normal",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": false,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "grid",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "buttons": [
+        {
+          "step": "1",
+          "p": "0.250000",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(0, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 83)",
+            "matrix(1, 0, 0, 1, 0, -83)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "2",
+          "p": "0.500000",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 83)",
+            "matrix(1, 0, 0, 1, 0, -83)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "3",
+          "p": "0.750000",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "step": "4",
+          "p": "0.999547",
+          "requested": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "scan": "matrix(1, 0, 0, 1, 0, 0)",
+          "cards": [
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)",
+            "matrix(1, 0, 0, 1, 0, 0)"
+          ],
+          "refs": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "frozen": true,
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "en.html",
+      "width": 320,
+      "height": 740,
+      "mode": "reduced",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": true,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "none",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "en.html",
+      "width": 320,
+      "height": 740,
+      "mode": "nojs",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "static": true,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "none",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    },
+    {
+      "lang": "en.html",
+      "width": 844,
+      "height": 390,
+      "mode": "print",
+      "errors": [],
+      "initial": {
+        "overflow": false,
+        "pinned": "false",
+        "static": true,
+        "panes": [
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          },
+          {
+            "visibility": "visible",
+            "ariaHidden": null
+          }
+        ],
+        "aside": 1,
+        "navDisplayed": "none",
+        "refOpacities": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "finalOverflow": {
+        "document": false,
+        "local": []
+      }
+    }
+  ],
+  "verdict": "PASS",
+  "findings": [],
+  "scope": "Root deltas: permanent provisional/unknown badges, completed pinned navigation landmarks, MCF7/12h context, ordinary-flow progress denominator, and separate wf-audit aside.",
+  "browser_cases": 14,
+  "expanded_mobile_aside_cases": [
+    {
+      "lang": "ja",
+      "asideClass": "wf-audit",
+      "overflow": [],
+      "counts": [
+        "74",
+        "4",
+        "30",
+        "48"
+      ],
+      "context": "MCF7という培養がん細胞で、投与12時間後に測った78条件と、タンパク質の増減パターンを比べます。下の3条件は、考え方を示す架空例です。",
+      "disclaimer": "新しい独立検索の結果は、まだ出していません。"
+    },
+    {
+      "lang": "en",
+      "asideClass": "wf-audit",
+      "overflow": [],
+      "counts": [
+        "74",
+        "4",
+        "30",
+        "48"
+      ],
+      "context": "Compare protein-abundance changes with all 78 conditions measured in cultured MCF7 cancer cells 12 hours after treatment. The three examples below are invented to explain the method.",
+      "disclaimer": "No new independent retrieval result has been produced."
+    }
+  ],
+  "resolved_finding": {
+    "issue": "Stage3 flow navigation left approximately 6.74px of sorting unfinished at 844x390.",
+    "resolution": "Root aligned local progress to the viewport .80 to pinTop interval.",
+    "current_max_sort_residual_pixels": 0.0278299,
+    "current_max_bar_scale_residual": 0.00121,
+    "interpretation": "Minor subpixel residues from browser scroll-position quantization; no material unfinished state."
+  },
+  "limitations": [
+    "UI/text scope only. No new scientific numerical evaluation was performed.",
+    "Audit-source science claims are covered by the separate scientific review, not independently validated by this UI check.",
+    "Existing aggregate JSON was read as the count source and was not edited."
+  ]
+}

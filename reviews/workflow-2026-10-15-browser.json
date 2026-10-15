@@ -1,0 +1,440 @@
+{
+  "base": "http://127.0.0.1:8771/",
+  "case_count": 36,
+  "assertions": 1018,
+  "passed": true,
+  "cases": [
+    {
+      "file": "index.html",
+      "w": 320,
+      "h": 740,
+      "mode": "normal",
+      "geometry": {
+        "width": 320,
+        "doc": 320,
+        "body": 320
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 320,
+      "h": 740,
+      "mode": "reduced",
+      "geometry": {
+        "width": 320,
+        "doc": 320,
+        "body": 320
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 320,
+      "h": 740,
+      "mode": "nojs",
+      "geometry": {
+        "width": 320,
+        "doc": 320,
+        "body": 320
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 390,
+      "h": 844,
+      "mode": "normal",
+      "geometry": {
+        "width": 390,
+        "doc": 390,
+        "body": 390
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 390,
+      "h": 844,
+      "mode": "reduced",
+      "geometry": {
+        "width": 390,
+        "doc": 390,
+        "body": 390
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 390,
+      "h": 844,
+      "mode": "nojs",
+      "geometry": {
+        "width": 390,
+        "doc": 390,
+        "body": 390
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 768,
+      "h": 1024,
+      "mode": "normal",
+      "geometry": {
+        "width": 768,
+        "doc": 768,
+        "body": 768
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 768,
+      "h": 1024,
+      "mode": "reduced",
+      "geometry": {
+        "width": 768,
+        "doc": 768,
+        "body": 768
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 768,
+      "h": 1024,
+      "mode": "nojs",
+      "geometry": {
+        "width": 768,
+        "doc": 768,
+        "body": 768
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 1024,
+      "h": 768,
+      "mode": "normal",
+      "geometry": {
+        "width": 1024,
+        "doc": 1024,
+        "body": 1024
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 1024,
+      "h": 768,
+      "mode": "reduced",
+      "geometry": {
+        "width": 1024,
+        "doc": 1024,
+        "body": 1024
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 1024,
+      "h": 768,
+      "mode": "nojs",
+      "geometry": {
+        "width": 1024,
+        "doc": 1024,
+        "body": 1024
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 1440,
+      "h": 1000,
+      "mode": "normal",
+      "geometry": {
+        "width": 1440,
+        "doc": 1440,
+        "body": 1440
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 1440,
+      "h": 1000,
+      "mode": "reduced",
+      "geometry": {
+        "width": 1440,
+        "doc": 1440,
+        "body": 1440
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 1440,
+      "h": 1000,
+      "mode": "nojs",
+      "geometry": {
+        "width": 1440,
+        "doc": 1440,
+        "body": 1440
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 844,
+      "h": 390,
+      "mode": "normal",
+      "geometry": {
+        "width": 844,
+        "doc": 844,
+        "body": 844
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 844,
+      "h": 390,
+      "mode": "reduced",
+      "geometry": {
+        "width": 844,
+        "doc": 844,
+        "body": 844
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "w": 844,
+      "h": 390,
+      "mode": "nojs",
+      "geometry": {
+        "width": 844,
+        "doc": 844,
+        "body": 844
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 320,
+      "h": 740,
+      "mode": "normal",
+      "geometry": {
+        "width": 320,
+        "doc": 320,
+        "body": 320
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 320,
+      "h": 740,
+      "mode": "reduced",
+      "geometry": {
+        "width": 320,
+        "doc": 320,
+        "body": 320
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 320,
+      "h": 740,
+      "mode": "nojs",
+      "geometry": {
+        "width": 320,
+        "doc": 320,
+        "body": 320
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 390,
+      "h": 844,
+      "mode": "normal",
+      "geometry": {
+        "width": 390,
+        "doc": 390,
+        "body": 390
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 390,
+      "h": 844,
+      "mode": "reduced",
+      "geometry": {
+        "width": 390,
+        "doc": 390,
+        "body": 390
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 390,
+      "h": 844,
+      "mode": "nojs",
+      "geometry": {
+        "width": 390,
+        "doc": 390,
+        "body": 390
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 768,
+      "h": 1024,
+      "mode": "normal",
+      "geometry": {
+        "width": 768,
+        "doc": 768,
+        "body": 768
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 768,
+      "h": 1024,
+      "mode": "reduced",
+      "geometry": {
+        "width": 768,
+        "doc": 768,
+        "body": 768
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 768,
+      "h": 1024,
+      "mode": "nojs",
+      "geometry": {
+        "width": 768,
+        "doc": 768,
+        "body": 768
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 1024,
+      "h": 768,
+      "mode": "normal",
+      "geometry": {
+        "width": 1024,
+        "doc": 1024,
+        "body": 1024
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 1024,
+      "h": 768,
+      "mode": "reduced",
+      "geometry": {
+        "width": 1024,
+        "doc": 1024,
+        "body": 1024
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 1024,
+      "h": 768,
+      "mode": "nojs",
+      "geometry": {
+        "width": 1024,
+        "doc": 1024,
+        "body": 1024
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 1440,
+      "h": 1000,
+      "mode": "normal",
+      "geometry": {
+        "width": 1440,
+        "doc": 1440,
+        "body": 1440
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 1440,
+      "h": 1000,
+      "mode": "reduced",
+      "geometry": {
+        "width": 1440,
+        "doc": 1440,
+        "body": 1440
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 1440,
+      "h": 1000,
+      "mode": "nojs",
+      "geometry": {
+        "width": 1440,
+        "doc": 1440,
+        "body": 1440
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 844,
+      "h": 390,
+      "mode": "normal",
+      "geometry": {
+        "width": 844,
+        "doc": 844,
+        "body": 844
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 844,
+      "h": 390,
+      "mode": "reduced",
+      "geometry": {
+        "width": 844,
+        "doc": 844,
+        "body": 844
+      },
+      "errors": []
+    },
+    {
+      "file": "en.html",
+      "w": 844,
+      "h": 390,
+      "mode": "nojs",
+      "geometry": {
+        "width": 844,
+        "doc": 844,
+        "body": 844
+      },
+      "errors": []
+    }
+  ]
+}
