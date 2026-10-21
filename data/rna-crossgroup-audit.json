@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "audit_id": "everyday-rna-crossgroup-preflight-v1",
+  "date": "2026-10-21",
+  "scope": "metadata correspondence audit before a proposed source-group transfer diagnostic",
+  "new_rna_values_read": false,
+  "new_numeric_evaluation_performed": false,
+  "new_rna_retrieval_result": null,
+  "old_rna_results_changed": false,
+  "independent_biological_validation": false,
+  "metadata_rows_examined": 1201944,
+  "matrix_body_probe_bytes": 8,
+  "matrix_probe_content": "HDF5 file magic only; no matrix or vector opened",
+  "profiles": [
+    {
+      "candidate_compounds": 4,
+      "planned_queries": 12,
+      "planned_references": 23,
+      "metadata_records": 35,
+      "unique_exact_signature_matches": 29,
+      "absent_records": 6,
+      "full_replicate_set_matches": 27,
+      "status": "not_run_input_gate_unsatisfied"
+    },
+    {
+      "candidate_compounds": 2,
+      "planned_queries": 6,
+      "planned_references": 9,
+      "metadata_records": 15,
+      "unique_exact_signature_matches": 14,
+      "absent_records": 1,
+      "full_replicate_set_matches": 13,
+      "status": "not_run_input_gate_unsatisfied"
+    }
+  ],
+  "fixed_eight": [
+    {
+      "compound_id": "caffeine",
+      "included_in_two_label_proposal": true,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": true,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": true,
+      "state": "exact_form_eligible_graph_and_reported_key_match"
+    },
+    {
+      "compound_id": "citric-acid",
+      "included_in_two_label_proposal": false,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": null,
+      "state": "absent_in_source"
+    },
+    {
+      "compound_id": "l-ascorbic-acid",
+      "included_in_two_label_proposal": false,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "different_form"
+    },
+    {
+      "compound_id": "quercetin",
+      "included_in_two_label_proposal": true,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": true,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": true,
+      "state": "exact_form_eligible_graph_and_reported_key_match"
+    },
+    {
+      "compound_id": "trans-resveratrol",
+      "included_in_two_label_proposal": false,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "stereo_annotation_conflict"
+    },
+    {
+      "compound_id": "curcumin",
+      "included_in_two_label_proposal": false,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "stereo_annotation_conflict"
+    },
+    {
+      "compound_id": "capsaicin",
+      "included_in_two_label_proposal": false,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "stereo_annotation_conflict"
+    },
+    {
+      "compound_id": "sulforaphane",
+      "included_in_two_label_proposal": false,
+      "new_numeric_result": null,
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": false,
+      "source_graph_and_reported_key_match": true,
+      "state": "reference_not_exact_form_eligible"
+    }
+  ],
+  "historical_batch_equality": null,
+  "chemical_annotation_conflicts": [
+    "trans-resveratrol",
+    "curcumin",
+    "capsaicin"
+  ],
+  "source_metadata_sha256": "1a38d7ea2a804be79804af4a27aff9f2537af8f13d3c8af1fdc1fef780f40201",
+  "metadata_correspondence_audit_sha256": "dfc71fe254bc60abb05ba3212f457ff2ff505d32ba98862529230d073d8fafc5",
+  "limits_ja": [
+    "旧資料と2020再処理版は別の版です。署名IDが同じでも、全反復の構成が同じとは限りません。",
+    "同じBroad/L1000基盤の再処理データであり、独立施設の新実験ではありません。問い合わせ側の元実験は旧評価で使用済みです。",
+    "全入力が対応する条件を満たさないため、新しいRNA照合の成功率・MRRは算出していません。",
+    "数値診断の未実施は、成分の有効性や無効性を示しません。食品・治療・健康な目標状態への効果は確認していません。"
+  ],
+  "limits_en": [
+    "The legacy release and the 2020 reprocessing are different versions. Equal signature IDs do not guarantee equal replicate composition.",
+    "This is a reprocessing within the same Broad/L1000 infrastructure, not new experiments at an independent facility. The underlying query experiments were used previously.",
+    "The complete input correspondence gate was not met; no new RNA retrieval success rate or MRR was calculated.",
+    "An unperformed diagnostic establishes neither efficacy nor lack of efficacy. Food, treatment and healthy target-state effects were not validated."
+  ],
+  "sources": [
+    {
+      "title": "Official LINCS2020 README",
+      "url": "https://s3.amazonaws.com/macchiato.clue.io/builds/LINCS2020/README.txt"
+    },
+    {
+      "title": "Official CMap data library manifest",
+      "url": "https://clue.io/connectopedia/data_library_manifest"
+    }
+  ],
+  "chemical_state_definition": "Eligibility is separate from graph/key correspondence. A matching unspecified reference form does not establish an eligible exact stereochemical form."
+}

@@ -1,5 +1,11 @@
 # 更新履歴
 
+## 2026-10-21 — 次のRNA比較の入力監査
+
+旧2017版と公式2020再処理版のmetadataを照合しました。4成分35記録では署名ID29・全反復集合27が一致。構造式と記載化学IDを照合できた2成分15記録でも14・13にとどまり、全入力対応の条件を満たしませんでした。新しいRNA数値照合を実行せず、日英ページに未実施・版の違い・不一致件数を追加しています。旧RNA結果と全8例の記録は保持しています。[今回の検査](reviews/rna-crossgroup-2026-10-21.md)
+
+English: Audited legacy-to-2020 metadata correspondence. Neither the four-label (27/35 full replicate sets) nor the two-label (13/15) proposal met the complete input gate. No new RNA retrieval was run and no new success rate or MRR was calculated. Existing results remain unchanged.
+
 ## 2026-10-21 — RNA実測検索と同研究内診断への続編
 
 GSE70138（2017-03-06）の厳密構造対応5成分・339署名から直接測定978ランドマーク遺伝子を取り込み、別のローカル研究用CLIで望むRNA方向や実測プロファイルを照合する処理へ進めました。同じ研究・同じ細胞の別濃度を比べる210件の記述的診断を、日英のRNA専用ページへ分け、トップと資料照合ページから導線を追加しました。サイトでは固定した研究デモと集計のみを表示し、入力や検索計算は受け付けません。

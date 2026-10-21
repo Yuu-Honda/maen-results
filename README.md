@@ -1,5 +1,7 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-10-21：RNAの次段階の入力対応監査を日英ページに追加。旧版と2020再処理版で全記録・反復が揃わず、新しい数値照合は未実施です。[日本語](rna.html#crossgroup-preflight) / [English](rna-en.html#crossgroup-preflight) / [検査記録](reviews/rna-crossgroup-2026-10-21.md)。
+
 2026-10-21 続編：[身近な成分のRNA実測検索](https://yuu-honda.github.io/maen-results/rna.html)（[English](https://yuu-honda.github.io/maen-results/rna-en.html)）へ進みました。GSE70138の厳密構造対応5成分・339署名から直接測定978ランドマーク遺伝子を取り込み、別のローカル研究用CLIでRNA変化を照合します。同研究内・別濃度の210件による記述的診断です。**測定群ラベルだけでも210/210件で同じ成分を特定でき、RNA変化と測定群の手掛かりを切り分けられません。独立した性能とは扱いません。** 正常状態の目標は未設定で、食品の効果・人体への到達は未検証、旧タンパク質検索とも未接続です。サイトは固定した研究デモと集計の閲覧のみで、入力・計算サーバーは公開していません。 [今回の二社検査・表示確認](reviews/rna-2026-10-21.md)
 
 2026-10-21 資料照合初版の記録：[身近な8成分と測定資料をつなぐページ](https://yuu-honda.github.io/maen-results/everyday.html)（[English](https://yuu-honda.github.io/maen-results/everyday-en.html)）を追加しました。参照構造が対応する5成分にRNA署名メタデータ821行。別形・名称のみの記録や未対応も保持します。行数は独立実験数・効果の数ではありません。この初版時点ではRNA変化量・逆検索は未実施でした。後続の339署名とは範囲を区別し、食品の効果は引き続き未評価です。[二社の検査と公開対象](reviews/everyday-2026-10-21.md)
