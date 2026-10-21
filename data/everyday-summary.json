@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "summary_id": "everyday-public-v1",
+  "updated_date": "2026-10-21",
+  "scope": {
+    "fixed_examples": 8,
+    "metadata_row_counts_only": true,
+    "rna_values_obtained": false,
+    "rna_reverse_search_implemented": false,
+    "new_activity_predictions": false,
+    "food_product_efficacy_inferred": false,
+    "healthy_target_validated": false,
+    "physical_sample_identity_verified": false,
+    "rna_and_protein_combined": false,
+    "counts_are_independent_experiments": false,
+    "release_independence_verified": false
+  },
+  "counts": {
+    "prism_inventory_compound_keys": 4532,
+    "prism_structure_correspondence_constituents": 5,
+    "prism_unspecified_structure_constituents": 1,
+    "prism_no_correspondence_constituents": 2,
+    "legacy_protein_catalog_conditions": 78,
+    "legacy_protein_name_correspondence_constituents": 0,
+    "rna": {
+      "structure_correspondence_rows": 821,
+      "unspecified_structure_rows": 304,
+      "name_or_other_rows": 168
+    },
+    "rna_rows_across_releases": 1293,
+    "new_protein_audit_exact_form_matches_verified": 0,
+    "new_protein_audit_imported_into_legacy_catalog": 0
+  },
+  "rna_releases": [
+    {
+      "dataset_id": "GSE92742",
+      "release": "GSE92742_phase1_pinned_files",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+      "structure_correspondence_rows": 482,
+      "unspecified_structure_rows": 262,
+      "name_or_other_rows": 153
+    },
+    {
+      "dataset_id": "GSE70138",
+      "release": "2017-03-06",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+      "structure_correspondence_rows": 339,
+      "unspecified_structure_rows": 42,
+      "name_or_other_rows": 15
+    }
+  ],
+  "compounds": [
+    {
+      "compound_id": "caffeine",
+      "display_name_ja": "カフェイン",
+      "display_name_en": "caffeine",
+      "pubchem_cid": 2519,
+      "full_standard_inchikey": "RYYVLZVUVIJVGH-UHFFFAOYSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/2519",
+      "ordinary_source_examples_ja": [
+        "コーヒー",
+        "茶"
+      ],
+      "ordinary_source_examples_en": [
+        "coffee",
+        "tea"
+      ],
+      "occurrence_source_urls": [
+        "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much"
+      ],
+      "occurrence_relationship": "named_constituent_in_ordinary_source",
+      "prism_status": "reported_structure_correspondence",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 33,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 42,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        }
+      ]
+    },
+    {
+      "compound_id": "citric-acid",
+      "display_name_ja": "クエン酸",
+      "display_name_en": "citric acid",
+      "pubchem_cid": 311,
+      "full_standard_inchikey": "KRKNYBCHXYNGOX-UHFFFAOYSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/311",
+      "ordinary_source_examples_ja": [
+        "レモン",
+        "ライム"
+      ],
+      "ordinary_source_examples_en": [
+        "lemon",
+        "lime"
+      ],
+      "occurrence_source_urls": [
+        "https://www.ams.usda.gov/sites/default/files/media/Citric%20Acid%20TR%202015.pdf"
+      ],
+      "occurrence_relationship": "named_constituent_in_ordinary_source",
+      "prism_status": "no_correspondence_in_inventory",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 0,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 0,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        }
+      ]
+    },
+    {
+      "compound_id": "l-ascorbic-acid",
+      "display_name_ja": "L-アスコルビン酸",
+      "display_name_en": "L-ascorbic acid",
+      "pubchem_cid": 54670067,
+      "full_standard_inchikey": "CIWBSHSKHKDKBQ-JLAZNSOCSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/54670067",
+      "ordinary_source_examples_ja": [
+        "柑橘類などの果実",
+        "野菜"
+      ],
+      "ordinary_source_examples_en": [
+        "citrus and other fruits",
+        "vegetables"
+      ],
+      "occurrence_source_urls": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/ascorbic-acid"
+      ],
+      "occurrence_relationship": "named_constituent_in_ordinary_source",
+      "prism_status": "no_correspondence_in_inventory",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 0,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 0,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        }
+      ]
+    },
+    {
+      "compound_id": "quercetin",
+      "display_name_ja": "ケルセチン",
+      "display_name_en": "quercetin",
+      "pubchem_cid": 5280343,
+      "full_standard_inchikey": "REFJWTPEDVJJIY-UHFFFAOYSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/5280343",
+      "ordinary_source_examples_ja": [
+        "タマネギ",
+        "リンゴ"
+      ],
+      "ordinary_source_examples_en": [
+        "onion",
+        "apple"
+      ],
+      "occurrence_source_urls": [
+        "https://ods.od.nih.gov/factsheets/COVID19-HealthProfessional/",
+        "https://pubmed.ncbi.nlm.nih.gov/9414116/"
+      ],
+      "occurrence_relationship": "constituent_family_with_conjugates",
+      "prism_status": "reported_structure_correspondence",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 33,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 42,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        }
+      ]
+    },
+    {
+      "compound_id": "trans-resveratrol",
+      "display_name_ja": "trans-レスベラトロール",
+      "display_name_en": "trans-resveratrol",
+      "pubchem_cid": 445154,
+      "full_standard_inchikey": "LUKBXSAWLPMMSZ-OWOJBTEDSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/445154",
+      "ordinary_source_examples_ja": [
+        "ブドウ"
+      ],
+      "ordinary_source_examples_en": [
+        "grape"
+      ],
+      "occurrence_source_urls": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/resveratrol"
+      ],
+      "occurrence_relationship": "named_constituent_in_ordinary_source",
+      "prism_status": "reported_structure_correspondence",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 151,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 19
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 171,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        }
+      ]
+    },
+    {
+      "compound_id": "curcumin",
+      "display_name_ja": "クルクミン",
+      "display_name_en": "curcumin",
+      "pubchem_cid": 969516,
+      "full_standard_inchikey": "VFLDPWHFBUODDF-FCXRPNKRSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/969516",
+      "ordinary_source_examples_ja": [
+        "ウコン（ターメリック）"
+      ],
+      "ordinary_source_examples_en": [
+        "turmeric (Curcuma longa)"
+      ],
+      "occurrence_source_urls": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/curcumin"
+      ],
+      "occurrence_relationship": "named_constituent_in_ordinary_source",
+      "prism_status": "reported_structure_correspondence",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 201,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 123
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 42,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 15
+        }
+      ]
+    },
+    {
+      "compound_id": "capsaicin",
+      "display_name_ja": "カプサイシン",
+      "display_name_en": "capsaicin",
+      "pubchem_cid": 1548943,
+      "full_standard_inchikey": "YKPUWZUDDOIDPM-SOFGYWHQSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/1548943",
+      "ordinary_source_examples_ja": [
+        "トウガラシ"
+      ],
+      "ordinary_source_examples_en": [
+        "chili pepper"
+      ],
+      "occurrence_source_urls": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/capsaicin"
+      ],
+      "occurrence_relationship": "named_constituent_in_ordinary_source",
+      "prism_status": "reported_structure_correspondence",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 64,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 11
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 42,
+          "unspecified_structure_rows": 0,
+          "name_or_other_rows": 0
+        }
+      ]
+    },
+    {
+      "compound_id": "sulforaphane",
+      "display_name_ja": "スルフォラファン",
+      "display_name_en": "sulforaphane",
+      "pubchem_cid": 5350,
+      "full_standard_inchikey": "SUVMJBTUFCVSAD-UHFFFAOYSA-N",
+      "pubchem_url": "https://pubchem.ncbi.nlm.nih.gov/compound/5350",
+      "ordinary_source_examples_ja": [
+        "ブロッコリースプラウトなどのアブラナ科植物"
+      ],
+      "ordinary_source_examples_en": [
+        "broccoli sprouts and other cruciferous plants"
+      ],
+      "occurrence_source_urls": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/sulforaphane",
+        "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet/cruciferous-vegetables-fact-sheet"
+      ],
+      "occurrence_relationship": "precursor_related_named_constituent",
+      "prism_status": "reported_unspecified_structure_correspondence",
+      "legacy_protein_name_correspondence_count": 0,
+      "rna_releases": [
+        {
+          "dataset_id": "GSE92742",
+          "release": "GSE92742_phase1_pinned_files",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742",
+          "structure_correspondence_rows": 0,
+          "unspecified_structure_rows": 262,
+          "name_or_other_rows": 0
+        },
+        {
+          "dataset_id": "GSE70138",
+          "release": "2017-03-06",
+          "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+          "structure_correspondence_rows": 0,
+          "unspecified_structure_rows": 42,
+          "name_or_other_rows": 0
+        }
+      ]
+    }
+  ],
+  "method_limits": {
+    "rna_count_unit": "Signature metadata rows within each specified release. Counts are not unique independent conditions, replicates, experiments, or efficacy results.",
+    "rna_structure_status": "Source-reported stereochemical molecular graph and full Standard InChIKey correspondence; not physical-sample identification.",
+    "rna_release_scope": "Counts are kept per release. Separate release records do not establish independent biological experiments or external validation.",
+    "rna_values": "Expression matrices and connectivity scores were not obtained or analyzed; quality filtering was not applied.",
+    "rna_protein_boundary": "RNA expression is a separate measurement from protein abundance and has not been substituted into the protein search.",
+    "food_boundary": "Ordinary-source occurrence does not establish exact product composition, achievable exposure, safety, or treatment benefit.",
+    "curcumin_S2": "Metadata and normalization/unit interpretation remain unresolved; no numeric import.",
+    "quercetin_disclosure": "Two protein data rows were accidentally displayed while inspecting a supplement PDF header. Reading stopped; the values were not used for signatures, ranking, or tests. Future reuse must disclose prior exposure."
+  },
+  "official_sources": {
+    "lincs_guide": "https://clue.io/connectopedia/guide_to_geo_l1000_data",
+    "multiple_source_ids": "https://clue.io/connectopedia/some_perts_have_over_one_brdid",
+    "redistribution": "https://clue.io/connectopedia/data_redistribution",
+    "prism": "https://doi.org/10.6084/m9.figshare.9393293.v4",
+    "legacy_protein_article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10859532/",
+    "curcumin_primary_article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6060558/",
+    "quercetin_primary_article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6981597/"
+  },
+  "source_aggregate_sha256": {
+    "chemical_occurrence_registry": "6bbc5a71feb70644034fffd02c2dc6150dbf528a2347254c02a7787b70440d71",
+    "prism_identity_coverage": "f340f6b0e7783763fb55b861fe1f0ab080c619fbc9c19a98fafb2da1dff5cbc3",
+    "rna_metadata_summary": "17b74e1238382105fbfbbc174cecce7cbd01b10e75c40c177f48e87ddac576fe",
+    "protein_expansion_audit": "bb45716eb96448f8ef6aa2314612ce51355e6ed5f5a16204ab53f07096202237"
+  }
+}
