@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "diagnostic_id": "everyday-rna-panel-confounding-v1",
+  "recorded_utc": "2026-10-21T03:46:03.015090+00:00",
+  "scope": "Aggregate metadata-only diagnostic; no RNA values used",
+  "source": {
+    "dataset_id": "GSE70138",
+    "release": "2017-03-06",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138",
+    "metadata_manifest_sha256": "f57ab45da7dc289453016ca0a26960f84e861d7b1167fbd9c0406525ea53e9df",
+    "primary_method_sha256": "c029c804da2011f358d2f7b76f7fffe55989f1d351bffa02b1b351e96764484b",
+    "diagnostic_code_sha256": "da7d232db8945c0f5266125d583183605defc977b68e9b80c219f318098372c8"
+  },
+  "timing": "Additional diagnostic after method registration, before RNA numerical parsing/scoring; source grouping concern already known",
+  "primary_plan_changed": false,
+  "rna_values_read": false,
+  "query_rows": 210,
+  "candidates_per_query": 5,
+  "metadata_only_unique_correct_top1": {
+    "signature_prefix_exact_match": 210,
+    "replicate_plate_set_exact_match": 194,
+    "replicate_plate_any_shared": 210,
+    "replicate_plate_shared_count": 210,
+    "replicate_plate_jaccard": 210
+  },
+  "correct_candidate_shares_source_plate_set_rows": 194,
+  "incorrect_candidate_shares_any_source_plate_comparisons": 0,
+  "correct_candidate_full_replicate_id_overlap_rows": 0,
+  "meaning": "Source identifier grouping alone recovers the compound label. RNA label recovery in this panel cannot separate molecular response from plate/brew or normalization artifacts.",
+  "limits": [
+    "This is an added metadata-only diagnostic after the primary plan was fixed; the confounding concern and source ID examples were already known. It is not a blinded or preregistered independent validation.",
+    "Every rule uses only source identifier prefixes, not RNA values, chemical structure or compound-name strings as a score. Candidate compound labels are used only to mark the correct candidate.",
+    "All 210 rows share a single study and reused panel structure. They are not 210 independent experiments or trials.",
+    "Perfect metadata-only label recovery means RNA cross-dose label recovery in this panel cannot by itself distinguish compound-specific molecular response from source plate/brew or normalization artifacts.",
+    "Identifier sharing establishes recorded source grouping, not proof that a batch effect exists in the RNA values or that every plate used identical physical controls.",
+    "Disjoint full signature/replicate IDs do not remove shared source plate/brew dependence. The primary fixed RNA method, 210 denominator, candidate rules and metrics are unchanged.",
+    "The existing gene-position permutation control is not a plate/brew-matched independent control and cannot by itself resolve this confounding.",
+    "No clinical, cancer, dietary, food-product, dose, human-exposure or treatment conclusion follows from this diagnostic."
+  ]
+}

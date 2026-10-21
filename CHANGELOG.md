@@ -1,5 +1,13 @@
 # 更新履歴
 
+## 2026-10-21 — RNA実測検索と同研究内診断への続編
+
+GSE70138（2017-03-06）の厳密構造対応5成分・339署名から直接測定978ランドマーク遺伝子を取り込み、別のローカル研究用CLIで望むRNA方向や実測プロファイルを照合する処理へ進めました。同じ研究・同じ細胞の別濃度を比べる210件の記述的診断を、日英のRNA専用ページへ分け、トップと資料照合ページから導線を追加しました。サイトでは固定した研究デモと集計のみを表示し、入力や検索計算は受け付けません。
+
+測定群ラベルだけでも210/210件で同じ成分を特定できるため、この診断ではRNA変化と測定群の手掛かりを切り分けられません。独立した性能として扱わず、正常状態の目標は未設定、食品の効果・人体への到達は未検証、旧タンパク質検索とは未接続であることを併記します。既存の821行などは2リリースのメタデータ照合の履歴として残し、今回の339署名とは置き換えません。旧RNAモデル・タンパク質検索・ベンチマーク・以前の更新履歴本文は保持しました。[今回の二社検査と表示確認](reviews/rna-2026-10-21.md)
+
+English: Added routes to a separate RNA lookup record using 339 signatures and 978 directly measured landmark genes for five constituents. The 210-query adjacent-dose diagnostic is within-source and confounded: measurement-group labels alone identify the same constituent in all 210 queries. It does not establish independent performance, a healthy-state target or food benefits, and is not connected to the protein search. Earlier two-release metadata counts and existing benchmarks remain historical records.
+
 ## 2026-10-21 — 身近な8成分と公開測定資料の対応を追加
 
 日英の専用ページに、由来の出典、化学形の照合、PRISM資料との対応、LINCSの2公開版の署名メタデータ行数を追加しました。全8例を保持し、参照構造対応821行・立体未指定304行・名前のみ等168行を分けています。独立した条件・実験・効果の数ではありません。RNA値や逆検索は未実施で、追加タンパク質資料も数値取込み前の保留です。見出し確認で補足PDFの数値2行が偶発表示された範囲を開示しました。

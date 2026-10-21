@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-10-21T04:11:48.902170+00:00",
+  "scope": "Final reviewed publication files; no individual data",
+  "source_files_sha256": {
+    "rna.html": "8e7f69581f280b183772d6c567d33203f15eea4a0a8f466bb10f73aace1858b3",
+    "rna-en.html": "9eb72b193cec93398d7703fd5669e4251e285623a12f00fd17dbba0957c9da21",
+    "data/rna-summary.json": "0c84b39da24850783e4645ccbcc8f89cb2c513a0278dc417beec6b35819bff52",
+    "data/rna-panel-audit.json": "d5e992042e9db5455578cef189bdc52122e50ff270deb6e5fc09d9964e9226fd",
+    "index.html": "6cc473afd796d6dbb15e5ac2a7c3e8119bb5d86aa5b773fd921e632a0f56bb1d",
+    "en.html": "45571429197edb9c5b6a12ade8295d34d8a5c31d8ad21ada828b5a340ea135a7",
+    "everyday.html": "41162908000fa879be74c1db10e9a0be686762e670c4630734d2bf5d76b3fbfb",
+    "everyday-en.html": "3a5e9c92bee5dc4f248133c0e0cee493915e2144a68c6181509c6e68e62c7b4f",
+    "README.md": "17af7907b2eae5e1886dc79d863de24f3c988d07add77a62814920bb816e0e86",
+    "CHANGELOG.md": "7987d4c575533c2464f3bbf17fd0212c73f7fd81438337bb95281dc7137a57dc"
+  },
+  "review_artifact_sha256": {
+    "codex-publication-final.json": "a78d497e618ebabdeee686e4e232dd48f9c9abad1692d17da4e15caba9b47c51",
+    "claude-publication-final.md": "76848d348b5b72c53fb34d3d7eb056a5a3e1bd26d8cba49df0582da20c1174fd",
+    "claude-publication-metadata.json": "b8fdc99e6a14a3a19ae41c49f5a69ed98c6ea803ddbf2740eb12430df8250038",
+    "postrun-independent-verdict.json": "bc2f312a296cb3d1278e7c27bae27216fe929b8bc6c2c7f215d8d39b353b442c",
+    "final297-tests.json": "90ae57e4210b544f4da0f8da53e238c2520a1d25d50658c4b752ff02b82ba328",
+    "site-page-build-proof-final.json": "0b99eb53dc14a060a4b5d8962502d104c0e27300fc70cad857bebf57797665b8"
+  },
+  "independent_codex": "PASS",
+  "actual_anthropic_claude": "PASS",
+  "public_json_unchanged_after_review": true,
+  "healthy_target_validated": false,
+  "food_product_efficacy_inferred": false,
+  "independent_biological_validation": false
+}

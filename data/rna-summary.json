@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "id": "everyday-rna-public-v1",
+  "method_id": "everyday-rna-retrieval-v1",
+  "source": {
+    "dataset_id": "GSE70138",
+    "release": "2017-03-06",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE70nnn/GSE70138/suppl/GSE70138_Broad_LINCS_Level5_COMPZ_n118050x12328_2017-03-06.gctx.gz",
+    "archive_bytes": 5365179698,
+    "archive_sha512": "9d078903d3d028f37b0bae584c1afe48f5bab0082e61f6e542de471674c78946cff710132b8e95beb997a39dc2dd6442fdda0fbb1cc9b2399ef21cf636975c9f",
+    "official_sha512_verified": true,
+    "expanded_bytes": 5824120558,
+    "expanded_sha256": "1f31891cc7138205688f9d1f2282004517c9e61a14c1c3d64a241b7582976a2e"
+  },
+  "provenance": {
+    "import_summary_sha256": "ddd983fb1f6b0b4ece9b770727bab2a940dc3e310606d97d245dd841c6d739b6",
+    "evaluation_sha256": "8c75e0383c85be034a9eb9b1e7eab1c64e332b35ca76216108df8833802b1130",
+    "registry_sha256": "6bbc5a71feb70644034fffd02c2dc6150dbf528a2347254c02a7787b70440d71",
+    "catalog_sha256": "b698c5595ec1e8a73ce83fcf45cbc8c3de1e6d934d3636c458575ba0aec44b26",
+    "plan_sha256": "c029c804da2011f358d2f7b76f7fffe55989f1d351bffa02b1b351e96764484b",
+    "code_freeze_sha256": "a9f0d72f2dd9027c4e8176febbfe71613933702adb274c8cbd7322d14f04a303",
+    "exporter_code_sha256": "64ec8853021ad31095e1b8a14d865437a04b8472962246c0eeb01b862b7d30cc",
+    "retrieval_code_sha256": "1094807eda74fc6c53ec4b17113c7add21c2819d71fd5e81611dafd62df1495a"
+  },
+  "counts": {
+    "fixed_constituents": 8,
+    "strict_constituents": 5,
+    "catalog_rows": 339,
+    "landmark_genes": 978,
+    "panel_rows": 210,
+    "outside_panel_rows_retained": 129,
+    "query_denominator": 210,
+    "candidates_per_query": 5,
+    "nonfinite_values_as_null": 0
+  },
+  "results": {
+    "observed": {
+      "aggregate": {
+        "queries": 210,
+        "complete_five_candidate_queries": 210,
+        "theoretical_random_top1_complete": 0.2,
+        "theoretical_random_mrr_complete": 0.45666666666666667,
+        "theoretical_random_top1_all_queries": 0.2,
+        "theoretical_random_mrr_all_queries": 0.4566666666666667,
+        "top1_successes": 185,
+        "top1_fraction": 0.8809523809523809,
+        "mean_reciprocal_midrank": 0.9287301587301587,
+        "incomplete_queries": 0,
+        "queries_with_top_ties": 0
+      }
+    },
+    "permuted_query_genes": {
+      "aggregate": {
+        "queries": 210,
+        "complete_five_candidate_queries": 210,
+        "theoretical_random_top1_complete": 0.2,
+        "theoretical_random_mrr_complete": 0.45666666666666667,
+        "theoretical_random_top1_all_queries": 0.2,
+        "theoretical_random_mrr_all_queries": 0.4566666666666667,
+        "top1_successes": 47,
+        "top1_fraction": 0.22380952380952382,
+        "mean_reciprocal_midrank": 0.4816666666666667,
+        "incomplete_queries": 0,
+        "queries_with_top_ties": 0
+      }
+    }
+  },
+  "panel_label_confounding": {
+    "diagnostic_id": "everyday-rna-panel-confounding-v1",
+    "public_sha256": "d5e992042e9db5455578cef189bdc52122e50ff270deb6e5fc09d9964e9226fd",
+    "query_rows": 210,
+    "metadata_only_unique_correct_top1": {
+      "signature_prefix_exact_match": 210,
+      "replicate_plate_set_exact_match": 194,
+      "replicate_plate_any_shared": 210,
+      "replicate_plate_shared_count": 210,
+      "replicate_plate_jaccard": 210
+    },
+    "rna_label_recovery_separates_compound_response_from_source_group": false
+  },
+  "constituents": [
+    {
+      "compound_id": "caffeine",
+      "display_name_ja": "カフェイン",
+      "display_name_en": "caffeine",
+      "ordinary_sources": {
+        "examples_ja": [
+          "コーヒー",
+          "茶"
+        ],
+        "examples_en": [
+          "coffee",
+          "tea"
+        ],
+        "source_urls": [
+          "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much"
+        ]
+      },
+      "status": "included",
+      "catalog_rows": 42,
+      "panel_queries": 42,
+      "results": {
+        "observed": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 32,
+          "top1_fraction": 0.7619047619047619,
+          "mean_reciprocal_midrank": 0.8666666666666666,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        },
+        "permuted_query_genes": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 10,
+          "top1_fraction": 0.23809523809523808,
+          "mean_reciprocal_midrank": 0.5007936507936508,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        }
+      }
+    },
+    {
+      "compound_id": "citric-acid",
+      "display_name_ja": "クエン酸",
+      "display_name_en": "citric acid",
+      "ordinary_sources": {
+        "examples_ja": [
+          "レモン",
+          "ライム"
+        ],
+        "examples_en": [
+          "lemon",
+          "lime"
+        ],
+        "source_urls": [
+          "https://www.ams.usda.gov/sites/default/files/media/Citric%20Acid%20TR%202015.pdf"
+        ]
+      },
+      "status": "no_correspondence_under_registered_identity_rules",
+      "catalog_rows": 0,
+      "panel_queries": 0,
+      "results": {
+        "observed": null,
+        "permuted_query_genes": null
+      }
+    },
+    {
+      "compound_id": "l-ascorbic-acid",
+      "display_name_ja": "L-アスコルビン酸",
+      "display_name_en": "L-ascorbic acid",
+      "ordinary_sources": {
+        "examples_ja": [
+          "柑橘類などの果実",
+          "野菜"
+        ],
+        "examples_en": [
+          "citrus and other fruits",
+          "vegetables"
+        ],
+        "source_urls": [
+          "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/ascorbic-acid"
+        ]
+      },
+      "status": "no_correspondence_under_registered_identity_rules",
+      "catalog_rows": 0,
+      "panel_queries": 0,
+      "results": {
+        "observed": null,
+        "permuted_query_genes": null
+      }
+    },
+    {
+      "compound_id": "quercetin",
+      "display_name_ja": "ケルセチン",
+      "display_name_en": "quercetin",
+      "ordinary_sources": {
+        "examples_ja": [
+          "タマネギ",
+          "リンゴ"
+        ],
+        "examples_en": [
+          "onion",
+          "apple"
+        ],
+        "source_urls": [
+          "https://ods.od.nih.gov/factsheets/COVID19-HealthProfessional/",
+          "https://pubmed.ncbi.nlm.nih.gov/9414116/"
+        ]
+      },
+      "status": "included",
+      "catalog_rows": 42,
+      "panel_queries": 42,
+      "results": {
+        "observed": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 41,
+          "top1_fraction": 0.9761904761904762,
+          "mean_reciprocal_midrank": 0.9880952380952381,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        },
+        "permuted_query_genes": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 10,
+          "top1_fraction": 0.23809523809523808,
+          "mean_reciprocal_midrank": 0.4920634920634921,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        }
+      }
+    },
+    {
+      "compound_id": "trans-resveratrol",
+      "display_name_ja": "trans-レスベラトロール",
+      "display_name_en": "trans-resveratrol",
+      "ordinary_sources": {
+        "examples_ja": [
+          "ブドウ"
+        ],
+        "examples_en": [
+          "grape"
+        ],
+        "source_urls": [
+          "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/resveratrol"
+        ]
+      },
+      "status": "included",
+      "catalog_rows": 171,
+      "panel_queries": 42,
+      "results": {
+        "observed": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 42,
+          "top1_fraction": 1.0,
+          "mean_reciprocal_midrank": 1.0,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        },
+        "permuted_query_genes": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 8,
+          "top1_fraction": 0.19047619047619047,
+          "mean_reciprocal_midrank": 0.423015873015873,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        }
+      }
+    },
+    {
+      "compound_id": "curcumin",
+      "display_name_ja": "クルクミン",
+      "display_name_en": "curcumin",
+      "ordinary_sources": {
+        "examples_ja": [
+          "ウコン（ターメリック）"
+        ],
+        "examples_en": [
+          "turmeric (Curcuma longa)"
+        ],
+        "source_urls": [
+          "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/curcumin"
+        ]
+      },
+      "status": "included",
+      "catalog_rows": 42,
+      "panel_queries": 42,
+      "results": {
+        "observed": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 29,
+          "top1_fraction": 0.6904761904761905,
+          "mean_reciprocal_midrank": 0.8007936507936508,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        },
+        "permuted_query_genes": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 6,
+          "top1_fraction": 0.14285714285714285,
+          "mean_reciprocal_midrank": 0.44206349206349205,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        }
+      }
+    },
+    {
+      "compound_id": "capsaicin",
+      "display_name_ja": "カプサイシン",
+      "display_name_en": "capsaicin",
+      "ordinary_sources": {
+        "examples_ja": [
+          "トウガラシ"
+        ],
+        "examples_en": [
+          "chili pepper"
+        ],
+        "source_urls": [
+          "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/capsaicin"
+        ]
+      },
+      "status": "included",
+      "catalog_rows": 42,
+      "panel_queries": 42,
+      "results": {
+        "observed": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 41,
+          "top1_fraction": 0.9761904761904762,
+          "mean_reciprocal_midrank": 0.9880952380952381,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        },
+        "permuted_query_genes": {
+          "queries": 42,
+          "complete_five_candidate_queries": 42,
+          "theoretical_random_top1_complete": 0.2,
+          "theoretical_random_mrr_complete": 0.45666666666666667,
+          "theoretical_random_top1_all_queries": 0.2,
+          "theoretical_random_mrr_all_queries": 0.45666666666666667,
+          "top1_successes": 13,
+          "top1_fraction": 0.30952380952380953,
+          "mean_reciprocal_midrank": 0.5503968253968254,
+          "incomplete_queries": 0,
+          "queries_with_top_ties": 0
+        }
+      }
+    },
+    {
+      "compound_id": "sulforaphane",
+      "display_name_ja": "スルフォラファン",
+      "display_name_en": "sulforaphane",
+      "ordinary_sources": {
+        "examples_ja": [
+          "ブロッコリースプラウトなどのアブラナ科植物"
+        ],
+        "examples_en": [
+          "broccoli sprouts and other cruciferous plants"
+        ],
+        "source_urls": [
+          "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/sulforaphane",
+          "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet/cruciferous-vegetables-fact-sheet"
+        ]
+      },
+      "status": "unspecified_stereochemistry_not_in_strict_catalog",
+      "catalog_rows": 0,
+      "panel_queries": 0,
+      "results": {
+        "observed": null,
+        "permuted_query_genes": null
+      }
+    }
+  ],
+  "method": {
+    "summary_ja": "同じ公開データ内で、同じ細胞の別濃度におけるRNA変化を5成分間で照合した記述的診断です。",
+    "summary_en": "A descriptive comparison of RNA changes between paired doses in the same cells within one public dataset, using five constituents.",
+    "top1_ja": "5候補すべてを採点でき、正解成分だけが最高点のときに成功とします。全210件を分母に残します。",
+    "top1_en": "Success requires all five candidates to be scoreable and the correct constituent to be the unique best. All 210 queries remain in the denominator.",
+    "mrr_ja": "同点には平均順位を使います。正解が採点不能、または5候補が揃わない場合の逆順位は0です。",
+    "mrr_en": "Ties use midranks. The reciprocal rank is zero when the correct candidate is unscoreable or the five-candidate panel is incomplete.",
+    "control_ja": "固定seedによる遺伝子位置の入れ替えを1回だけ全照会に適用しました。理論的ランダム値は独立した実測対照ではありません。",
+    "control_en": "One fixed-seed gene-position permutation is applied to all queries. The theoretical random reference is not an independent measured control.",
+    "limitations_ja": "出典IDの接頭辞だけで210/210件の正解を識別できるため、このパネルのRNA一致は成分固有の反応と出典グループの影響を分離できません。これはRNA値にバッチ効果が実在することの証明ではありません。同じ研究・測定系・共有対照の影響が残り、往復の照会も独立ではありません。品質による選別はしていません。健康状態への回復、正常細胞への選択性、人体で届く濃度、摂取の安全性、食品や治療の効果は未検証です。RNAとタンパク質は別の測定です。由来の例は食品全体と純粋な成分の同一性を示しません。",
+    "limitations_en": "Source ID prefixes alone identify all 210/210 correct labels, so RNA label recovery in this panel cannot separate compound-specific response from source grouping. This does not prove a batch effect exists in RNA values. Shared studies, measurements and controls may explain similarity; reciprocal queries are dependent. No quality-based selection was applied. Healthy-state restoration, normal-cell selectivity, achievable human exposure, intake safety, and food or treatment efficacy are unvalidated. RNA and protein are separate measurements. Source examples do not establish equivalence between a food and a pure constituent."
+  },
+  "healthy_target_validated": false,
+  "food_product_efficacy_inferred": false,
+  "protein_prediction_performed": false,
+  "independent_validation": false
+}
