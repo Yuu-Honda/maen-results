@@ -1,0 +1,31 @@
+{
+  "prepared_utc": "2026-10-21T02:41:35.513396+00:00",
+  "input_sha256": "9a9c78073ac22e45341674a1a2936dc20af5c59400d1557182d15a45399e9ad2",
+  "source_files_sha256": {
+    "everyday.html": "b565d474be9bc469561f66d43a0853826311e314d533463593ea7dbb0a642187",
+    "everyday-en.html": "fadfafd8939c88892c400f3ea188e4dd56a08b474961d193141acde15cfa88e6",
+    "data/everyday-summary.json": "3837947914c8b8a8da338a7581915228d9b53807b3f7fa8fb299c6e9d86459b5"
+  },
+  "homepage_note_sha256": "d8f0b68f3b2ec57757a314467dd11e3fef3c1d922cded61222ca248c3fd58a28",
+  "review_completed": true,
+  "actual_anthropic": true,
+  "transport": "Authenticated Claude desktop normal chat",
+  "model_display_label": "Opus 5.5 中",
+  "observed_completed_utc": "2026-10-21T02:47:32.761457+00:00",
+  "initial_verdict": "PASS",
+  "final_verdict": "PASS",
+  "static_review_only": true,
+  "tools_executed": false,
+  "followup_changes": "5 optional points: compound keys, metadata heading, other forms, labelled aside, internal-link arrows",
+  "final_source_files_sha256": {
+    "everyday.html": "2c67146f50638282b886088ff129434fa39bfac6e122fc8346baa893b4079d9d",
+    "everyday-en.html": "731a4508744e1fa8ac2e7eb12e2b9b3023fd037da090a6aa3de02196319f85d6",
+    "data/everyday-summary.json": "3837947914c8b8a8da338a7581915228d9b53807b3f7fa8fb299c6e9d86459b5",
+    "index.html": "c5add5ebb8967c8e9f008332245b81763edd5c6d172c6c9a2f13b050281d8952",
+    "en.html": "6c9d8c17839504a347c8fe04592e899961ee1a195c54ce76e032754a38ea2493"
+  },
+  "responses": {
+    "reviews/everyday-claude-initial-2026-10-21.md": "8115da7269b17088bbed532c9a256eea265e1240cb332d7c65988fdbe25fed68",
+    "reviews/everyday-claude-final-2026-10-21.md": "531a2f4197cabc23c01c6a7b2f6d1de8d15a164be41b8702b898b9175e1cd438"
+  }
+}

@@ -1,5 +1,7 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-10-21：[身近な8成分と測定資料をつなぐページ](https://yuu-honda.github.io/maen-results/everyday.html)（[English](https://yuu-honda.github.io/maen-results/everyday-en.html)）を追加しました。参照構造が対応する5成分にRNA署名メタデータ821行。別形・名称のみの記録や未対応も保持します。行数は独立実験数・効果の数ではなく、RNA変化量・逆検索・食品の効果は未評価です。[二社の検査と公開対象](reviews/everyday-2026-10-21.md)
+
 2026-10-15：接続の仕組みを[4段階のスクロール図](https://yuu-honda.github.io/maen-results/#workflow-animation)で説明しました。物質参照と別研究の入力条件を監査しましたが、新しい独立検索の数値結果はありません。[検査・修正記録](reviews/workflow-2026-10-15.md)
 
 [日本語サイト](https://yuu-honda.github.io/maen-results/) / [English](https://yuu-honda.github.io/maen-results/en.html) / [更新履歴](CHANGELOG.md)

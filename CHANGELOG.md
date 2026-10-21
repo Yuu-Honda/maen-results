@@ -1,5 +1,13 @@
 # 更新履歴
 
+## 2026-10-21 — 身近な8成分と公開測定資料の対応を追加
+
+日英の専用ページに、由来の出典、化学形の照合、PRISM資料との対応、LINCSの2公開版の署名メタデータ行数を追加しました。全8例を保持し、参照構造対応821行・立体未指定304行・名前のみ等168行を分けています。独立した条件・実験・効果の数ではありません。RNA値や逆検索は未実施で、追加タンパク質資料も数値取込み前の保留です。見出し確認で補足PDFの数値2行が偶発表示された範囲を開示しました。
+
+4段階の模式図は、下へスクロールで進み、上へ戻ると巻き戻り、止めると止まります。静止表示・JavaScript無効にも対応。トップページには案内だけを追加し、旧本文・集計JSON・共通CSS/JSは保持しています。独立Codexと実Claudeによる静的検査・修正後の再確認を記録し、Chromeで日英32表示条件を確認しました。[検査記録](reviews/everyday-2026-10-21.md)
+
+English: Added an eight-reference source map with separate chemical-identity states and release-specific LINCS signature metadata rows, plus a reversible scroll explanation. These are availability records, not independent experiments, efficacy results or food recommendations. Existing scientific results and shared assets are unchanged.
+
 ## 2026-10-15 — 接続の流れを4段階のスクロール図で説明
 
 日英の接続節に、指定したタンパク質量の差、既存条件との比較、順位を変えずに名称対応の参照を添える処理、未確認事項を残す処理を追加しました。架空のA/B/C・X/Y/Zによる模式図と、既存デモの74＋4／30＋48という同じ78条件の二分類を分けています。下へ進む・上へ戻る・止めて読む操作に対応し、画面に収まらない場合、動き軽減、JavaScript無効、印刷では全文を読めます。
