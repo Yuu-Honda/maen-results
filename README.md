@@ -1,5 +1,7 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+**2026-10-24：同じ2020版の追加照合は、実RNA3/6・入替え対照3/6（両方MRR0.75）でした。** 実RNAは全6件でケルセチン側を上位にしており、今回の条件でRNAの利点は示せませんでした。[日本語の追加結果](https://yuu-honda.github.io/maen-results/rna.html#current-release) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#current-release) / [公開集計](data/rna-current-summary.json)。旧結果・未実施記録・全8例を保持しています。
+
 2026-10-21：RNAの次段階の入力対応監査を日英ページに追加。旧版と2020再処理版で全記録・反復が揃わず、新しい数値照合は未実施です。[日本語](rna.html#crossgroup-preflight) / [English](rna-en.html#crossgroup-preflight) / [検査記録](reviews/rna-crossgroup-2026-10-21.md)。
 
 2026-10-21 続編：[身近な成分のRNA実測検索](https://yuu-honda.github.io/maen-results/rna.html)（[English](https://yuu-honda.github.io/maen-results/rna-en.html)）へ進みました。GSE70138の厳密構造対応5成分・339署名から直接測定978ランドマーク遺伝子を取り込み、別のローカル研究用CLIでRNA変化を照合します。同研究内・別濃度の210件による記述的診断です。**測定群ラベルだけでも210/210件で同じ成分を特定でき、RNA変化と測定群の手掛かりを切り分けられません。独立した性能とは扱いません。** 正常状態の目標は未設定で、食品の効果・人体への到達は未検証、旧タンパク質検索とも未接続です。サイトは固定した研究デモと集計の閲覧のみで、入力・計算サーバーは公開していません。 [今回の二社検査・表示確認](reviews/rna-2026-10-21.md)
