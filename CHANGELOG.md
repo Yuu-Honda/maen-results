@@ -1,5 +1,13 @@
 # 更新履歴
 
+## 2026-10-24 — 同じ2020公開版でのRNA追加照合
+
+現在のmetadata全体から定義した2成分・6問い合わせ・12参照の別計画を一度実行しました。実RNAは単独1位3/6・MRR0.75、固定した遺伝子位置入替え対照も3/6・MRR0.75。実RNAはカフェイン0/3、ケルセチン3/3で、全6件でケルセチン側が上位になる偏りがありました。この条件でRNAを使う利点は示せませんでした。
+
+日英のRNAページに全体・成分別結果と限界を追加しました。旧2017版の185/210、旧版間対応の未実施、全8成分の対応状態を保持しています。同じ配布版は独立した生物学的検証ではなく、食品・治療の効果は未確認です。[今回の検査記録](reviews/rna-current-2026-10-24.md)
+
+English: A separate current-release comparison used two labels, six queries and twelve references. Observed and fixed-permutation matching both recovered 3/6 labels (MRR 0.75). Observed matching preferred quercetin for every query: caffeine 0/3, quercetin 3/3. This did not demonstrate an RNA advantage under these conditions. Older results and the failed cross-release gate remain historical records.
+
 ## 2026-10-21 — 次のRNA比較の入力監査
 
 旧2017版と公式2020再処理版のmetadataを照合しました。4成分35記録では署名ID29・全反復集合27が一致。構造式と記載化学IDを照合できた2成分15記録でも14・13にとどまり、全入力対応の条件を満たしませんでした。新しいRNA数値照合を実行せず、日英ページに未実施・版の違い・不一致件数を追加しています。旧RNA結果と全8例の記録は保持しています。[今回の検査](reviews/rna-crossgroup-2026-10-21.md)

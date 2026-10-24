@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "id": "everyday-rna-current-public-v1",
+  "method_id": "everyday-rna-current-v1",
+  "status": "completed",
+  "scope": "same-release tiny two-label exploratory source-group comparison",
+  "old_rna_results_changed": false,
+  "old_correspondence_trial_rescued": false,
+  "counts": {
+    "fixed_constituents": 8,
+    "compound_labels": 2,
+    "queries": 6,
+    "references": 12,
+    "signature_records": 18,
+    "landmark_genes": 978,
+    "cell_contexts": 3
+  },
+  "source": {
+    "release": "LINCS2020 beta",
+    "platform": "Broad/L1000",
+    "matrix_object_version": "ljLz1nWDJ4co.kG6bSrfEs7mrklxiVS4",
+    "matrix_bytes": 35518405386,
+    "matrix_etag": "\"d342ab7f3fa6ece699099bc2d8fc94b8-2118\"",
+    "source_metadata_sha256": "1a38d7ea2a804be79804af4a27aff9f2537af8f13d3c8af1fdc1fef780f40201",
+    "whole_file_hash_verified": false,
+    "transferred_numeric_body_bytes": 25156362
+  },
+  "provenance": {
+    "plan_sha256": "f0426b544caa7a89b3f4e03cb8e0bd4e0721d6f7159c16fae3a6039ac294ba83",
+    "code_freeze_sha256": "9d019637a0446aaf8b95a0a39c9b61d739ff30a90a02873409b5cea249c46098",
+    "layout_sha256": "4e054ecbf0f553ab9afcfda524c32f51e12c34ecb84ad5f6d3e1d8acd50f934b",
+    "evaluation_sha256": "61fcf063062e95d5796c4500d3b62431bb4fc7fd444ed027168017c9bd26599a",
+    "availability_source_sha256": "e92edd1f66b5643d0b70fc3579a9b8d883b6f36e5450cbe7e7bad297274a1fdf",
+    "exporter_code_sha256": "ef381d9c973c29bf2884e0c1eb98f9ff36839808be9fd02318b1209c8164a8ae"
+  },
+  "fixed_eight": [
+    {
+      "compound_id": "caffeine",
+      "eligible_exact_form_graph_and_reported_key_match": true,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": true,
+      "state": "exact_form_eligible_graph_and_reported_key_match"
+    },
+    {
+      "compound_id": "citric-acid",
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": null,
+      "state": "absent_in_source"
+    },
+    {
+      "compound_id": "l-ascorbic-acid",
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "different_form"
+    },
+    {
+      "compound_id": "quercetin",
+      "eligible_exact_form_graph_and_reported_key_match": true,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": true,
+      "state": "exact_form_eligible_graph_and_reported_key_match"
+    },
+    {
+      "compound_id": "trans-resveratrol",
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "stereo_annotation_conflict"
+    },
+    {
+      "compound_id": "curcumin",
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "stereo_annotation_conflict"
+    },
+    {
+      "compound_id": "capsaicin",
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": true,
+      "source_graph_and_reported_key_match": false,
+      "state": "stereo_annotation_conflict"
+    },
+    {
+      "compound_id": "sulforaphane",
+      "eligible_exact_form_graph_and_reported_key_match": false,
+      "reference_exact_form_eligible": false,
+      "source_graph_and_reported_key_match": true,
+      "state": "reference_not_exact_form_eligible"
+    }
+  ],
+  "results": {
+    "observed": {
+      "aggregate": {
+        "queries": 6,
+        "candidate_count": 2,
+        "complete_candidate_queries": 6,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.5,
+        "mean_reciprocal_midrank": 0.75,
+        "queries_with_top_ties": 0,
+        "theoretical_random_top1_all_queries": 0.5,
+        "theoretical_random_mrr_all_queries": 0.75
+      },
+      "by_compound": {
+        "caffeine": {
+          "queries": 3,
+          "candidate_count": 2,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 0,
+          "top1_fraction": 0.0,
+          "mean_reciprocal_midrank": 0.5,
+          "queries_with_top_ties": 0,
+          "theoretical_random_top1_all_queries": 0.5,
+          "theoretical_random_mrr_all_queries": 0.75
+        },
+        "quercetin": {
+          "queries": 3,
+          "candidate_count": 2,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 3,
+          "top1_fraction": 1.0,
+          "mean_reciprocal_midrank": 1.0,
+          "queries_with_top_ties": 0,
+          "theoretical_random_top1_all_queries": 0.5,
+          "theoretical_random_mrr_all_queries": 0.75
+        }
+      }
+    },
+    "permuted_query_genes": {
+      "aggregate": {
+        "queries": 6,
+        "candidate_count": 2,
+        "complete_candidate_queries": 6,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.5,
+        "mean_reciprocal_midrank": 0.75,
+        "queries_with_top_ties": 0,
+        "theoretical_random_top1_all_queries": 0.5,
+        "theoretical_random_mrr_all_queries": 0.75
+      },
+      "by_compound": {
+        "caffeine": {
+          "queries": 3,
+          "candidate_count": 2,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 2,
+          "top1_fraction": 0.6666666666666666,
+          "mean_reciprocal_midrank": 0.8333333333333334,
+          "queries_with_top_ties": 0,
+          "theoretical_random_top1_all_queries": 0.5,
+          "theoretical_random_mrr_all_queries": 0.75
+        },
+        "quercetin": {
+          "queries": 3,
+          "candidate_count": 2,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 1,
+          "top1_fraction": 0.3333333333333333,
+          "mean_reciprocal_midrank": 0.6666666666666666,
+          "queries_with_top_ties": 0,
+          "theoretical_random_top1_all_queries": 0.5,
+          "theoretical_random_mrr_all_queries": 0.75
+        }
+      }
+    }
+  },
+  "metadata_equality_sanity_check": {
+    "queries": 6,
+    "candidate_count": 2,
+    "complete_candidate_queries": 6,
+    "incomplete_queries": 0,
+    "top1_successes": 0,
+    "top1_fraction": 0.0,
+    "mean_reciprocal_midrank": 0.6666666666666666,
+    "queries_with_top_ties": 6,
+    "theoretical_random_top1_all_queries": 0.5,
+    "theoretical_random_mrr_all_queries": 0.75
+  },
+  "metadata_sanity_scope": "A consequence of the exact-ID/group exclusion boundary; not a general metadata-only predictor or a random performance reference.",
+  "matrix_values_interpreted": true,
+  "signature_vectors_decoded": 18,
+  "numeric_evaluation_completed": true,
+  "stop": null,
+  "gene_permutation_seed": 20261024,
+  "p_values_computed": false,
+  "confidence_intervals_computed": false,
+  "independent_biological_validation": false,
+  "source_group_confounding_fully_resolved": false,
+  "historical_trial_rescued": false,
+  "healthy_target_validated": false,
+  "food_product_efficacy_inferred": false,
+  "protein_prediction_performed": false,
+  "blind_independent_validation": false,
+  "identical_per_experiment_processing_proven": false,
+  "limits_ja": [
+    "2020配布版内の2成分・6問い合わせの探索的な照合です。旧2017評価と版間対応試験は変更しません。",
+    "同じBroad/L1000基盤の既存実験の再処理で、問い合わせの元実験は使用済みです。盲検・独立施設の検証ではありません。",
+    "成分と測定グループの交絡は未解決で、遺伝子位置の入替えでも分離できません。",
+    "二択の単独1位率とMRRは独立した裏付けではありません。理論的ランダム期待値は実測対照ではありません。",
+    "対象にできる化学形で構造グラフと記載full InChIKeyの両方が対応するのは2成分です。ほかの成分の無効判定ではありません。",
+    "食品・治療・健康な状態への回復・人体で届く量は未検証で、タンパク質78条件とは未接続です。"
+  ],
+  "limits_en": [
+    "An exploratory two-label, six-query comparison within the 2020 release; the old 2017 evaluation and stopped cross-release trial remain unchanged.",
+    "Existing experiments were reprocessed on the same Broad/L1000 platform; underlying query experiments were used previously. This is neither blind nor independent-facility validation.",
+    "Compound and measurement-group effects remain confounded; permuting gene positions does not separate them.",
+    "Two-way unique top-1 and MRR are not independent corroboration. Theoretical random expectations are not measured controls.",
+    "Two eligible exact forms meet both structure-graph and reported full-InChIKey checks. Other constituents were not judged ineffective.",
+    "Food/treatment effects, healthy-state restoration and achievable human exposure are untested; the 78-condition protein catalog is unconnected."
+  ]
+}
