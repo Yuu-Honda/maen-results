@@ -1,5 +1,13 @@
 # 更新履歴
 
+## 2026-10-24 — 固定した陽性対照4ラベルのRNA検索
+
+事前固定・二社検査・commit/push後の単回取得で、実RNAは11/12件（91.7%）を完全識別しました。遺伝子位置入替え20通りの平均は27.5%（範囲1〜6/12）、4定数対照は各3/12、位置metadata対照は2/12（同点10件）。全12件の突合は両方正解1・RNAのみ正解10・位置のみ正解1・両方不正解0です。
+
+日英ページに全体・ラベル別・全seed・全6候補/9細胞の選択経緯と限界を追加。11/12を主結果とし、注釈群の緩和一致12/12は副指標として区別しました。旧2成分3/6と旧2017版の記録は不変です。同じデータ内で選んだ陽性対照の技術検査であり、食品や治療の効果・独立施設での検証は示しません。[検査記録](reviews/rna-positive-2026-10-24.md)
+
+English: A fixed four-label positive-control panel recovered 11/12 exact labels. Twenty fixed gene permutations averaged 27.5% (1–6/12); each constant-label control recovered 3/12; the position rule recovered 2/12 with ten ties. All twelve queries were joined: both correct 1, RNA only 10, position only 1, both wrong 0. This selected same-dataset technical check does not revise the earlier everyday-compound result or establish food/treatment efficacy.
+
 ## 2026-10-24 — 同じ2020公開版でのRNA追加照合
 
 現在のmetadata全体から定義した2成分・6問い合わせ・12参照の別計画を一度実行しました。実RNAは単独1位3/6・MRR0.75、固定した遺伝子位置入替え対照も3/6・MRR0.75。実RNAはカフェイン0/3、ケルセチン3/3で、全6件でケルセチン側が上位になる偏りがありました。この条件でRNAを使う利点は示せませんでした。

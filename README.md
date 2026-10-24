@@ -1,5 +1,7 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+**2026-10-24 続編：固定した陽性対照4ラベルでは、実RNAが11/12件を識別しました。** 遺伝子位置の固定入替え20通りは平均27.5%（1〜6/12）、定数ラベルは各3/12、ウェル位置対照は2/12（同点10件）。選んだ有利な条件での技術的なラベル照合で、身近な成分・食品・抗がん効果を示すものではありません。前の2成分の陰性結果は保持しています。[日本語](https://yuu-honda.github.io/maen-results/rna.html#positive-controls) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#positive-controls) / [公開集計](data/rna-positive-summary.json) / [検査記録](reviews/rna-positive-2026-10-24.md)。
+
 **2026-10-24：同じ2020版の追加照合は、実RNA3/6・入替え対照3/6（両方MRR0.75）でした。** 実RNAは全6件でケルセチン側を上位にしており、今回の条件でRNAの利点は示せませんでした。[日本語の追加結果](https://yuu-honda.github.io/maen-results/rna.html#current-release) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#current-release) / [公開集計](data/rna-current-summary.json)。旧結果・未実施記録・全8例を保持しています。
 
 2026-10-21：RNAの次段階の入力対応監査を日英ページに追加。旧版と2020再処理版で全記録・反復が揃わず、新しい数値照合は未実施です。[日本語](rna.html#crossgroup-preflight) / [English](rna-en.html#crossgroup-preflight) / [検査記録](reviews/rna-crossgroup-2026-10-21.md)。

@@ -1,0 +1,2588 @@
+{
+  "schema_version": 1,
+  "id": "rna-positive-current-public-v1",
+  "method_id": "rna-positive-current-v1",
+  "status": "completed",
+  "scope": "source_brd_label_reidentification_technical_diagnostic",
+  "counts": {
+    "candidate_inventory": 6,
+    "compound_labels": 4,
+    "queries": 12,
+    "references": 12,
+    "signature_records": 24,
+    "landmark_genes": 978,
+    "cell_contexts": 3,
+    "core_cell_inventory": 9
+  },
+  "source": {
+    "release": "LINCS2020 beta",
+    "platform": "Broad/L1000",
+    "matrix_object_version": "ljLz1nWDJ4co.kG6bSrfEs7mrklxiVS4",
+    "matrix_etag": "\"d342ab7f3fa6ece699099bc2d8fc94b8-2118\"",
+    "matrix_bytes": 35518405386,
+    "source_metadata_sha256": "1a38d7ea2a804be79804af4a27aff9f2537af8f13d3c8af1fdc1fef780f40201",
+    "whole_file_hash_verified": false,
+    "transferred_numeric_body_bytes": 27253514
+  },
+  "provenance": {
+    "plan_sha256": "dc5fc02d85c61f28f20aae2f24e8069392d73db421ed9d0948e2f5f4333ba342",
+    "cohort_sha256": "0057c42502c64e1a4bf7ab957f16f856f3e69abba0e8c21af50edc432853c45c",
+    "metadata_audit_sha256": "04b4d4a741eb737a0d348dc549dfa590b217d1388a247140af1ff844b10f62fa",
+    "layout_sha256": "4e054ecbf0f553ab9afcfda524c32f51e12c34ecb84ad5f6d3e1d8acd50f934b",
+    "code_freeze_sha256": "7dc89dc229f571b054c820b7a9adc07a3f1f6441dfb8154c0bbb1c38050632a7",
+    "catalog_sha256": "736173fa15b5ac684991cec6859a5f1e102044c3cfbe73fa4227e059fcc93ac9",
+    "evaluation_sha256": "d704902924c872460787a2186a81d26876d67a69135893efe4db2f1774fdb340",
+    "worker_completed_sha256": "71ea34c6684371edf1dfc90a3bcb97a16988a221b536f0ce46d13f0e5a128beb",
+    "completed_sha256": "c69443d8a8ba063bf28605f2ceccb1badf95ec646025eb4a2d71534686d7e234",
+    "exporter_code_sha256": "feccbf83c3cb783d7f8947817d7ebfa824e60dda179f29188a090174864700dc"
+  },
+  "candidate_inventory": [
+    {
+      "compound_id": "geldanamycin",
+      "signature_metadata_rows": 1535,
+      "source_form_count": 2,
+      "cell_count": 80,
+      "library_prefix_count": 208,
+      "selected_for_diagnostic": false,
+      "state": "source_annotation_inconsistent_excluded",
+      "source_form_verification": "annotation-consistency-only",
+      "stereochemistry_scope": "no complete external chemical-form claim"
+    },
+    {
+      "compound_id": "trichostatin-a",
+      "signature_metadata_rows": 1788,
+      "source_form_count": 2,
+      "cell_count": 108,
+      "library_prefix_count": 248,
+      "selected_for_diagnostic": false,
+      "state": "source_annotation_inconsistent_excluded",
+      "source_form_verification": "annotation-consistency-only",
+      "stereochemistry_scope": "no complete external chemical-form claim"
+    },
+    {
+      "compound_id": "vorinostat",
+      "signature_metadata_rows": 3286,
+      "source_form_count": 1,
+      "cell_count": 197,
+      "library_prefix_count": 298,
+      "selected_for_diagnostic": true,
+      "state": "fixed_source_brd_label_selected",
+      "source_form_verification": "annotation-consistency-only",
+      "stereochemistry_scope": "no complete external chemical-form claim"
+    },
+    {
+      "compound_id": "wortmannin",
+      "signature_metadata_rows": 1713,
+      "source_form_count": 3,
+      "cell_count": 87,
+      "library_prefix_count": 194,
+      "selected_for_diagnostic": true,
+      "state": "fixed_source_brd_label_selected",
+      "source_form_verification": "annotation-consistency-only",
+      "stereochemistry_scope": "stereo-unspecified source form; variants not pooled"
+    },
+    {
+      "compound_id": "ly-294002",
+      "signature_metadata_rows": 792,
+      "source_form_count": 1,
+      "cell_count": 93,
+      "library_prefix_count": 121,
+      "selected_for_diagnostic": true,
+      "state": "fixed_source_brd_label_selected",
+      "source_form_verification": "annotation-consistency-only",
+      "stereochemistry_scope": "no complete external chemical-form claim"
+    },
+    {
+      "compound_id": "mitoxantrone",
+      "signature_metadata_rows": 1778,
+      "source_form_count": 1,
+      "cell_count": 138,
+      "library_prefix_count": 136,
+      "selected_for_diagnostic": true,
+      "state": "fixed_source_brd_label_selected",
+      "source_form_verification": "annotation-consistency-only",
+      "stereochemistry_scope": "no complete external chemical-form claim"
+    }
+  ],
+  "core9_availability": [
+    {
+      "cell": "A375",
+      "complete_prefix_count": 1,
+      "selected_for_diagnostic": false
+    },
+    {
+      "cell": "A549",
+      "complete_prefix_count": 2,
+      "selected_for_diagnostic": true
+    },
+    {
+      "cell": "HA1E",
+      "complete_prefix_count": 1,
+      "selected_for_diagnostic": false
+    },
+    {
+      "cell": "HCC515",
+      "complete_prefix_count": 0,
+      "selected_for_diagnostic": false
+    },
+    {
+      "cell": "HEPG2",
+      "complete_prefix_count": 0,
+      "selected_for_diagnostic": false
+    },
+    {
+      "cell": "HT29",
+      "complete_prefix_count": 1,
+      "selected_for_diagnostic": false
+    },
+    {
+      "cell": "MCF7",
+      "complete_prefix_count": 2,
+      "selected_for_diagnostic": true
+    },
+    {
+      "cell": "PC3",
+      "complete_prefix_count": 2,
+      "selected_for_diagnostic": true
+    },
+    {
+      "cell": "VCAP",
+      "complete_prefix_count": 0,
+      "selected_for_diagnostic": false
+    }
+  ],
+  "well_position_metadata_baseline": {
+    "definition": {
+      "baseline_id": "well-row-column-jaccard-v1",
+      "features": "union of declared well rows and integer columns across all full replicates",
+      "score_rule": "mean of row-set Jaccard and column-set Jaccard; no replicate-count weighting",
+      "query_denominator": 12,
+      "tie_tolerance": 1e-12,
+      "selection_effect": "diagnostic only; no cohort changes",
+      "rna_values_read": false,
+      "response_quality_metrics_used": false,
+      "code_sha256": "485241487f385d35b5d9689485651a77b2a0f7b6712a1db9078b588b0bffdf64",
+      "metric_and_aggregate_source_sha256": "fd3ea78d7ab79a495299fa815564c3ff28481d5e9361907a74ce890b65b0cda8"
+    },
+    "results": {
+      "aggregate": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 2,
+        "top1_fraction": 0.16666666666666666,
+        "macro_top1_fraction": 0.16666666666666666,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 2,
+        "annotation_group_match_fraction": 0.16666666666666666,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.5,
+        "queries_with_top_ties": 10,
+        "predicted_label_counts": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 2
+        },
+        "tied_top_predictions": 10,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 3,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 3,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 3,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 1,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "by_compound": {
+        "ly-294002": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 0,
+          "top1_fraction": 0.0,
+          "macro_top1_fraction": 0.0,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 0,
+          "annotation_group_match_fraction": 0.0,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 0
+          },
+          "mean_reciprocal_midrank": 0.4000000000000001,
+          "queries_with_top_ties": 3,
+          "predicted_label_counts": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0
+          },
+          "tied_top_predictions": 3,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 3,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        },
+        "mitoxantrone": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 0,
+          "top1_fraction": 0.0,
+          "macro_top1_fraction": 0.0,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 0,
+          "annotation_group_match_fraction": 0.0,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 0
+          },
+          "mean_reciprocal_midrank": 0.4000000000000001,
+          "queries_with_top_ties": 3,
+          "predicted_label_counts": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0
+          },
+          "tied_top_predictions": 3,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 3,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        },
+        "vorinostat": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 0,
+          "top1_fraction": 0.0,
+          "macro_top1_fraction": 0.0,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 0,
+          "annotation_group_match_fraction": 0.0,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 0
+          },
+          "mean_reciprocal_midrank": 0.4000000000000001,
+          "queries_with_top_ties": 3,
+          "predicted_label_counts": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0
+          },
+          "tied_top_predictions": 3,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 3,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        },
+        "wortmannin": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 2,
+          "top1_fraction": 0.6666666666666666,
+          "macro_top1_fraction": 0.6666666666666666,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 2,
+          "annotation_group_match_fraction": 0.6666666666666666,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 0
+          },
+          "mean_reciprocal_midrank": 0.7999999999999999,
+          "queries_with_top_ties": 1,
+          "predicted_label_counts": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 2
+          },
+          "tied_top_predictions": 1,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 2,
+              "tied_top": 1,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        }
+      }
+    },
+    "interpretation": "The fixed row/column shortcut describes metadata-only label retrieval. Neither success nor failure establishes biological origin, artifact origin, or removal of all position/group confounding."
+  },
+  "metadata_vs_rna_agreement": {
+    "basis": "primary exact four-label unique top1 only; secondary annotation matches are not used",
+    "prediction_bucket_rule": "Unscoreable if either side is unscoreable; otherwise tied-top if either side ties; otherwise compare the two unique predicted labels.",
+    "aggregate": {
+      "queries": 12,
+      "correctness_contingency": {
+        "both_correct": 1,
+        "rna_only_correct": 10,
+        "metadata_only_correct": 1,
+        "both_wrong": 0
+      },
+      "prediction_comparison": {
+        "same_unique_prediction": 1,
+        "different_unique_predictions": 1,
+        "tied_top_without_unscoreable": 10,
+        "at_least_one_unscoreable": 0
+      },
+      "rna_when_metadata_not_unique_top1": {
+        "queries": 10,
+        "rna_top1_successes": 10,
+        "rna_top1_fraction": 1.0
+      },
+      "rna_when_metadata_unique_top1": {
+        "queries": 2,
+        "rna_top1_successes": 1,
+        "rna_top1_fraction": 0.5
+      }
+    },
+    "by_compound": {
+      "ly-294002": {
+        "queries": 3,
+        "correctness_contingency": {
+          "both_correct": 0,
+          "rna_only_correct": 3,
+          "metadata_only_correct": 0,
+          "both_wrong": 0
+        },
+        "prediction_comparison": {
+          "same_unique_prediction": 0,
+          "different_unique_predictions": 0,
+          "tied_top_without_unscoreable": 3,
+          "at_least_one_unscoreable": 0
+        },
+        "rna_when_metadata_not_unique_top1": {
+          "queries": 3,
+          "rna_top1_successes": 3,
+          "rna_top1_fraction": 1.0
+        },
+        "rna_when_metadata_unique_top1": {
+          "queries": 0,
+          "rna_top1_successes": 0,
+          "rna_top1_fraction": null
+        }
+      },
+      "mitoxantrone": {
+        "queries": 3,
+        "correctness_contingency": {
+          "both_correct": 0,
+          "rna_only_correct": 3,
+          "metadata_only_correct": 0,
+          "both_wrong": 0
+        },
+        "prediction_comparison": {
+          "same_unique_prediction": 0,
+          "different_unique_predictions": 0,
+          "tied_top_without_unscoreable": 3,
+          "at_least_one_unscoreable": 0
+        },
+        "rna_when_metadata_not_unique_top1": {
+          "queries": 3,
+          "rna_top1_successes": 3,
+          "rna_top1_fraction": 1.0
+        },
+        "rna_when_metadata_unique_top1": {
+          "queries": 0,
+          "rna_top1_successes": 0,
+          "rna_top1_fraction": null
+        }
+      },
+      "vorinostat": {
+        "queries": 3,
+        "correctness_contingency": {
+          "both_correct": 0,
+          "rna_only_correct": 3,
+          "metadata_only_correct": 0,
+          "both_wrong": 0
+        },
+        "prediction_comparison": {
+          "same_unique_prediction": 0,
+          "different_unique_predictions": 0,
+          "tied_top_without_unscoreable": 3,
+          "at_least_one_unscoreable": 0
+        },
+        "rna_when_metadata_not_unique_top1": {
+          "queries": 3,
+          "rna_top1_successes": 3,
+          "rna_top1_fraction": 1.0
+        },
+        "rna_when_metadata_unique_top1": {
+          "queries": 0,
+          "rna_top1_successes": 0,
+          "rna_top1_fraction": null
+        }
+      },
+      "wortmannin": {
+        "queries": 3,
+        "correctness_contingency": {
+          "both_correct": 1,
+          "rna_only_correct": 1,
+          "metadata_only_correct": 1,
+          "both_wrong": 0
+        },
+        "prediction_comparison": {
+          "same_unique_prediction": 1,
+          "different_unique_predictions": 1,
+          "tied_top_without_unscoreable": 1,
+          "at_least_one_unscoreable": 0
+        },
+        "rna_when_metadata_not_unique_top1": {
+          "queries": 1,
+          "rna_top1_successes": 1,
+          "rna_top1_fraction": 1.0
+        },
+        "rna_when_metadata_unique_top1": {
+          "queries": 2,
+          "rna_top1_successes": 1,
+          "rna_top1_fraction": 0.5
+        }
+      }
+    },
+    "interpretation": "Paired descriptive agreement on the same twelve queries; neither overlap nor disagreement identifies biological or artifact origin, or separates all confounding."
+  },
+  "results": {
+    "observed": {
+      "aggregate": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 11,
+        "top1_fraction": 0.9166666666666666,
+        "macro_top1_fraction": 0.9166666666666666,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 12,
+        "annotation_group_match_fraction": 1.0,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 1
+        },
+        "mean_reciprocal_midrank": 0.9583333333333334,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 4,
+          "mitoxantrone": 3,
+          "vorinostat": 3,
+          "wortmannin": 2
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 3,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 3,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 3,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "by_compound": {
+        "ly-294002": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 3,
+          "top1_fraction": 1.0,
+          "macro_top1_fraction": 1.0,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 3,
+          "annotation_group_match_fraction": 1.0,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 0
+          },
+          "mean_reciprocal_midrank": 1.0,
+          "queries_with_top_ties": 0,
+          "predicted_label_counts": {
+            "ly-294002": 3,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0
+          },
+          "tied_top_predictions": 0,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 3,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        },
+        "mitoxantrone": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 3,
+          "top1_fraction": 1.0,
+          "macro_top1_fraction": 1.0,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 3,
+          "annotation_group_match_fraction": 1.0,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 0
+          },
+          "mean_reciprocal_midrank": 1.0,
+          "queries_with_top_ties": 0,
+          "predicted_label_counts": {
+            "ly-294002": 0,
+            "mitoxantrone": 3,
+            "vorinostat": 0,
+            "wortmannin": 0
+          },
+          "tied_top_predictions": 0,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 3,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        },
+        "vorinostat": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 3,
+          "top1_fraction": 1.0,
+          "macro_top1_fraction": 1.0,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 3,
+          "annotation_group_match_fraction": 1.0,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 0
+          },
+          "mean_reciprocal_midrank": 1.0,
+          "queries_with_top_ties": 0,
+          "predicted_label_counts": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 3,
+            "wortmannin": 0
+          },
+          "tied_top_predictions": 0,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 3,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        },
+        "wortmannin": {
+          "queries": 3,
+          "candidate_count": 4,
+          "complete_candidate_queries": 3,
+          "incomplete_queries": 0,
+          "top1_successes": 2,
+          "top1_fraction": 0.6666666666666666,
+          "macro_top1_fraction": 0.6666666666666666,
+          "macro_compound_count": 1,
+          "annotation_group_matches": 3,
+          "annotation_group_match_fraction": 1.0,
+          "annotation_pair_cross_predictions": {
+            "ly-294002_to_wortmannin": 0,
+            "wortmannin_to_ly-294002": 1
+          },
+          "mean_reciprocal_midrank": 0.8333333333333334,
+          "queries_with_top_ties": 0,
+          "predicted_label_counts": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 2
+          },
+          "tied_top_predictions": 0,
+          "unscoreable_predictions": 0,
+          "confusion_matrix": {
+            "ly-294002": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "mitoxantrone": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "vorinostat": {
+              "ly-294002": 0,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 0,
+              "tied_top": 0,
+              "unscoreable": 0
+            },
+            "wortmannin": {
+              "ly-294002": 1,
+              "mitoxantrone": 0,
+              "vorinostat": 0,
+              "wortmannin": 2,
+              "tied_top": 0,
+              "unscoreable": 0
+            }
+          },
+          "theoretical_random_top1_all_queries": 0.25,
+          "theoretical_random_mrr_all_queries": 0.5208333333333334
+        }
+      }
+    }
+  },
+  "permutation_controls": {
+    "count": 20,
+    "seeds": [
+      2026102400,
+      2026102401,
+      2026102402,
+      2026102403,
+      2026102404,
+      2026102405,
+      2026102406,
+      2026102407,
+      2026102408,
+      2026102409,
+      2026102410,
+      2026102411,
+      2026102412,
+      2026102413,
+      2026102414,
+      2026102415,
+      2026102416,
+      2026102417,
+      2026102418,
+      2026102419
+    ],
+    "by_seed": {
+      "2026102400": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 5,
+        "top1_fraction": 0.4166666666666667,
+        "macro_top1_fraction": 0.41666666666666663,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 9,
+        "annotation_group_match_fraction": 0.75,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 2,
+          "wortmannin_to_ly-294002": 2
+        },
+        "mean_reciprocal_midrank": 0.5833333333333334,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 3,
+          "mitoxantrone": 4,
+          "vorinostat": 1,
+          "wortmannin": 4
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 2,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 2,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102401": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 4,
+        "top1_fraction": 0.3333333333333333,
+        "macro_top1_fraction": 0.3333333333333333,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 4,
+        "annotation_group_match_fraction": 0.3333333333333333,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.5972222222222222,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 0,
+          "mitoxantrone": 5,
+          "vorinostat": 5,
+          "wortmannin": 2
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 3,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 3,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102402": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 6,
+        "top1_fraction": 0.5,
+        "macro_top1_fraction": 0.5,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 7,
+        "annotation_group_match_fraction": 0.5833333333333334,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 1
+        },
+        "mean_reciprocal_midrank": 0.6527777777777778,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 4,
+          "mitoxantrone": 2,
+          "vorinostat": 6,
+          "wortmannin": 0
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 2,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102403": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.25,
+        "macro_top1_fraction": 0.25,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 3,
+        "annotation_group_match_fraction": 0.25,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.5277777777777778,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 0,
+          "mitoxantrone": 9,
+          "vorinostat": 1,
+          "wortmannin": 2
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 3,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 2,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 3,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102404": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.25,
+        "macro_top1_fraction": 0.25,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 4,
+        "annotation_group_match_fraction": 0.3333333333333333,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 1
+        },
+        "mean_reciprocal_midrank": 0.5625,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 4,
+          "mitoxantrone": 3,
+          "vorinostat": 3,
+          "wortmannin": 2
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 2,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102405": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 4,
+        "top1_fraction": 0.3333333333333333,
+        "macro_top1_fraction": 0.3333333333333333,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 5,
+        "annotation_group_match_fraction": 0.4166666666666667,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 1
+        },
+        "mean_reciprocal_midrank": 0.576388888888889,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 2,
+          "mitoxantrone": 2,
+          "vorinostat": 6,
+          "wortmannin": 2
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 3,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102406": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 6,
+        "top1_fraction": 0.5,
+        "macro_top1_fraction": 0.5,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 6,
+        "annotation_group_match_fraction": 0.5,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.6805555555555555,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 3,
+          "mitoxantrone": 4,
+          "vorinostat": 2,
+          "wortmannin": 3
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 2,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102407": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.25,
+        "macro_top1_fraction": 0.25,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 5,
+        "annotation_group_match_fraction": 0.4166666666666667,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 2
+        },
+        "mean_reciprocal_midrank": 0.5416666666666666,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 5,
+          "mitoxantrone": 5,
+          "vorinostat": 2,
+          "wortmannin": 0
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 1,
+            "mitoxantrone": 2,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 1,
+            "mitoxantrone": 2,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102408": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 1,
+        "top1_fraction": 0.08333333333333333,
+        "macro_top1_fraction": 0.08333333333333333,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 2,
+        "annotation_group_match_fraction": 0.16666666666666666,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 1,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.3888888888888889,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 3,
+          "mitoxantrone": 1,
+          "vorinostat": 4,
+          "wortmannin": 4
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 2,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 2,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102409": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 1,
+        "top1_fraction": 0.08333333333333333,
+        "macro_top1_fraction": 0.08333333333333333,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 3,
+        "annotation_group_match_fraction": 0.25,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 2,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.40972222222222227,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 1,
+          "mitoxantrone": 6,
+          "vorinostat": 0,
+          "wortmannin": 5
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 3,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102410": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 2,
+        "top1_fraction": 0.16666666666666666,
+        "macro_top1_fraction": 0.16666666666666666,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 4,
+        "annotation_group_match_fraction": 0.3333333333333333,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 2,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.40972222222222227,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 0,
+          "mitoxantrone": 2,
+          "vorinostat": 5,
+          "wortmannin": 5
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 3,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102411": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.25,
+        "macro_top1_fraction": 0.25,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 4,
+        "annotation_group_match_fraction": 0.3333333333333333,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 1
+        },
+        "mean_reciprocal_midrank": 0.5555555555555556,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 2,
+          "mitoxantrone": 4,
+          "vorinostat": 2,
+          "wortmannin": 4
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 3,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 2,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102412": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 1,
+        "top1_fraction": 0.08333333333333333,
+        "macro_top1_fraction": 0.08333333333333333,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 1,
+        "annotation_group_match_fraction": 0.08333333333333333,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.40972222222222227,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 1,
+          "mitoxantrone": 5,
+          "vorinostat": 6,
+          "wortmannin": 0
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 3,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 3,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102413": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 2,
+        "top1_fraction": 0.16666666666666666,
+        "macro_top1_fraction": 0.16666666666666666,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 5,
+        "annotation_group_match_fraction": 0.4166666666666667,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 2,
+          "wortmannin_to_ly-294002": 1
+        },
+        "mean_reciprocal_midrank": 0.5069444444444444,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 4,
+          "mitoxantrone": 0,
+          "vorinostat": 3,
+          "wortmannin": 5
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102414": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 5,
+        "top1_fraction": 0.4166666666666667,
+        "macro_top1_fraction": 0.41666666666666663,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 6,
+        "annotation_group_match_fraction": 0.5,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 1
+        },
+        "mean_reciprocal_midrank": 0.6944444444444445,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 2,
+          "mitoxantrone": 4,
+          "vorinostat": 6,
+          "wortmannin": 0
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 2,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102415": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 4,
+        "top1_fraction": 0.3333333333333333,
+        "macro_top1_fraction": 0.3333333333333333,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 5,
+        "annotation_group_match_fraction": 0.4166666666666667,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 1,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.576388888888889,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 2,
+          "mitoxantrone": 4,
+          "vorinostat": 3,
+          "wortmannin": 3
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 2,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102416": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 5,
+        "top1_fraction": 0.4166666666666667,
+        "macro_top1_fraction": 0.41666666666666663,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 7,
+        "annotation_group_match_fraction": 0.5833333333333334,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 0,
+          "wortmannin_to_ly-294002": 2
+        },
+        "mean_reciprocal_midrank": 0.6041666666666666,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 4,
+          "mitoxantrone": 3,
+          "vorinostat": 3,
+          "wortmannin": 2
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 2,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 2,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102417": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 2,
+        "top1_fraction": 0.16666666666666666,
+        "macro_top1_fraction": 0.16666666666666666,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 5,
+        "annotation_group_match_fraction": 0.4166666666666667,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 1,
+          "wortmannin_to_ly-294002": 2
+        },
+        "mean_reciprocal_midrank": 0.4583333333333333,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 7,
+          "mitoxantrone": 0,
+          "vorinostat": 1,
+          "wortmannin": 4
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 3,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 1,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102418": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.25,
+        "macro_top1_fraction": 0.25,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 5,
+        "annotation_group_match_fraction": 0.4166666666666667,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 2,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.576388888888889,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 4,
+          "mitoxantrone": 0,
+          "vorinostat": 3,
+          "wortmannin": 5
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 2,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 0,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 0,
+            "vorinostat": 1,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      },
+      "2026102419": {
+        "queries": 12,
+        "candidate_count": 4,
+        "complete_candidate_queries": 12,
+        "incomplete_queries": 0,
+        "top1_successes": 3,
+        "top1_fraction": 0.25,
+        "macro_top1_fraction": 0.25,
+        "macro_compound_count": 4,
+        "annotation_group_matches": 4,
+        "annotation_group_match_fraction": 0.3333333333333333,
+        "annotation_pair_cross_predictions": {
+          "ly-294002_to_wortmannin": 1,
+          "wortmannin_to_ly-294002": 0
+        },
+        "mean_reciprocal_midrank": 0.5277777777777778,
+        "queries_with_top_ties": 0,
+        "predicted_label_counts": {
+          "ly-294002": 1,
+          "mitoxantrone": 4,
+          "vorinostat": 1,
+          "wortmannin": 6
+        },
+        "tied_top_predictions": 0,
+        "unscoreable_predictions": 0,
+        "confusion_matrix": {
+          "ly-294002": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 1,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "mitoxantrone": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "vorinostat": {
+            "ly-294002": 1,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 1,
+            "tied_top": 0,
+            "unscoreable": 0
+          },
+          "wortmannin": {
+            "ly-294002": 0,
+            "mitoxantrone": 1,
+            "vorinostat": 0,
+            "wortmannin": 2,
+            "tied_top": 0,
+            "unscoreable": 0
+          }
+        },
+        "theoretical_random_top1_all_queries": 0.25,
+        "theoretical_random_mrr_all_queries": 0.5208333333333334
+      }
+    },
+    "aggregate_distribution": {
+      "macro_top1_fraction": {
+        "mean": 0.275,
+        "min": 0.08333333333333333,
+        "max": 0.5
+      },
+      "top1_fraction": {
+        "mean": 0.275,
+        "min": 0.08333333333333333,
+        "max": 0.5
+      },
+      "mean_reciprocal_midrank": {
+        "mean": 0.5420138888888889,
+        "min": 0.3888888888888889,
+        "max": 0.6944444444444445
+      },
+      "annotation_group_match_fraction": {
+        "mean": 0.39166666666666666,
+        "min": 0.08333333333333333,
+        "max": 0.75
+      }
+    },
+    "independent_biological_replicates": false
+  },
+  "constant_label_baselines": {
+    "ly-294002": {
+      "queries": 12,
+      "candidate_count": 4,
+      "complete_candidate_queries": 12,
+      "incomplete_queries": 0,
+      "top1_successes": 3,
+      "top1_fraction": 0.25,
+      "macro_top1_fraction": 0.25,
+      "macro_compound_count": 4,
+      "annotation_group_matches": 6,
+      "annotation_group_match_fraction": 0.5,
+      "annotation_pair_cross_predictions": {
+        "ly-294002_to_wortmannin": 0,
+        "wortmannin_to_ly-294002": 3
+      },
+      "mean_reciprocal_midrank": 0.5,
+      "queries_with_top_ties": 0,
+      "predicted_label_counts": {
+        "ly-294002": 12,
+        "mitoxantrone": 0,
+        "vorinostat": 0,
+        "wortmannin": 0
+      },
+      "tied_top_predictions": 0,
+      "unscoreable_predictions": 0,
+      "confusion_matrix": {
+        "ly-294002": {
+          "ly-294002": 3,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "mitoxantrone": {
+          "ly-294002": 3,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "vorinostat": {
+          "ly-294002": 3,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "wortmannin": {
+          "ly-294002": 3,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        }
+      },
+      "theoretical_random_top1_all_queries": 0.25,
+      "theoretical_random_mrr_all_queries": 0.5208333333333334
+    },
+    "mitoxantrone": {
+      "queries": 12,
+      "candidate_count": 4,
+      "complete_candidate_queries": 12,
+      "incomplete_queries": 0,
+      "top1_successes": 3,
+      "top1_fraction": 0.25,
+      "macro_top1_fraction": 0.25,
+      "macro_compound_count": 4,
+      "annotation_group_matches": 3,
+      "annotation_group_match_fraction": 0.25,
+      "annotation_pair_cross_predictions": {
+        "ly-294002_to_wortmannin": 0,
+        "wortmannin_to_ly-294002": 0
+      },
+      "mean_reciprocal_midrank": 0.5,
+      "queries_with_top_ties": 0,
+      "predicted_label_counts": {
+        "ly-294002": 0,
+        "mitoxantrone": 12,
+        "vorinostat": 0,
+        "wortmannin": 0
+      },
+      "tied_top_predictions": 0,
+      "unscoreable_predictions": 0,
+      "confusion_matrix": {
+        "ly-294002": {
+          "ly-294002": 0,
+          "mitoxantrone": 3,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "mitoxantrone": {
+          "ly-294002": 0,
+          "mitoxantrone": 3,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "vorinostat": {
+          "ly-294002": 0,
+          "mitoxantrone": 3,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "wortmannin": {
+          "ly-294002": 0,
+          "mitoxantrone": 3,
+          "vorinostat": 0,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        }
+      },
+      "theoretical_random_top1_all_queries": 0.25,
+      "theoretical_random_mrr_all_queries": 0.5208333333333334
+    },
+    "vorinostat": {
+      "queries": 12,
+      "candidate_count": 4,
+      "complete_candidate_queries": 12,
+      "incomplete_queries": 0,
+      "top1_successes": 3,
+      "top1_fraction": 0.25,
+      "macro_top1_fraction": 0.25,
+      "macro_compound_count": 4,
+      "annotation_group_matches": 3,
+      "annotation_group_match_fraction": 0.25,
+      "annotation_pair_cross_predictions": {
+        "ly-294002_to_wortmannin": 0,
+        "wortmannin_to_ly-294002": 0
+      },
+      "mean_reciprocal_midrank": 0.5,
+      "queries_with_top_ties": 0,
+      "predicted_label_counts": {
+        "ly-294002": 0,
+        "mitoxantrone": 0,
+        "vorinostat": 12,
+        "wortmannin": 0
+      },
+      "tied_top_predictions": 0,
+      "unscoreable_predictions": 0,
+      "confusion_matrix": {
+        "ly-294002": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 3,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "mitoxantrone": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 3,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "vorinostat": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 3,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "wortmannin": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 3,
+          "wortmannin": 0,
+          "tied_top": 0,
+          "unscoreable": 0
+        }
+      },
+      "theoretical_random_top1_all_queries": 0.25,
+      "theoretical_random_mrr_all_queries": 0.5208333333333334
+    },
+    "wortmannin": {
+      "queries": 12,
+      "candidate_count": 4,
+      "complete_candidate_queries": 12,
+      "incomplete_queries": 0,
+      "top1_successes": 3,
+      "top1_fraction": 0.25,
+      "macro_top1_fraction": 0.25,
+      "macro_compound_count": 4,
+      "annotation_group_matches": 6,
+      "annotation_group_match_fraction": 0.5,
+      "annotation_pair_cross_predictions": {
+        "ly-294002_to_wortmannin": 3,
+        "wortmannin_to_ly-294002": 0
+      },
+      "mean_reciprocal_midrank": 0.5,
+      "queries_with_top_ties": 0,
+      "predicted_label_counts": {
+        "ly-294002": 0,
+        "mitoxantrone": 0,
+        "vorinostat": 0,
+        "wortmannin": 12
+      },
+      "tied_top_predictions": 0,
+      "unscoreable_predictions": 0,
+      "confusion_matrix": {
+        "ly-294002": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 3,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "mitoxantrone": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 3,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "vorinostat": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 3,
+          "tied_top": 0,
+          "unscoreable": 0
+        },
+        "wortmannin": {
+          "ly-294002": 0,
+          "mitoxantrone": 0,
+          "vorinostat": 0,
+          "wortmannin": 3,
+          "tied_top": 0,
+          "unscoreable": 0
+        }
+      },
+      "theoretical_random_top1_all_queries": 0.25,
+      "theoretical_random_mrr_all_queries": 0.5208333333333334
+    }
+  },
+  "descriptive_macro_top1_differences": {
+    "observed_minus_mean20_permuted_query_genes": 0.6416666666666666,
+    "observed_minus_best_constant_label": 0.6666666666666666
+  },
+  "metadata_equality_sanity_check": {
+    "queries": 12,
+    "candidate_count": 4,
+    "complete_candidate_queries": 12,
+    "incomplete_queries": 0,
+    "top1_successes": 0,
+    "top1_fraction": 0.0,
+    "macro_top1_fraction": 0.0,
+    "macro_compound_count": 4,
+    "annotation_group_matches": 0,
+    "annotation_group_match_fraction": 0.0,
+    "annotation_pair_cross_predictions": {
+      "ly-294002_to_wortmannin": 0,
+      "wortmannin_to_ly-294002": 0
+    },
+    "mean_reciprocal_midrank": 0.4000000000000001,
+    "queries_with_top_ties": 12,
+    "predicted_label_counts": {
+      "ly-294002": 0,
+      "mitoxantrone": 0,
+      "vorinostat": 0,
+      "wortmannin": 0
+    },
+    "tied_top_predictions": 12,
+    "unscoreable_predictions": 0,
+    "confusion_matrix": {
+      "ly-294002": {
+        "ly-294002": 0,
+        "mitoxantrone": 0,
+        "vorinostat": 0,
+        "wortmannin": 0,
+        "tied_top": 3,
+        "unscoreable": 0
+      },
+      "mitoxantrone": {
+        "ly-294002": 0,
+        "mitoxantrone": 0,
+        "vorinostat": 0,
+        "wortmannin": 0,
+        "tied_top": 3,
+        "unscoreable": 0
+      },
+      "vorinostat": {
+        "ly-294002": 0,
+        "mitoxantrone": 0,
+        "vorinostat": 0,
+        "wortmannin": 0,
+        "tied_top": 3,
+        "unscoreable": 0
+      },
+      "wortmannin": {
+        "ly-294002": 0,
+        "mitoxantrone": 0,
+        "vorinostat": 0,
+        "wortmannin": 0,
+        "tied_top": 3,
+        "unscoreable": 0
+      }
+    },
+    "theoretical_random_top1_all_queries": 0.25,
+    "theoretical_random_mrr_all_queries": 0.5208333333333334
+  },
+  "metadata_sanity_scope": "All exact/shared-group scores are zero by design; not a general metadata predictor.",
+  "matrix_values_interpreted": true,
+  "signature_vectors_decoded": 24,
+  "decoded_matrix_values": 295872,
+  "retained_landmark_values": 23472,
+  "numeric_evaluation_completed": true,
+  "all_registered_queries_accounted_for": true,
+  "old_rna_results_changed": false,
+  "earlier_two_label_result_revised": false,
+  "source_form_verification": "annotation-consistency-only",
+  "wortmannin_stereochemistry": "stereo-unspecified source form; variants not pooled",
+  "positive_control_selection_bias_present": true,
+  "blind_independent_validation": false,
+  "secondary_annotation_pair": [
+    "ly-294002",
+    "wortmannin"
+  ],
+  "secondary_annotation_scope": "Exact label matches plus LY-294002/wortmannin cross-predictions only; shared annotation does not establish RNA equivalence, mechanism, or biological correctness.",
+  "p_values_computed": false,
+  "confidence_intervals_computed": false,
+  "identical_per_experiment_processing_proven": false,
+  "external_exact_form_reference_verified": false,
+  "statistical_significance_evaluated": false,
+  "scientific_success_threshold_applied": false,
+  "independent_biological_validation": false,
+  "source_group_confounding_fully_resolved": false,
+  "complete_stereochemistry_verified": false,
+  "physical_sample_identity_verified": false,
+  "healthy_target_validated": false,
+  "food_product_efficacy_inferred": false,
+  "anticancer_efficacy_evaluated": false,
+  "protein_prediction_performed": false,
+  "annotation_group_match_is_biological_correctness": false,
+  "limits_ja": [
+    "陽性対照名を持つ固定BRDラベル4種類・12問い合わせの技術診断で、強い既知摂動を選んだ偏りがあります。",
+    "source構造と記載keyの内部整合だけを確認しました。wortmanninは立体未指定の報告形で、実物stockや外部の完全指定形との一致は未確認です。",
+    "同じBroad/L1000配布版内の検索です。metadataと解析法を見た後の診断で、盲検・独立施設の検証ではありません。",
+    "共有する測定群があり12件は独立した生物学的反復ではありません。20入替えも独立実験ではなく、p値・CI・普遍的合格閾値を計算しません。",
+    "LY-294002とwortmanninの共有PI3K注釈による副次一致は、生物学的な正解やRNAの同型性を意味しません。常にどちらかを選んでも副次一致は1/2で、取り違えは主4ラベル指標では失敗です。",
+    "成分と測定条件の影響を完全に分離していません。食品・治療効果、正常化、人体で届く量、タンパク質78条件との接続は未検証です。",
+    "前回のカフェイン／ケルセチンの実RNA3/6・入替え3/6は変更しません。"
+  ],
+  "limits_en": [
+    "A technical diagnostic of four fixed source BRD labels and twelve queries; selecting known positive controls creates selection bias.",
+    "Checks establish internal source-graph/reported-key consistency only. The wortmannin form is stereo-unspecified; physical stock and an external fully specified reference were not verified.",
+    "Retrieval is within one Broad/L1000 release, after metadata and methods were viewed. It is neither blinded nor independent-facility validation.",
+    "Queries share measurement groups and are not twelve independent biological replicates. Twenty gene permutations are not independent experiments; no p-values, confidence intervals or universal pass threshold are computed.",
+    "The shared PI3K annotation of LY-294002/wortmannin defines a secondary match only, not biological correctness or RNA equivalence. Always choosing either label already yields 1/2 secondary matches; swapping them remains a primary four-label error.",
+    "Compound and measurement-condition effects remain unresolved. Food/treatment effects, healthy-state restoration, human exposure and connection to the 78-condition protein catalog remain untested.",
+    "The earlier caffeine/quercetin result, observed 3/6 and fixed permutation 3/6, is unchanged."
+  ]
+}
