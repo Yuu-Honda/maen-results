@@ -1,5 +1,12 @@
 # 更新履歴
 
+## 2026-10-27
+
+2026-10-27：**保存済み2成分スコアの全参照ペア診断を追加しました。** 6問い合わせ等重みの単独1位率は実RNA55.6%、旧入替え1通り65.7%、一定ラベル基準50.0%。参照組によって2/6件が変わりますが偏りは残り、実RNAの利点は示せません。全14組・28判定は独立実験ではありません。旧結果・CSS・スクロール動作は保持し、新RNAや食品・抗がんの効果は評価していません。[日本語](https://yuu-honda.github.io/maen-results/rna.html#reference-diagnostic) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#reference-diagnostic) / [集計JSON](data/rna-reference-summary.json) / [metadata可用性](data/rna-gap-metadata-summary.json)。
+
+Saved-score reference-pair diagnostic: query-equal top-1 is 55.6% observed and 65.7% for one retained gene permutation; both pooled summaries are 17/28. These are dependent recombinations of six queries, with no demonstrated RNA advantage or food/treatment efficacy. Earlier results and scroll controls are preserved.
+
+
 ## 2026-10-24 — 固定した陽性対照4ラベルのRNA検索
 
 事前固定・二社検査・commit/push後の単回取得で、実RNAは11/12件（91.7%）を完全識別しました。遺伝子位置入替え20通りの平均は27.5%（範囲1〜6/12）、4定数対照は各3/12、位置metadata対照は2/12（同点10件）。全12件の突合は両方正解1・RNAのみ正解10・位置のみ正解1・両方不正解0です。

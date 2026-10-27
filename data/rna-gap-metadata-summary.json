@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "protocol_id": "rna-gap-metadata-public-v1",
+  "scope": "Fixed six previously selected BRD labels in the pinned LINCS2020 metadata; metadata availability only.",
+  "source_metadata_rows": 1201944,
+  "fixed_source_label_count": 6,
+  "fixed_source_label_metadata_rows": 8031,
+  "eligible_metadata_rows": 8031,
+  "excluded_metadata_rows": 0,
+  "all_context_source_group_panels": 4742,
+  "all_six_labels_present_in_same_context_and_source_group": 0,
+  "all_six_one_signature_each_in_same_context_and_source_group": 0,
+  "prior_three_cells_24h_10um_shared_everyday_source_groups": 0,
+  "prior_everyday_query_source_groups": 6,
+  "prior_everyday_query_groups_with_any_fixed_positive_label": 0,
+  "prior_everyday_reference_source_groups": 12,
+  "prior_everyday_reference_groups_with_any_fixed_positive_label": 11,
+  "prior_everyday_positive_cohorts_shared_source_groups": 0,
+  "prior_cohorts_shared_canonical_cells": 2,
+  "all_context_complete_everyday_group_pairs": 2,
+  "all_context_complete_everyday_group_pairs_meeting_all_provenance_proxy_separation": 0,
+  "interpretation": [
+    "These zero counts concern the fixed six source chemical labels and the existing source separation rules. They do not show that all public data or future experiments cannot validate a retrieval method.",
+    "The prior two-label everyday and four-label positive-control results used different source groups and partially different cells; their raw success rates are not a controlled compound-class comparison.",
+    "Some reference-side source groups contain positive controls, but the six original query-side REP groups do not; changing the source groups changes the question.",
+    "No RNA values, response-quality values, numerical scores or clinical effects were inspected in this metadata audit."
+  ],
+  "new_http_requests": 0,
+  "rna_values_read": 0,
+  "quality_metrics_used": false,
+  "source_metadata_sha256": "1a38d7ea2a804be79804af4a27aff9f2537af8f13d3c8af1fdc1fef780f40201",
+  "source_cohort_sha256": {
+    "current": "a0de152e62635dfa2e875e655ae112283bbfdd9aa01d1656fec899c57fcb1de7",
+    "positive": "0057c42502c64e1a4bf7ab957f16f856f3e69abba0e8c21af50edc432853c45c"
+  }
+}

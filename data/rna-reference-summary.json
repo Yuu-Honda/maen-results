@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "id": "rna-reference-sensitivity-public-v1",
+  "method_id": "rna-reference-sensitivity-v1",
+  "source_method_id": "everyday-rna-current-v1",
+  "scope": "post-result-development-reference-aggregation-diagnostic",
+  "counts": {
+    "source_queries": 6,
+    "reference_signatures": 12,
+    "cell_contexts": 3,
+    "reference_pairs_per_mode": 14,
+    "pair_decisions_per_mode": 28,
+    "modes": 2
+  },
+  "tie_tolerance": 1e-12,
+  "permutation_seed": 20261024,
+  "primary_weighting": "equal weight for each of the six original queries; average its pair success fractions",
+  "source_median_reconstruction_verified": true,
+  "saved_individual_scores_only": true,
+  "new_rna_acquired": false,
+  "raw_rna_read": false,
+  "new_gene_permutations_generated": false,
+  "anticancer_efficacy_evaluated": false,
+  "confirmatory_validation": false,
+  "independent_biological_replicates": false,
+  "independent_biological_validation": false,
+  "source_group_confounding_fully_resolved": false,
+  "historical_trial_rescued": false,
+  "healthy_target_validated": false,
+  "food_product_efficacy_inferred": false,
+  "protein_prediction_performed": false,
+  "results": {
+    "observed": {
+      "aggregate": {
+        "source_queries": 6,
+        "pair_decisions": 28,
+        "query_equal_weight_top1_fraction": 0.5555555555555555,
+        "query_equal_weight_mean_reciprocal_midrank": 0.7777777777777778,
+        "query_equal_weight_complete_fraction": 1.0,
+        "query_equal_weight_prediction_fractions": {
+          "caffeine": 0.0925925925925926,
+          "quercetin": 0.9074074074074074,
+          "tie": 0.0,
+          "unscoreable": 0.0
+        },
+        "pair_weighted_top1_fraction": 0.6071428571428571,
+        "pair_weighted_mean_reciprocal_midrank": 0.8035714285714286,
+        "pair_weighted_top1_successes": 17,
+        "pair_weighted_prediction_counts": {
+          "caffeine": 5,
+          "quercetin": 23,
+          "tie": 0,
+          "unscoreable": 0
+        },
+        "query_prediction_stability_counts": {
+          "every_pair_predicted_caffeine": 0,
+          "every_pair_predicted_quercetin": 4,
+          "every_pair_predicted_tie": 0,
+          "every_pair_predicted_unscoreable": 0,
+          "mixed_pair_predictions": 2
+        }
+      },
+      "by_compound": {
+        "caffeine": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 0.14814814814814814,
+          "query_equal_weight_mean_reciprocal_midrank": 0.5740740740740741,
+          "query_equal_weight_complete_fraction": 1.0,
+          "query_equal_weight_prediction_fractions": {
+            "caffeine": 0.14814814814814814,
+            "quercetin": 0.8518518518518517,
+            "tie": 0.0,
+            "unscoreable": 0.0
+          },
+          "pair_weighted_top1_fraction": 0.2857142857142857,
+          "pair_weighted_mean_reciprocal_midrank": 0.6428571428571429,
+          "pair_weighted_top1_successes": 4,
+          "pair_weighted_prediction_counts": {
+            "caffeine": 4,
+            "quercetin": 10,
+            "tie": 0,
+            "unscoreable": 0
+          },
+          "query_prediction_stability_counts": {
+            "every_pair_predicted_caffeine": 0,
+            "every_pair_predicted_quercetin": 2,
+            "every_pair_predicted_tie": 0,
+            "every_pair_predicted_unscoreable": 0,
+            "mixed_pair_predictions": 1
+          }
+        },
+        "quercetin": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 0.9629629629629629,
+          "query_equal_weight_mean_reciprocal_midrank": 0.9814814814814815,
+          "query_equal_weight_complete_fraction": 1.0,
+          "query_equal_weight_prediction_fractions": {
+            "caffeine": 0.037037037037037035,
+            "quercetin": 0.9629629629629629,
+            "tie": 0.0,
+            "unscoreable": 0.0
+          },
+          "pair_weighted_top1_fraction": 0.9285714285714286,
+          "pair_weighted_mean_reciprocal_midrank": 0.9642857142857143,
+          "pair_weighted_top1_successes": 13,
+          "pair_weighted_prediction_counts": {
+            "caffeine": 1,
+            "quercetin": 13,
+            "tie": 0,
+            "unscoreable": 0
+          },
+          "query_prediction_stability_counts": {
+            "every_pair_predicted_caffeine": 0,
+            "every_pair_predicted_quercetin": 2,
+            "every_pair_predicted_tie": 0,
+            "every_pair_predicted_unscoreable": 0,
+            "mixed_pair_predictions": 1
+          }
+        }
+      },
+      "reference_pair_outcomes": {
+        "both_correct": 4,
+        "caffeine_only_correct": 0,
+        "quercetin_only_correct": 9,
+        "both_reversed": 1,
+        "tie_or_unscoreable": 0
+      },
+      "reconstructed_median": {
+        "aggregate": {
+          "queries": 6,
+          "candidate_count": 2,
+          "complete_candidate_queries": 6,
+          "incomplete_queries": 0,
+          "top1_successes": 3,
+          "top1_fraction": 0.5,
+          "mean_reciprocal_midrank": 0.75,
+          "queries_with_top_ties": 0,
+          "theoretical_random_top1_all_queries": 0.5,
+          "theoretical_random_mrr_all_queries": 0.75
+        },
+        "by_compound": {
+          "caffeine": {
+            "queries": 3,
+            "candidate_count": 2,
+            "complete_candidate_queries": 3,
+            "incomplete_queries": 0,
+            "top1_successes": 0,
+            "top1_fraction": 0.0,
+            "mean_reciprocal_midrank": 0.5,
+            "queries_with_top_ties": 0,
+            "theoretical_random_top1_all_queries": 0.5,
+            "theoretical_random_mrr_all_queries": 0.75
+          },
+          "quercetin": {
+            "queries": 3,
+            "candidate_count": 2,
+            "complete_candidate_queries": 3,
+            "incomplete_queries": 0,
+            "top1_successes": 3,
+            "top1_fraction": 1.0,
+            "mean_reciprocal_midrank": 1.0,
+            "queries_with_top_ties": 0,
+            "theoretical_random_top1_all_queries": 0.5,
+            "theoretical_random_mrr_all_queries": 0.75
+          }
+        }
+      }
+    },
+    "permuted_query_genes": {
+      "aggregate": {
+        "source_queries": 6,
+        "pair_decisions": 28,
+        "query_equal_weight_top1_fraction": 0.6574074074074074,
+        "query_equal_weight_mean_reciprocal_midrank": 0.8287037037037037,
+        "query_equal_weight_complete_fraction": 1.0,
+        "query_equal_weight_prediction_fractions": {
+          "caffeine": 0.5925925925925926,
+          "quercetin": 0.40740740740740744,
+          "tie": 0.0,
+          "unscoreable": 0.0
+        },
+        "pair_weighted_top1_fraction": 0.6071428571428571,
+        "pair_weighted_mean_reciprocal_midrank": 0.8035714285714286,
+        "pair_weighted_top1_successes": 17,
+        "pair_weighted_prediction_counts": {
+          "caffeine": 19,
+          "quercetin": 9,
+          "tie": 0,
+          "unscoreable": 0
+        },
+        "query_prediction_stability_counts": {
+          "every_pair_predicted_caffeine": 2,
+          "every_pair_predicted_quercetin": 1,
+          "every_pair_predicted_tie": 0,
+          "every_pair_predicted_unscoreable": 0,
+          "mixed_pair_predictions": 3
+        }
+      },
+      "by_compound": {
+        "caffeine": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 0.75,
+          "query_equal_weight_mean_reciprocal_midrank": 0.875,
+          "query_equal_weight_complete_fraction": 1.0,
+          "query_equal_weight_prediction_fractions": {
+            "caffeine": 0.75,
+            "quercetin": 0.25,
+            "tie": 0.0,
+            "unscoreable": 0.0
+          },
+          "pair_weighted_top1_fraction": 0.7857142857142857,
+          "pair_weighted_mean_reciprocal_midrank": 0.8928571428571429,
+          "pair_weighted_top1_successes": 11,
+          "pair_weighted_prediction_counts": {
+            "caffeine": 11,
+            "quercetin": 3,
+            "tie": 0,
+            "unscoreable": 0
+          },
+          "query_prediction_stability_counts": {
+            "every_pair_predicted_caffeine": 2,
+            "every_pair_predicted_quercetin": 0,
+            "every_pair_predicted_tie": 0,
+            "every_pair_predicted_unscoreable": 0,
+            "mixed_pair_predictions": 1
+          }
+        },
+        "quercetin": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 0.5648148148148148,
+          "query_equal_weight_mean_reciprocal_midrank": 0.7824074074074074,
+          "query_equal_weight_complete_fraction": 1.0,
+          "query_equal_weight_prediction_fractions": {
+            "caffeine": 0.4351851851851852,
+            "quercetin": 0.5648148148148148,
+            "tie": 0.0,
+            "unscoreable": 0.0
+          },
+          "pair_weighted_top1_fraction": 0.42857142857142855,
+          "pair_weighted_mean_reciprocal_midrank": 0.7142857142857143,
+          "pair_weighted_top1_successes": 6,
+          "pair_weighted_prediction_counts": {
+            "caffeine": 8,
+            "quercetin": 6,
+            "tie": 0,
+            "unscoreable": 0
+          },
+          "query_prediction_stability_counts": {
+            "every_pair_predicted_caffeine": 0,
+            "every_pair_predicted_quercetin": 1,
+            "every_pair_predicted_tie": 0,
+            "every_pair_predicted_unscoreable": 0,
+            "mixed_pair_predictions": 2
+          }
+        }
+      },
+      "reference_pair_outcomes": {
+        "both_correct": 5,
+        "caffeine_only_correct": 6,
+        "quercetin_only_correct": 1,
+        "both_reversed": 2,
+        "tie_or_unscoreable": 0
+      },
+      "reconstructed_median": {
+        "aggregate": {
+          "queries": 6,
+          "candidate_count": 2,
+          "complete_candidate_queries": 6,
+          "incomplete_queries": 0,
+          "top1_successes": 3,
+          "top1_fraction": 0.5,
+          "mean_reciprocal_midrank": 0.75,
+          "queries_with_top_ties": 0,
+          "theoretical_random_top1_all_queries": 0.5,
+          "theoretical_random_mrr_all_queries": 0.75
+        },
+        "by_compound": {
+          "caffeine": {
+            "queries": 3,
+            "candidate_count": 2,
+            "complete_candidate_queries": 3,
+            "incomplete_queries": 0,
+            "top1_successes": 2,
+            "top1_fraction": 0.6666666666666666,
+            "mean_reciprocal_midrank": 0.8333333333333334,
+            "queries_with_top_ties": 0,
+            "theoretical_random_top1_all_queries": 0.5,
+            "theoretical_random_mrr_all_queries": 0.75
+          },
+          "quercetin": {
+            "queries": 3,
+            "candidate_count": 2,
+            "complete_candidate_queries": 3,
+            "incomplete_queries": 0,
+            "top1_successes": 1,
+            "top1_fraction": 0.3333333333333333,
+            "mean_reciprocal_midrank": 0.6666666666666666,
+            "queries_with_top_ties": 0,
+            "theoretical_random_top1_all_queries": 0.5,
+            "theoretical_random_mrr_all_queries": 0.75
+          }
+        }
+      }
+    }
+  },
+  "constant_label_baselines": {
+    "caffeine": {
+      "source_queries": 6,
+      "reference_pairs": 14,
+      "pair_decisions": 28,
+      "query_equal_weight_top1_fraction": 0.5,
+      "pair_weighted_top1_fraction": 0.5,
+      "by_compound": {
+        "caffeine": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 1.0,
+          "pair_weighted_top1_fraction": 1.0
+        },
+        "quercetin": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 0.0,
+          "pair_weighted_top1_fraction": 0.0
+        }
+      }
+    },
+    "quercetin": {
+      "source_queries": 6,
+      "reference_pairs": 14,
+      "pair_decisions": 28,
+      "query_equal_weight_top1_fraction": 0.5,
+      "pair_weighted_top1_fraction": 0.5,
+      "by_compound": {
+        "caffeine": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 0.0,
+          "pair_weighted_top1_fraction": 0.0
+        },
+        "quercetin": {
+          "source_queries": 3,
+          "pair_decisions": 14,
+          "query_equal_weight_top1_fraction": 1.0,
+          "pair_weighted_top1_fraction": 1.0
+        }
+      }
+    }
+  },
+  "limits_ja": [
+    "結果が既知の2成分・6問い合わせの保存cosineを使う開発診断です。新しいRNA取得・反復実験ではありません。",
+    "全14参照ペア・28判定は同じ問い合わせと参照の組み替えで、独立な28実験ではありません。",
+    "主集計では元の6問い合わせを等重みにします。参照ペア数で重みが変わる集計は別の補助指標です。",
+    "中央値集約への依存を調べます。成分と測定グループの交絡、弱い反応、機序は確定できません。",
+    "既存の遺伝子位置入れ替え1通りをそのまま使います。新しい対照の追加・最適化・p値計算はしません。",
+    "食品・治療・健康な状態への回復・人体で届く量は未検証で、タンパク質78条件とは未接続です。"
+  ],
+  "limits_en": [
+    "A development diagnostic of saved cosine scores for two labels and six queries with known results; no new RNA or replicate experiment.",
+    "The 14 reference pairs and 28 decisions recombine the same queries and references; they are not 28 independent experiments.",
+    "The primary summary weights the six source queries equally. Pair-weighted results are separately named supplementary summaries.",
+    "This tests dependence on median aggregation; it cannot establish compound/group separation, weak response, or mechanism.",
+    "The one existing gene-position permutation is retained; no new controls, optimization, or p-values are introduced.",
+    "Food/treatment effects, healthy-state restoration and achievable human exposure are untested; the 78-condition protein catalog is unconnected."
+  ],
+  "provenance": {
+    "plan_sha256": "644fe49693a99b37dfc8f06660bc0ba8303fbdde47af06345688d32aae9ecc8c",
+    "source_cohort_sha256": "a0de152e62635dfa2e875e655ae112283bbfdd9aa01d1656fec899c57fcb1de7",
+    "saved_scores_sha256": "61fcf063062e95d5796c4500d3b62431bb4fc7fd444ed027168017c9bd26599a",
+    "code_freeze_sha256": "5445eed616e1a86e6499ef25b66ade8cc44e3099a7e4e7275eab2db2f55403d2",
+    "diagnostic_code_sha256": "6662b5407812862741d80c0fd533e127021186a5087909667f901258abbd4608"
+  }
+}

@@ -1,5 +1,8 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-10-27：**保存済み2成分スコアの全参照ペア診断を追加しました。** 6問い合わせ等重みの単独1位率は実RNA55.6%、旧入替え1通り65.7%、一定ラベル基準50.0%。参照組によって2/6件が変わりますが偏りは残り、実RNAの利点は示せません。全14組・28判定は独立実験ではありません。旧結果・CSS・スクロール動作は保持し、新RNAや食品・抗がんの効果は評価していません。[日本語](https://yuu-honda.github.io/maen-results/rna.html#reference-diagnostic) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#reference-diagnostic) / [集計JSON](data/rna-reference-summary.json) / [metadata可用性](data/rna-gap-metadata-summary.json)。
+
+
 **2026-10-24 続編：固定した陽性対照4ラベルでは、実RNAが11/12件を識別しました。** 遺伝子位置の固定入替え20通りは平均27.5%（1〜6/12）、定数ラベルは各3/12、ウェル位置対照は2/12（同点10件）。選んだ有利な条件での技術的なラベル照合で、身近な成分・食品・抗がん効果を示すものではありません。前の2成分の陰性結果は保持しています。[日本語](https://yuu-honda.github.io/maen-results/rna.html#positive-controls) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#positive-controls) / [公開集計](data/rna-positive-summary.json) / [検査記録](reviews/rna-positive-2026-10-24.md)。
 
 **2026-10-24：同じ2020版の追加照合は、実RNA3/6・入替え対照3/6（両方MRR0.75）でした。** 実RNAは全6件でケルセチン側を上位にしており、今回の条件でRNAの利点は示せませんでした。[日本語の追加結果](https://yuu-honda.github.io/maen-results/rna.html#current-release) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#current-release) / [公開集計](data/rna-current-summary.json)。旧結果・未実施記録・全8例を保持しています。
