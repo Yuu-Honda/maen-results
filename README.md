@@ -1,5 +1,7 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-10-28：**測定項目と旧978遺伝子の「対応辞書」を監査しました。** 別研究の注釈候補と22,484/22,537項目が名前で一致し、53は未対応。旧978では両ID一致976、Entrezのみ2、ID衝突0。両ID一致の112遺伝子は複数probeで、値の集約は未実施です。Probe_ID照合0も併記します。元研究固有のmanifest・配列・lotや研究間尺度、食品・治療の効果は確認していません。RNA数値を解釈・再採点せず、既存結果とスクロール表示を保持しています。[日本語](https://yuu-honda.github.io/maen-results/rna.html#gene-correspondence) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#gene-correspondence) / [集計JSON](data/rna-gene-correspondence.json)。
+
 2026-10-28：**別の元研究内で、27投与条件のRNA逆検索を追加しました。** 単独1位50/324（15.43%）、20入替平均4.49%。一方、濃度＋配置の対照は5位以内とMRRでRNAを上回り、濃度だけの同点配分14.81%に対してRNA15.43%でした。caffeineの条件一致は1/36。旧2成分モデルの外部検証、食品や治療の効果には結びつけません。旧結果・CSS・スクロール表示は保持します。[日本語](https://yuu-honda.github.io/maen-results/rna.html#tempo-retrieval) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#tempo-retrieval) / [集計JSON](data/rna-tempo-summary.json)。
 
 Within-study retrieval in a different source dataset retains 324 queries and 27 treatment conditions. RNA unique top1 is 50/324 (15.43%) versus a 4.49% mean across 20 coordinate permutations. Joint dose/position wins on top5 and MRR; dose-only fractional top1 is 14.81% versus RNA 15.43%. Caffeine exact-condition recovery is 1/36. This does not validate the earlier model across studies or establish food/treatment benefit. Earlier results and scroll behavior are preserved.
