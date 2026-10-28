@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "method_id": "rna-cross-assay-preflight-public-v1",
+  "status": "no_go_for_registered_external_retrieval",
+  "numeric_execution_authorized": false,
+  "rna_values_read": false,
+  "rna_rescoring_performed": false,
+  "source_manifest_status": "unconfirmed",
+  "condition_audit": {
+    "shared_compound_labels": 1,
+    "old_catalog_caffeine_signature_records": 42,
+    "current_metadata_same_cell_6h_caffeine_records": 12,
+    "current_metadata_exact_dose_records": 0
+  },
+  "provenance": {
+    "contract_sha256": "ecec42d7e56957d2f9462e527c6d241e285fbff611d0f4cfcabccf6c2ebcc86e",
+    "condition_audit_sha256": "4ca71d4475bc17a4d0ce8fb9501ee2d1672a5db56eff3cb779dbeabe97305072",
+    "manifest_search_sha256": "3d124fbe7a5b8578931a2ccf35dce9619dbdd6c59ff552b51fc5303ec97042c1",
+    "preflight_input_sha256": "a91102bfeb899d1ebfac2bc6e684099d647e9a5b4b628d1fbdddeaf912ad34c0",
+    "preflight_output_sha256": "e5da2068274e0aa04a628bb13c758f58ea14fe4d728afaaf9f1ab5b23022b783",
+    "preflight_code_sha256": "ed1393ee2789bad7922daa001f0209fc8dfca36f1fe7799bfcfe5cb6680375a5"
+  }
+}
