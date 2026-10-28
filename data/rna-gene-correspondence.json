@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "method_id": "tempo-gene-correspondence-public-v1",
+  "source_method_id": "tempo-gene-correspondence-v1",
+  "scope": "Post-result non-performance reference-label audit; no gene-level count collapse or RNA scoring",
+  "primary_set": "Intersection of exact native labels across every source",
+  "secondary_set": "Union of exact native labels, reported separately from the common set",
+  "counts": {
+    "sources": 4,
+    "annotation_probes": 22537,
+    "landmark_genes": 978,
+    "native_feature_occurrences": 90148,
+    "common_native_labels": 22537,
+    "union_native_labels": 22537,
+    "reference_sequence_length": 50
+  },
+  "annotation_statistics": {
+    "probe_count": 22537,
+    "unique_entrez_gene_count": 19638,
+    "unique_ensembl_gene_count": 19618,
+    "unique_nonempty_symbol_count": 19703,
+    "missing_entrez_probe_count": 66,
+    "missing_ensembl_probe_count": 121,
+    "missing_both_ids_probe_count": 47,
+    "entrez_single_probe_gene_count": 17441,
+    "entrez_multiple_probe_gene_count": 2197,
+    "ensembl_single_probe_gene_count": 17451,
+    "ensembl_multiple_probe_gene_count": 2167,
+    "entrez_to_multiple_ensembl_gene_count": 1,
+    "ensembl_to_multiple_entrez_gene_count": 0,
+    "symbol_to_multiple_entrez_count": 0,
+    "symbol_to_multiple_ensembl_count": 1
+  },
+  "key_namespaces_audited": [
+    "Probe_Name",
+    "Probe_ID"
+  ],
+  "index_order_used_as_lookup": false,
+  "alias_lookup_used": false,
+  "symbol_used_as_join_key": false,
+  "study_specific_manifest_confirmed": false,
+  "actual_probe_sequence_equivalence_confirmed": false,
+  "actual_sample_probe_identity_confirmed": false,
+  "cross_study_numeric_compatibility_evaluated": false,
+  "biological_effect_evaluated": false,
+  "RNA_performance_evaluated": false,
+  "blinded_to_prior_results": false,
+  "namespaces": {
+    "Probe_Name": {
+      "source_totals": {
+        "source_count": 4,
+        "native_feature_occurrences": 90148,
+        "matched_feature_occurrences": 89936,
+        "unmatched_feature_occurrences": 212,
+        "fully_covered_source_count": 0,
+        "every_source_fully_covered": false,
+        "source_landmark_gene_denominator": 3912,
+        "source_landmark_status_totals": {
+          "cross_namespace_conflict": 0,
+          "concordant_pair": 3904,
+          "single_namespace_only": 8,
+          "absent": 0
+        }
+      },
+      "primary_common": {
+        "native_label_count": 22537,
+        "matched_probe_count": 22484,
+        "unmatched_label_count": 53,
+        "fully_covered": false,
+        "gene_annotation_stats": {
+          "probe_count": 22484,
+          "unique_entrez_gene_count": 19607,
+          "unique_ensembl_gene_count": 19570,
+          "unique_nonempty_symbol_count": 19654,
+          "missing_entrez_probe_count": 47,
+          "missing_ensembl_probe_count": 120,
+          "missing_both_ids_probe_count": 46,
+          "entrez_single_probe_gene_count": 17413,
+          "entrez_multiple_probe_gene_count": 2194,
+          "ensembl_single_probe_gene_count": 17407,
+          "ensembl_multiple_probe_gene_count": 2163,
+          "entrez_to_multiple_ensembl_gene_count": 1,
+          "ensembl_to_multiple_entrez_gene_count": 0,
+          "symbol_to_multiple_entrez_count": 0,
+          "symbol_to_multiple_ensembl_count": 1
+        },
+        "landmark_stats": {
+          "landmark_gene_count": 978,
+          "status_counts": {
+            "cross_namespace_conflict": 0,
+            "concordant_pair": 976,
+            "single_namespace_only": 2,
+            "absent": 0
+          },
+          "concordant_single_probe_gene_count": 864,
+          "concordant_multiple_probe_gene_count": 112,
+          "pair_candidate_probe_count": 1125,
+          "single_namespace_entrez_only_gene_count": 2,
+          "single_namespace_ensembl_only_gene_count": 0,
+          "single_namespace_both_sides_separate_probes_gene_count": 0,
+          "genes_with_missing_id_candidates_count": 3,
+          "missing_id_candidate_probe_count": 3,
+          "cross_namespace_conflict_probe_count": 0,
+          "cross_namespace_conflict_probe_association_count": 0,
+          "symbol_disagreement_gene_count": 2,
+          "symbol_disagreement_probe_count": 2,
+          "genes_with_missing_symbols_count": 0
+        }
+      },
+      "secondary_union": {
+        "native_label_count": 22537,
+        "matched_probe_count": 22484,
+        "unmatched_label_count": 53,
+        "fully_covered": false,
+        "gene_annotation_stats": {
+          "probe_count": 22484,
+          "unique_entrez_gene_count": 19607,
+          "unique_ensembl_gene_count": 19570,
+          "unique_nonempty_symbol_count": 19654,
+          "missing_entrez_probe_count": 47,
+          "missing_ensembl_probe_count": 120,
+          "missing_both_ids_probe_count": 46,
+          "entrez_single_probe_gene_count": 17413,
+          "entrez_multiple_probe_gene_count": 2194,
+          "ensembl_single_probe_gene_count": 17407,
+          "ensembl_multiple_probe_gene_count": 2163,
+          "entrez_to_multiple_ensembl_gene_count": 1,
+          "ensembl_to_multiple_entrez_gene_count": 0,
+          "symbol_to_multiple_entrez_count": 0,
+          "symbol_to_multiple_ensembl_count": 1
+        },
+        "landmark_stats": {
+          "landmark_gene_count": 978,
+          "status_counts": {
+            "cross_namespace_conflict": 0,
+            "concordant_pair": 976,
+            "single_namespace_only": 2,
+            "absent": 0
+          },
+          "concordant_single_probe_gene_count": 864,
+          "concordant_multiple_probe_gene_count": 112,
+          "pair_candidate_probe_count": 1125,
+          "single_namespace_entrez_only_gene_count": 2,
+          "single_namespace_ensembl_only_gene_count": 0,
+          "single_namespace_both_sides_separate_probes_gene_count": 0,
+          "genes_with_missing_id_candidates_count": 3,
+          "missing_id_candidate_probe_count": 3,
+          "cross_namespace_conflict_probe_count": 0,
+          "cross_namespace_conflict_probe_association_count": 0,
+          "symbol_disagreement_gene_count": 2,
+          "symbol_disagreement_probe_count": 2,
+          "genes_with_missing_symbols_count": 0
+        }
+      }
+    },
+    "Probe_ID": {
+      "source_totals": {
+        "source_count": 4,
+        "native_feature_occurrences": 90148,
+        "matched_feature_occurrences": 0,
+        "unmatched_feature_occurrences": 90148,
+        "fully_covered_source_count": 0,
+        "every_source_fully_covered": false,
+        "source_landmark_gene_denominator": 3912,
+        "source_landmark_status_totals": {
+          "cross_namespace_conflict": 0,
+          "concordant_pair": 0,
+          "single_namespace_only": 0,
+          "absent": 3912
+        }
+      },
+      "primary_common": {
+        "native_label_count": 22537,
+        "matched_probe_count": 0,
+        "unmatched_label_count": 22537,
+        "fully_covered": false,
+        "gene_annotation_stats": {
+          "probe_count": 0,
+          "unique_entrez_gene_count": 0,
+          "unique_ensembl_gene_count": 0,
+          "unique_nonempty_symbol_count": 0,
+          "missing_entrez_probe_count": 0,
+          "missing_ensembl_probe_count": 0,
+          "missing_both_ids_probe_count": 0,
+          "entrez_single_probe_gene_count": 0,
+          "entrez_multiple_probe_gene_count": 0,
+          "ensembl_single_probe_gene_count": 0,
+          "ensembl_multiple_probe_gene_count": 0,
+          "entrez_to_multiple_ensembl_gene_count": 0,
+          "ensembl_to_multiple_entrez_gene_count": 0,
+          "symbol_to_multiple_entrez_count": 0,
+          "symbol_to_multiple_ensembl_count": 0
+        },
+        "landmark_stats": {
+          "landmark_gene_count": 978,
+          "status_counts": {
+            "cross_namespace_conflict": 0,
+            "concordant_pair": 0,
+            "single_namespace_only": 0,
+            "absent": 978
+          },
+          "concordant_single_probe_gene_count": 0,
+          "concordant_multiple_probe_gene_count": 0,
+          "pair_candidate_probe_count": 0,
+          "single_namespace_entrez_only_gene_count": 0,
+          "single_namespace_ensembl_only_gene_count": 0,
+          "single_namespace_both_sides_separate_probes_gene_count": 0,
+          "genes_with_missing_id_candidates_count": 0,
+          "missing_id_candidate_probe_count": 0,
+          "cross_namespace_conflict_probe_count": 0,
+          "cross_namespace_conflict_probe_association_count": 0,
+          "symbol_disagreement_gene_count": 0,
+          "symbol_disagreement_probe_count": 0,
+          "genes_with_missing_symbols_count": 0
+        }
+      },
+      "secondary_union": {
+        "native_label_count": 22537,
+        "matched_probe_count": 0,
+        "unmatched_label_count": 22537,
+        "fully_covered": false,
+        "gene_annotation_stats": {
+          "probe_count": 0,
+          "unique_entrez_gene_count": 0,
+          "unique_ensembl_gene_count": 0,
+          "unique_nonempty_symbol_count": 0,
+          "missing_entrez_probe_count": 0,
+          "missing_ensembl_probe_count": 0,
+          "missing_both_ids_probe_count": 0,
+          "entrez_single_probe_gene_count": 0,
+          "entrez_multiple_probe_gene_count": 0,
+          "ensembl_single_probe_gene_count": 0,
+          "ensembl_multiple_probe_gene_count": 0,
+          "entrez_to_multiple_ensembl_gene_count": 0,
+          "ensembl_to_multiple_entrez_gene_count": 0,
+          "symbol_to_multiple_entrez_count": 0,
+          "symbol_to_multiple_ensembl_count": 0
+        },
+        "landmark_stats": {
+          "landmark_gene_count": 978,
+          "status_counts": {
+            "cross_namespace_conflict": 0,
+            "concordant_pair": 0,
+            "single_namespace_only": 0,
+            "absent": 978
+          },
+          "concordant_single_probe_gene_count": 0,
+          "concordant_multiple_probe_gene_count": 0,
+          "pair_candidate_probe_count": 0,
+          "single_namespace_entrez_only_gene_count": 0,
+          "single_namespace_ensembl_only_gene_count": 0,
+          "single_namespace_both_sides_separate_probes_gene_count": 0,
+          "genes_with_missing_id_candidates_count": 0,
+          "missing_id_candidate_probe_count": 0,
+          "cross_namespace_conflict_probe_count": 0,
+          "cross_namespace_conflict_probe_association_count": 0,
+          "symbol_disagreement_gene_count": 0,
+          "symbol_disagreement_probe_count": 0,
+          "genes_with_missing_symbols_count": 0
+        }
+      }
+    }
+  },
+  "crossstudy_scale_compatibility_tested": false,
+  "future_probe_collapse_defined": false,
+  "rna_values_numeric_parsed": false,
+  "native_sources_audit": {
+    "source_count": 4,
+    "all_source_sets_equal": true,
+    "all_source_orders_equal": true,
+    "original_gzip_hashes_unchanged_before_after": true
+  },
+  "provenance": {
+    "plan_sha256": "1d3201c73aac3bb29b163d31424e18e76e1e8afdfe7c35289b39b8012977d14d",
+    "freeze_sha256": "709d82db867f2c0883120542d3b47a3e9ec69bb00275e06e1c89a6a94eb8377a",
+    "registration_commit": "3c61c04536222bb6afaa754fd22160c3c4a2d755",
+    "inputs_sha256": {
+      "annotation": "768442ddd8cd92c2e59c4056ebac1bb2432d57ec70a2e2345871b92bebb4c0aa",
+      "geneinfo": "e739d06bad42ff9285c00b778e65d8999425062a3375cc7e7cdab0e7154490b5",
+      "cohort": "a0de152e62635dfa2e875e655ae112283bbfdd9aa01d1656fec899c57fcb1de7",
+      "original_acquisition": "03ea5c5b26fa3872a6b8d6cd3872466cb192136c48e7f25fa9b83783e64414f0",
+      "original_schema": "1be15a0e2baae11bdc294470ee15bed54fd10e249be71b29a1bcd607eba75422"
+    },
+    "core_sha256": "abcadded07aa02a7293aabbac1ed4fd9751511bd55c4568bac10b0110dbc064f"
+  }
+}
