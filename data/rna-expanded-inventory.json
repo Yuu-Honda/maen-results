@@ -1,0 +1,1327 @@
+{
+  "schema_version": 1,
+  "method_id": "rna-expanded-inventory-public-v1",
+  "status": "no_matched_multicompound_panel_established",
+  "numeric_execution_authorized": false,
+  "rna_values_read": false,
+  "rna_rescoring_performed": false,
+  "scope": {
+    "population_note": "All chemical annotations and signature metadata in the two pinned LINCS2020 beta files, compared with the fixed nine-compound TempO cohort. This expands the previous old five-compound catalog / saved two-compound metadata audit; earlier results retain their original populations. Not all LINCS releases or all studies worldwide.",
+    "nominal_cell_labels_note": "HepG2 maps to HEPG2; MCF7, A549 and iCAR are literal nominal labels. Labels do not establish shared cell stock, passage, culture, vehicle or treatment context.",
+    "count_note": "Metadata records, unique signature identifiers and distinct nominal cell/time/dose conditions are separate counts, not independent experiments or numeric-file membership.",
+    "identity_note": "Strict full InChIKey, canonical isomeric graph and self-consistency of source annotations identify reference-molecule candidates, not physical TempO reagent form, purity or lot.",
+    "zero_note": "Zero means no match within these fixed metadata files, not inactivity, absent measurements worldwide, or no possible future use.",
+    "vehicle_context_note": "The selected siginfo fields do not verify vehicle or culture context. The last gate remains unverified, not inferred from labels.",
+    "prior_results_known": true,
+    "original_manifest_status": "unconfirmed",
+    "food_or_treatment_effects_evaluated": false
+  },
+  "source_counts": {
+    "compound_annotation_rows": 39321,
+    "signature_metadata_rows": 1201944
+  },
+  "totals": {
+    "target_count": 9,
+    "structurally_annotated_targets": 6,
+    "same_cell_six_hour_targets": 4,
+    "all_rna_metadata_records": 914,
+    "nominal_cell": 143,
+    "six_hours": 22,
+    "exact_dose": 0,
+    "vehicle_and_context_verified": 0,
+    "exact_dose_records": 0,
+    "fixed_panels": 16,
+    "panels_with_two_shared_labels": 0
+  },
+  "targets": [
+    {
+      "compound": "caffeine",
+      "tempo_doses_uM": [
+        "50",
+        "500",
+        "1000"
+      ],
+      "annotation_status": "strict_annotation",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 309,
+          "unique_signature_ids": 309,
+          "distinct_nominal_cell_time_dose_conditions": 285
+        },
+        "nominal_cell": {
+          "records": 71,
+          "unique_signature_ids": 71,
+          "distinct_nominal_cell_time_dose_conditions": 60
+        },
+        "six_hours": {
+          "records": 12,
+          "unique_signature_ids": 12,
+          "distinct_nominal_cell_time_dose_conditions": 7
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "paraxanthine",
+      "tempo_doses_uM": [
+        "50",
+        "500",
+        "1000"
+      ],
+      "annotation_status": "strict_annotation",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 73,
+          "unique_signature_ids": 73,
+          "distinct_nominal_cell_time_dose_conditions": 73
+        },
+        "nominal_cell": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "six_hours": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "theobromine",
+      "tempo_doses_uM": [
+        "50",
+        "500",
+        "1000"
+      ],
+      "annotation_status": "strict_annotation",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 244,
+          "unique_signature_ids": 244,
+          "distinct_nominal_cell_time_dose_conditions": 236
+        },
+        "nominal_cell": {
+          "records": 26,
+          "unique_signature_ids": 26,
+          "distinct_nominal_cell_time_dose_conditions": 25
+        },
+        "six_hours": {
+          "records": 1,
+          "unique_signature_ids": 1,
+          "distinct_nominal_cell_time_dose_conditions": 1
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "theophylline",
+      "tempo_doses_uM": [
+        "50",
+        "500",
+        "1000"
+      ],
+      "annotation_status": "strict_annotation",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 248,
+          "unique_signature_ids": 248,
+          "distinct_nominal_cell_time_dose_conditions": 238
+        },
+        "nominal_cell": {
+          "records": 37,
+          "unique_signature_ids": 37,
+          "distinct_nominal_cell_time_dose_conditions": 33
+        },
+        "six_hours": {
+          "records": 3,
+          "unique_signature_ids": 3,
+          "distinct_nominal_cell_time_dose_conditions": 2
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "4-HBA",
+      "tempo_doses_uM": [
+        "1",
+        "50",
+        "500"
+      ],
+      "annotation_status": "no_strict_annotation_candidate",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "nominal_cell": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "six_hours": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "methylparaben",
+      "tempo_doses_uM": [
+        "1",
+        "50",
+        "500"
+      ],
+      "annotation_status": "strict_annotation",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 12,
+          "unique_signature_ids": 12,
+          "distinct_nominal_cell_time_dose_conditions": 12
+        },
+        "nominal_cell": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "six_hours": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "ethylparaben",
+      "tempo_doses_uM": [
+        "1",
+        "50",
+        "500"
+      ],
+      "annotation_status": "no_strict_annotation_candidate",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "nominal_cell": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "six_hours": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "propylparaben",
+      "tempo_doses_uM": [
+        "1",
+        "50",
+        "500"
+      ],
+      "annotation_status": "no_strict_annotation_candidate",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "nominal_cell": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "six_hours": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    },
+    {
+      "compound": "butylparaben",
+      "tempo_doses_uM": [
+        "1",
+        "50",
+        "500"
+      ],
+      "annotation_status": "strict_annotation",
+      "physical_sample_identity_verified": false,
+      "stages": {
+        "all_rna_metadata_records": {
+          "records": 28,
+          "unique_signature_ids": 28,
+          "distinct_nominal_cell_time_dose_conditions": 20
+        },
+        "nominal_cell": {
+          "records": 9,
+          "unique_signature_ids": 9,
+          "distinct_nominal_cell_time_dose_conditions": 5
+        },
+        "six_hours": {
+          "records": 6,
+          "unique_signature_ids": 6,
+          "distinct_nominal_cell_time_dose_conditions": 3
+        },
+        "exact_dose": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        },
+        "vehicle_and_context_verified": {
+          "records": 0,
+          "unique_signature_ids": 0,
+          "distinct_nominal_cell_time_dose_conditions": 0
+        }
+      },
+      "other_routes": {
+        "unresolved_annotation_candidate": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        },
+        "literal_name_only": {
+          "all_rna_metadata_records": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "nominal_cell": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "six_hours": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "exact_dose": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          },
+          "vehicle_and_context_verified": {
+            "records": 0,
+            "unique_signature_ids": 0,
+            "distinct_nominal_cell_time_dose_conditions": 0
+          }
+        }
+      }
+    }
+  ],
+  "panels": [
+    {
+      "nominal_cell": "A549",
+      "time_h": "6",
+      "dose_uM": "1",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "ethylparaben",
+        "methylparaben",
+        "propylparaben"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "A549",
+      "time_h": "6",
+      "dose_uM": "50",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "A549",
+      "time_h": "6",
+      "dose_uM": "500",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "A549",
+      "time_h": "6",
+      "dose_uM": "1000",
+      "tempo_eligible_labels": [
+        "caffeine",
+        "paraxanthine",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "HEPG2",
+      "time_h": "6",
+      "dose_uM": "1",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "ethylparaben",
+        "methylparaben",
+        "propylparaben"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "HEPG2",
+      "time_h": "6",
+      "dose_uM": "50",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "HEPG2",
+      "time_h": "6",
+      "dose_uM": "500",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "HEPG2",
+      "time_h": "6",
+      "dose_uM": "1000",
+      "tempo_eligible_labels": [
+        "caffeine",
+        "paraxanthine",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "MCF7",
+      "time_h": "6",
+      "dose_uM": "1",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "ethylparaben",
+        "methylparaben",
+        "propylparaben"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "MCF7",
+      "time_h": "6",
+      "dose_uM": "50",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "MCF7",
+      "time_h": "6",
+      "dose_uM": "500",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "MCF7",
+      "time_h": "6",
+      "dose_uM": "1000",
+      "tempo_eligible_labels": [
+        "caffeine",
+        "paraxanthine",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "iCAR",
+      "time_h": "6",
+      "dose_uM": "1",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "ethylparaben",
+        "methylparaben",
+        "propylparaben"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "iCAR",
+      "time_h": "6",
+      "dose_uM": "50",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "iCAR",
+      "time_h": "6",
+      "dose_uM": "500",
+      "tempo_eligible_labels": [
+        "4-HBA",
+        "butylparaben",
+        "caffeine",
+        "ethylparaben",
+        "methylparaben",
+        "paraxanthine",
+        "propylparaben",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    },
+    {
+      "nominal_cell": "iCAR",
+      "time_h": "6",
+      "dose_uM": "1000",
+      "tempo_eligible_labels": [
+        "caffeine",
+        "paraxanthine",
+        "theobromine",
+        "theophylline"
+      ],
+      "strict_shared_labels": [],
+      "strict_shared_label_count": 0
+    }
+  ],
+  "external_sources": {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-29T01:58:47.826654+00:00",
+    "checked_local_date": "2026-10-29 Asia/Tokyo",
+    "kind": "public_aggregate_external_condition_inventory",
+    "status": "ADDITIONAL_CANDIDATES_IDENTIFIED_BUT_NO_READY_EXACT_CONDITION_MULTI_COMPOUND_VALIDATION",
+    "scope": {
+      "metadata_only": true,
+      "rna_values_acquired_or_parsed": false,
+      "normalization_or_scoring_performed": false,
+      "numerical_execution_authorized_by_this_summary": false,
+      "individual_identifiers_or_contact_details_included": false,
+      "discovery_is_not_blinded_to_previous_study_summaries": true
+    },
+    "baseline": {
+      "accession": "GSE218902",
+      "primary_urls": [
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218902",
+        "https://www.frontiersin.org/journals/toxicology/articles/10.3389/ftox.2022.1082222/full"
+      ],
+      "assay": "TempO-Seq human whole transcriptome version 2.0; original reference manifest unresolved",
+      "nominal_cells": [
+        "HepG2",
+        "MCF7",
+        "A549",
+        "iCAR"
+      ],
+      "rna_exposure_h": 6,
+      "culture_background": "For the HepG2 comparison: phenol-red-free DMEM with 10% serum and 0.1% DMSO"
+    },
+    "finite_search": {
+      "fixed_compound_names": [
+        "caffeine",
+        "paraxanthine",
+        "theobromine",
+        "theophylline",
+        "4-hydroxybenzoic-acid",
+        "methylparaben",
+        "ethylparaben",
+        "propylparaben",
+        "butylparaben"
+      ],
+      "discovery_scope": "Human GEO Series, quoted chemical names and explicitly declared synonyms, followed by selected primary study metadata and methods",
+      "limits": "Name indexing does not establish treatment identity, chemical structure, purity, lot or a complete condition panel. This finite search does not prove absence from other public or private sources; a complete BioStudies/ArrayExpress inventory was not acquired."
+    },
+    "external_candidates": [
+      {
+        "accession": "GSE200441",
+        "primary_urls": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE200441",
+          "https://pubmed.ncbi.nlm.nih.gov/36427571/"
+        ],
+        "metadata_checked_at_utc": "2026-10-29T01:52:12.850464+00:00",
+        "nominal_cell": "HepG2",
+        "confirmed_compound_names": [
+          "caffeine"
+        ],
+        "rna_exposure_h": 6,
+        "reported_doses_uM": [
+          0.01,
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ],
+        "nominal_same_cell_time_dose_conditions": 1,
+        "nominal_matching_condition": {
+          "compound": "caffeine",
+          "cell": "HepG2",
+          "time_h": 6,
+          "dose_uM": 1000
+        },
+        "culture_background": "serum-free DMEM; caffeine stock in DMEM",
+        "control": "untreated according to treatment annotations; not matched to the original 0.1% DMSO / 10% serum background",
+        "unresolved_metadata_discrepancy": "The series describes 0 uM of coumarin as the control, whereas treatment annotations describe untreated. The discrepancy is retained, not silently corrected.",
+        "assay": "poly(A) whole RNA-seq; DNBSEQ-G400; GRCh38/Hisat2/DESeq2; exact annotation release not specified",
+        "source_origin_conclusion": "Different study and measurement provenance are supported by checked archive metadata. This is not proof of independent biological material or complete chain of custody, and no independent biological validation is certified.",
+        "single_compound_only": true,
+        "background_context_compatible_with_baseline": false,
+        "multi_compound_retrieval_validation_ready": false,
+        "numerical_analysis_ready": false,
+        "interpretation": "A candidate for a separately planned single-compound contrast across different culture/control backgrounds; it cannot test multi-compound reverse-search accuracy."
+      },
+      {
+        "accession": "GSE262419",
+        "primary_urls": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262419",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11691792/"
+        ],
+        "metadata_checked_at_utc": "2026-10-29T01:52:12.850464+00:00",
+        "nominal_cell": "human iPSC-derived cardiomyocytes",
+        "confirmed_compound_names": [
+          "caffeine",
+          "theophylline",
+          "methylparaben",
+          "ethylparaben",
+          "propylparaben",
+          "butylparaben"
+        ],
+        "condition_coverage": "Six treatment names each have a limited direct annotation witness. Full dose, replicate and control pairing for all six names has not been exhaustively adjudicated.",
+        "reported_rna_exposure_h": 24,
+        "reported_doses_uM": [
+          0.2,
+          1,
+          10
+        ],
+        "reported_vehicle": "0.5% v/v DMSO; distinct media-only controls",
+        "time_caveat": "The 90-minute functional-assay timing is not the RNA exposure time.",
+        "model_identity_caveat": "The nominal cardiomyocyte model is not assumed to have the same donor, lot or material as the original iCAR block.",
+        "assay": "TempO-Seq human whole transcriptome, reported 22,537 probes; STAR mapping description",
+        "original_reference_manifest_substitute": false,
+        "manifest_caveat": "A matching probe count or vendor name does not establish the original GSE218902 manifest, target sequences, annotation release or revision. The checked supplement list did not identify the original reference; absence from private or other sources is not proven.",
+        "background_context_compatible_with_baseline": false,
+        "numerical_analysis_ready": false,
+        "interpretation": "A candidate for a separately planned transfer across conditions or cardiomyocyte response question. It is not exact-condition external validation or evidence of cancer selectivity."
+      },
+      {
+        "accession": "GSE233332",
+        "primary_urls": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE233332",
+          "https://pubmed.ncbi.nlm.nih.gov/37690743/"
+        ],
+        "metadata_checked_at_utc": "2026-10-29T01:52:12.850464+00:00",
+        "nominal_cell": "SBAD2 human iPSC during UKN1 neural differentiation",
+        "confirmed_compound_names": [
+          "methylparaben",
+          "ethylparaben",
+          "propylparaben",
+          "butylparaben"
+        ],
+        "compound_coverage": "Four paraben names are present in the full title inventory; a 1 uM title exists for each. This does not establish complete cross-study condition pairing.",
+        "reported_exposure_h_from_treatment_protocol": 96,
+        "reported_rna_collection_day_from_growth_protocol": 6,
+        "time_caveat": "Day 6 collection and the series summary of concurrent differentiation are not relabeled as six days of exposure.",
+        "control": "0.1% DMSO in the protocol, but controls are titled Untreated; exact contrast pairing remains to be adjudicated",
+        "culture_background": "neural differentiation with SB431542, dorsomorphin and noggin",
+        "assay": "Recorded platform GPL570 / Affymetrix HG-U133 Plus 2.0 / fRMA",
+        "unresolved_assay_wording": "The series also uses Illumina RNA-sequencing wording. The platform/protocol discrepancy is retained and the data are not merged as the same assay.",
+        "background_context_compatible_with_baseline": false,
+        "numerical_analysis_ready": false,
+        "interpretation": "A different developmental differentiation/toxicology context; not restoration to a normal state or validation of the original cancer-cell reverse search."
+      }
+    ],
+    "original_reference_followup": {
+      "source_study": "GSE218902",
+      "metadata_checked_at_utc": "2026-10-29T01:50:13.099509+00:00",
+      "additional_routes": "Official NCBI SRA/BioSample and ENA project, study, submission and experiment metadata; previous publisher/vendor searches were read rather than repeated",
+      "public_sra_experiments_checked": 210,
+      "nominal_cell_counts": {
+        "HepG2": 105,
+        "MCF7": 105
+      },
+      "coverage_limit": "The 210 public SRA experiments do not constitute a new audit of all 420 GEO records; A549/iCAR raw records were not provided according to project metadata.",
+      "study_specific_manifest_or_reference_identified": false,
+      "status": "Unconfirmed within the checked public sources; not proof of global absence",
+      "same_product_name_or_probe_count_proves_identity": false,
+      "reference_gate_opened": false,
+      "draft_request_prepared": true,
+      "draft_request_sent": false,
+      "author_or_vendor_contacts_sent": 0
+    },
+    "overall_interpretation": {
+      "new_multi_compound_exact_condition_panel_ready": false,
+      "rna_numerical_comparison_run": false,
+      "result_is_efficacy_or_clinical_validation": false,
+      "next_requirements": [
+        "Original study-linked probe/lookup/reference file and provenance",
+        "Complete candidate condition/replicate/control inventory",
+        "A separately fixed comparison question, preprocessing, scale, controls and evaluation plan with both-provider review before new numerical execution"
+      ]
+    },
+    "evidence_provenance": [
+      {
+        "path": "reports/rna-expanded-review/original-reference/original-reference-followup-findings-v1.json",
+        "sha256": "3131b44b7fa22e493b64069f2dae7416b132a1fd9618b7aad66db27986031c06"
+      },
+      {
+        "path": "reports/rna-expanded-review/original-reference/sra-reference-audit-v1.json",
+        "sha256": "652e2800e975f26ebebd73ce10c96c8522f467b9bf13f34155ee3ea50f898d5b"
+      },
+      {
+        "path": "reports/rna-expanded-review/external-search/external-condition-inventory-v1.json",
+        "sha256": "fb7871e55024890b94e66f003dd29bbf7e5cd3fc41782e4cb5126e9f363410e4"
+      },
+      {
+        "path": "reports/rna-expanded-review/external-search/metadata-verification-v1.json",
+        "sha256": "252c89d126ceaaa3110e7a3ade2b54074ebfc5edb4ff4a7df035c5e7d8a9c141"
+      }
+    ]
+  },
+  "provenance": {
+    "inventory_sha256": "1958e70e6d51ba61726697d67d22b0790f790f64562835c2cbb44e978012907b",
+    "references_sha256": "281d14c4c6e70d679ba393a57b9739a94b7a8d833c7b193048bf11b383a2b45b",
+    "external_sha256": "1c4a8872b41931448309b69bb9313d38daafb55c80231898f6cf1c73a8ef628e",
+    "plan_sha256": "fd312f04ab70456c0774ca8e18b3f41d3e3fe4e3ba86cb976267ee00eeff6349",
+    "metadata_code_sha256": "de8d79ebee5141cc04dcb6b6f538fdf807f47e99a9cc700664a0b33f0b875e05"
+  }
+}
