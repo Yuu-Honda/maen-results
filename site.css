@@ -14,7 +14,7 @@ button:disabled{cursor:default}
 .container{width:min(1160px,calc(100% - 80px));margin-inline:auto}
 .skip-link{position:fixed;top:8px;left:16px;transform:translateY(-180%);z-index:100;background:var(--surface);padding:9px 18px;border:2px solid var(--teal)}
 .skip-link:focus{transform:none}
-.site-header{position:sticky;top:0;z-index:20;background:rgba(245,243,236,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(245,243,236,.96);border-bottom:1px solid var(--line)}
 .header-inner{min-height:78px;display:flex;align-items:center;gap:36px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-size:22px;font-weight:800;letter-spacing:.12em;flex-shrink:0}
 .brand img{width:30px;height:30px}

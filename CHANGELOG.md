@@ -2,6 +2,10 @@
 
 ## 2026-10-29
 
+- 読みやすさと軽さの改善（全6ページ、研究の数値・本文は変更なし）。点線の専門用語をタップ／クリックすると短い説明が出ます（スマホは下から出るシート、PCは吹き出し）。説明はサイト上の確認済みの言い回しに合わせ、「一次 hit＝細胞死ではない」などの留保も添えました。各節は軽く浮き上がって表示され、主な数値はカウントアップし、上部に読書位置のバーと現在の節の表示を追加しました。JavaScriptなし・動きを減らす設定・印刷では、すべて最終状態のまま表示されます。
+- 動作を軽くしました。画面外に出たヒーロー図のループ動画を停止（ページ途中で静止時のCPU使用：計測で約1.9秒/4秒 → ほぼ0）、スクロール中の図の位置計算をレイアウト変化時だけに変更、ヘッダーのぼかし処理を削除。スクロール連動図は1枚あたり画面の約0.9倍 → 約0.55倍のスクロールで完了します。
+- Lighter, clearer pages (no research values or text changed): tap-to-explain glossary for technical terms (bottom sheet on phones, bubble on wide screens), quick section entrances, count-up for headline figures, a reading-progress bar and current-section highlight. Off-screen hero animation now pauses, scroll-driven figures no longer force layout on every frame, and each pinned figure completes in about 0.55 of a screen instead of 0.9. No-JS, reduced-motion and print keep the static final state.
+
 - 全9成分へmetadata探索を拡張。固定2020 betaの全39,321注釈行・1,201,944署名metadata行から6成分914記録、名目細胞・6時間22記録、濃度一致0を報告。全16組の0件を保持。別施設caffeineの名目1条件と培地・対照の違い、他研究の6／4成分候補も明記。新RNA数値は取得・再採点なし。
 - Add expanded metadata inventory in [Japanese](https://yuu-honda.github.io/maen-results/rna.html#expanded-inventory), [English](https://yuu-honda.github.io/maen-results/rna-en.html#expanded-inventory), [aggregate JSON](data/rna-expanded-inventory.json), and [two-provider review record](reviews/expanded-inventory-2026-10-29.md). Earlier results, shared assets and scroll controls are retained.
 

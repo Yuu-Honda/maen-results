@@ -19,6 +19,8 @@
   let pinned = false;
   let pinTop = 90;
   let distance = 1;
+  let trackTop = 0;
+  let cardGap = 0;
   let current = -1;
   const active = () => !printing && !motion?.matches;
 
@@ -42,13 +44,13 @@
       node.style.transform = `scaleX(${ratio + (1 - ratio) * amounts[0]})`;
     });
     scan.style.transform = `scaleX(${amounts[1]})`;
-    const gap = cards[1].offsetTop - cards[0].offsetTop;
     cards.forEach((card, i) => {
-      const offset = i === 0 ? gap : i === 1 ? -gap : 0;
+      const offset = i === 0 ? cardGap : i === 1 ? -cardGap : 0;
       card.style.transform = `translateY(${offset * (1 - amounts[2])}px)`;
     });
   };
   const reset = () => {
+    cardGap = cards[1].offsetTop - cards[0].offsetTop;
     story.classList.remove('wf-scroll');
     board.classList.remove('wf-flow');
     track.style.height = '';
@@ -58,7 +60,8 @@
     current = -1;
     story.dataset.wfStep = 'static';
   };
-  const start = () => track.getBoundingClientRect().top + window.scrollY - pinTop;
+  // Cached in measure(); scrolling then never forces a synchronous layout.
+  const start = () => trackTop - pinTop;
   const update = () => {
     pending = null;
     if (!active()) return;
@@ -96,8 +99,10 @@
     pinned = height + pinTop + 16 <= window.innerHeight;
     track.dataset.wfPinned = String(pinned);
     board.classList.toggle('wf-flow', !pinned);
-    distance = Math.max(800, Math.round(window.innerHeight * 1.35));
+    distance = Math.max(560, Math.round(window.innerHeight * .95));
     track.style.height = pinned ? `${height + distance}px` : '';
+    trackTop = track.getBoundingClientRect().top + window.scrollY;
+    cardGap = cards[1].offsetTop - cards[0].offsetTop;
     current = -1;
     update();
   };
@@ -115,5 +120,12 @@
   window.addEventListener('afterprint', () => { printing = false; measure(); });
   motion?.addEventListener('change', measure);
   document.fonts?.ready.then(measure);
+  if ('ResizeObserver' in window) {
+    // Content above the story can change height after load (tables, details).
+    let queued = null;
+    new ResizeObserver(() => {
+      if (queued === null) queued = window.requestAnimationFrame(() => { queued = null; measure(); });
+    }).observe(document.body);
+  }
   measure();
 })();
