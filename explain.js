@@ -74,7 +74,9 @@
     if (model.kind === 'sieve') {
       const stages = [phase(p, .08, .28), phase(p, .36, .56), phase(p, .64, .90)];
       f.dataset.step = String(p < .28 ? 0 : p < .56 ? 1 : p < .90 ? 2 : 3);
-      model.dots.forEach(dot => {
+      const key = stages.join();
+      // Hundreds of dots: rewrite them only when a stage actually moved.
+      if (model.stageKey !== key) model.dots.forEach(dot => {
         const drop = !dot.classList.contains('s1') ? stages[0]
           : !dot.classList.contains('s2') ? stages[1]
           : !dot.classList.contains('s3') ? stages[2] : 0;
@@ -83,6 +85,7 @@
         dot.style.opacity = String(1 - drop * .2);
         dot.style.transform = `translateY(${drop * 5}px)`;
       });
+      model.stageKey = key;
       f.querySelectorAll('.ex-ring').forEach(node => { node.style.opacity = String(phase(p, .90, 1) * .85); });
     } else if (model.kind === 'classes') {
       const amount = phase(p, .10, .85);
@@ -135,12 +138,14 @@
   };
 
   const staticState = model => {
+    model.stageKey = null;
     render(model, 1);
     model.figure.classList.remove('ex-scroll-enabled');
     model.figure.querySelectorAll('[style]').forEach(node => {
       // Keep original SVG custom properties and geometry; clear runtime styles.
       ['fill','opacity','transform','stroke','stroke-width'].forEach(key => node.style.removeProperty(key));
     });
+    model.stageKey = null;
     model.figure.dataset.step = 'final';
     if (model.kind === 'rank') rankFrame(model, 'r007');
     if (model.kind === 'separation') {
@@ -150,8 +155,8 @@
   };
 
   const bounds = model => {
-    // Existing aggregate tables can finish loading after window.load. Read
-    // the current document position so those layout shifts cannot stale a range.
+    // Read on layout changes only. Late layout shifts (tables, fonts, opened
+    // details) resize the body, and the ResizeObserver below re-measures.
     const top = Number(model.track.dataset.pinTop);
     model.start = model.track.getBoundingClientRect().top + window.scrollY - top;
     model.track.dataset.start = String(model.start);
@@ -169,7 +174,7 @@
       const pinned = active && height + top + 16 <= viewport;
       // Short landscape windows retain ordinary document flow instead of
       // pinning a diagram taller than the visible screen.
-      model.distance = pinned ? Math.max(480, Math.round(viewport * .90)) : Math.max(1, viewport * .80 - top);
+      model.distance = pinned ? Math.max(320, Math.round(viewport * .55)) : Math.max(1, viewport * .80 - top);
       model.track.dataset.pinned = String(pinned);
       model.track.style.setProperty('--ex-pin-top', `${top}px`);
       model.track.style.height = active && pinned ? `${height + model.distance}px` : '';
@@ -186,7 +191,6 @@
     lastScroll = scroll;
     if (reduced() || printing) return;
     models.forEach(model => {
-      bounds(model);
       const p = clamp((scroll - model.start) / model.distance);
       if (p !== model.progress) render(model, p);
     });

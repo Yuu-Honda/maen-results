@@ -1,0 +1,37 @@
+/* Tap-to-explain terms. Buttons are added by glossary.js only. */
+.gl-term,.gl-pop{--gl-accent:#14635b;--gl-ink:#143c3a;--gl-muted:#566c67;--gl-line:#d6ddd5;--gl-surface:#fffefa;--gl-soft:#eaf1eb}
+.gl-term{display:inline;margin:0;padding:0 1px;border:0;border-radius:3px;background:none;color:inherit;font:inherit;line-height:inherit;letter-spacing:inherit;text-align:inherit;text-decoration:underline dotted 1.5px;text-decoration-color:color-mix(in srgb,currentColor 55%,transparent);text-underline-offset:4px;cursor:help;transition:background-color .15s ease,text-decoration-color .15s ease}
+.gl-term:hover,.gl-term[aria-expanded="true"]{background:color-mix(in srgb,currentColor 11%,transparent);text-decoration-color:currentColor}
+.gl-term:focus-visible{outline:2px solid #a35235;outline-offset:2px}
+.gl-hint{display:flex;align-items:center;gap:9px;margin:10px 0 24px;font-size:12.5px;line-height:1.6;opacity:.9}
+.hero-lead+.gl-hint{margin-top:-14px}
+.gl-hint-mark{display:inline-grid;place-items:center;flex:none;width:20px;height:20px;border:1.5px dotted currentColor;border-radius:50%;font-size:11px;font-weight:800;line-height:1}
+
+.gl-pop{position:fixed;z-index:60;top:0;left:0;width:min(360px,calc(100vw - 24px));color:var(--gl-ink);opacity:0;transform:translateY(6px) scale(.98);transform-origin:50% 0;transition:opacity .16s ease,transform .18s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.gl-pop[data-side="above"]{transform-origin:50% 100%;transform:translateY(-6px) scale(.98)}
+.gl-pop.is-open{opacity:1;transform:none;pointer-events:auto}
+.gl-pop[hidden]{display:none}
+.gl-card{position:relative;padding:16px 44px 16px 18px;background:var(--gl-surface);border:1px solid var(--gl-line);border-radius:10px;box-shadow:0 14px 38px rgba(16,63,59,.18),0 2px 6px rgba(16,63,59,.08);font:14px/1.75 system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;text-align:left;outline:none}
+.gl-kicker{margin:0 0 2px;font-size:10.5px;font-weight:750;letter-spacing:.14em;color:var(--gl-accent)}
+.gl-title{margin:0 0 6px;font-size:17px;font-weight:750;line-height:1.45}
+.gl-def{margin:0}
+.gl-row{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:10px 0 0;padding-top:10px;border-top:1px solid var(--gl-line);font-size:13px;line-height:1.7;color:var(--gl-muted)}
+.gl-row[hidden]{display:none}
+.gl-row>span:first-child{font-size:10.5px;font-weight:750;line-height:2.1;letter-spacing:.06em;white-space:nowrap;color:var(--gl-accent)}
+.gl-site>span:first-child{color:#a35235}
+.gl-close{position:absolute;top:8px;right:8px;display:grid;place-items:center;width:32px;height:32px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--gl-muted);font-size:21px;line-height:1;cursor:pointer}
+.gl-close:hover{background:var(--gl-soft);color:var(--gl-ink)}
+.gl-close:focus-visible{outline:2px solid #a35235;outline-offset:1px}
+.gl-arrow{position:absolute;top:-6px;width:12px;height:12px;margin-left:-6px;background:var(--gl-surface);border:1px solid var(--gl-line);border-right:0;border-bottom:0;transform:rotate(45deg)}
+.gl-pop[data-side="above"] .gl-arrow{top:auto;bottom:-6px;transform:rotate(225deg)}
+
+/* Small screens: a sheet from the bottom edge, thumb-reachable. */
+.gl-pop[data-mode="sheet"]{top:auto!important;left:0!important;right:0;bottom:0;width:100%;transform:translateY(100%);transition:opacity .14s ease,transform .22s cubic-bezier(.2,.8,.2,1)}
+.gl-pop[data-mode="sheet"].is-open{transform:none}
+.gl-pop[data-mode="sheet"] .gl-arrow{display:none}
+.gl-pop[data-mode="sheet"] .gl-card{max-height:min(62vh,460px);overflow:auto;padding:22px 48px calc(20px + env(safe-area-inset-bottom)) 20px;border-radius:16px 16px 0 0;border-bottom:0;box-shadow:0 -10px 34px rgba(16,63,59,.2)}
+.gl-pop[data-mode="sheet"] .gl-card::before{content:"";position:absolute;top:8px;left:50%;width:38px;height:4px;margin-left:-19px;border-radius:2px;background:var(--gl-line)}
+.gl-pop[data-mode="sheet"] .gl-close{top:12px;right:10px}
+
+@media(prefers-reduced-motion:reduce){.gl-term,.gl-pop,.gl-pop[data-mode="sheet"]{transition:none!important}.gl-pop{transform:none!important}}
+@media print{.gl-pop,.gl-hint{display:none!important}.gl-term{text-decoration:none;padding:0}}

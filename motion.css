@@ -1,0 +1,21 @@
+/* Page motion added by motion.js. Without the script nothing here hides content. */
+.mo-progress{position:fixed;z-index:40;top:0;left:0;right:0;height:3px;pointer-events:none}
+.mo-progress i{display:block;height:100%;background:linear-gradient(90deg,#1a9a74,#2a78d6);transform:scaleX(0);transform-origin:left center}
+
+/* Off-screen hero drawing does not need to keep animating. */
+.hero.mo-paused,.hero.mo-paused *,.hero.mo-paused::before,.hero.mo-paused::after,
+.hero.mo-paused-tab,.hero.mo-paused-tab *,.hero.mo-paused-tab::before,.hero.mo-paused-tab::after{animation-play-state:paused!important}
+
+/* Current section in the top navigation. */
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.nav-links a[aria-current="location"]::after{transform:scaleX(1)}
+
+/* Entrance: quick fade and rise. */
+.mo-rv{opacity:0;transform:translateY(18px)}
+.mo-rv.mo-in{opacity:1;transform:none;transition:opacity .45s ease var(--mo-delay,0ms),transform .55s cubic-bezier(.2,.8,.2,1) var(--mo-delay,0ms)}
+.mo-counting{font-variant-numeric:tabular-nums}
+
+@media(max-width:780px){.nav-links a::after{display:none}}
+@media(prefers-reduced-motion:reduce){.mo-rv{opacity:1!important;transform:none!important}.nav-links a::after{transition:none}}
+@media print{.mo-progress{display:none}.mo-rv{opacity:1!important;transform:none!important}}
