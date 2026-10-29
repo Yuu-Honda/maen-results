@@ -1,5 +1,9 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-10-29：全9成分のmetadata在庫を拡張。構造注釈候補6成分、名目細胞・6時間で4成分22記録、濃度一致0。別元実験の候補と条件差も併記します。RNA数値・食品や治療効果は評価していません。[日本語](https://yuu-honda.github.io/maen-results/rna.html#expanded-inventory) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#expanded-inventory) / [集計JSON](data/rna-expanded-inventory.json) / [二社検査記録](reviews/expanded-inventory-2026-10-29.md)。
+
+Expanded to all pinned LINCS2020 beta metadata: six structurally annotated compounds, 22 same-cell-label/6 h records for four compounds, and zero exact-dose matches. External source candidates have differing conditions. No new RNA scoring or food/treatment efficacy evaluation.
+
 2026-10-29: Added bilingual [cross-assay connection checks](https://yuu-honda.github.io/maen-results/rna.html#cross-assay-preflight): one shared compound, no matched caffeine doses in the checked inventory, original manifest unconfirmed. Metadata checks only; no new RNA values or retrieval scores. Previous results and scroll controls are preserved.
 
 2026-10-28：**測定項目と旧978遺伝子の「対応辞書」を監査しました。** 別研究の注釈候補と22,484/22,537項目が名前で一致し、53は未対応。旧978では両ID一致976、Entrezのみ2、ID衝突0。両ID一致の112遺伝子は複数probeで、値の集約は未実施です。Probe_ID照合0も併記します。元研究固有のmanifest・配列・lotや研究間尺度、食品・治療の効果は確認していません。RNA数値を解釈・再採点せず、既存結果とスクロール表示を保持しています。[日本語](https://yuu-honda.github.io/maen-results/rna.html#gene-correspondence) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#gene-correspondence) / [集計JSON](data/rna-gene-correspondence.json)。

@@ -2,6 +2,9 @@
 
 ## 2026-10-29
 
+- 全9成分へmetadata探索を拡張。固定2020 betaの全39,321注釈行・1,201,944署名metadata行から6成分914記録、名目細胞・6時間22記録、濃度一致0を報告。全16組の0件を保持。別施設caffeineの名目1条件と培地・対照の違い、他研究の6／4成分候補も明記。新RNA数値は取得・再採点なし。
+- Add expanded metadata inventory in [Japanese](https://yuu-honda.github.io/maen-results/rna.html#expanded-inventory), [English](https://yuu-honda.github.io/maen-results/rna-en.html#expanded-inventory), [aggregate JSON](data/rna-expanded-inventory.json), and [two-provider review record](reviews/expanded-inventory-2026-10-29.md). Earlier results, shared assets and scroll controls are retained.
+
 - Add JA/EN metadata-only cross-assay connection checks and aggregate JSON. Distinguish 12 signature records from independent experiments and report zero exact-dose matches within the checked inventory.
 - Preserve prior HTML bytes after removing the marked additions, nine previous RNA aggregate files, shared CSS/JS and scroll-controlled forward/reverse/stopped states.
 - Original-study manifest and numerical cross-assay method remain unconfirmed/unregistered; no RNA reading, rescoring or probe aggregation.
