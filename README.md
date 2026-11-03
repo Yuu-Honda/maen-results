@@ -1,5 +1,9 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-11-03：異条件比較の設計とmetadata点検を追加。全6成分54記録から共通1 µMの4parabenを主設計候補に固定しましたが、選択部分集合の成分／plate表示の交絡と対照・原資料不足が残り、数値実行はHOLDです。[日本語](https://yuu-honda.github.io/maen-results/rna.html#condition-transfer-plan) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#condition-transfer-plan) / [集計JSON](data/rna-transfer-design.json) / [二社検査記録](reviews/condition-transfer-design-2026-11-03.md)。
+
+A metadata-based transfer design retains all six targets and selects four parabens at the shared nominal dose of 1 µM. Compound and recorded plate label remain nested in the selected subset; controls and original references remain unresolved. Numerical preregistration is incomplete; no new RNA scoring or efficacy evaluation. Prior RNA results from the original source are known; this is not blinded design.
+
 2026-10-29：全9成分のmetadata在庫を拡張。構造注釈候補6成分、名目細胞・6時間で4成分22記録、濃度一致0。別元実験の候補と条件差も併記します。RNA数値・食品や治療効果は評価していません。[日本語](https://yuu-honda.github.io/maen-results/rna.html#expanded-inventory) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#expanded-inventory) / [集計JSON](data/rna-expanded-inventory.json) / [二社検査記録](reviews/expanded-inventory-2026-10-29.md)。
 
 Expanded to all pinned LINCS2020 beta metadata: six structurally annotated compounds, 22 same-cell-label/6 h records for four compounds, and zero exact-dose matches. External source candidates have differing conditions. No new RNA scoring or food/treatment efficacy evaluation.

@@ -1,5 +1,11 @@
 # 更新履歴
 
+## 2026-11-03
+
+- Add the [Japanese transfer design](https://yuu-honda.github.io/maen-results/rna.html#condition-transfer-plan) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#condition-transfer-plan), [aggregate JSON](data/rna-transfer-design.json), and [two-provider review record](reviews/condition-transfer-design-2026-11-03.md).
+- 全6対象54処置metadataを照合し、濃度積集合から4paraben・1 µMを主設計候補に固定。選択部分集合での成分／試料名plate表示の交絡、12件のMedia_0_uM表記の対照候補、原資料と数値仕様の不足をHOLDとして報告。新規RNA値は未取得・未読（元研究側の過去RNA結果は既知）、旧結果・共通asset・scroll動作を保持。
+
+
 ## 2026-10-29
 
 - 全9成分へmetadata探索を拡張。固定2020 betaの全39,321注釈行・1,201,944署名metadata行から6成分914記録、名目細胞・6時間22記録、濃度一致0を報告。全16組の0件を保持。別施設caffeineの名目1条件と培地・対照の違い、他研究の6／4成分候補も明記。新RNA数値は取得・再採点なし。

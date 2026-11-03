@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "method_id": "rna-condition-transfer-design-public-v1",
+  "status": "HOLD_FOR_NEW_NUMERICAL_PROTOCOL",
+  "numeric_execution_authorized": false,
+  "rna_values_read": false,
+  "rna_rescoring_performed": false,
+  "numerical_preregistration_complete": false,
+  "prior_rna_summaries_known": true,
+  "selection_policy": "All target labels and doses in the exact intersection of the two metadata dose sets. No nearest dose, response-based selection or later fallback. All six targets retained in inventory.",
+  "target_inventory": [
+    "caffeine",
+    "theophylline",
+    "methylparaben",
+    "ethylparaben",
+    "propylparaben",
+    "butylparaben"
+  ],
+  "inventory_audits": [
+    {
+      "represented_treatment_metadata_records": 54,
+      "selected_label_count": 6,
+      "labels_with_records": 6,
+      "known_batch_count": 3,
+      "unknown_batch_records": 0,
+      "single_target_label_batches": 0,
+      "batches_with_multiple_target_labels": 3,
+      "labels_observed_in_multiple_batches": 6,
+      "label_nested_in_batch_for_complete_checked_subset": false,
+      "per_compound": [
+        {
+          "compound": "caffeine",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "theophylline",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "methylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "ethylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "propylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "butylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 3
+        }
+      ],
+      "scope_note": "Only the selected target treatment metadata subset, not the whole study. Recorded plate labels from sample titles or frozen cohort blocks are grouping proxies, not verified physical processing batches, biological independence, RNA differences or prediction performance."
+    },
+    {
+      "represented_treatment_metadata_records": 54,
+      "selected_label_count": 6,
+      "labels_with_records": 6,
+      "known_batch_count": 6,
+      "unknown_batch_records": 0,
+      "single_target_label_batches": 6,
+      "batches_with_multiple_target_labels": 0,
+      "labels_observed_in_multiple_batches": 0,
+      "label_nested_in_batch_for_complete_checked_subset": true,
+      "per_compound": [
+        {
+          "compound": "caffeine",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "theophylline",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "methylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "ethylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "propylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "butylparaben",
+          "represented_records": 9,
+          "distinct_nominal_doses": 3,
+          "distinct_known_batches": 1
+        }
+      ],
+      "scope_note": "Only the selected target treatment metadata subset, not the whole study. Recorded plate labels from sample titles or frozen cohort blocks are grouping proxies, not verified physical processing batches, biological independence, RNA differences or prediction performance."
+    }
+  ],
+  "primary_design_complete": true,
+  "primary_selection": [
+    {
+      "compound": "methylparaben",
+      "doses_uM": [
+        "1"
+      ]
+    },
+    {
+      "compound": "ethylparaben",
+      "doses_uM": [
+        "1"
+      ]
+    },
+    {
+      "compound": "propylparaben",
+      "doses_uM": [
+        "1"
+      ]
+    },
+    {
+      "compound": "butylparaben",
+      "doses_uM": [
+        "1"
+      ]
+    }
+  ],
+  "primary_audits": [
+    {
+      "represented_treatment_metadata_records": 12,
+      "selected_label_count": 4,
+      "labels_with_records": 4,
+      "known_batch_count": 3,
+      "unknown_batch_records": 0,
+      "single_target_label_batches": 0,
+      "batches_with_multiple_target_labels": 3,
+      "labels_observed_in_multiple_batches": 4,
+      "label_nested_in_batch_for_complete_checked_subset": false,
+      "per_compound": [
+        {
+          "compound": "methylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "ethylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "propylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 3
+        },
+        {
+          "compound": "butylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 3
+        }
+      ],
+      "scope_note": "Only the selected target treatment metadata subset, not the whole study. Recorded plate labels from sample titles or frozen cohort blocks are grouping proxies, not verified physical processing batches, biological independence, RNA differences or prediction performance."
+    },
+    {
+      "represented_treatment_metadata_records": 12,
+      "selected_label_count": 4,
+      "labels_with_records": 4,
+      "known_batch_count": 4,
+      "unknown_batch_records": 0,
+      "single_target_label_batches": 4,
+      "batches_with_multiple_target_labels": 0,
+      "labels_observed_in_multiple_batches": 0,
+      "label_nested_in_batch_for_complete_checked_subset": true,
+      "per_compound": [
+        {
+          "compound": "methylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "ethylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "propylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 1
+        },
+        {
+          "compound": "butylparaben",
+          "represented_records": 3,
+          "distinct_nominal_doses": 1,
+          "distinct_known_batches": 1
+        }
+      ],
+      "scope_note": "Only the selected target treatment metadata subset, not the whole study. Recorded plate labels from sample titles or frozen cohort blocks are grouping proxies, not verified physical processing batches, biological independence, RNA differences or prediction performance."
+    }
+  ],
+  "source_contexts": [
+    {
+      "series": "GSE218902",
+      "nominal_cell": "iCAR",
+      "time_h": "6",
+      "time_basis": "cohort_sample_metadata",
+      "batch_basis": "frozen_cohort_block_label",
+      "vehicle": "0.1% DMSO",
+      "full_target_metadata_checked": true,
+      "control_candidates_indexed": 24,
+      "control_witnesses_checked": 24,
+      "vehicle_control_pairing_verified": null,
+      "reference_identity_verified": false
+    },
+    {
+      "series": "GSE262419",
+      "nominal_cell": "human iPSC-derived cardiomyocytes",
+      "time_h": "24",
+      "time_basis": "study_protocol_summary",
+      "batch_basis": "plate_label_from_sample_title",
+      "vehicle": "0.5% DMSO",
+      "full_target_metadata_checked": true,
+      "control_candidates_indexed": 30,
+      "control_witnesses_checked": 12,
+      "vehicle_control_pairing_verified": false,
+      "reference_identity_verified": null
+    }
+  ],
+  "future_numeric_evidence": {
+    "study_linked_reference_verified": false,
+    "cross_study_gene_map_verified": false,
+    "control_pairing_verified": false,
+    "nuisance_separation_established": false,
+    "numeric_file_membership_verified": false,
+    "numeric_preprocessing_registered": false,
+    "numeric_metric_and_controls_registered": false,
+    "numeric_inputs_frozen": false,
+    "same_map_numeric_codex_pass": false,
+    "same_map_numeric_claude_pass": false,
+    "numeric_registration_pushed_and_byte_verified": false
+  },
+  "supplementary_caffeine": {
+    "series": "GSE200441",
+    "metadata_records": 21,
+    "treated_records": 18,
+    "control_candidate_records": 3,
+    "control_wording_resolved": false,
+    "paired_blocks_verified": null,
+    "gene_annotation_release_verified": false
+  },
+  "hold_reasons": [
+    "unverified_study_linked_reference_verified",
+    "unverified_cross_study_gene_map_verified",
+    "unverified_control_pairing_verified",
+    "unverified_nuisance_separation_established",
+    "unverified_numeric_file_membership_verified",
+    "unverified_numeric_preprocessing_registered",
+    "unverified_numeric_metric_and_controls_registered",
+    "unverified_numeric_inputs_frozen",
+    "unverified_same_map_numeric_codex_pass",
+    "unverified_same_map_numeric_claude_pass",
+    "unverified_numeric_registration_pushed_and_byte_verified",
+    "GSE218902_control_pairing_unverified",
+    "GSE262419_control_pairing_unverified",
+    "GSE262419_primary_label_batch_confounding",
+    "this_metadata_design_never_authorizes_numerical_execution"
+  ],
+  "interpretation": "A metadata-based comparison design, not a completed numerical preregistration, RNA retrieval evaluation, independent biological validation, food effect, cancer selectivity or treatment evidence. Control subtraction does not supply independent reallocation across confounded compound/batch groups.",
+  "provenance": {
+    "cohort_sha256": "6e6fe2bc95cc5a787e5c64a8d8010654a7317ba153212dd78cdb7cc3f523acbe",
+    "cardiac_ledger_sha256": "206c9e4abeb8183af7590760cfa8c2e148ead6b279650e2ef7fdd9acbb6ebfbe",
+    "cardiac_public_summary_sha256": "2f04a8dd9fd9e87158d0b5445c6a53afeb8590a818767e1df71d309fa193b408",
+    "caffeine_public_summary_sha256": "17efa6f420657be52566ea5bc7fc13582c45e91a71bca84055de57fb7ca66528",
+    "design_contract_sha256": "7cf18279d6bae8ab2e1c326172f5d1b4cb10951ba55be927aab4d4d8d9a3f0c5"
+  },
+  "input_sha256": "58d6834db3e23ee23c0e3656872734d534d6fa6fb481f590a0048ea0ab32b91e",
+  "input_bytes": 13831,
+  "metadata_code_sha256": "3d58cd5d8b8174374b935834c8c1fd5e7b810f420f45c4c9d0ab087837b2dde8"
+}
