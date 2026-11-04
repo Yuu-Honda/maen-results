@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "method_id": "rna-source-readiness-public-v1",
+  "date": "2026-11-04",
+  "scope": "Post-result annotation and source-provenance audit only; prior original-study RNA outcomes are known.",
+  "status": "HOLD_FOR_STUDY_REFERENCE_AND_PROCESSING_PROVENANCE",
+  "numeric_execution_authorized": false,
+  "numerical_preregistration_complete": false,
+  "prior_original_study_rna_results_known": true,
+  "new_study_rna_values_read": false,
+  "old_rna_matrices_reopened": false,
+  "gene_mapping_or_probe_aggregation_replaced": false,
+  "manufacturer_manifest": {
+    "index_url": "https://www.biospyder.com/temposeq-manifests",
+    "index_section": "Archived Human Manifests",
+    "link_label": "Human Whole Transcriptome v2.0",
+    "file_url": "https://www.biospyder.com/s/190620HumanWholeTranscriptome20Manifest.xlsx",
+    "bytes": 2483450,
+    "sha256": "0dcceee852b5ceec2807641b1c55b3f57e33ffa7687b584d4d4a3806d6752da0",
+    "annotation_rows": 22537,
+    "annotation_columns": 7,
+    "sample_expression_columns_present": false,
+    "exact_original_study_manifest_revision_verified": false,
+    "actual_study_sequence_and_alignment_reference_verified": false,
+    "gene_annotation_release_verified": false,
+    "comparison_target_study": "GSE218902"
+  },
+  "annotation_comparison": {
+    "other_annotation_series": "GSE288929",
+    "other_annotation_sha256": "768442ddd8cd92c2e59c4056ebac1bb2432d57ec70a2e2345871b92bebb4c0aa",
+    "rows_per_file": 22537,
+    "shared_literal_probe_names": 22484,
+    "names_unique_to_each_file": 53,
+    "unique_sequence_pairs": 22537,
+    "sequence_pairs_with_different_literal_names": 53,
+    "row_order_equal": false,
+    "shared_name_entrez_missingness_differences": {
+      "manufacturer_NULL_other_empty": 47,
+      "manufacturer_NULL_other_concrete": 11
+    },
+    "shared_name_ensembl_missingness_differences": {
+      "manufacturer_NULL_other_empty": 120,
+      "manufacturer_NULL_other_concrete": 1
+    },
+    "shared_name_concrete_ID_disagreements": 0,
+    "sequence_diagnostic_adopted_as_new_join_key": false,
+    "scope": "Two annotation files only. Missingness differences are not disagreements between two concrete IDs. Sequence matching is diagnostic, not an adopted mapping or proof of original-study sequence identity."
+  },
+  "cached_original_label_check": {
+    "series": "GSE218902",
+    "previous_metadata_ledger_sha256": "7ed8f133493aff69121ae5b42a325f8b41fc9fab0395b389d5d57405e3e5b860",
+    "source_tables": 4,
+    "unique_names_per_table": 22537,
+    "each_name_set_exactly_matches_manufacturer": true,
+    "each_row_order_matches_manufacturer": false,
+    "previously_extracted_labels_read": true,
+    "old_count_files_reopened": false,
+    "scope": "Previously saved metadata-only labels. Matching names does not identify the reference sequences or annotation revision actually used."
+  },
+  "processing_provenance": {
+    "series": "GSE262419",
+    "primary_methods_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11691792/",
+    "culture_plate_wells": 384,
+    "lysate_transfer_plate_wells": 96,
+    "library_pooling_reported": true,
+    "title_plate_to_processing_stage_crosswalk_verified": false,
+    "selected_six_compound_crossed_allocation_verified": false,
+    "vehicle_basis": "Original methods report nominal 0.5% DMSO treatment vehicle; actual sample-control composition and pairing are not verified.",
+    "previous_direct_control_annotation": "Media_0_uM",
+    "media_annotation_implies_absent_DMSO": false,
+    "sample_control_pairing_verified": false,
+    "scope": "The previously selected six-compound/54-treatment-record subset only; no claim of whole-series absence of crossed allocation and no MAEN RNA plate-effect measurement."
+  },
+  "positive_control_metadata": {
+    "compound": "endothelin-1",
+    "finite_index_records": 48,
+    "sample_title_group_labels": 16,
+    "direct_metadata_witnesses": 2,
+    "direct_witness_nominal_dose_uM": "0.01",
+    "direct_witness_annotation": "ET-1_0.01_uM",
+    "all_48_directly_verified": false,
+    "RNA_signal_verified": false,
+    "old_new_shared_positive_control_verified": false,
+    "resolves_target_compound_allocation": false,
+    "series": "GSE262419"
+  },
+  "qc_metadata_candidate": {
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE262nnn/GSE262419/suppl/GSE262419_hash.csv.gz",
+    "request_method": "HEAD",
+    "status": 200,
+    "reported_compressed_bytes": 47637,
+    "body_acquired": false,
+    "schema_and_control_mapping_verified": false,
+    "series": "GSE262419"
+  },
+  "next_required_evidence": [
+    "Exact study manifest, alignment reference and gene annotation provenance.",
+    "Sample crosswalk across culture, lysate transfer, library/pool and sequencing, including true control composition and replicate provenance.",
+    "Target allocation that permits compound and processing groups to be separated.",
+    "Chemical-form correspondence and signal-detectability/shared-control design.",
+    "A separate complete numerical registration and same-map Codex plus actual Claude review before new RNA values."
+  ],
+  "author_vendor_contacts_sent": 0,
+  "information_request_drafts_prepared_but_unsent": true,
+  "clinical_food_or_cancer_selectivity_evaluated": false,
+  "source_audits_sha256": {
+    "manufacturer_and_annotation": "6b43a97117dd7d726626df2e41dc9cc676d23863123521f46917df0257564f60",
+    "allocation": "4eac65a506a0a818a7dbf4699833562ed8750cdbb75a4b8d9ee875f886a32e85",
+    "allocation_primary_sources": "63e6c57be73153ec32acb7fd68d89aaa3744c63ca9a061ee61bd90639871fed4"
+  }
+}
