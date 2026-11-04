@@ -1,5 +1,12 @@
 # 更新履歴
 
+## 2026-11-04
+
+- Add [Japanese source verification](https://yuu-honda.github.io/maen-results/rna.html#source-readiness), [English](https://yuu-honda.github.io/maen-results/rna-en.html#source-readiness), [aggregate JSON](data/rna-source-readiness.json), and the [two-provider review record](reviews/source-readiness-2026-11-04.md).
+- 公式v2.0測定項目表を取得。元研究の保存済み4表は各22,537行名が集合一致、旧注釈候補と全22,537配列が集合一致する一方、53組の名称差とID欠測状況の差を保持。実使用参照版の証明にはせず、RNA数値は保留。
+- 培養384well・移送96well・library poolを区別。ET-1候補48索引記録・16表記群・直接2記録、QC候補HEADのみを報告。新RNA値は未取得・未読（元研究過去結果は既知）。旧結果・集計・CSS/JS・スクロール表示を保持。
+
+
 ## 2026-11-03
 
 - Add the [Japanese transfer design](https://yuu-honda.github.io/maen-results/rna.html#condition-transfer-plan) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#condition-transfer-plan), [aggregate JSON](data/rna-transfer-design.json), and [two-provider review record](reviews/condition-transfer-design-2026-11-03.md).
