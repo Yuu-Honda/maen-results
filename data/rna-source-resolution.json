@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "method_id": "rna-source-resolution-public-v1",
+  "date": "2026-11-07",
+  "scope": "Source metadata resolution and prospective question definition only; original RNA outcomes are known.",
+  "status": "CARDIAC_TRANSFER_HOLD_MCF7_QUESTION_DEFINED_NOT_NUMERICALLY_REGISTERED",
+  "numeric_execution_authorized": false,
+  "numerical_preregistration_complete": false,
+  "prior_original_rna_results_known": true,
+  "new_RNA_values_read": false,
+  "old_RNA_matrices_reopened": false,
+  "old_mapping_freezes_or_results_changed": false,
+  "previous_source_readiness_sha256": "aa62fa63c1f6e04b0d3fac474a811c8657a77516ba8efd96230071473758ab11",
+  "GSE262419_annotation_audit": {
+    "source": {
+      "series": "GSE262419",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE262nnn/GSE262419/suppl/GSE262419_hash.csv.gz",
+      "compressed_bytes": 47637,
+      "compressed_sha256": "dbdaadfc357fabfadb291d2818d5ce242bba52486b3d8ec86460b61457d57f3c",
+      "header_sha256": "68ddad5a2b054ba4d728c5f47fc13e87822ad0153d57d63d9e3ed814afe2f451",
+      "decompressed_bytes": 202604,
+      "decompressed_sha256": "1b2a562bc79098bba08a1602a329b2796cb71a347cbf12bebc1f471efb25da48",
+      "data_rows": 4558
+    },
+    "fields_exact": [
+      "No",
+      "Plate_ID",
+      "Well_ID",
+      "Chemical_Index",
+      "Column order",
+      "Chemical_Concentration_uM",
+      "Replicate_Number",
+      "Solvent",
+      "Chemical_name"
+    ],
+    "table_inventory": {
+      "records": 4558,
+      "literal_plate_count": 16,
+      "records_per_plate_distribution": [
+        {
+          "records_per_plate": 277,
+          "plate_count": 2
+        },
+        {
+          "records_per_plate": 286,
+          "plate_count": 14
+        }
+      ],
+      "literal_chemical_name_count": 466,
+      "missing_sentinel_counts": {
+        "No": 0,
+        "Plate_ID": 0,
+        "Well_ID": 0,
+        "Chemical_Index": 0,
+        "Column order": 0,
+        "Chemical_Concentration_uM": 0,
+        "Replicate_Number": 0,
+        "Solvent": 0,
+        "Chemical_name": 0
+      },
+      "identifier_counts": {
+        "No": {
+          "distinct_literals": 4558,
+          "missing_records": 0,
+          "duplicate_nonmissing_records_beyond_first": 0
+        },
+        "Column order": {
+          "distinct_literals": 286,
+          "missing_records": 0,
+          "duplicate_nonmissing_records_beyond_first": 4272
+        },
+        "Replicate_Number": {
+          "distinct_literals": 12,
+          "missing_records": 0,
+          "duplicate_nonmissing_records_beyond_first": 4546
+        },
+        "Chemical_Index": {
+          "distinct_literals": 466,
+          "missing_records": 0,
+          "duplicate_nonmissing_records_beyond_first": 4092
+        }
+      }
+    },
+    "fixed_six_target_inventory": {
+      "caffeine": {
+        "records": 9,
+        "literal_plate_count": 1,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0.2",
+              "records": 3
+            },
+            {
+              "dose_uM": "1",
+              "records": 3
+            },
+            {
+              "dose_uM": "10",
+              "records": 3
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0.2",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "1",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "10",
+            "literal_plate_count": 1
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "DMSO",
+            "records": 9,
+            "missing_sentinel": false
+          }
+        ]
+      },
+      "theophylline": {
+        "records": 9,
+        "literal_plate_count": 1,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0.2",
+              "records": 3
+            },
+            {
+              "dose_uM": "1",
+              "records": 3
+            },
+            {
+              "dose_uM": "10",
+              "records": 3
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0.2",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "1",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "10",
+            "literal_plate_count": 1
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "DMSO",
+            "records": 9,
+            "missing_sentinel": false
+          }
+        ]
+      },
+      "methylparaben": {
+        "records": 9,
+        "literal_plate_count": 1,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0.2",
+              "records": 3
+            },
+            {
+              "dose_uM": "1",
+              "records": 3
+            },
+            {
+              "dose_uM": "10",
+              "records": 3
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0.2",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "1",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "10",
+            "literal_plate_count": 1
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "DMSO",
+            "records": 9,
+            "missing_sentinel": false
+          }
+        ]
+      },
+      "ethylparaben": {
+        "records": 9,
+        "literal_plate_count": 1,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0.2",
+              "records": 3
+            },
+            {
+              "dose_uM": "1",
+              "records": 3
+            },
+            {
+              "dose_uM": "10",
+              "records": 3
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0.2",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "1",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "10",
+            "literal_plate_count": 1
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "DMSO",
+            "records": 9,
+            "missing_sentinel": false
+          }
+        ]
+      },
+      "propylparaben": {
+        "records": 9,
+        "literal_plate_count": 1,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0.2",
+              "records": 3
+            },
+            {
+              "dose_uM": "1",
+              "records": 3
+            },
+            {
+              "dose_uM": "10",
+              "records": 3
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0.2",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "1",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "10",
+            "literal_plate_count": 1
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "DMSO",
+            "records": 9,
+            "missing_sentinel": false
+          }
+        ]
+      },
+      "butylparaben": {
+        "records": 9,
+        "literal_plate_count": 1,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0.2",
+              "records": 3
+            },
+            {
+              "dose_uM": "1",
+              "records": 3
+            },
+            {
+              "dose_uM": "10",
+              "records": 3
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0.2",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "1",
+            "literal_plate_count": 1
+          },
+          {
+            "dose_uM": "10",
+            "literal_plate_count": 1
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "DMSO",
+            "records": 9,
+            "missing_sentinel": false
+          }
+        ]
+      }
+    },
+    "cached_target_correspondence": {
+      "old_ledger_sha256": "206c9e4abeb8183af7590760cfa8c2e148ead6b279650e2ef7fdd9acbb6ebfbe",
+      "primary_strict_numeric_plate_literal_key": {
+        "all_54": {
+          "old_records": 54,
+          "key_unique_matched": 39,
+          "key_unmatched": 15,
+          "key_ambiguous": 0,
+          "unique_key_name_matches": 39,
+          "unique_key_name_mismatches": 0,
+          "unique_key_dose_matches": 39,
+          "unique_key_dose_mismatches": 0,
+          "fully_concordant_annotation": 39
+        },
+        "primary_12": {
+          "old_records": 12,
+          "key_unique_matched": 7,
+          "key_unmatched": 5,
+          "key_ambiguous": 0,
+          "unique_key_name_matches": 7,
+          "unique_key_name_mismatches": 0,
+          "unique_key_dose_matches": 7,
+          "unique_key_dose_mismatches": 0,
+          "fully_concordant_annotation": 7
+        },
+        "by_target": {
+          "caffeine": {
+            "old_records": 9,
+            "key_unique_matched": 9,
+            "key_unmatched": 0,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 9,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 9,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 9
+          },
+          "theophylline": {
+            "old_records": 9,
+            "key_unique_matched": 9,
+            "key_unmatched": 0,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 9,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 9,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 9
+          },
+          "methylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 0,
+            "key_unmatched": 9,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 0,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 0,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 0
+          },
+          "ethylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 9,
+            "key_unmatched": 0,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 9,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 9,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 9
+          },
+          "propylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 3,
+            "key_unmatched": 6,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 3,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 3,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 3
+          },
+          "butylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 9,
+            "key_unmatched": 0,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 9,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 9,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 9
+          }
+        }
+      },
+      "separate_prespecified_title_format_diagnostic": {
+        "all_54": {
+          "old_records": 54,
+          "key_unique_matched": 0,
+          "key_unmatched": 54,
+          "key_ambiguous": 0,
+          "unique_key_name_matches": 0,
+          "unique_key_name_mismatches": 0,
+          "unique_key_dose_matches": 0,
+          "unique_key_dose_mismatches": 0,
+          "fully_concordant_annotation": 0
+        },
+        "primary_12": {
+          "old_records": 12,
+          "key_unique_matched": 0,
+          "key_unmatched": 12,
+          "key_ambiguous": 0,
+          "unique_key_name_matches": 0,
+          "unique_key_name_mismatches": 0,
+          "unique_key_dose_matches": 0,
+          "unique_key_dose_mismatches": 0,
+          "fully_concordant_annotation": 0
+        },
+        "by_target": {
+          "caffeine": {
+            "old_records": 9,
+            "key_unique_matched": 0,
+            "key_unmatched": 9,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 0,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 0,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 0
+          },
+          "theophylline": {
+            "old_records": 9,
+            "key_unique_matched": 0,
+            "key_unmatched": 9,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 0,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 0,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 0
+          },
+          "methylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 0,
+            "key_unmatched": 9,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 0,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 0,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 0
+          },
+          "ethylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 0,
+            "key_unmatched": 9,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 0,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 0,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 0
+          },
+          "propylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 0,
+            "key_unmatched": 9,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 0,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 0,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 0
+          },
+          "butylparaben": {
+            "old_records": 9,
+            "key_unique_matched": 0,
+            "key_unmatched": 9,
+            "key_ambiguous": 0,
+            "unique_key_name_matches": 0,
+            "unique_key_name_mismatches": 0,
+            "unique_key_dose_matches": 0,
+            "unique_key_dose_mismatches": 0,
+            "fully_concordant_annotation": 0
+          }
+        }
+      }
+    },
+    "prespecified_control_literals": {
+      "Media": {
+        "records": 80,
+        "literal_plate_count": 16,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0",
+              "records": 80
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0",
+            "literal_plate_count": 16
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "Media",
+            "records": 80,
+            "missing_sentinel": false
+          }
+        ]
+      },
+      "DMSO": {
+        "records": 0,
+        "literal_plate_count": 0,
+        "nominal_doses": {
+          "exact_decimal_counts": [],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [],
+        "solvent_annotations": []
+      },
+      "ET-1": {
+        "records": 48,
+        "literal_plate_count": 16,
+        "nominal_doses": {
+          "exact_decimal_counts": [
+            {
+              "dose_uM": "0.01",
+              "records": 48
+            }
+          ],
+          "missing_records": 0
+        },
+        "same_dose_literal_plate_counts": [
+          {
+            "dose_uM": "0.01",
+            "literal_plate_count": 16
+          }
+        ],
+        "solvent_annotations": [
+          {
+            "literal": "DMSO",
+            "records": 48,
+            "missing_sentinel": false
+          }
+        ]
+      }
+    },
+    "all_solvent_annotations": [
+      {
+        "literal": "Blank",
+        "records": 32,
+        "missing_sentinel": false
+      },
+      {
+        "literal": "DMSO",
+        "records": 4446,
+        "missing_sentinel": false
+      },
+      {
+        "literal": "Media",
+        "records": 80,
+        "missing_sentinel": false
+      }
+    ],
+    "scope_limit": "The original strict literal join remains 39/54 and 7/12. A separate post-hoc fixed-grammar spelling diagnostic gives unique annotation-coordinate/name/dose correspondence for all54 and primary12, with no collisions across4558. It does not verify actual RNA columns, post-QC inclusion or physical processing groups; no RNA correspondence rule is adopted.",
+    "solvent_fraction_and_control_pairing_verified": false,
+    "culture_transfer_library_sequencing_crosswalk_verified": false,
+    "target_crossed_physical_allocation_verified": false,
+    "biological_independence_verified": false,
+    "shared_old_new_positive_control_or_signal_verified": false,
+    "posthoc_canonical_well_diagnostic": {
+      "schema_version": 1,
+      "method_id": "GSE262419-posthoc-canonical-well-identifier-v1",
+      "status": "CANONICAL_ANNOTATION_DIAGNOSTIC_COMPLETE_NUMERIC_HOLD",
+      "plan_sha256": "5580065178fd38874eeeb8e9f0d92a53c2f9f71993d044244cce4c917cb716eb",
+      "script_sha256": "63ae0c093926f4bed9b4c3c60f9c06253c99488438c5f14484977849563ff639",
+      "posthoc_not_blinded": true,
+      "not_preregistered_performance_result": true,
+      "source_compressed_sha256": "dbdaadfc357fabfadb291d2818d5ce242bba52486b3d8ec86460b61457d57f3c",
+      "source_decompressed_sha256": "1b2a562bc79098bba08a1602a329b2796cb71a347cbf12bebc1f471efb25da48",
+      "all_metadata_rows_grammar_checked": 4558,
+      "all_metadata_canonical_keys_unique": 4558,
+      "old_records_grammar_checked": 54,
+      "canonical_key_collisions": 0,
+      "canonical_annotation_correspondence": {
+        "all_old_records": 54,
+        "canonical_unique_counterparts": 54,
+        "chemical_literal_assertions_passed": 54,
+        "exact_decimal_dose_assertions_passed": 54,
+        "primary_old_records": 12,
+        "primary_canonical_unique_counterparts": 12
+      },
+      "prior_strict_history_unchanged": {
+        "all_old_records": 54,
+        "literal_key_fully_concordant": 39,
+        "literal_key_unmatched": 15,
+        "primary_old_records": 12,
+        "primary_literal_key_fully_concordant": 7,
+        "primary_literal_key_unmatched": 5,
+        "prior_public_aggregate_sha256": "390ea9f3018b06d1f9dd4d260b7f756a5585f6bc18223b57d01cba92fe11bea6"
+      },
+      "new_correspondence_rule_adopted_for_RNA": false,
+      "interpretation_limits": [
+        "Canonical well syntax equivalence is a routine annotation identity diagnostic only, not a search accuracy improvement.",
+        "It does not establish GSM-to-actual-RNA-column membership, QC inclusion, culture/transfer/library/pool/sequencing mapping, vehicle composition/pairing, chemical structure identity or biological replicate independence.",
+        "Even complete canonical annotation correspondence cannot resolve compound versus physical processing group or authorize new RNA work.",
+        "The original strict join remains39/54 and7/12; any later numerical protocol must explicitly cite and justify a newly registered correspondence rule rather than modifying old freezes."
+      ],
+      "network_requests": 0,
+      "RNA_values_or_scores": false,
+      "numeric_execution_authorized": false,
+      "contacts_sent": 0,
+      "individual_sample_plate_or_well_ids_included": false
+    },
+    "canonical_gate_interpretation": {
+      "all_or_stop": true,
+      "stops_if_any_missing_counterpart_name_dose_grammar_or_collision_failure": true,
+      "54_of_54_and_12_of_12_are_full_gate_pass_counts_not_estimated_match_rates": true,
+      "rule_created_after_observing_leading_zero_spelling_among_strict_gaps": true,
+      "failure_audit_retained_but_no_partial_success_aggregate_would_be_written": true
+    },
+    "selected_six_targets_literal_plate_label_union_count": 6
+  },
+  "GSE218902_reference_audit": {
+    "checked_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9811170/",
+      "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218902&targ=self&form=text&view=full"
+    ],
+    "requests": 2,
+    "body_bytes": 260658,
+    "source_hashes": {
+      "original-paper-index-v1.html": "c2415e3b94e335da1895afce140b0eb369cdbf3cee73df2d1208112127093256",
+      "original-series-full-self-v1.soft": "b4034a0df4b01d0aebfba4051eb9a73ea1209211de83ba59adfd94af30d04a4d"
+    },
+    "study_linked_reference_found_in_checked_routes": false,
+    "replicate_count_descriptions_differ": true,
+    "replicate_description_scope_and_reason_verified": false,
+    "same_route_search_closed_until_new_evidence": true,
+    "scope_limit": "No direct reference/lookup/code link identified in the checked sections and four listed count supplements. This is not proof of absence elsewhere. Supplement bodies and original RNA matrices were not opened."
+  },
+  "next_research_question": {
+    "status": "QUALITATIVE_QUESTION_DEFINED_NOT_A_NUMERICAL_PROTOCOL",
+    "first_context": "MCF7, one breast-derived cancer cell model",
+    "selection_reason": "Connect to the existing MCF7 protein retrieval measurement context, not favorable compound outcomes.",
+    "question": "Can predefined MCF7 state changes retrieve known perturbations while separately recording effects in a non-tumorigenic mammary epithelial comparator and separately measured functional-response evidence?",
+    "desired_signed_target_vector_registered": false,
+    "comparator_and_exact_datasets_selected": false,
+    "matched_chemical_form_dose_time_data_verified": false,
+    "candidate_ranking_performed": false,
+    "existing_eight_everyday_reference_examples_retained": true,
+    "before_candidate_ranking": [
+      "Define the desired signed changes and functions to preserve using independent biological evidence.",
+      "Fix comparator provenance, culture backgrounds, functional endpoints, exact inputs, controls and failure rules.",
+      "Keep unresolved data and all eight everyday reference examples; do not select a favorable target or comparator after seeing candidate ranks.",
+      "Register a separate numerical protocol and obtain same-map independent Codex plus actual Claude PASS, commit/push and GitHub byte proof before new RNA values."
+    ],
+    "limits": [
+      "One MCF7 context is not all breast cancer or patients.",
+      "Non-tumorigenic cultured cells are not a normal human body; matching dose/time alone does not establish cancer selectivity.",
+      "An inverse tumor-versus-normal signature is not adopted as an automatically beneficial target.",
+      "No food, cancer selectivity, normal restoration, human exposure or treatment efficacy has been evaluated."
+    ],
+    "identifier_sources": [
+      "https://www.atcc.org/products/htb-22",
+      "https://www.cellosaurus.org/CVCL_0031"
+    ],
+    "identifier_source_observation": "Primary-site search excerpts only; both page-body opens timed out. Actual study-stock identity is unverified.",
+    "prior_MCF7_results_known": true,
+    "blinded_context_selection": false
+  },
+  "author_vendor_contacts_sent": 0,
+  "clinical_food_or_cancer_selectivity_evaluated": false,
+  "source_aggregate_sha256": {
+    "processing": "390ea9f3018b06d1f9dd4d260b7f756a5585f6bc18223b57d01cba92fe11bea6",
+    "reference": "63ada6efdc99043f99e69ec6430a6fc305af60bf120ea6132d5d6da4b210f605",
+    "posthoc_canonical_well": "b88c41df5706b301c2a131d0896bbd960caafd77fa4ef752a9998993e5eddafe"
+  }
+}

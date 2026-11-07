@@ -1,5 +1,16 @@
 # 更新履歴
 
+## 2026-11-07
+
+今回の事後的な54/54・12/12は、不一致が1件でもあれば停止する全件確認を通った件数で、一致率の推定ではありません。元の文字列照合39/54・7/12を保持します。
+
+The post-hoc54/54 and12/12 are counts passing an all-or-stop annotation gate, not estimated match rates; the original literal39/54 and7/12 remain.
+
+- Add the [Japanese update](https://yuu-honda.github.io/maen-results/rna.html#source-resolution), [English](https://yuu-honda.github.io/maen-results/rna-en.html#source-resolution), [aggregate](data/rna-source-resolution.json) and [two-provider review](reviews/source-resolution-2026-11-07.md).
+- GSE262419の対応表4,558行をmetadataとして監査。6成分の名目54行はあるが、保存試料の固定鍵対応39/54・主候補7/12。元の未対応15/5は元診断として保持。別に事後的な位置番号表記の診断を計画し、全4,558行の構文・衝突検査後に54/54・12/12の注釈座標対応を確認。旧結果は置換せず、RNA用の対応規則にも未採用。溶媒欄の注釈と実組成・対照pairingを区別。
+- GSE218902の有限原参照探索を区切り、旧比較を保留。別に次の問いをMCF7一系に固定。比較細胞・目標ベクトル・exact入力は未選定、新規RNA・候補順位・食品／抗がん効果は未評価。既存結果・JSON・CSS/JS・スクロール動作は保持。
+
+
 ## 2026-11-04
 
 - Add [Japanese source verification](https://yuu-honda.github.io/maen-results/rna.html#source-readiness), [English](https://yuu-honda.github.io/maen-results/rna-en.html#source-readiness), [aggregate JSON](data/rna-source-readiness.json), and the [two-provider review record](reviews/source-readiness-2026-11-04.md).
