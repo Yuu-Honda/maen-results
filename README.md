@@ -1,5 +1,13 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+今回の事後的な54/54・12/12は、不一致が1件でもあれば停止する全件確認を通った件数で、一致率の推定ではありません。元の文字列照合39/54・7/12を保持します。
+
+The post-hoc54/54 and12/12 are counts passing an all-or-stop annotation gate, not estimated match rates; the original literal39/54 and7/12 remain.
+
+2026-11-07：対応表本文を監査。GSE262419の名目6成分54行を確認しましたが、最初の文字列鍵対応39/54（主候補7/12）を保持し、別の事後的な位置表記診断では54/54・12/12の注釈座標が対応。実RNA列・処理経路は未確定で、数値解析は保留。次のがん研究の問いをMCF7一系と比較細胞への影響に絞りました。目標ベクトル・比較細胞・実データは未選定で、候補順位や薬効は未評価です。[日本語](https://yuu-honda.github.io/maen-results/rna.html#source-resolution) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#source-resolution) / [集計JSON](data/rna-source-resolution.json) / [二社検査記録](reviews/source-resolution-2026-11-07.md)。
+
+The GSE262419 audit retains the strict literal joins of 39/54 and 7/12. A separate post-hoc well-spelling diagnostic gives 54/54 and 12/12 annotation-coordinate correspondences, without verifying actual RNA-column or processing provenance. The next qualitative question uses one MCF7 context and a non-tumorigenic comparator; targets, comparator datasets and a numerical protocol are not yet selected. No new RNA scoring or efficacy evaluation.
+
 2026-11-03：異条件比較の設計とmetadata点検を追加。全6成分54記録から共通1 µMの4parabenを主設計候補に固定しましたが、選択部分集合の成分／plate表示の交絡と対照・原資料不足が残り、数値実行はHOLDです。[日本語](https://yuu-honda.github.io/maen-results/rna.html#condition-transfer-plan) / [English](https://yuu-honda.github.io/maen-results/rna-en.html#condition-transfer-plan) / [集計JSON](data/rna-transfer-design.json) / [二社検査記録](reviews/condition-transfer-design-2026-11-03.md)。
 
 A metadata-based transfer design retains all six targets and selects four parabens at the shared nominal dose of 1 µM. Compound and recorded plate label remain nested in the selected subset; controls and original references remain unresolved. Numerical preregistration is incomplete; no new RNA scoring or efficacy evaluation. Prior RNA results from the original source are known; this is not blinded design.
