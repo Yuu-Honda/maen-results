@@ -1,0 +1,961 @@
+{
+  "schema_version": 1,
+  "cell_line": "MCF7",
+  "time_hours": 12,
+  "biological_replicates": 2,
+  "total_proteins": 15170,
+  "threshold_fold": 1.5,
+  "control": "DMSO",
+  "source": {
+    "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10859532/",
+    "accession": "PXD043263",
+    "tables": [
+      "S1",
+      "S2"
+    ],
+    "workbook_sha256": {
+      "mmc2.xlsx": "7e515106947e15f2347a6e53e3702a054f2bdc1624ccb4df3404ba48b791a41c",
+      "mmc3.xlsx": "49d5b9518c14374beb83831560d760c2f4d38af2508eb3bf98d68cdc55ae4d79"
+    },
+    "unit_assumption": "S2 positive numeric values interpreted as treatment/DMSO ratios from article method 2.5; workbook caption does not declare units",
+    "condition_order": "S1 Sheet2 row order"
+  },
+  "conditions": [
+    {
+      "id": "ABT888 hydrochloride",
+      "name": "ABT888 hydrochloride",
+      "dose": "3.2 µM",
+      "counts": {
+        "increased": 106,
+        "decreased": 79,
+        "discordant": 434,
+        "within_threshold": 4389,
+        "missing": 10162
+      }
+    },
+    {
+      "id": "Aminophylline",
+      "name": "Aminophylline",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 94,
+        "decreased": 119,
+        "discordant": 473,
+        "within_threshold": 4773,
+        "missing": 9711
+      }
+    },
+    {
+      "id": "CPI-203",
+      "name": "CPI-203",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 80,
+        "decreased": 80,
+        "discordant": 384,
+        "within_threshold": 4465,
+        "missing": 10161
+      }
+    },
+    {
+      "id": "Dacogen",
+      "name": "Dacogen",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 90,
+        "decreased": 122,
+        "discordant": 487,
+        "within_threshold": 4760,
+        "missing": 9711
+      }
+    },
+    {
+      "id": "Dinaciclib",
+      "name": "Dinaciclib",
+      "dose": "0.032 µM",
+      "counts": {
+        "increased": 103,
+        "decreased": 140,
+        "discordant": 512,
+        "within_threshold": 4254,
+        "missing": 10161
+      }
+    },
+    {
+      "id": "Entacapone",
+      "name": "Entacapone",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 86,
+        "decreased": 112,
+        "discordant": 488,
+        "within_threshold": 4773,
+        "missing": 9711
+      }
+    },
+    {
+      "id": "GSK-525762A",
+      "name": "GSK-525762A",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 90,
+        "decreased": 98,
+        "discordant": 441,
+        "within_threshold": 4380,
+        "missing": 10161
+      }
+    },
+    {
+      "id": "JQ-1",
+      "name": "JQ-1",
+      "dose": "7.1 µM",
+      "counts": {
+        "increased": 129,
+        "decreased": 84,
+        "discordant": 425,
+        "within_threshold": 4371,
+        "missing": 10161
+      }
+    },
+    {
+      "id": "Theophylline monohydrate",
+      "name": "Theophylline monohydrate",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 111,
+        "decreased": 132,
+        "discordant": 515,
+        "within_threshold": 4697,
+        "missing": 9715
+      }
+    },
+    {
+      "id": "Valproic acid",
+      "name": "Valproic acid",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 81,
+        "decreased": 116,
+        "discordant": 490,
+        "within_threshold": 4772,
+        "missing": 9711
+      }
+    },
+    {
+      "id": "AS605240",
+      "name": "AS605240",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 71,
+        "decreased": 66,
+        "discordant": 261,
+        "within_threshold": 5015,
+        "missing": 9757
+      }
+    },
+    {
+      "id": "AT-7519",
+      "name": "AT-7519",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 83,
+        "decreased": 130,
+        "discordant": 482,
+        "within_threshold": 4206,
+        "missing": 10269
+      }
+    },
+    {
+      "id": "AZD7762",
+      "name": "AZD7762",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 71,
+        "decreased": 76,
+        "discordant": 376,
+        "within_threshold": 4769,
+        "missing": 9878
+      }
+    },
+    {
+      "id": "CAY10603",
+      "name": "CAY10603",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 102,
+        "decreased": 73,
+        "discordant": 397,
+        "within_threshold": 4329,
+        "missing": 10269
+      }
+    },
+    {
+      "id": "Cisplatin",
+      "name": "Cisplatin",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 56,
+        "decreased": 67,
+        "discordant": 371,
+        "within_threshold": 4798,
+        "missing": 9878
+      }
+    },
+    {
+      "id": "MLN4924",
+      "name": "MLN4924",
+      "dose": "2.74 µM",
+      "counts": {
+        "increased": 128,
+        "decreased": 89,
+        "discordant": 384,
+        "within_threshold": 4692,
+        "missing": 9877
+      }
+    },
+    {
+      "id": "PD-0325901",
+      "name": "PD-0325901",
+      "dose": "8.2 µM",
+      "counts": {
+        "increased": 55,
+        "decreased": 71,
+        "discordant": 319,
+        "within_threshold": 4968,
+        "missing": 9757
+      }
+    },
+    {
+      "id": "PIK-93",
+      "name": "PIK-93",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 58,
+        "decreased": 70,
+        "discordant": 278,
+        "within_threshold": 5007,
+        "missing": 9757
+      }
+    },
+    {
+      "id": "PXD101",
+      "name": "PXD101",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 113,
+        "decreased": 88,
+        "discordant": 394,
+        "within_threshold": 4698,
+        "missing": 9877
+      }
+    },
+    {
+      "id": "Refametinib",
+      "name": "Refametinib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 49,
+        "decreased": 55,
+        "discordant": 305,
+        "within_threshold": 5003,
+        "missing": 9758
+      }
+    },
+    {
+      "id": "RO-3306",
+      "name": "RO-3306",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 68,
+        "decreased": 41,
+        "discordant": 453,
+        "within_threshold": 4339,
+        "missing": 10269
+      }
+    },
+    {
+      "id": "Selisistat",
+      "name": "Selisistat",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 39,
+        "decreased": 49,
+        "discordant": 346,
+        "within_threshold": 4467,
+        "missing": 10269
+      }
+    },
+    {
+      "id": "Tubastatin A",
+      "name": "Tubastatin A",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 33,
+        "decreased": 41,
+        "discordant": 414,
+        "within_threshold": 4413,
+        "missing": 10269
+      }
+    },
+    {
+      "id": "ZM447439",
+      "name": "ZM447439",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 73,
+        "decreased": 74,
+        "discordant": 393,
+        "within_threshold": 4751,
+        "missing": 9879
+      }
+    },
+    {
+      "id": "ZSTK474",
+      "name": "ZSTK474",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 35,
+        "decreased": 80,
+        "discordant": 374,
+        "within_threshold": 4924,
+        "missing": 9757
+      }
+    },
+    {
+      "id": "AS601245",
+      "name": "AS601245",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 56,
+        "decreased": 74,
+        "discordant": 264,
+        "within_threshold": 4091,
+        "missing": 10685
+      }
+    },
+    {
+      "id": "Axitinib",
+      "name": "Axitinib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 48,
+        "decreased": 87,
+        "discordant": 281,
+        "within_threshold": 4101,
+        "missing": 10653
+      }
+    },
+    {
+      "id": "BMS-754807",
+      "name": "BMS-754807",
+      "dose": "0.96 µM",
+      "counts": {
+        "increased": 43,
+        "decreased": 83,
+        "discordant": 248,
+        "within_threshold": 4143,
+        "missing": 10653
+      }
+    },
+    {
+      "id": "Bosutinib",
+      "name": "Bosutinib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 91,
+        "decreased": 103,
+        "discordant": 405,
+        "within_threshold": 3885,
+        "missing": 10686
+      }
+    },
+    {
+      "id": "Erlotinib",
+      "name": "Erlotinib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 51,
+        "decreased": 90,
+        "discordant": 258,
+        "within_threshold": 4118,
+        "missing": 10653
+      }
+    },
+    {
+      "id": "Lapatinib",
+      "name": "Lapatinib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 60,
+        "decreased": 97,
+        "discordant": 302,
+        "within_threshold": 4058,
+        "missing": 10653
+      }
+    },
+    {
+      "id": "Pazopanib",
+      "name": "Pazopanib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 57,
+        "decreased": 92,
+        "discordant": 303,
+        "within_threshold": 4065,
+        "missing": 10653
+      }
+    },
+    {
+      "id": "PLX4720",
+      "name": "PLX4720",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 53,
+        "decreased": 75,
+        "discordant": 268,
+        "within_threshold": 4089,
+        "missing": 10685
+      }
+    },
+    {
+      "id": "VX-702",
+      "name": "VX-702",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 46,
+        "decreased": 62,
+        "discordant": 244,
+        "within_threshold": 4133,
+        "missing": 10685
+      }
+    },
+    {
+      "id": "Alectinib",
+      "name": "Alectinib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 84,
+        "decreased": 154,
+        "discordant": 499,
+        "within_threshold": 4326,
+        "missing": 10107
+      }
+    },
+    {
+      "id": "CUDC-101",
+      "name": "CUDC-101",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 108,
+        "decreased": 156,
+        "discordant": 418,
+        "within_threshold": 4383,
+        "missing": 10105
+      }
+    },
+    {
+      "id": "Docetaxel",
+      "name": "Docetaxel",
+      "dose": "0.016 µM",
+      "counts": {
+        "increased": 95,
+        "decreased": 182,
+        "discordant": 426,
+        "within_threshold": 4357,
+        "missing": 10110
+      }
+    },
+    {
+      "id": "Metformin_100",
+      "name": "Metformin_100",
+      "dose": "100 µM",
+      "counts": {
+        "increased": 74,
+        "decreased": 117,
+        "discordant": 303,
+        "within_threshold": 3980,
+        "missing": 10696
+      }
+    },
+    {
+      "id": "Metformin_1000",
+      "name": "Metformin_1000",
+      "dose": "1000 µM",
+      "counts": {
+        "increased": 74,
+        "decreased": 111,
+        "discordant": 311,
+        "within_threshold": 3977,
+        "missing": 10697
+      }
+    },
+    {
+      "id": "Metformin_50",
+      "name": "Metformin_50",
+      "dose": "50 µM",
+      "counts": {
+        "increased": 79,
+        "decreased": 119,
+        "discordant": 332,
+        "within_threshold": 3942,
+        "missing": 10698
+      }
+    },
+    {
+      "id": "Metformin_500",
+      "name": "Metformin_500",
+      "dose": "500 µM",
+      "counts": {
+        "increased": 83,
+        "decreased": 112,
+        "discordant": 495,
+        "within_threshold": 3783,
+        "missing": 10697
+      }
+    },
+    {
+      "id": "Metformin_8000",
+      "name": "Metformin_8000",
+      "dose": "8000 µM",
+      "counts": {
+        "increased": 79,
+        "decreased": 125,
+        "discordant": 335,
+        "within_threshold": 3934,
+        "missing": 10697
+      }
+    },
+    {
+      "id": "Nutlin-3a",
+      "name": "Nutlin-3a",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 99,
+        "decreased": 167,
+        "discordant": 551,
+        "within_threshold": 4246,
+        "missing": 10107
+      }
+    },
+    {
+      "id": "XAV939",
+      "name": "XAV939",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 71,
+        "decreased": 154,
+        "discordant": 376,
+        "within_threshold": 4463,
+        "missing": 10106
+      }
+    },
+    {
+      "id": "5-FU",
+      "name": "5-FU",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 111,
+        "decreased": 114,
+        "discordant": 464,
+        "within_threshold": 4494,
+        "missing": 9987
+      }
+    },
+    {
+      "id": "Actinomycin-D",
+      "name": "Actinomycin-D",
+      "dose": "0.169 µM",
+      "counts": {
+        "increased": 85,
+        "decreased": 99,
+        "discordant": 430,
+        "within_threshold": 4641,
+        "missing": 9915
+      }
+    },
+    {
+      "id": "Bortezomib",
+      "name": "Bortezomib",
+      "dose": "4.1 µM",
+      "counts": {
+        "increased": 135,
+        "decreased": 47,
+        "discordant": 364,
+        "within_threshold": 4654,
+        "missing": 9970
+      }
+    },
+    {
+      "id": "Camptothecin",
+      "name": "Camptothecin",
+      "dose": "0.165 µM",
+      "counts": {
+        "increased": 77,
+        "decreased": 52,
+        "discordant": 405,
+        "within_threshold": 4379,
+        "missing": 10257
+      }
+    },
+    {
+      "id": "Capecitabine",
+      "name": "Capecitabine",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 84,
+        "decreased": 96,
+        "discordant": 386,
+        "within_threshold": 4615,
+        "missing": 9989
+      }
+    },
+    {
+      "id": "Carfilzomib",
+      "name": "Carfilzomib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 128,
+        "decreased": 45,
+        "discordant": 311,
+        "within_threshold": 4715,
+        "missing": 9971
+      }
+    },
+    {
+      "id": "Carmustine",
+      "name": "Carmustine",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 94,
+        "decreased": 91,
+        "discordant": 424,
+        "within_threshold": 4574,
+        "missing": 9987
+      }
+    },
+    {
+      "id": "CC-122",
+      "name": "CC-122",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 124,
+        "decreased": 57,
+        "discordant": 366,
+        "within_threshold": 4310,
+        "missing": 10313
+      }
+    },
+    {
+      "id": "CC-885",
+      "name": "CC-885",
+      "dose": "0.103 µM",
+      "counts": {
+        "increased": 103,
+        "decreased": 72,
+        "discordant": 366,
+        "within_threshold": 4315,
+        "missing": 10314
+      }
+    },
+    {
+      "id": "Celastrol",
+      "name": "Celastrol",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 94,
+        "decreased": 94,
+        "discordant": 329,
+        "within_threshold": 4683,
+        "missing": 9970
+      }
+    },
+    {
+      "id": "Colchicine",
+      "name": "Colchicine",
+      "dose": "0.19 µM",
+      "counts": {
+        "increased": 68,
+        "decreased": 31,
+        "discordant": 228,
+        "within_threshold": 5125,
+        "missing": 9718
+      }
+    },
+    {
+      "id": "CPT-11",
+      "name": "CPT-11",
+      "dose": "4 µM",
+      "counts": {
+        "increased": 43,
+        "decreased": 33,
+        "discordant": 344,
+        "within_threshold": 4494,
+        "missing": 10256
+      }
+    },
+    {
+      "id": "Crizotinib",
+      "name": "Crizotinib",
+      "dose": "1.23 µM",
+      "counts": {
+        "increased": 118,
+        "decreased": 52,
+        "discordant": 399,
+        "within_threshold": 4769,
+        "missing": 9832
+      }
+    },
+    {
+      "id": "Cyclophosphamide",
+      "name": "Cyclophosphamide",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 81,
+        "decreased": 78,
+        "discordant": 521,
+        "within_threshold": 4503,
+        "missing": 9987
+      }
+    },
+    {
+      "id": "Daunorubicin",
+      "name": "Daunorubicin",
+      "dose": "0.6 µM",
+      "counts": {
+        "increased": 77,
+        "decreased": 41,
+        "discordant": 403,
+        "within_threshold": 4736,
+        "missing": 9913
+      }
+    },
+    {
+      "id": "Etoposide",
+      "name": "Etoposide",
+      "dose": "9.66 µM",
+      "counts": {
+        "increased": 49,
+        "decreased": 31,
+        "discordant": 337,
+        "within_threshold": 4492,
+        "missing": 10261
+      }
+    },
+    {
+      "id": "Geldanamycin",
+      "name": "Geldanamycin",
+      "dose": "5.6 µM",
+      "counts": {
+        "increased": 64,
+        "decreased": 66,
+        "discordant": 410,
+        "within_threshold": 4373,
+        "missing": 10257
+      }
+    },
+    {
+      "id": "Imatinib",
+      "name": "Imatinib",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 107,
+        "decreased": 56,
+        "discordant": 387,
+        "within_threshold": 4789,
+        "missing": 9831
+      }
+    },
+    {
+      "id": "INCB018424",
+      "name": "INCB018424",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 119,
+        "decreased": 107,
+        "discordant": 475,
+        "within_threshold": 4637,
+        "missing": 9832
+      }
+    },
+    {
+      "id": "Ixabepilone",
+      "name": "Ixabepilone",
+      "dose": "0.3 µM",
+      "counts": {
+        "increased": 78,
+        "decreased": 28,
+        "discordant": 293,
+        "within_threshold": 4856,
+        "missing": 9915
+      }
+    },
+    {
+      "id": "Lenalidomide",
+      "name": "Lenalidomide",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 98,
+        "decreased": 29,
+        "discordant": 260,
+        "within_threshold": 4467,
+        "missing": 10316
+      }
+    },
+    {
+      "id": "LY2835219",
+      "name": "LY2835219",
+      "dose": "1.27 µM",
+      "counts": {
+        "increased": 106,
+        "decreased": 48,
+        "discordant": 385,
+        "within_threshold": 4802,
+        "missing": 9829
+      }
+    },
+    {
+      "id": "MG132",
+      "name": "MG132",
+      "dose": "4.3 µM",
+      "counts": {
+        "increased": 140,
+        "decreased": 37,
+        "discordant": 1026,
+        "within_threshold": 3995,
+        "missing": 9972
+      }
+    },
+    {
+      "id": "Mitomycin C",
+      "name": "Mitomycin C",
+      "dose": "0.231 µM",
+      "counts": {
+        "increased": 66,
+        "decreased": 34,
+        "discordant": 266,
+        "within_threshold": 4891,
+        "missing": 9913
+      }
+    },
+    {
+      "id": "Paclitaxel",
+      "name": "Paclitaxel",
+      "dose": "0.13 µM",
+      "counts": {
+        "increased": 47,
+        "decreased": 33,
+        "discordant": 206,
+        "within_threshold": 5167,
+        "missing": 9717
+      }
+    },
+    {
+      "id": "Pemetrexed",
+      "name": "Pemetrexed",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 60,
+        "decreased": 32,
+        "discordant": 273,
+        "within_threshold": 4891,
+        "missing": 9914
+      }
+    },
+    {
+      "id": "Pomalidomide",
+      "name": "Pomalidomide",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 105,
+        "decreased": 31,
+        "discordant": 269,
+        "within_threshold": 4451,
+        "missing": 10314
+      }
+    },
+    {
+      "id": "SAHA",
+      "name": "SAHA",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 122,
+        "decreased": 61,
+        "discordant": 392,
+        "within_threshold": 4764,
+        "missing": 9831
+      }
+    },
+    {
+      "id": "Temozolomide",
+      "name": "Temozolomide",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 88,
+        "decreased": 90,
+        "discordant": 476,
+        "within_threshold": 4529,
+        "missing": 9987
+      }
+    },
+    {
+      "id": "Thalidomide",
+      "name": "Thalidomide",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 108,
+        "decreased": 41,
+        "discordant": 331,
+        "within_threshold": 4375,
+        "missing": 10315
+      }
+    },
+    {
+      "id": "Topotecan",
+      "name": "Topotecan",
+      "dose": "7 µM",
+      "counts": {
+        "increased": 69,
+        "decreased": 67,
+        "discordant": 353,
+        "within_threshold": 4422,
+        "missing": 10259
+      }
+    },
+    {
+      "id": "Triptolide",
+      "name": "Triptolide",
+      "dose": "10 µM",
+      "counts": {
+        "increased": 69,
+        "decreased": 70,
+        "discordant": 318,
+        "within_threshold": 4743,
+        "missing": 9970
+      }
+    },
+    {
+      "id": "Vinblastine",
+      "name": "Vinblastine",
+      "dose": "0.11 µM",
+      "counts": {
+        "increased": 45,
+        "decreased": 31,
+        "discordant": 230,
+        "within_threshold": 5146,
+        "missing": 9718
+      }
+    },
+    {
+      "id": "Vincristine",
+      "name": "Vincristine",
+      "dose": "0.045 µM",
+      "counts": {
+        "increased": 71,
+        "decreased": 28,
+        "discordant": 253,
+        "within_threshold": 5100,
+        "missing": 9718
+      }
+    }
+  ]
+}

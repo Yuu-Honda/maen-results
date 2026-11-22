@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MCF7乳がん由来細胞に物質を加えた12時間後のタンパク質量を、溶媒だけの対照群と比べます。">
+  <meta name="theme-color" content="#103f3b">
+  <title>物質を加えると細胞はどう変わる？ | MAEN</title>
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+  <link rel="alternate" hreflang="ja" href="protein-response.html">
+  <link rel="alternate" hreflang="en" href="protein-response-en.html">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="protein-response.css">
+  <script defer src="protein-response.js"></script>
+</head>
+<body class="protein-response">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="favicon.svg?v=2" width="30" height="30" alt="">MAEN</a>
+    <nav class="language" aria-label="言語"><span aria-current="page">JP</span><span class="separator" aria-hidden="true">/</span><a href="protein-response-en.html" lang="en" hreflang="en">EN</a></nav>
+  </div>
+</header>
+<main id="main">
+  <section class="response-hero" aria-labelledby="response-title">
+    <div class="container">
+      <p class="eyebrow">MCF7 / タンパク質の実測</p>
+      <h1 id="response-title">物質を加えると、<br>細胞はどう変わる？</h1>
+      <p>研究者は乳がん由来の培養細胞に物質を加え、12時間後のタンパク質量を測りました。78条件から一つ選ぶと、溶媒（DMSO）だけを加えた対照群との差が見られます。</p>
+    </div>
+  </section>
+  <div class="container response-content">
+    <div id="response-loading" role="status" hidden>集計を読み込んでいます。</div>
+    <p id="response-error" role="alert" hidden>集計を読み込めませんでした。ページを再読み込みするか、下の集計データを開いてください。</p>
+    <noscript>
+      <section class="response-fallback" aria-labelledby="fallback-title">
+        <h2 id="fallback-title">最初の投与条件の実測例</h2>
+        <p>ABT888 hydrochloride（3.2 µM）。12時間後に溶媒だけの対照群と比較した2回分の測定から、全15,170タンパク質IDを数えています。</p>
+        <dl class="response-fallback-counts">
+          <dt>増加（2回とも1.5倍以上）</dt><dd>106</dd>
+          <dt>減少（2回とも3分の2以下）</dt><dd>79</dd>
+          <dt>2回で判定が異なる</dt><dd>434</dd>
+          <dt>2回とも基準内</dt><dd>4,389</dd>
+          <dt>測定値が不足（少なくとも片方）</dt><dd>10,162</dd>
+        </dl>
+        <p>条件の切り替えにはJavaScriptが必要です。全条件の件数は下の集計データで確認できます。</p>
+      </section>
+    </noscript>
+    <section class="response-panel" id="response-panel" aria-labelledby="response-chart-title" hidden>
+      <div class="response-toolbar">
+        <label for="response-condition">投与条件を選ぶ</label>
+        <select id="response-condition"></select>
+        <p>同じ物質でも、濃度が異なれば別の条件です。</p>
+      </div>
+      <div class="response-chart">
+        <h2 id="response-chart-title">対照群と比べた変化</h2>
+        <p id="response-selected" class="response-selected" role="status"></p>
+        <p class="response-scale">棒の全幅は、元の表にある全15,170タンパク質IDです。</p>
+        <ul class="response-rows">
+          <li class="response-row" data-bin="increased">
+            <div class="response-row-head"><strong>増加</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>2回とも対照の1.5倍以上。</p>
+          </li>
+          <li class="response-row" data-bin="decreased">
+            <div class="response-row-head"><strong>減少</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>2回とも対照の3分の2以下。</p>
+          </li>
+          <li class="response-row" data-bin="discordant">
+            <div class="response-row-head"><strong>2回で判定が異なる</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>両方に値があり、増加・減少・基準内の判定が揃わない。</p>
+          </li>
+          <li class="response-row" data-bin="within_threshold">
+            <div class="response-row-head"><strong>2回とも基準内</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>2回とも対照の3分の2より大きく、1.5倍未満。</p>
+          </li>
+          <li class="response-row" data-bin="missing">
+            <div class="response-row-head"><strong>測定値が不足</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>少なくとも片方の測定値が表にない。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="response-reading" aria-labelledby="response-reading-title">
+      <h2 id="response-reading-title">グラフの読み方</h2>
+      <p>物質を加えて12時間後に測った値を、研究で使われたDMSO対照と比べます。この研究では測定グループ間で同じDMSO対照を共有しています。補足表S2に単位の明記がないため、原著の方法（2.5節）に基づき、表の値を「投与群の量 ÷ 対照群の量」として読みました。1.5倍とその逆数は件数を数える基準です。統計的に確かな変化かどうかは検定していません。</p>
+      <p>対象は培養したMCF7細胞のタンパク質量です。増減が治療に役立つかを判断するには、細胞の増殖や比較細胞への影響を別の実験で測る必要があります。</p>
+      <p class="response-links"><a href="data/protein-response.json">全条件の集計データ（JSON）</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10859532/">原著と補足表</a></p>
+    </section>
+    <section class="response-reading" aria-labelledby="response-reverse-title">
+      <h2 id="response-reverse-title">似た変化を実験データから探す</h2>
+      <p>研究では、タンパク質ごとの増減の並びを比べて、似た変化を起こした投与条件を探します。</p>
+      <p><a href="index.html#protein">逆検索の仕組みと検証結果を見る</a></p>
+    </section>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><a href="index.html">MAENのトップへ</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore measured protein abundance in MCF7 breast cancer cells 12 hours after treatment, compared with a vehicle-only control.">
+  <meta name="theme-color" content="#103f3b">
+  <title>How do cells change after treatment? | MAEN</title>
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+  <link rel="alternate" hreflang="ja" href="protein-response.html">
+  <link rel="alternate" hreflang="en" href="protein-response-en.html">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="protein-response.css">
+  <script defer src="protein-response.js"></script>
+</head>
+<body class="protein-response">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="en.html"><img src="favicon.svg?v=2" width="30" height="30" alt="">MAEN</a>
+    <nav class="language" aria-label="Language"><a href="protein-response.html" lang="ja" hreflang="ja">JP</a><span class="separator" aria-hidden="true">/</span><span aria-current="page">EN</span></nav>
+  </div>
+</header>
+<main id="main">
+  <section class="response-hero" aria-labelledby="response-title">
+    <div class="container">
+      <p class="eyebrow">MCF7 / Measured protein abundance</p>
+      <h1 id="response-title">How do cells change<br>after treatment?</h1>
+      <p>Researchers added substances to cultured breast cancer cells and measured their protein abundance 12 hours later. Pick one of 78 conditions to see how the cells differed from cells given only the solvent (DMSO).</p>
+    </div>
+  </section>
+  <div class="container response-content">
+    <div id="response-loading" role="status" hidden>Loading the summary.</div>
+    <p id="response-error" role="alert" hidden>The summary could not be loaded. Reload this page or open the data link below.</p>
+    <noscript>
+      <section class="response-fallback" aria-labelledby="fallback-title">
+        <h2 id="fallback-title">Measured example from the first condition</h2>
+        <p>ABT888 hydrochloride (3.2 µM). Counts cover all 15,170 protein IDs and use both repeats of the comparison with the vehicle-only control at 12 hours.</p>
+        <dl class="response-fallback-counts">
+          <dt>Increased (at least 1.5 times in both)</dt><dd>106</dd>
+          <dt>Decreased (at most two thirds in both)</dt><dd>79</dd>
+          <dt>Repeats differ</dt><dd>434</dd>
+          <dt>Both within bounds</dt><dd>4,389</dd>
+          <dt>Missing data in at least one repeat</dt><dd>10,162</dd>
+        </dl>
+        <p>JavaScript is needed to switch conditions here. The data link below contains the counts for all conditions.</p>
+      </section>
+    </noscript>
+    <section class="response-panel" id="response-panel" aria-labelledby="response-chart-title" hidden>
+      <div class="response-toolbar">
+        <label for="response-condition">Choose a treatment condition</label>
+        <select id="response-condition"></select>
+        <p>Each concentration of a substance is listed separately.</p>
+      </div>
+      <div class="response-chart">
+        <h2 id="response-chart-title">Change relative to the control</h2>
+        <p id="response-selected" class="response-selected" role="status"></p>
+        <p class="response-scale">A full bar represents all 15,170 protein IDs in the source table.</p>
+        <ul class="response-rows">
+          <li class="response-row" data-bin="increased">
+            <div class="response-row-head"><strong>Increased</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>At least 1.5 times the control in both repeats.</p>
+          </li>
+          <li class="response-row" data-bin="decreased">
+            <div class="response-row-head"><strong>Decreased</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>At most two thirds of the control in both repeats.</p>
+          </li>
+          <li class="response-row" data-bin="discordant">
+            <div class="response-row-head"><strong>Repeats differ</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>Both values are present, but they fall into different categories.</p>
+          </li>
+          <li class="response-row" data-bin="within_threshold">
+            <div class="response-row-head"><strong>Both within bounds</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>Both values are above two thirds and below 1.5 times the control.</p>
+          </li>
+          <li class="response-row" data-bin="missing">
+            <div class="response-row-head"><strong>Missing data</strong><span class="response-count"></span></div>
+            <div class="response-bar" aria-hidden="true"><span></span></div>
+            <p>At least one repeat has no value in the table.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="response-reading" aria-labelledby="response-reading-title">
+      <h2 id="response-reading-title">How to read the chart</h2>
+      <p>We compare the values measured 12 hours after treatment with the study’s DMSO control. The study shared DMSO controls across measurement groups. Supplementary Table S2 does not specify a unit. Following section 2.5 of the paper, we interpret its values as protein abundance in treated cells divided by abundance in the control. The 1.5 threshold and its reciprocal define the counts. We did not test for statistical significance.</p>
+      <p>The chart measures protein abundance in cultured MCF7 cells. To assess whether these changes could be useful for treatment, separate experiments would need to measure cell growth and effects on comparator cells.</p>
+      <p class="response-links"><a href="data/protein-response.json">Aggregated counts for all conditions (JSON)</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10859532/">Original paper and supplementary tables</a></p>
+    </section>
+    <section class="response-reading" aria-labelledby="response-reverse-title">
+      <h2 id="response-reverse-title">Find similar changes in the experiment</h2>
+      <p>Researchers can compare patterns of increase and decrease across individual proteins to find other conditions that produced similar changes.</p>
+      <p><a href="en.html#protein">See how reverse lookup works and how MAEN tested it</a></p>
+    </section>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><a href="en.html">Back to MAEN</a></div></footer>
+</body>
+</html>

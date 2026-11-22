@@ -1,5 +1,7 @@
 # MAEN — 細胞の変化から、次に調べる候補へ
 
+2026-11-22：MCF7に物質を加えた12時間後のタンパク質量を、溶媒だけの対照群と比べる画面を追加しました。78条件を切り替えて増加、減少、測定値の不足などを確認できます。[日本語](https://yuu-honda.github.io/maen-results/protein-response.html) / [English](https://yuu-honda.github.io/maen-results/protein-response-en.html) / [集計データ](data/protein-response.json)
+
 今回の事後的な54/54・12/12は、不一致が1件でもあれば停止する全件確認を通った件数で、一致率の推定ではありません。元の文字列照合39/54・7/12を保持します。
 
 The post-hoc54/54 and12/12 are counts passing an all-or-stop annotation gate, not estimated match rates; the original literal39/54 and7/12 remain.
