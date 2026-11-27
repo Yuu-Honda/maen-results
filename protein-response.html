@@ -10,8 +10,8 @@
   <link rel="alternate" hreflang="ja" href="protein-response.html">
   <link rel="alternate" hreflang="en" href="protein-response-en.html">
   <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="protein-response.css">
-  <script defer src="protein-response.js"></script>
+  <link rel="stylesheet" href="protein-response.css?v=2">
+  <script defer src="protein-response.js?v=2"></script>
 </head>
 <body class="protein-response">
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -84,6 +84,21 @@
           </li>
         </ul>
       </div>
+      <section class="response-similarity" aria-labelledby="response-similarity-title">
+        <h2 id="response-similarity-title">この条件に似た変化</h2>
+        <p>同じMCF7の研究で、物質を加えた12時間後のタンパク質量の増減が近い条件を最大5件表示します。条件名を押すと、その条件の実測件数に切り替わります。</p>
+        <p class="response-similarity-note">78条件のうち52条件で、最も変化が近い相手は同じ測定グループでした。測定のしかたが順位に影響した可能性があります。</p>
+        <p id="response-similarity-status" role="status">似た条件を読み込んでいます。</p>
+        <p class="response-similarity-key">R1は1回目、R2は2回目の測定です。矢印の左が選んだ条件、右がリストの条件です。</p>
+        <ol id="response-neighbors" class="response-neighbors" aria-label="類似度の高い順" hidden></ol>
+        <details class="response-similarity-method">
+          <summary>類似度と共通タンパク質数の読み方</summary>
+          <p>選択した条件の1回目と別条件の2回目を比較し、選択した条件の2回目と別条件の1回目も比較します。どちらも共通タンパク質IDが100以上の場合に、対照に対する量の比を対数（log₂）に変換してコサイン類似度を求め、2方向の値を平均します。類似度は−1から1で、1に近いほど実測の増減パターンが近いことを表します。表示値は小数第3位まで丸めています。</p>
+          <p>共通タンパク質数は比較の方向ごとに表示します。測定値があるIDだけを使うため、欠測のパターンや測定グループ、共有したDMSO対照が類似度に影響する場合があります。作用のしくみや治療効果の確認には別の検証が必要です。</p>
+          <p>78条件をそれぞれ選んで残り77条件との組を数えると、全6,006組のうち304組（5.1%）が同じ測定グループでした。</p>
+          <p><a href="data/protein-similarity.json">全条件の類似度集計（JSON）</a></p>
+        </details>
+      </section>
     </section>
     <section class="response-reading" aria-labelledby="response-reading-title">
       <h2 id="response-reading-title">グラフの読み方</h2>
@@ -92,8 +107,8 @@
       <p class="response-links"><a href="data/protein-response.json">全条件の集計データ（JSON）</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10859532/">原著と補足表</a></p>
     </section>
     <section class="response-reading" aria-labelledby="response-reverse-title">
-      <h2 id="response-reverse-title">似た変化を実験データから探す</h2>
-      <p>研究では、タンパク質ごとの増減の並びを比べて、似た変化を起こした投与条件を探します。</p>
+      <h2 id="response-reverse-title">逆検索の検証結果</h2>
+      <p>MAENでは、片方の反復の増減パターンを使うと、もう片方の反復から元の条件をどれだけ見つけられるかも調べています。</p>
       <p><a href="index.html#protein">逆検索の仕組みと検証結果を見る</a></p>
     </section>
   </div>
