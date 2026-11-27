@@ -10,8 +10,8 @@
   <link rel="alternate" hreflang="ja" href="protein-response.html">
   <link rel="alternate" hreflang="en" href="protein-response-en.html">
   <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="protein-response.css">
-  <script defer src="protein-response.js"></script>
+  <link rel="stylesheet" href="protein-response.css?v=2">
+  <script defer src="protein-response.js?v=2"></script>
 </head>
 <body class="protein-response">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -84,6 +84,21 @@
           </li>
         </ul>
       </div>
+      <section class="response-similarity" aria-labelledby="response-similarity-title">
+        <h2 id="response-similarity-title">Conditions with similar changes</h2>
+        <p>Find up to five other conditions whose protein changes were most similar 12 hours after treatment in the same MCF7 study. Select a condition to view its measured counts.</p>
+        <p class="response-similarity-note">For 52 of the 78 conditions, the closest match came from the same measurement group. The measurement setup may have influenced the rankings.</p>
+        <p id="response-similarity-status" role="status">Loading similar conditions.</p>
+        <p class="response-similarity-key">R1 and R2 are the first and second replicates. Each arrow runs from the condition you selected to the condition in the list.</p>
+        <ol id="response-neighbors" class="response-neighbors" aria-label="Ranked by similarity" hidden></ol>
+        <details class="response-similarity-method">
+          <summary>How to read similarity and shared protein counts</summary>
+          <p>We compare replicate 1 of the selected condition with replicate 2 of another condition, then swap the replicates. When both directions share at least 100 protein IDs, we calculate cosine similarity on the log₂ ratios to the control, then average the two scores. Scores range from −1 to 1. A score closer to 1 indicates a more similar pattern of measured changes. Scores are displayed to three decimal places.</p>
+          <p>The shared protein count is shown for each direction. Comparisons use only IDs with values in both measurements. Missing values, measurement groups and shared DMSO controls may influence the scores. Mechanism and treatment effect require separate evidence.</p>
+          <p>Counting all 77 possible matches for each of the 78 conditions, 304 of 6,006 pairs (5.1%) came from the same measurement group.</p>
+          <p><a href="data/protein-similarity.json">Similarity data for all conditions (JSON)</a></p>
+        </details>
+      </section>
     </section>
     <section class="response-reading" aria-labelledby="response-reading-title">
       <h2 id="response-reading-title">How to read the chart</h2>
@@ -92,8 +107,8 @@
       <p class="response-links"><a href="data/protein-response.json">Aggregated counts for all conditions (JSON)</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10859532/">Original paper and supplementary tables</a></p>
     </section>
     <section class="response-reading" aria-labelledby="response-reverse-title">
-      <h2 id="response-reverse-title">Find similar changes in the experiment</h2>
-      <p>Researchers can compare patterns of increase and decrease across individual proteins to find other conditions that produced similar changes.</p>
+      <h2 id="response-reverse-title">Reverse lookup test results</h2>
+      <p>MAEN also tested how often a pattern from one replicate retrieves its original condition in the other replicate.</p>
       <p><a href="en.html#protein">See how reverse lookup works and how MAEN tested it</a></p>
     </section>
   </div>

@@ -1,0 +1,2814 @@
+{
+  "schema_version": 1,
+  "min_shared_proteins": 100,
+  "conditions": [
+    {
+      "id": "ABT888 hydrochloride",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "GSK-525762A",
+          "similarity": 0.667195,
+          "shared_r1_r2": 5008,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "JQ-1",
+          "similarity": 0.666607,
+          "shared_r1_r2": 5008,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.585635,
+          "shared_r1_r2": 5008,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.544428,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4936
+        },
+        {
+          "id": "Valproic acid",
+          "similarity": 0.538814,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4937
+        }
+      ]
+    },
+    {
+      "id": "Aminophylline",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Valproic acid",
+          "similarity": 0.667812,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Entacapone",
+          "similarity": 0.661592,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.608444,
+          "shared_r1_r2": 5457,
+          "shared_r2_r1": 5456
+        },
+        {
+          "id": "Dacogen",
+          "similarity": 0.597593,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.582397,
+          "shared_r1_r2": 4937,
+          "shared_r2_r1": 5009
+        }
+      ]
+    },
+    {
+      "id": "CPI-203",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "GSK-525762A",
+          "similarity": 0.611517,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "JQ-1",
+          "similarity": 0.591989,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.588505,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4936
+        },
+        {
+          "id": "ABT888 hydrochloride",
+          "similarity": 0.585635,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5008
+        },
+        {
+          "id": "Dinaciclib",
+          "similarity": 0.583719,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        }
+      ]
+    },
+    {
+      "id": "Dacogen",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Valproic acid",
+          "similarity": 0.6185,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Entacapone",
+          "similarity": 0.603734,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Aminophylline",
+          "similarity": 0.597593,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.590912,
+          "shared_r1_r2": 5457,
+          "shared_r2_r1": 5456
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.54238,
+          "shared_r1_r2": 4937,
+          "shared_r2_r1": 5009
+        }
+      ]
+    },
+    {
+      "id": "Dinaciclib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "CPI-203",
+          "similarity": 0.583719,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "Valproic acid",
+          "similarity": 0.541116,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4937
+        },
+        {
+          "id": "AT-7519",
+          "similarity": 0.533961,
+          "shared_r1_r2": 4774,
+          "shared_r2_r1": 4791
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.53353,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4936
+        },
+        {
+          "id": "Entacapone",
+          "similarity": 0.526657,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4937
+        }
+      ]
+    },
+    {
+      "id": "Entacapone",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Aminophylline",
+          "similarity": 0.661592,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Valproic acid",
+          "similarity": 0.636825,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Dacogen",
+          "similarity": 0.603734,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.599687,
+          "shared_r1_r2": 5457,
+          "shared_r2_r1": 5456
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.575514,
+          "shared_r1_r2": 4937,
+          "shared_r2_r1": 5009
+        }
+      ]
+    },
+    {
+      "id": "GSK-525762A",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "JQ-1",
+          "similarity": 0.676257,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "ABT888 hydrochloride",
+          "similarity": 0.667195,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5008
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.611517,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.579203,
+          "shared_r1_r2": 5008,
+          "shared_r2_r1": 4936
+        },
+        {
+          "id": "Valproic acid",
+          "similarity": 0.572427,
+          "shared_r1_r2": 5008,
+          "shared_r2_r1": 4937
+        }
+      ]
+    },
+    {
+      "id": "JQ-1",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "GSK-525762A",
+          "similarity": 0.676257,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "ABT888 hydrochloride",
+          "similarity": 0.666607,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5008
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.591989,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "Entacapone",
+          "similarity": 0.547267,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4937
+        },
+        {
+          "id": "Valproic acid",
+          "similarity": 0.545234,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 4937
+        }
+      ]
+    },
+    {
+      "id": "Theophylline monohydrate",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Valproic acid",
+          "similarity": 0.620316,
+          "shared_r1_r2": 5456,
+          "shared_r2_r1": 5457
+        },
+        {
+          "id": "Aminophylline",
+          "similarity": 0.608444,
+          "shared_r1_r2": 5456,
+          "shared_r2_r1": 5457
+        },
+        {
+          "id": "Entacapone",
+          "similarity": 0.599687,
+          "shared_r1_r2": 5456,
+          "shared_r2_r1": 5457
+        },
+        {
+          "id": "Dacogen",
+          "similarity": 0.590912,
+          "shared_r1_r2": 5456,
+          "shared_r2_r1": 5457
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.588505,
+          "shared_r1_r2": 4936,
+          "shared_r2_r1": 5009
+        }
+      ]
+    },
+    {
+      "id": "Valproic acid",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Aminophylline",
+          "similarity": 0.667812,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Entacapone",
+          "similarity": 0.636825,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "Theophylline monohydrate",
+          "similarity": 0.620316,
+          "shared_r1_r2": 5457,
+          "shared_r2_r1": 5456
+        },
+        {
+          "id": "Dacogen",
+          "similarity": 0.6185,
+          "shared_r1_r2": 5459,
+          "shared_r2_r1": 5459
+        },
+        {
+          "id": "CPI-203",
+          "similarity": 0.578418,
+          "shared_r1_r2": 4937,
+          "shared_r2_r1": 5009
+        }
+      ]
+    },
+    {
+      "id": "AS605240",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "PIK-93",
+          "similarity": 0.685738,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.6677,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.65627,
+          "shared_r1_r2": 5412,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "ZSTK474",
+          "similarity": 0.629369,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.583985,
+          "shared_r1_r2": 5081,
+          "shared_r2_r1": 5247
+        }
+      ]
+    },
+    {
+      "id": "AT-7519",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Dinaciclib",
+          "similarity": 0.533961,
+          "shared_r1_r2": 4791,
+          "shared_r2_r1": 4774
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.519487,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.511043,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.509792,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.504651,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        }
+      ]
+    },
+    {
+      "id": "AZD7762",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Cisplatin",
+          "similarity": 0.635356,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5292
+        },
+        {
+          "id": "ZM447439",
+          "similarity": 0.617526,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5291
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.589011,
+          "shared_r1_r2": 5245,
+          "shared_r2_r1": 5081
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.581354,
+          "shared_r1_r2": 5245,
+          "shared_r2_r1": 5081
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.57433,
+          "shared_r1_r2": 5245,
+          "shared_r2_r1": 5081
+        }
+      ]
+    },
+    {
+      "id": "CAY10603",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "PXD101",
+          "similarity": 0.619834,
+          "shared_r1_r2": 5017,
+          "shared_r2_r1": 5010
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.512919,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.512104,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "ZM447439",
+          "similarity": 0.508888,
+          "shared_r1_r2": 5017,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.500858,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        }
+      ]
+    },
+    {
+      "id": "Cisplatin",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "AZD7762",
+          "similarity": 0.635356,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5292
+        },
+        {
+          "id": "ZM447439",
+          "similarity": 0.627992,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5291
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.602882,
+          "shared_r1_r2": 5247,
+          "shared_r2_r1": 5081
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.58904,
+          "shared_r1_r2": 5247,
+          "shared_r2_r1": 5081
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.583985,
+          "shared_r1_r2": 5247,
+          "shared_r2_r1": 5081
+        }
+      ]
+    },
+    {
+      "id": "MLN4924",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Cisplatin",
+          "similarity": 0.582825,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5293
+        },
+        {
+          "id": "ZM447439",
+          "similarity": 0.551808,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5292
+        },
+        {
+          "id": "Selisistat",
+          "similarity": 0.51882,
+          "shared_r1_r2": 5010,
+          "shared_r2_r1": 5018
+        },
+        {
+          "id": "AZD7762",
+          "similarity": 0.518089,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5293
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.513924,
+          "shared_r1_r2": 5247,
+          "shared_r2_r1": 5081
+        }
+      ]
+    },
+    {
+      "id": "PD-0325901",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Refametinib",
+          "similarity": 0.687229,
+          "shared_r1_r2": 5412,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.676634,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.6677,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "ZSTK474",
+          "similarity": 0.620996,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.602882,
+          "shared_r1_r2": 5081,
+          "shared_r2_r1": 5247
+        }
+      ]
+    },
+    {
+      "id": "PIK-93",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "AS605240",
+          "similarity": 0.685738,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.676634,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.659632,
+          "shared_r1_r2": 5412,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "ZSTK474",
+          "similarity": 0.636019,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.58904,
+          "shared_r1_r2": 5081,
+          "shared_r2_r1": 5247
+        }
+      ]
+    },
+    {
+      "id": "PXD101",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "CAY10603",
+          "similarity": 0.619834,
+          "shared_r1_r2": 5010,
+          "shared_r2_r1": 5017
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.535948,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5293
+        },
+        {
+          "id": "ZM447439",
+          "similarity": 0.523743,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5292
+        },
+        {
+          "id": "AZD7762",
+          "similarity": 0.519772,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5293
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.483654,
+          "shared_r1_r2": 5247,
+          "shared_r2_r1": 5080
+        }
+      ]
+    },
+    {
+      "id": "Refametinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "PD-0325901",
+          "similarity": 0.687229,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5412
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.659632,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5412
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.65627,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5412
+        },
+        {
+          "id": "ZSTK474",
+          "similarity": 0.610182,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5412
+        },
+        {
+          "id": "Selisistat",
+          "similarity": 0.585683,
+          "shared_r1_r2": 5000,
+          "shared_r2_r1": 5289
+        }
+      ]
+    },
+    {
+      "id": "RO-3306",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "AS605240",
+          "similarity": 0.509365,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.500388,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "ZM447439",
+          "similarity": 0.498784,
+          "shared_r1_r2": 5017,
+          "shared_r2_r1": 5009
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.493131,
+          "shared_r1_r2": 5018,
+          "shared_r2_r1": 5010
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.48994,
+          "shared_r1_r2": 5289,
+          "shared_r2_r1": 5000
+        }
+      ]
+    },
+    {
+      "id": "Selisistat",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "PD-0325901",
+          "similarity": 0.591429,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.585683,
+          "shared_r1_r2": 5289,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.580268,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.576662,
+          "shared_r1_r2": 5018,
+          "shared_r2_r1": 5010
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.574617,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        }
+      ]
+    },
+    {
+      "id": "Tubastatin A",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "PD-0325901",
+          "similarity": 0.562795,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.556886,
+          "shared_r1_r2": 5018,
+          "shared_r2_r1": 5010
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.546541,
+          "shared_r1_r2": 5290,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "PIK-93",
+          "similarity": 0.539174,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.525342,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5000
+        }
+      ]
+    },
+    {
+      "id": "ZM447439",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Cisplatin",
+          "similarity": 0.627992,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5292
+        },
+        {
+          "id": "AZD7762",
+          "similarity": 0.617526,
+          "shared_r1_r2": 5291,
+          "shared_r2_r1": 5292
+        },
+        {
+          "id": "Selisistat",
+          "similarity": 0.560158,
+          "shared_r1_r2": 5009,
+          "shared_r2_r1": 5017
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.557108,
+          "shared_r1_r2": 5244,
+          "shared_r2_r1": 5080
+        },
+        {
+          "id": "MLN4924",
+          "similarity": 0.551808,
+          "shared_r1_r2": 5292,
+          "shared_r2_r1": 5292
+        }
+      ]
+    },
+    {
+      "id": "ZSTK474",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "PIK-93",
+          "similarity": 0.636019,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "AS605240",
+          "similarity": 0.629369,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "PD-0325901",
+          "similarity": 0.620996,
+          "shared_r1_r2": 5413,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "Refametinib",
+          "similarity": 0.610182,
+          "shared_r1_r2": 5412,
+          "shared_r2_r1": 5413
+        },
+        {
+          "id": "Cisplatin",
+          "similarity": 0.564767,
+          "shared_r1_r2": 5081,
+          "shared_r2_r1": 5247
+        }
+      ]
+    },
+    {
+      "id": "AS601245",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Erlotinib",
+          "similarity": 0.676688,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Lapatinib",
+          "similarity": 0.673772,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Axitinib",
+          "similarity": 0.668944,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Pazopanib",
+          "similarity": 0.659593,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "VX-702",
+          "similarity": 0.65146,
+          "shared_r1_r2": 4485,
+          "shared_r2_r1": 4485
+        }
+      ]
+    },
+    {
+      "id": "Axitinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Bosutinib",
+          "similarity": 0.682186,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "VX-702",
+          "similarity": 0.679531,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "PLX4720",
+          "similarity": 0.675549,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "AS601245",
+          "similarity": 0.668944,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Erlotinib",
+          "similarity": 0.660967,
+          "shared_r1_r2": 4517,
+          "shared_r2_r1": 4517
+        }
+      ]
+    },
+    {
+      "id": "BMS-754807",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "VX-702",
+          "similarity": 0.658178,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "AS601245",
+          "similarity": 0.644435,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "PLX4720",
+          "similarity": 0.642088,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Bosutinib",
+          "similarity": 0.627892,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Erlotinib",
+          "similarity": 0.603025,
+          "shared_r1_r2": 4517,
+          "shared_r2_r1": 4517
+        }
+      ]
+    },
+    {
+      "id": "Bosutinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Erlotinib",
+          "similarity": 0.693,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Lapatinib",
+          "similarity": 0.691395,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Axitinib",
+          "similarity": 0.682186,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Pazopanib",
+          "similarity": 0.672354,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "PLX4720",
+          "similarity": 0.658878,
+          "shared_r1_r2": 4484,
+          "shared_r2_r1": 4485
+        }
+      ]
+    },
+    {
+      "id": "Erlotinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "VX-702",
+          "similarity": 0.704552,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Bosutinib",
+          "similarity": 0.693,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "PLX4720",
+          "similarity": 0.684302,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "AS601245",
+          "similarity": 0.676688,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Lapatinib",
+          "similarity": 0.670342,
+          "shared_r1_r2": 4517,
+          "shared_r2_r1": 4517
+        }
+      ]
+    },
+    {
+      "id": "Lapatinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "VX-702",
+          "similarity": 0.70022,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Bosutinib",
+          "similarity": 0.691395,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "AS601245",
+          "similarity": 0.673772,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Erlotinib",
+          "similarity": 0.670342,
+          "shared_r1_r2": 4517,
+          "shared_r2_r1": 4517
+        },
+        {
+          "id": "PLX4720",
+          "similarity": 0.669994,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        }
+      ]
+    },
+    {
+      "id": "Pazopanib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "VX-702",
+          "similarity": 0.673112,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Bosutinib",
+          "similarity": 0.672354,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "Erlotinib",
+          "similarity": 0.662706,
+          "shared_r1_r2": 4517,
+          "shared_r2_r1": 4517
+        },
+        {
+          "id": "PLX4720",
+          "similarity": 0.662527,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        },
+        {
+          "id": "AS601245",
+          "similarity": 0.659593,
+          "shared_r1_r2": 4479,
+          "shared_r2_r1": 4638
+        }
+      ]
+    },
+    {
+      "id": "PLX4720",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Erlotinib",
+          "similarity": 0.684302,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Axitinib",
+          "similarity": 0.675549,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Lapatinib",
+          "similarity": 0.669994,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "VX-702",
+          "similarity": 0.663076,
+          "shared_r1_r2": 4485,
+          "shared_r2_r1": 4485
+        },
+        {
+          "id": "Pazopanib",
+          "similarity": 0.662527,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        }
+      ]
+    },
+    {
+      "id": "VX-702",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Erlotinib",
+          "similarity": 0.704552,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Lapatinib",
+          "similarity": 0.70022,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Axitinib",
+          "similarity": 0.679531,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "Pazopanib",
+          "similarity": 0.673112,
+          "shared_r1_r2": 4638,
+          "shared_r2_r1": 4479
+        },
+        {
+          "id": "PLX4720",
+          "similarity": 0.663076,
+          "shared_r1_r2": 4485,
+          "shared_r2_r1": 4485
+        }
+      ]
+    },
+    {
+      "id": "Alectinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Metformin_100",
+          "similarity": 0.718663,
+          "shared_r1_r2": 4802,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.714362,
+          "shared_r1_r2": 4803,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_500",
+          "similarity": 0.708939,
+          "shared_r1_r2": 4803,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "XAV939",
+          "similarity": 0.704577,
+          "shared_r1_r2": 5063,
+          "shared_r2_r1": 5064
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.700971,
+          "shared_r1_r2": 4801,
+          "shared_r2_r1": 4389
+        }
+      ]
+    },
+    {
+      "id": "CUDC-101",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.683554,
+          "shared_r1_r2": 4803,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "XAV939",
+          "similarity": 0.683391,
+          "shared_r1_r2": 5064,
+          "shared_r2_r1": 5065
+        },
+        {
+          "id": "Docetaxel",
+          "similarity": 0.683065,
+          "shared_r1_r2": 5061,
+          "shared_r2_r1": 5063
+        },
+        {
+          "id": "Metformin_100",
+          "similarity": 0.681821,
+          "shared_r1_r2": 4802,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.677563,
+          "shared_r1_r2": 4801,
+          "shared_r2_r1": 4389
+        }
+      ]
+    },
+    {
+      "id": "Docetaxel",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "XAV939",
+          "similarity": 0.72569,
+          "shared_r1_r2": 5062,
+          "shared_r2_r1": 5061
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.722028,
+          "shared_r1_r2": 4801,
+          "shared_r2_r1": 4389
+        },
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.718504,
+          "shared_r1_r2": 4803,
+          "shared_r2_r1": 4389
+        },
+        {
+          "id": "Metformin_100",
+          "similarity": 0.716022,
+          "shared_r1_r2": 4802,
+          "shared_r2_r1": 4389
+        },
+        {
+          "id": "Alectinib",
+          "similarity": 0.700529,
+          "shared_r1_r2": 5062,
+          "shared_r2_r1": 5061
+        }
+      ]
+    },
+    {
+      "id": "Metformin_100",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.747332,
+          "shared_r1_r2": 4473,
+          "shared_r2_r1": 4474
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.733847,
+          "shared_r1_r2": 4472,
+          "shared_r2_r1": 4473
+        },
+        {
+          "id": "Metformin_8000",
+          "similarity": 0.727936,
+          "shared_r1_r2": 4473,
+          "shared_r2_r1": 4474
+        },
+        {
+          "id": "XAV939",
+          "similarity": 0.720401,
+          "shared_r1_r2": 4390,
+          "shared_r2_r1": 4802
+        },
+        {
+          "id": "Alectinib",
+          "similarity": 0.718663,
+          "shared_r1_r2": 4390,
+          "shared_r2_r1": 4802
+        }
+      ]
+    },
+    {
+      "id": "Metformin_1000",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Metformin_100",
+          "similarity": 0.747332,
+          "shared_r1_r2": 4474,
+          "shared_r2_r1": 4473
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.738462,
+          "shared_r1_r2": 4472,
+          "shared_r2_r1": 4472
+        },
+        {
+          "id": "Metformin_8000",
+          "similarity": 0.734602,
+          "shared_r1_r2": 4473,
+          "shared_r2_r1": 4473
+        },
+        {
+          "id": "XAV939",
+          "similarity": 0.72387,
+          "shared_r1_r2": 4390,
+          "shared_r2_r1": 4803
+        },
+        {
+          "id": "Docetaxel",
+          "similarity": 0.718504,
+          "shared_r1_r2": 4389,
+          "shared_r2_r1": 4803
+        }
+      ]
+    },
+    {
+      "id": "Metformin_50",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.738462,
+          "shared_r1_r2": 4472,
+          "shared_r2_r1": 4472
+        },
+        {
+          "id": "Metformin_100",
+          "similarity": 0.733847,
+          "shared_r1_r2": 4473,
+          "shared_r2_r1": 4472
+        },
+        {
+          "id": "Docetaxel",
+          "similarity": 0.722028,
+          "shared_r1_r2": 4389,
+          "shared_r2_r1": 4801
+        },
+        {
+          "id": "XAV939",
+          "similarity": 0.717906,
+          "shared_r1_r2": 4389,
+          "shared_r2_r1": 4801
+        },
+        {
+          "id": "Metformin_8000",
+          "similarity": 0.713473,
+          "shared_r1_r2": 4472,
+          "shared_r2_r1": 4472
+        }
+      ]
+    },
+    {
+      "id": "Metformin_500",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Nutlin-3a",
+          "similarity": 0.712615,
+          "shared_r1_r2": 4390,
+          "shared_r2_r1": 4803
+        },
+        {
+          "id": "Alectinib",
+          "similarity": 0.708939,
+          "shared_r1_r2": 4390,
+          "shared_r2_r1": 4803
+        },
+        {
+          "id": "Metformin_100",
+          "similarity": 0.69744,
+          "shared_r1_r2": 4474,
+          "shared_r2_r1": 4473
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.686087,
+          "shared_r1_r2": 4472,
+          "shared_r2_r1": 4472
+        },
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.674658,
+          "shared_r1_r2": 4473,
+          "shared_r2_r1": 4473
+        }
+      ]
+    },
+    {
+      "id": "Metformin_8000",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.734602,
+          "shared_r1_r2": 4473,
+          "shared_r2_r1": 4473
+        },
+        {
+          "id": "Metformin_100",
+          "similarity": 0.727936,
+          "shared_r1_r2": 4474,
+          "shared_r2_r1": 4473
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.713473,
+          "shared_r1_r2": 4472,
+          "shared_r2_r1": 4472
+        },
+        {
+          "id": "XAV939",
+          "similarity": 0.705491,
+          "shared_r1_r2": 4390,
+          "shared_r2_r1": 4802
+        },
+        {
+          "id": "Alectinib",
+          "similarity": 0.697898,
+          "shared_r1_r2": 4390,
+          "shared_r2_r1": 4802
+        }
+      ]
+    },
+    {
+      "id": "Nutlin-3a",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Metformin_500",
+          "similarity": 0.712615,
+          "shared_r1_r2": 4803,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_100",
+          "similarity": 0.668495,
+          "shared_r1_r2": 4802,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.663877,
+          "shared_r1_r2": 4803,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.657543,
+          "shared_r1_r2": 4801,
+          "shared_r2_r1": 4389
+        },
+        {
+          "id": "Docetaxel",
+          "similarity": 0.65442,
+          "shared_r1_r2": 5059,
+          "shared_r2_r1": 5063
+        }
+      ]
+    },
+    {
+      "id": "XAV939",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Docetaxel",
+          "similarity": 0.72569,
+          "shared_r1_r2": 5061,
+          "shared_r2_r1": 5062
+        },
+        {
+          "id": "Metformin_1000",
+          "similarity": 0.72387,
+          "shared_r1_r2": 4803,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_100",
+          "similarity": 0.720401,
+          "shared_r1_r2": 4802,
+          "shared_r2_r1": 4390
+        },
+        {
+          "id": "Metformin_50",
+          "similarity": 0.717906,
+          "shared_r1_r2": 4801,
+          "shared_r2_r1": 4389
+        },
+        {
+          "id": "Metformin_8000",
+          "similarity": 0.705491,
+          "shared_r1_r2": 4802,
+          "shared_r2_r1": 4390
+        }
+      ]
+    },
+    {
+      "id": "5-FU",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Capecitabine",
+          "similarity": 0.64543,
+          "shared_r1_r2": 5181,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Carmustine",
+          "similarity": 0.638736,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Temozolomide",
+          "similarity": 0.62222,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Cyclophosphamide",
+          "similarity": 0.604691,
+          "shared_r1_r2": 5182,
+          "shared_r2_r1": 5184
+        },
+        {
+          "id": "VX-702",
+          "similarity": 0.515475,
+          "shared_r1_r2": 4678,
+          "shared_r2_r1": 4567
+        }
+      ]
+    },
+    {
+      "id": "Actinomycin-D",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Triptolide",
+          "similarity": 0.597772,
+          "shared_r1_r2": 5164,
+          "shared_r2_r1": 5075
+        },
+        {
+          "id": "Topotecan",
+          "similarity": 0.535502,
+          "shared_r1_r2": 4957,
+          "shared_r2_r1": 4978
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.492865,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5254
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.486633,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5255
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.461569,
+          "shared_r1_r2": 5256,
+          "shared_r2_r1": 5255
+        }
+      ]
+    },
+    {
+      "id": "Bortezomib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Carfilzomib",
+          "similarity": 0.639028,
+          "shared_r1_r2": 5199,
+          "shared_r2_r1": 5200
+        },
+        {
+          "id": "MG132",
+          "similarity": 0.521493,
+          "shared_r1_r2": 5200,
+          "shared_r2_r1": 5198
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.49383,
+          "shared_r1_r2": 5077,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.486799,
+          "shared_r1_r2": 5076,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Celastrol",
+          "similarity": 0.473213,
+          "shared_r1_r2": 5200,
+          "shared_r2_r1": 5200
+        }
+      ]
+    },
+    {
+      "id": "Camptothecin",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Crizotinib",
+          "similarity": 0.484321,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4968
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.482671,
+          "shared_r1_r2": 4977,
+          "shared_r2_r1": 4968
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.479511,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4969
+        },
+        {
+          "id": "Daunorubicin",
+          "similarity": 0.464948,
+          "shared_r1_r2": 4979,
+          "shared_r2_r1": 4957
+        },
+        {
+          "id": "Etoposide",
+          "similarity": 0.462683,
+          "shared_r1_r2": 4911,
+          "shared_r2_r1": 4911
+        }
+      ]
+    },
+    {
+      "id": "Capecitabine",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "5-FU",
+          "similarity": 0.64543,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5181
+        },
+        {
+          "id": "Carmustine",
+          "similarity": 0.641313,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5181
+        },
+        {
+          "id": "Cyclophosphamide",
+          "similarity": 0.608075,
+          "shared_r1_r2": 5182,
+          "shared_r2_r1": 5182
+        },
+        {
+          "id": "Temozolomide",
+          "similarity": 0.606024,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5181
+        },
+        {
+          "id": "Erlotinib",
+          "similarity": 0.49824,
+          "shared_r1_r2": 4760,
+          "shared_r2_r1": 4465
+        }
+      ]
+    },
+    {
+      "id": "Carfilzomib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Bortezomib",
+          "similarity": 0.639028,
+          "shared_r1_r2": 5200,
+          "shared_r2_r1": 5199
+        },
+        {
+          "id": "MG132",
+          "similarity": 0.500116,
+          "shared_r1_r2": 5200,
+          "shared_r2_r1": 5197
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.469346,
+          "shared_r1_r2": 5077,
+          "shared_r2_r1": 5162
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.461939,
+          "shared_r1_r2": 5076,
+          "shared_r2_r1": 5162
+        },
+        {
+          "id": "Celastrol",
+          "similarity": 0.45856,
+          "shared_r1_r2": 5200,
+          "shared_r2_r1": 5199
+        }
+      ]
+    },
+    {
+      "id": "Carmustine",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Capecitabine",
+          "similarity": 0.641313,
+          "shared_r1_r2": 5181,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "5-FU",
+          "similarity": 0.638736,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Temozolomide",
+          "similarity": 0.610891,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Cyclophosphamide",
+          "similarity": 0.602578,
+          "shared_r1_r2": 5182,
+          "shared_r2_r1": 5184
+        },
+        {
+          "id": "VX-702",
+          "similarity": 0.48611,
+          "shared_r1_r2": 4678,
+          "shared_r2_r1": 4567
+        }
+      ]
+    },
+    {
+      "id": "CC-122",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Lenalidomide",
+          "similarity": 0.598379,
+          "shared_r1_r2": 4856,
+          "shared_r2_r1": 4855
+        },
+        {
+          "id": "Thalidomide",
+          "similarity": 0.596684,
+          "shared_r1_r2": 4857,
+          "shared_r2_r1": 4855
+        },
+        {
+          "id": "Pomalidomide",
+          "similarity": 0.595992,
+          "shared_r1_r2": 4856,
+          "shared_r2_r1": 4857
+        },
+        {
+          "id": "CC-885",
+          "similarity": 0.531885,
+          "shared_r1_r2": 4857,
+          "shared_r2_r1": 4856
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.463465,
+          "shared_r1_r2": 4846,
+          "shared_r2_r1": 4693
+        }
+      ]
+    },
+    {
+      "id": "CC-885",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Lenalidomide",
+          "similarity": 0.609329,
+          "shared_r1_r2": 4855,
+          "shared_r2_r1": 4855
+        },
+        {
+          "id": "Pomalidomide",
+          "similarity": 0.590709,
+          "shared_r1_r2": 4855,
+          "shared_r2_r1": 4857
+        },
+        {
+          "id": "Thalidomide",
+          "similarity": 0.582308,
+          "shared_r1_r2": 4856,
+          "shared_r2_r1": 4855
+        },
+        {
+          "id": "INCB018424",
+          "similarity": 0.533302,
+          "shared_r1_r2": 4846,
+          "shared_r2_r1": 4693
+        },
+        {
+          "id": "CC-122",
+          "similarity": 0.531885,
+          "shared_r1_r2": 4856,
+          "shared_r2_r1": 4857
+        }
+      ]
+    },
+    {
+      "id": "Celastrol",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Bortezomib",
+          "similarity": 0.473213,
+          "shared_r1_r2": 5200,
+          "shared_r2_r1": 5200
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.459236,
+          "shared_r1_r2": 5076,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.459148,
+          "shared_r1_r2": 5076,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Carfilzomib",
+          "similarity": 0.45856,
+          "shared_r1_r2": 5199,
+          "shared_r2_r1": 5200
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.437392,
+          "shared_r1_r2": 5075,
+          "shared_r2_r1": 5163
+        }
+      ]
+    },
+    {
+      "id": "Colchicine",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Vincristine",
+          "similarity": 0.627268,
+          "shared_r1_r2": 5452,
+          "shared_r2_r1": 5452
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.449467,
+          "shared_r1_r2": 5102,
+          "shared_r2_r1": 5231
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.409186,
+          "shared_r1_r2": 5102,
+          "shared_r2_r1": 5232
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.405263,
+          "shared_r1_r2": 5101,
+          "shared_r2_r1": 5232
+        },
+        {
+          "id": "Paclitaxel",
+          "similarity": 0.368715,
+          "shared_r1_r2": 5453,
+          "shared_r2_r1": 5452
+        }
+      ]
+    },
+    {
+      "id": "CPT-11",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Crizotinib",
+          "similarity": 0.497068,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4968
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.488048,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4969
+        },
+        {
+          "id": "Imatinib",
+          "similarity": 0.473761,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4969
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.465368,
+          "shared_r1_r2": 4977,
+          "shared_r2_r1": 4968
+        },
+        {
+          "id": "Etoposide",
+          "similarity": 0.460246,
+          "shared_r1_r2": 4911,
+          "shared_r2_r1": 4912
+        }
+      ]
+    },
+    {
+      "id": "Crizotinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "LY2835219",
+          "similarity": 0.616413,
+          "shared_r1_r2": 5340,
+          "shared_r2_r1": 5339
+        },
+        {
+          "id": "Imatinib",
+          "similarity": 0.589906,
+          "shared_r1_r2": 5340,
+          "shared_r2_r1": 5337
+        },
+        {
+          "id": "INCB018424",
+          "similarity": 0.585579,
+          "shared_r1_r2": 5340,
+          "shared_r2_r1": 5336
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.574225,
+          "shared_r1_r2": 5339,
+          "shared_r2_r1": 5338
+        },
+        {
+          "id": "Etoposide",
+          "similarity": 0.513054,
+          "shared_r1_r2": 4965,
+          "shared_r2_r1": 4977
+        }
+      ]
+    },
+    {
+      "id": "Cyclophosphamide",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Capecitabine",
+          "similarity": 0.608075,
+          "shared_r1_r2": 5182,
+          "shared_r2_r1": 5182
+        },
+        {
+          "id": "5-FU",
+          "similarity": 0.604691,
+          "shared_r1_r2": 5184,
+          "shared_r2_r1": 5182
+        },
+        {
+          "id": "Carmustine",
+          "similarity": 0.602578,
+          "shared_r1_r2": 5184,
+          "shared_r2_r1": 5182
+        },
+        {
+          "id": "Temozolomide",
+          "similarity": 0.577879,
+          "shared_r1_r2": 5184,
+          "shared_r2_r1": 5182
+        },
+        {
+          "id": "Erlotinib",
+          "similarity": 0.464994,
+          "shared_r1_r2": 4762,
+          "shared_r2_r1": 4462
+        }
+      ]
+    },
+    {
+      "id": "Daunorubicin",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.54122,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.518178,
+          "shared_r1_r2": 5256,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.498619,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5255
+        },
+        {
+          "id": "Etoposide",
+          "similarity": 0.470274,
+          "shared_r1_r2": 4955,
+          "shared_r2_r1": 4978
+        },
+        {
+          "id": "Camptothecin",
+          "similarity": 0.464948,
+          "shared_r1_r2": 4957,
+          "shared_r2_r1": 4979
+        }
+      ]
+    },
+    {
+      "id": "Etoposide",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Crizotinib",
+          "similarity": 0.513054,
+          "shared_r1_r2": 4977,
+          "shared_r2_r1": 4965
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.505883,
+          "shared_r1_r2": 4977,
+          "shared_r2_r1": 4966
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.489761,
+          "shared_r1_r2": 4976,
+          "shared_r2_r1": 4965
+        },
+        {
+          "id": "Imatinib",
+          "similarity": 0.482798,
+          "shared_r1_r2": 4977,
+          "shared_r2_r1": 4966
+        },
+        {
+          "id": "Daunorubicin",
+          "similarity": 0.470274,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4955
+        }
+      ]
+    },
+    {
+      "id": "Geldanamycin",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Crizotinib",
+          "similarity": 0.462205,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4968
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.45782,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4969
+        },
+        {
+          "id": "INCB018424",
+          "similarity": 0.457591,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4969
+        },
+        {
+          "id": "Imatinib",
+          "similarity": 0.448142,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4969
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.440222,
+          "shared_r1_r2": 4977,
+          "shared_r2_r1": 4968
+        }
+      ]
+    },
+    {
+      "id": "Imatinib",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Crizotinib",
+          "similarity": 0.589906,
+          "shared_r1_r2": 5337,
+          "shared_r2_r1": 5340
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.583951,
+          "shared_r1_r2": 5339,
+          "shared_r2_r1": 5341
+        },
+        {
+          "id": "INCB018424",
+          "similarity": 0.564108,
+          "shared_r1_r2": 5339,
+          "shared_r2_r1": 5338
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.529385,
+          "shared_r1_r2": 5338,
+          "shared_r2_r1": 5340
+        },
+        {
+          "id": "Etoposide",
+          "similarity": 0.482798,
+          "shared_r1_r2": 4966,
+          "shared_r2_r1": 4977
+        }
+      ]
+    },
+    {
+      "id": "INCB018424",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "LY2835219",
+          "similarity": 0.586077,
+          "shared_r1_r2": 5338,
+          "shared_r2_r1": 5341
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.585579,
+          "shared_r1_r2": 5336,
+          "shared_r2_r1": 5340
+        },
+        {
+          "id": "Imatinib",
+          "similarity": 0.564108,
+          "shared_r1_r2": 5338,
+          "shared_r2_r1": 5339
+        },
+        {
+          "id": "CC-885",
+          "similarity": 0.533302,
+          "shared_r1_r2": 4693,
+          "shared_r2_r1": 4846
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.518884,
+          "shared_r1_r2": 5337,
+          "shared_r2_r1": 5340
+        }
+      ]
+    },
+    {
+      "id": "Ixabepilone",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.561368,
+          "shared_r1_r2": 5255,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.52308,
+          "shared_r1_r2": 5254,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Daunorubicin",
+          "similarity": 0.498619,
+          "shared_r1_r2": 5255,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Actinomycin-D",
+          "similarity": 0.492865,
+          "shared_r1_r2": 5254,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.47667,
+          "shared_r1_r2": 5131,
+          "shared_r2_r1": 5157
+        }
+      ]
+    },
+    {
+      "id": "Lenalidomide",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Pomalidomide",
+          "similarity": 0.653664,
+          "shared_r1_r2": 4854,
+          "shared_r2_r1": 4856
+        },
+        {
+          "id": "Thalidomide",
+          "similarity": 0.643986,
+          "shared_r1_r2": 4855,
+          "shared_r2_r1": 4854
+        },
+        {
+          "id": "CC-885",
+          "similarity": 0.609329,
+          "shared_r1_r2": 4855,
+          "shared_r2_r1": 4855
+        },
+        {
+          "id": "CC-122",
+          "similarity": 0.598379,
+          "shared_r1_r2": 4855,
+          "shared_r2_r1": 4856
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.499316,
+          "shared_r1_r2": 4845,
+          "shared_r2_r1": 4692
+        }
+      ]
+    },
+    {
+      "id": "LY2835219",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Crizotinib",
+          "similarity": 0.616413,
+          "shared_r1_r2": 5339,
+          "shared_r2_r1": 5340
+        },
+        {
+          "id": "INCB018424",
+          "similarity": 0.586077,
+          "shared_r1_r2": 5341,
+          "shared_r2_r1": 5338
+        },
+        {
+          "id": "Imatinib",
+          "similarity": 0.583951,
+          "shared_r1_r2": 5341,
+          "shared_r2_r1": 5339
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.55475,
+          "shared_r1_r2": 5340,
+          "shared_r2_r1": 5340
+        },
+        {
+          "id": "Etoposide",
+          "similarity": 0.505883,
+          "shared_r1_r2": 4966,
+          "shared_r2_r1": 4977
+        }
+      ]
+    },
+    {
+      "id": "MG132",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Bortezomib",
+          "similarity": 0.521493,
+          "shared_r1_r2": 5198,
+          "shared_r2_r1": 5200
+        },
+        {
+          "id": "Carfilzomib",
+          "similarity": 0.500116,
+          "shared_r1_r2": 5197,
+          "shared_r2_r1": 5200
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.384293,
+          "shared_r1_r2": 5076,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.375239,
+          "shared_r1_r2": 5075,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Celastrol",
+          "similarity": 0.356717,
+          "shared_r1_r2": 5198,
+          "shared_r2_r1": 5200
+        }
+      ]
+    },
+    {
+      "id": "Mitomycin C",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.565308,
+          "shared_r1_r2": 5256,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.561368,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5255
+        },
+        {
+          "id": "Daunorubicin",
+          "similarity": 0.54122,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5257
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.493867,
+          "shared_r1_r2": 5132,
+          "shared_r2_r1": 5157
+        },
+        {
+          "id": "Bortezomib",
+          "similarity": 0.49383,
+          "shared_r1_r2": 5163,
+          "shared_r2_r1": 5077
+        }
+      ]
+    },
+    {
+      "id": "Paclitaxel",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Vinblastine",
+          "similarity": 0.593392,
+          "shared_r1_r2": 5452,
+          "shared_r2_r1": 5453
+        },
+        {
+          "id": "CC-885",
+          "similarity": 0.461277,
+          "shared_r1_r2": 4686,
+          "shared_r2_r1": 4922
+        },
+        {
+          "id": "Lenalidomide",
+          "similarity": 0.447787,
+          "shared_r1_r2": 4685,
+          "shared_r2_r1": 4921
+        },
+        {
+          "id": "Thalidomide",
+          "similarity": 0.441438,
+          "shared_r1_r2": 4686,
+          "shared_r2_r1": 4922
+        },
+        {
+          "id": "Pomalidomide",
+          "similarity": 0.439696,
+          "shared_r1_r2": 4685,
+          "shared_r2_r1": 4923
+        }
+      ]
+    },
+    {
+      "id": "Pemetrexed",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.565308,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5256
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.52308,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5254
+        },
+        {
+          "id": "Daunorubicin",
+          "similarity": 0.518178,
+          "shared_r1_r2": 5257,
+          "shared_r2_r1": 5256
+        },
+        {
+          "id": "Bortezomib",
+          "similarity": 0.486799,
+          "shared_r1_r2": 5163,
+          "shared_r2_r1": 5076
+        },
+        {
+          "id": "Carfilzomib",
+          "similarity": 0.461939,
+          "shared_r1_r2": 5162,
+          "shared_r2_r1": 5076
+        }
+      ]
+    },
+    {
+      "id": "Pomalidomide",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Lenalidomide",
+          "similarity": 0.653664,
+          "shared_r1_r2": 4856,
+          "shared_r2_r1": 4854
+        },
+        {
+          "id": "Thalidomide",
+          "similarity": 0.628522,
+          "shared_r1_r2": 4857,
+          "shared_r2_r1": 4854
+        },
+        {
+          "id": "CC-122",
+          "similarity": 0.595992,
+          "shared_r1_r2": 4857,
+          "shared_r2_r1": 4856
+        },
+        {
+          "id": "CC-885",
+          "similarity": 0.590709,
+          "shared_r1_r2": 4857,
+          "shared_r2_r1": 4855
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.484073,
+          "shared_r1_r2": 4846,
+          "shared_r2_r1": 4693
+        }
+      ]
+    },
+    {
+      "id": "SAHA",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Crizotinib",
+          "similarity": 0.574225,
+          "shared_r1_r2": 5338,
+          "shared_r2_r1": 5339
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.55475,
+          "shared_r1_r2": 5340,
+          "shared_r2_r1": 5340
+        },
+        {
+          "id": "Imatinib",
+          "similarity": 0.529385,
+          "shared_r1_r2": 5340,
+          "shared_r2_r1": 5338
+        },
+        {
+          "id": "INCB018424",
+          "similarity": 0.518884,
+          "shared_r1_r2": 5340,
+          "shared_r2_r1": 5337
+        },
+        {
+          "id": "Etoposide",
+          "similarity": 0.489761,
+          "shared_r1_r2": 4965,
+          "shared_r2_r1": 4976
+        }
+      ]
+    },
+    {
+      "id": "Temozolomide",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "5-FU",
+          "similarity": 0.62222,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Carmustine",
+          "similarity": 0.610891,
+          "shared_r1_r2": 5183,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Capecitabine",
+          "similarity": 0.606024,
+          "shared_r1_r2": 5181,
+          "shared_r2_r1": 5183
+        },
+        {
+          "id": "Cyclophosphamide",
+          "similarity": 0.577879,
+          "shared_r1_r2": 5182,
+          "shared_r2_r1": 5184
+        },
+        {
+          "id": "VX-702",
+          "similarity": 0.474219,
+          "shared_r1_r2": 4678,
+          "shared_r2_r1": 4566
+        }
+      ]
+    },
+    {
+      "id": "Thalidomide",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Lenalidomide",
+          "similarity": 0.643986,
+          "shared_r1_r2": 4854,
+          "shared_r2_r1": 4855
+        },
+        {
+          "id": "Pomalidomide",
+          "similarity": 0.628522,
+          "shared_r1_r2": 4854,
+          "shared_r2_r1": 4857
+        },
+        {
+          "id": "CC-122",
+          "similarity": 0.596684,
+          "shared_r1_r2": 4855,
+          "shared_r2_r1": 4857
+        },
+        {
+          "id": "CC-885",
+          "similarity": 0.582308,
+          "shared_r1_r2": 4855,
+          "shared_r2_r1": 4856
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.478203,
+          "shared_r1_r2": 4845,
+          "shared_r2_r1": 4693
+        }
+      ]
+    },
+    {
+      "id": "Topotecan",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Actinomycin-D",
+          "similarity": 0.535502,
+          "shared_r1_r2": 4978,
+          "shared_r2_r1": 4957
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.495175,
+          "shared_r1_r2": 4976,
+          "shared_r2_r1": 4967
+        },
+        {
+          "id": "LY2835219",
+          "similarity": 0.492115,
+          "shared_r1_r2": 4976,
+          "shared_r2_r1": 4968
+        },
+        {
+          "id": "Triptolide",
+          "similarity": 0.486076,
+          "shared_r1_r2": 4952,
+          "shared_r2_r1": 4874
+        },
+        {
+          "id": "SAHA",
+          "similarity": 0.471893,
+          "shared_r1_r2": 4975,
+          "shared_r2_r1": 4967
+        }
+      ]
+    },
+    {
+      "id": "Triptolide",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Actinomycin-D",
+          "similarity": 0.597772,
+          "shared_r1_r2": 5075,
+          "shared_r2_r1": 5164
+        },
+        {
+          "id": "Topotecan",
+          "similarity": 0.486076,
+          "shared_r1_r2": 4874,
+          "shared_r2_r1": 4952
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.465275,
+          "shared_r1_r2": 5076,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.46352,
+          "shared_r1_r2": 5076,
+          "shared_r2_r1": 5163
+        },
+        {
+          "id": "Crizotinib",
+          "similarity": 0.462317,
+          "shared_r1_r2": 4954,
+          "shared_r2_r1": 5068
+        }
+      ]
+    },
+    {
+      "id": "Vinblastine",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Paclitaxel",
+          "similarity": 0.593392,
+          "shared_r1_r2": 5453,
+          "shared_r2_r1": 5452
+        },
+        {
+          "id": "Lenalidomide",
+          "similarity": 0.438316,
+          "shared_r1_r2": 4685,
+          "shared_r2_r1": 4920
+        },
+        {
+          "id": "Thalidomide",
+          "similarity": 0.435595,
+          "shared_r1_r2": 4686,
+          "shared_r2_r1": 4921
+        },
+        {
+          "id": "CC-885",
+          "similarity": 0.434832,
+          "shared_r1_r2": 4686,
+          "shared_r2_r1": 4921
+        },
+        {
+          "id": "Pomalidomide",
+          "similarity": 0.432722,
+          "shared_r1_r2": 4685,
+          "shared_r2_r1": 4922
+        }
+      ]
+    },
+    {
+      "id": "Vincristine",
+      "eligible_candidates": 77,
+      "neighbors": [
+        {
+          "id": "Colchicine",
+          "similarity": 0.627268,
+          "shared_r1_r2": 5452,
+          "shared_r2_r1": 5452
+        },
+        {
+          "id": "Ixabepilone",
+          "similarity": 0.442199,
+          "shared_r1_r2": 5102,
+          "shared_r2_r1": 5230
+        },
+        {
+          "id": "Mitomycin C",
+          "similarity": 0.392402,
+          "shared_r1_r2": 5102,
+          "shared_r2_r1": 5231
+        },
+        {
+          "id": "Pemetrexed",
+          "similarity": 0.386884,
+          "shared_r1_r2": 5101,
+          "shared_r2_r1": 5231
+        },
+        {
+          "id": "Paclitaxel",
+          "similarity": 0.3568,
+          "shared_r1_r2": 5453,
+          "shared_r2_r1": 5452
+        }
+      ]
+    }
+  ]
+}
